@@ -1,0 +1,197 @@
+/*-- scss:functions --*/
+// @function colorToRGB ($color) {
+//     @return "rgb(" + red($color) + ", " + green($color) + ", " + blue($color)+ ")";
+// }
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/*-- scss:defaults --*/
+
+:root {
+    --margin-max-width: calc((100% - calc(1550px - 1.5em)) / 2)
+}
+
+// $h2-font-size:          1.6rem !default;
+// $headings-font-weight:  500 !default;
+
+/*-- scss:rules --*/
+// h1, h2, h3, h4, h5, h6 {
+//     text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
+// }
+.navbar {
+    background-color: #f4f4f4;
+    border-block-end: 1px solid #E0E0E0;
+}
+
+.navbar-logo
+{
+    max-height: 48px;
+}
+
+
+.menu-text {
+    color: black;
+    font-size: 14pt;
+    line-height: 120%;
+    color: inherit;
+    
+}
+
+.nav-page .nav-page-text {
+    font-size: 16pt;
+    color: #0f62fe !important;
+    
+}
+
+
+/* Sets the navbar chosen option to Blue and Underlined*/
+div.sidebar-item-container .active, div.sidebar-item-container .show > .nav-link, div.sidebar-item-container .sidebar-link > code {
+    color: #0f62fe !important;
+}
+
+.sidebar-item {
+    font-weight: 500 !important;
+    padding: .3rem;
+}
+
+
+.collapse list-unstyled sidebar-section  {
+    font-weight: 400;
+}
+
+.sidebar-menu-container
+{
+    color: #0f62fe !important;
+}
+
+.quarto-sidebar-section-1{
+    padding-bottom: 0;
+}
+
+.navbar-brand {
+    color: black;
+    font-size: 18pt;
+   
+}
+.navbar-brand:hover {
+    color: black;
+}
+
+#quarto-margin-sidebar {
+    background-color: #FFFFFF;
+}
+
+
+.sidebar nav[role=doc-toc] ul>li>ul>li>a, .sidebar nav[role=doc-toc]>ul a {
+    border-left: none;
+    padding-left: 0;
+}
+
+.sidebar nav[role=doc-toc] ul>li>a.active, .sidebar nav[role=doc-toc] ul>li>ul>li>a.active {
+    border-left: none;//4px solid #0f62fe;
+    color: #0f62fe !important;
+}
+
+.navbar .aa-Autocomplete .aa-Form {
+    width: 250px;
+}
+
+body {
+    font-family: "IBM Plex Sans", serif;
+    background-color: #FFFFFF;
+}
+
+* {
+    font-family: "IBM Plex Sans", serif;
+}
+
+.bi-github{
+    color:black
+}
+.bi-linkedin{
+    color: #0077B5;
+    height: 25px;
+    width: 25px;
+}
+
+
+@media (min-width: 992px) {
+    #quarto-content.page-columns{
+        grid-template-columns: [screen-start] 1.5em [screen-start-inset page-start] minmax(50px, 100px) [page-start-inset] 50px [body-start-outset] 150px [body-start] minmax(1.5em, var(--margin-max-width)) [body-content-start] minmax(500px, calc(1000px - 3em)) [body-content-end] minmax(1.5em, var(--margin-max-width)) [body-end] 50px [body-end-outset] minmax(50px, 100px) [page-end-inset] 50px [page-end] 5fr [screen-end-inset] 1.5em [screen-end];
+    }
+}
+
+.footer{
+    
+
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.125rem;
+    letter-spacing: .16px;
+    width: 100%;
+    background: #000;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 2;
+}
+.nav-footer {
+    align-items: center;
+    min-height: 370px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    justify-content: space-between;
+    color:#e8e8e8
+    
+       
+}
+
+.nav-footer-left
+{
+    padding-left: 5rem;
+    text-align: left;
+    
+}
+.nav-footer-center img
+{
+    text-align: center;
+    vertical-align: top;    
+}
+.nav-footer-center 
+{
+    text-align: center;
+    vertical-align: top;    
+}
+
+.nav-footer-right
+{
+    text-align: left;
+}
+
+.CEText
+{
+    text-align: left;
+    padding-left: 40px;
+   
+}
+
+.listitem {
+    width: 100%;
+    margin-left: 0;
+}
+
+a[role=listitem] {
+    color: #e8e8e8;
+    
+}
+
+
+.footer__bottom {
+    width: 100%;
+    text-align: center;
+}
+
+.footerLogo {
+    color: #f4f4f4;
+    vertical-align: top;
+}
+

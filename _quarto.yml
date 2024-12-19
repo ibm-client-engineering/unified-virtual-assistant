@@ -55,6 +55,20 @@ website:
                   href: ./Implementation/watsonx-gov.qmd
                 - text: RAG Attribution Links
                   href: ./Implementation/rag-attr-links.qmd
+            - section: Third-Party Applications
+              contents:
+                - text: ServiceNow
+                  href: ./Implementation/imp-snow.qmd
+                - text: Workday
+                  href: ./Implementation/imp-workday.qmd
+                - text: Genesys
+                  href: ./Implementation/imp-genesys.qmd
+            - section: Identity and Access Management
+              contents:
+                - text: IBM Security Verify
+                  href: ./Implementation/imp-verify-assis.qmd
+                - text: Simulation
+                  href: ./Implementation/imp-sim.qmd
         - text: Key Takeaways
           href: key-takeaway.qmd
 

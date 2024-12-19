@@ -20,19 +20,28 @@
     border-block-end: 1px solid #E0E0E0; /* Bottom border with a light gray color */
 }
 
+
 /* Navbar Logo Size */
 .navbar-logo {
     max-height: 75px; /* Restrict the height of the logo */
 }
 
-/* Menu Text Styling */
-.menu-text {
-    color: black;
-    font-size: 14pt; /* Set font size */
-    line-height: 120%; /* Consistent line spacing */
-    font-weight: 400;
+/* Navbar Margin Sizing Target */
+.navbar > .container, .navbar > .container-fluid, .navbar > .container-sm, .navbar > .container-md, .navbar > .container-lg, .navbar > .container-xl, .navbar > .container-xxl 
+{ 
+    margin-top: -10px; /* Reducing the top margin size */
+    margin-bottom: -10px; /* Reducing the bottom margin size */
 }
 
+/* Target the search container and components */
+.aa-Dropdown-menu,
+.aa-Form,
+.aa-DetachedSearchButtonPlaceholder,
+.navbar #quarto-search.type-overlay .aa-Autocomplete {
+    width: 300px !important;
+    height: 40px !important;
+    max-width: 300px !important;
+}
 
 /* Navbar Page Text Styling */
 .nav-page .nav-page-text {
@@ -52,7 +61,7 @@ div.sidebar-item-container .active, div.sidebar-item-container .show > .nav-link
 
 /* Bold Top-Level Headings in Sidebar */
 .sidebar nav[role=doc-toc] ul>li>a {
-    font-weight: 600; /* Bold font weight for primary headings */
+    font-weight: 800; /* Bold font weight for primary headings */
 }
 
 /* Normal Font Weight for Subheadings */
@@ -62,7 +71,7 @@ div.sidebar-item-container .active, div.sidebar-item-container .show > .nav-link
 
 /* General Sidebar Item Padding */
 .sidebar-item {
-    padding: .3rem; /* Adds padding for better spacing */
+    padding: .2rem; /* Adds padding for better spacing */
 }
 
 /* Sidebar Menu Container Text Color */
@@ -103,7 +112,7 @@ div.sidebar-item-container .active, div.sidebar-item-container .show > .nav-link
     color: #0f62fe !important; /* Blue text color */
     background-color: #E9E9E9; /* Light blue background */
     border-radius: 0 4px 4px 0; /* Rounded right corners */
-    padding: 0.5rem 0.75rem; /* Internal spacing */
+    padding: 0.50em 0.75rem; /* Internal spacing */
     margin-left: -0.75rem; /* Aligns active items to the left */
 }
 
@@ -137,12 +146,77 @@ nav .nav-link i, nav .dropdown-item i {
 /* Icon Styling for GitHub and LinkedIn */
 .bi-github {
     color: black; /* GitHub icon in black */
+    font-size: 24px !important;
+    width: 50px !important;
+    height: 50px !important;
 }
+/* Specific styling for brand icons */
 .bi-linkedin {
     color: #0077B5; /* LinkedIn icon in blue */
-    height: 25px; /* Icon height */
-    width: 25px; /* Icon width */
+    font-size: 24px !important;
+    height: 50px; /* Icon height */
+    width: 50px; /* Icon width */
 }
+
+/* Style the page navigation container */
+.page-navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem;
+}
+
+/* Style individual navigation containers */
+.nav-page {
+    flex: 1;
+    max-width: 50%;
+    padding: 1rem;
+    background-color: #ffffff;
+    margin: 0;
+    display: flex;
+    align-items: center;      /* Center items vertically */
+}
+
+/* Style the navigation links */
+.nav-page a {
+    display: flex;
+    align-items: center;      /* Align arrow with text */
+    text-decoration: none;
+    width: 100%;             /* Take full width of container */
+}
+
+/* Only apply hover effect to nav items with content */
+.nav-page:has(a):hover {
+    background-color: #c6c3c3;
+}
+
+/* Remove hover effect from empty nav items */
+.nav-page:not(:has(a)) {
+    background-color: transparent !important;
+    pointer-events: none;
+}
+
+.nav-page:not(:has(a)):hover {
+    background-color: transparent !important;
+}
+
+
+/* Style the navigation text */
+.nav-page-text {
+    color: #ffffff !important;    /* White text */
+    font-size: 4rem;
+    margin: 0 1rem;
+}
+
+/* Style the Previous/Next labels */
+.nav-page small {
+    color: #c6c6c6;              /* Light gray for labels */
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
 
 /* Media Query for Grid Layout on Larger Screens */
 @media (min-width: 992px) {

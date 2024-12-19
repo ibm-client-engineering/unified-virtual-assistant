@@ -3,7 +3,7 @@ title: Simulation
 format: html
 ---
 
-This section will go through how to simulate User and Access Management for an Assistant. The steps consist of: 
+This section will go through how to simulate Identity and Access Management for an Assistant. The steps consist of: 
 
 1. Create a variable assigned to an expression of a dictionary within the assistant platfrom and include the necessary users and their appropriate metadata within the dictionary.
 2. Modify the "Greet Customer" action within the assistant
@@ -17,7 +17,7 @@ This section will go through how to simulate User and Access Management for an A
     
 <div style="margin-left: 40px;">
 ex)
-```default
+```json
 [
     {
         "name":"martha",

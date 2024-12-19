@@ -3,8 +3,8 @@ title: Assistant Custom Extension
 format: html
 ---
 
-This section will describe how we were able to query one watsonx assistant from another using the watsonx assistant API. In addition, this guide will also include information about how to update session variables on the subordinate bot from the calling bot.
-Ways to integrate with a subordinate watsonx assisant bot:
+This section will describe how we were able to query one watson<span style="color:#2c62f5;">x</span> assistant from another using the watson<span style="color:#2c62f5;">x</span> assistant API. In addition, this guide will also include information about how to update session variables on the subordinate bot from the calling bot.
+Ways to integrate with a subordinate watson<span style="color:#2c62f5;">x</span> assisant bot:
 
 1. [Assistant Custom Extension](#assistant-custom-extension)
 
@@ -28,7 +28,7 @@ Two values will be needed to connect to a subordinate Assistant:
     * ```Draft/Live Environment ID``` (whichever is applicable)
 
 ### Create the Custom Extension
-1. Navigate and download the OpenAPI spec for another assistant bot [here](https://github.ibm.com/ibm-client-engineering/solution-watsonx-orchestrate/tree/main/assets/openAPI_specs/otherBot)
+1. Navigate and download the OpenAPI spec for another assistant bot [here](https://github.ibm.com/ibm-client-engineering/solution-watson<span style="color:#2c62f5;">x</span>-orchestrate/tree/main/assets/openAPI_specs/otherBot)
 2. Modify the server url at line 10 with the ```service instance url``` from step 3 [here](#identify-openapi-spec-values)
 3. Navigate to the integrations section within the Assistant Builder sidebar
 4. Select "Build custom extension" and name the extension
@@ -70,7 +70,7 @@ Two api calls are needed to successfully integrate this extension:
 
 ::: {.callout-note}
 #### **A note about session variables**
-Session variables play a crucial role in storing and managing information within and across Watsonx Assistant actions. These variables can be defined either by the user or automatically by the assistant, with each session maintaining a distinct instance of each variable.
+Session variables play a crucial role in storing and managing information within and across watson<span style="color:#2c62f5;">x</span> Assistant actions. These variables can be defined either by the user or automatically by the assistant, with each session maintaining a distinct instance of each variable.
 
 When there is a need to pass additional information beyond the input query to a subordinate bot, session variables are the appropriate mechanism. To facilitate this, the session variable must first be defined on the subordinate side before its value can be updated via a dialog request. Once defined, the variable can be updated by including its name and the desired value in a JSON object under the useContext.skills.actions.skill.skill_variables field.
 

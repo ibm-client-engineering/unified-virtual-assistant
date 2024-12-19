@@ -12,7 +12,7 @@ This doc will go through how to build an externally accessible webpage with the 
 **Software Requirements:**
 
 * IBM Cloud Object Storage - Lite
-* watsonx Orchestrate or watsonx Assistant
+* watson<span style="color:#2c62f5;">x</span> Orchestrate or watson<span style="color:#2c62f5;">x</span> Assistant
 
 ### Embed Assistant Webchat into HTML file
 1. Within the Assitant Builder's sidebar, navigate to the "Integrations" section

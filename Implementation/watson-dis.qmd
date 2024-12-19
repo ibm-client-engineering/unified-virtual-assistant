@@ -3,16 +3,16 @@ title: "watson Discovery"
 format: html
 ---
 ::: {.callout-warning}
-Prerequisite: [Watson Disovery Software Requirement](/environment.html#watson-discovery)
+Prerequisite: [Watson Disovery Software Requirement](/environment.html#rag-document-search)
 :::
 
 This build consists of three main components:
 
 1. Setup watson Discovery
-2. Create watsonx and Watson Discovery Extensions
+2. Create watson<span style="color:#2c62f5;">x</span> and Watson Discovery Extensions
     1. Create watson Discovery custom extension
-    2. Create watsonx custom extension
-    3. Integrate watsonx Search using Watson Discovery to Assistant
+    2. Create watson<span style="color:#2c62f5;">x</span> custom extension
+    3. Integrate watson<span style="color:#2c62f5;">x</span> Search using Watson Discovery to Assistant
 3. Setup Watson Assistant
 
 ## 1. Setup watson Discovery
@@ -24,7 +24,7 @@ This build consists of three main components:
 5. Select data source
 6. If webcrawl, input url links to "Starting URLs" and click "Add" -> Finish
 
-## 2. Create watsonx and watson Discovery Extensions
+## 2. Create watson<span style="color:#2c62f5;">x</span> and watson Discovery Extensions
 
 **Required Steps:**
 
@@ -41,30 +41,33 @@ This build consists of three main components:
     4. Paste URL into discovery_url and remove `https://` from the beginning of the string
 7. Click "Next", click "Finish", click "Close"
 
-- Reference: [starter kit for accessing the IBM Watson Discovery v2 search API via a custom extension to IBM Watson Assistant](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/extensions/starter-kits/watson-discovery)
+- Reference: [starter kit](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/extensions/starter-kits/watson-discovery)
 
-#### **2.2 Create watsonx custom extension**
-1.  In your assistant, navigate to Integrations page, click "Build custom extension" -> click "Next" -> Input Extension name `watsonx` -> click "Next" .
-2. download json file: [watsonx-openapi.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-watsonx/watsonx-openapi.json) and import file to WA
+#### **2.2 Create watson<span style="color:#2c62f5;">x</span> custom extension**
+1.  In your assistant, navigate to Integrations page, click "Build custom extension" -> click "Next" -> Input Extension name `watson<span style="color:#2c62f5;">x</span>` -> click "Next" .
+2. download json file: [watson<span style="color:#2c62f5;">x</span>-openapi.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-watson<span style="color:#2c62f5;">x</span>/watson<span style="color:#2c62f5;">x</span>-openapi.json) and import file to WA
 3. click "Next" -> click "Finish"
-4. Lower Right corner of the watsonx extension, click "Add" -> click "Add" -> click "Next"
+4. Lower Right corner of the watson<span style="color:#2c62f5;">x</span> extension, click "Add" -> click "Add" -> click "Next"
 5. In Authentication page, in the Authentication type dropdown, select "OAuth 2.0"
     1. For Apikey, create and copy a new API key from [API key](https://cloud.ibm.com/iam/apikeys)
 6. Click "Next", click "Finish", click "Close"
 
-#### **2.3 Integrate watsonx Search using Watson Discovery to Assistant**
+#### **2.3 Integrate watson<span style="color:#2c62f5;">x</span> Search using Watson Discovery to Assistant**
 ##### Upload Actions:
-1. Download [discovery-watsonx-actions.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-conversational-search/discovery-watsonx-actions.json)
+1. Download [discovery-watson<span style="color:#2c62f5;">x</span>-actions.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-conversational-search/discovery-watson<span style="color:#2c62f5;">x</span>-actions.json)
 2. Navigate to "Actions" page, click "Global Settings" icon on the upper right corner
-3. Navigate to Upload/Download tab, upload the downloaded JSON file [discovery-watsonx-actions.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-conversational-search/discovery-watsonx-actions.json) onto the tab or click to select a file from your local system, then click "Upload", and "Uplaod and replace".
-4. within the Actions page, navigate to "Actions / Variables / Created by you". Set `discovery_project_id` and `watsonx_project_id` session variable
-    :::info
-    **Where to get credentials**
-    - **discovery_project_id**: within Watson Discovery: Upper left Hamburger icon -> Integrate and deploy -> API Information
-    - **watsonx_project_id**: 
-        - Go to [watsonX Platform](https://dataplatform.cloud.ibm.com/wx/home?context=wx)
-        - Projects (click on project)-> Manage -> General -> Details -> Project ID
-    :::
+3. Navigate to Upload/Download tab, upload the downloaded JSON file [discovery-watson-actions.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-conversational-search/discovery-watson<span style="color:#2c62f5;">x</span>-actions.json) onto the tab or click to select a file from your local system, then click "Upload", and "Uplaod and replace".
+4. Within the Actions page, navigate to "Actions / Variables / Created by you". Set `discovery_project_id` and `watsonx_project_id` session variable
+
+<div style="margin-left: 35px;">
+::: {.callout-note}
+**Where to get credentials**
+- **discovery_project_id**: within Watson Discovery: Upper left Hamburger icon -> Integrate and deploy -> API Information
+- **watson<span style="color:#2c62f5;">x</span>_project_id**: 
+    - Go to [watson<span style="color:#2c62f5;">x</span> Platform](https://dataplatform.cloud.ibm.com/wx/home?context=wx)
+    - Projects (click on project)-> Manage -> General -> Details -> Project ID
+:::
+</div>
 
 ##### No action matches Setup
 1. Navigate to "All items" -> "Set by assistant" -> "No action matches".

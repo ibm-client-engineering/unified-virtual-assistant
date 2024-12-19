@@ -4,7 +4,7 @@ format: html
 ---
 
 ::: {.callout-warning}
-Prerequisite: [Genesys Requirement](/Prepare/Requirements#genesys)
+Prerequisite: [Genesys Requirement](/environment.html#third-party-applications)
 :::
 
 ## 1. Setup Genesys Web Messenger
@@ -40,7 +40,7 @@ Note: The Genesys SDK does not work if launched from a local HTML file opened di
     i. The serviceDesk portion of the script enables the Genesys integration. Simply add those values to where you have the Watson Assistant Embed script written out. Shown Below.
 
 <div style="margin-left: 50px;">
-```sh
+```html
 <script>
         window.watsonAssistantChatOptions = {
         showRestartButton: true, //Optional

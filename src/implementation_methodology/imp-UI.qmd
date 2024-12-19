@@ -22,7 +22,7 @@ This doc will go through how to build an externally accessible webpage with the 
 5. Optional : Add ```showRestartButton: true``` after ```window.watsonAssistantChatOptions ={}``` to display web-chat restart button
 
 ### Create Cloud Object Storage (COS) Instance
-1. Go to the dedicated IBM Cloud Account "Resource" List [here](https://cloud.ibm.com/resources) and click "Create Resource +"
+1. Go to the dedicated IBM Cloud Account "Resource" List [here](https://cloud.ibm.com/resources){target="_blank"} and click "Create Resource +"
 2. Search and select "Object Storage"
 3. Select "IBM Cloud" as the infrastructure and the appropriate pricing plan
 4. Name the service and click "Create"
@@ -33,7 +33,7 @@ This doc will go through how to build an externally accessible webpage with the 
 3. Enter a valid bucket name and select the appropriate values for "Resiliency", "Location", "Storage class", "Object Versioning" and "Immutablity"
 4. Within the section "Advanced configurations (optional)" click the "Add +" for "Static website hosting"
 
-![](../images/COS_status_config.png)
+![](../../images/COS_status_config.png)
 
 5. Ensure the "Public access" toggle is switched to "On"
 6. Enter the name of the target html file which will be used to build the desired web app

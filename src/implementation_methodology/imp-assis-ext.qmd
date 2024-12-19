@@ -28,7 +28,7 @@ Two values will be needed to connect to a subordinate Assistant:
     * ```Draft/Live Environment ID``` (whichever is applicable)
 
 ### Create the Custom Extension
-1. Navigate and download the OpenAPI spec for another assistant bot [here](https://github.ibm.com/ibm-client-engineering/solution-watson<span style="color:#2c62f5;">x</span>-orchestrate/tree/main/assets/openAPI_specs/otherBot)
+1. Navigate and download the OpenAPI spec for another assistant bot [here](https://github.com/ibm-client-engineering/unified-virtual-assistant/blob/main/assets/OpenAPI_Specs/Subordinate%20Bot/assistantBot_openapi_spec.json){target="_blank"}
 2. Modify the server url at line 10 with the ```service instance url``` from step 3 [here](#identify-openapi-spec-values)
 3. Navigate to the integrations section within the Assistant Builder sidebar
 4. Select "Build custom extension" and name the extension
@@ -52,9 +52,10 @@ Two api calls are needed to successfully integrate this extension:
 3. Select the Operation as "Create Session"
 4. Set the Parameters to:
     * **environment_id**: Environment ID from step 3 of [Identify OpenAPI spec values](#identify-openapi-spec-values)
-    :::tip
-    Make sure the "environment_id" variable type is 'text'
-    :::
+
+::: {.callout-tip .indent}
+Make sure the "environment_id" variable type is 'text'
+:::
 
 #### **Make a dialog request**
 1. Create a new step after the action with the "create a session" extension  

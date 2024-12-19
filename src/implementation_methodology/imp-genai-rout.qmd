@@ -3,7 +3,6 @@ title: "GenAI Driven Routing"
 format: html
 ---
 
-
 ## Overview
 This documentation walks through how to leverage generative AI to route a user's request to the most appropriate action/workflow or perform RAG on the most relevant data corpuses. This generative AI routing can be carried out by one of two methods:
 
@@ -13,11 +12,11 @@ This documentation walks through how to leverage generative AI to route a user's
 ## watson<span style="color:#2c62f5;">x</span>.ai
 #### **Create watson<span style="color:#2c62f5;">x</span>.ai custom extension**
 1.  In your assistant, navigate to Integrations page, click "Build custom extension" -> click "Next" -> Input Extension name `watson<span style="color:#2c62f5;">x</span>` -> click "Next" .
-2. download json file: [watson<span style="color:#2c62f5;">x</span>-openapi.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-watson<span style="color:#2c62f5;">x</span>/watson<span style="color:#2c62f5;">x</span>-openapi.json) and import file to WA
+2. download json file: [watsonx-openapi.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-watsonx/watsonx-openapi.json){target="_blank"} and import file to assistant.
 3. click "Next" -> click "Finish"
 4. Lower Right corner of the watson<span style="color:#2c62f5;">x</span> extension, click "Add" -> click "Add" -> click "Next"
 5. In Authentication page, in the Authentication type dropdown, select "OAuth 2.0"
-    1. For Apikey, create and copy a new API key from [API key](https://cloud.ibm.com/iam/apikeys)
+    1. For Apikey, create and copy a new API key from [API key](https://cloud.ibm.com/iam/apikeys){target="_blank"}
 6. Click "Next", click "Finish", click "Close"
 
 #### **Action configuration**
@@ -26,4 +25,4 @@ This documentation walks through how to leverage generative AI to route a user's
 
 
 ## watson<span style="color:#2c62f5;">x</span>.gov
-Follow the instructions from [here](/Implementation/watsonx-gov.html)
+Follow the instructions from [here](./watsonx-gov.html)

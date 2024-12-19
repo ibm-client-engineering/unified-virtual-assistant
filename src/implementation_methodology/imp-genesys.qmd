@@ -4,13 +4,13 @@ format: html
 ---
 
 ::: {.callout-warning}
-Prerequisite: [Genesys Requirement](/environment.html#third-party-applications)
+Prerequisite: [Genesys Requirement](../solution_overview/environment.html#third-party-applications)
 :::
 
 ## 1. Setup Genesys Web Messenger
 <div style={{ borderBottom: '1px solid #000', marginTop: '20px', marginBottom: '20px' }}></div>
-1. Sign up for a free trial of Genesys Cloud CX at [this link.](https://www.genesys.com/campaign/try-genesys-cloud-for-free) This trial will last for 14 days.
-2. Once Genesys Cloud CX is running, configure the web messenger following [these steps:](https://help.mypurecloud.com/articles/configure-messenger/)
+1. Sign up for a free trial of Genesys Cloud CX at [this link.](https://www.genesys.com/campaign/try-genesys-cloud-for-free){target="_blank"} This trial will last for 14 days.
+2. Once Genesys Cloud CX is running, configure the web messenger following [these steps:](https://help.mypurecloud.com/articles/configure-messenger/){target="_blank"}
     1. Click **Admin**.
     2. Under **Message**, click **Messenger Configurations**.
     3. Enter a name and description for your web messenger.
@@ -29,14 +29,14 @@ Prerequisite: [Genesys Requirement](/environment.html#third-party-applications)
 ## 2. Connect Genesys to Watson Assistant
 <div style={{ borderBottom: '1px solid #000', marginTop: '20px', marginBottom: '20px' }}></div>
 ::: {.callout-warning}
-Prerequisite: [Webchat Interface](../01-Webchat%20Interface/01-Static-Webpage.mdx)
+Prerequisite: [Webchat Interface](../solution_overview/environment.html)
 
-Note: The Genesys SDK does not work if launched from a local HTML file opened directly in your browser (using file://). It needs to be served from a server (which can be localhost) over HTTP. You can use [http-server](https://www.npmjs.com/package/http-server) if you need a simple local server for testing purposes.
+Note: The Genesys SDK does not work if launched from a local HTML file opened directly in your browser (using file://). It needs to be served from a server (which can be localhost) over HTTP. You can use [http-server](https://www.npmjs.com/package/http-server){target="_blank"} if you need a simple local server for testing purposes.
 :::
 
 ### Congfigure HTML File for Genesys
 1. Get the **script URL, environment, and deployment ID** values from the **Mesenger Deployments** page on Genesys and have them ready to add to the Watson Assistant Embed Script.
-2. Follow the sample script which shows how to enable the Genesys integration at [this link.](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-genesys#enabling)
+2. Follow the sample script which shows how to enable the Genesys integration at [this link.](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-genesys#enabling){target="_blank"}
     i. The serviceDesk portion of the script enables the Genesys integration. Simply add those values to where you have the Watson Assistant Embed script written out. Shown Below.
 
 <div style="margin-left: 50px;">
@@ -83,4 +83,4 @@ Note: The Genesys SDK does not work if launched from a local HTML file opened di
 
 ## References
 <div style={{ borderBottom: '1px solid #000', marginTop: '20px', marginBottom: '20px' }}></div>
-- [Integrating Watson Assistant with Genesys](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-deploy-genesys)
+- [Integrating Watson Assistant with Genesys](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-deploy-genesys){target="_blank"}

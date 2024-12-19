@@ -1,9 +1,9 @@
---
-title: "watson Discovery"
+---
+title: watson Discovery
 format: html
 ---
 ::: {.callout-warning}
-Prerequisite: [Watson Disovery Software Requirement](/environment.html#rag-document-search)
+Prerequisite: [Watson Disovery Software Requirement](../solution_overview/environment.html#rag-document-search)
 :::
 
 This build consists of three main components:

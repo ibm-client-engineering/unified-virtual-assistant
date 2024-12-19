@@ -2,3 +2,64 @@
 title: Simulation
 format: html
 ---
+
+This section will go through how to simulate User and Access Management for an Assistant. The steps consist of: 
+
+1. Create a variable assigned to an expression of a dictionary within the assistant platfrom and include the necessary users and their appropriate metadata within the dictionary.
+2. Modify the "Greet Customer" action within the assistant
+
+### Variable Creation
+1. Within the "Actions" section of the Assistant navigate to the "Created by you" variables and select "New Variable+"
+2. Create a variable name and set variable type to "Any"
+3. Update the "initial value":
+    - Toggle the "Use Expression" to on
+    - Create dictionary value:
+    
+<div style="margin-left: 40px;">
+ex)
+```default
+[
+    {
+        "name":"martha",
+        "password":"MARTHA",
+        "access":"Admin",
+        "role":"Manager"
+    },
+    {
+        "name":"robert",
+        "password":"ROBERT",
+        "access":"Employee",
+        "role":"Employee"
+    }
+]
+```
+</div>
+4. Click "Save"
+
+### Modify "Greet Customer" action
+- Within the "Actions" section of the Assistant, navigate to the "Greet Customer" action
+
+#### **Authenticate User**
+1. Check valid user by setting a new boolean variable to an expression value of:
+
+    ``` !(( [users variable from "Variable Creation" step above]).filter("user", "user.name ==  [current_user value]")).isEmpty()) ```
+
+    Example)
+    
+    ![Valid User Example](../images/valid_user_example.png)
+
+
+2. Ensure valid password by creating conditional statement with expression value of :
+
+    ``` [current_password value] == (users.filter("user", "user.name == [current_user value]"))[0].password  ```
+
+    Example)
+
+   ![Valid Password Example](../images/valid_pass_example.png)
+
+#### **Change User's Password**
+1. Set a new password for the current user with an expression like:
+    ```((( ${users}.filter(\"user\", \"user.name ==  ${current_user} \"))[0]).password) = ${new_pass}```
+2. Validate changed password with:
+    ```((( ${users}.filter(\"user\", \"user.name ==  ${current_user} \"))[0]).password) ```
+

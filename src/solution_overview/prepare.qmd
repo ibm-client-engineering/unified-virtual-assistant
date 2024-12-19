@@ -19,7 +19,7 @@ appropriate channels and/or 3rd-party applications while leveraging generative A
 | Governance   | watson<span style="color:#2c62f5;">x</span>.gov |
 | Subordinate Bot Integration   | watson<span style="color:#2c62f5;">x</span> Orchestrate Assistant |
 
-![](./images/component_arch.png)
+![](../../images/component_arch.png)
 
 # Solution Components
 ## **Web-Chat Interface**

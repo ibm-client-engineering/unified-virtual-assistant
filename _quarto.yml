@@ -34,47 +34,47 @@ website:
         - section: Solution Overview
           contents:
             - text: Prepare
-              href: prepare.qmd
+              href: src/solution_overview/prepare.qmd
             - text: Environment
-              href: environment.qmd
+              href: src/solution_overview/environment.qmd
         - section: Implementation Methodology
           contents:
             - text: User Interface
-              href: ./Implementation/imp-UI.qmd
+              href: src/implementation_methodology/imp-UI.qmd
             - text: Generative-AI Driven Routing
-              href: ./Implementation/imp-genai-rout.qmd
+              href: src/implementation_methodology/imp-genai-rout.qmd
             - section: RAG Document Search
               contents:
                 - text: watsonx Discovery
-                  href: ./Implementation/watsonx-dis.qmd
+                  href: src/implementation_methodology/watsonx-dis.qmd
                 - text: watson Discovery
-                  href: ./Implementation/watson-dis.qmd
+                  href: src/implementation_methodology/watson-dis.qmd
             - section: Governance
               contents:
                 - text: watsonx Governance
-                  href: ./Implementation/watsonx-gov.qmd
+                  href: src/implementation_methodology/watsonx-gov.qmd
                 - text: RAG Attribution Links
-                  href: ./Implementation/rag-attr-links.qmd
+                  href: src/implementation_methodology/rag-attr-links.qmd
             - section: Third-Party Applications
               contents:
                 - text: ServiceNow
-                  href: ./Implementation/imp-snow.qmd
+                  href: src/implementation_methodology/imp-snow.qmd
                 - text: Workday
-                  href: ./Implementation/imp-workday.qmd
+                  href: src/implementation_methodology/imp-workday.qmd
                 - text: Genesys
-                  href: ./Implementation/imp-genesys.qmd
+                  href: src/implementation_methodology/imp-genesys.qmd
             - section: Subordinate Bots
               contents:
                 - text: Assistant Custom Extension
-                  href: ./Implementation/imp-assis-ext.qmd
+                  href: src/implementation_methodology/imp-assis-ext.qmd
             - section: Identity and Access Management
               contents:
                 - text: IBM Security Verify
-                  href: ./Implementation/imp-verify-assis.qmd
+                  href: src/implementation_methodology/imp-verify-assis.qmd
                 - text: Simulation
-                  href: ./Implementation/imp-sim.qmd
+                  href: src/implementation_methodology/imp-sim.qmd
         - text: Key Takeaways
-          href: key-takeaway.qmd
+          href: src/key-takeaway.qmd
 
   page-footer: 
     background: black
@@ -82,7 +82,7 @@ website:
         <div class ="listitem"><a href="https://ibm.com" rel="noopener noreferrer" class="footerLogo"><img src="https://www.ibm.com/brand/experience-guides/developer/8f4e3cc2b5d52354a6d43c8edba1e3c9/02_8-bar-reverse.svg" alt="IBM Logo" class="footer__logo themedComponent_node_modules-@docusaurus-theme-common-lib-components-ThemedComponent-styles-module themedComponent--light_node_modules-@docusaurus-theme-common-lib-components-ThemedComponent-styles-module" width="250" height="250"></a></div> 
 format:
   html:
-    theme: custom.scss
+    theme: src/custom.scss
     toc: true
     toc-location: right
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Key Takeaways – Unified Virtual Assistant</title>
+<title>IBM Security Verify – Unified Virtual Assistant</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./Implementation/imp-sim.html" rel="prev">
-<link href="./images/bee.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c5d66fdff0ab8b4959478e7a18c370f1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../src/implementation_methodology/imp-sim.html" rel="next">
+<link href="../../src/implementation_methodology/imp-assis-ext.html" rel="prev">
+<link href="../../images/bee.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c5d66fdff0ab8b4959478e7a18c370f1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,10 +112,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/IBMlogo.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/IBMlogo.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Unified Virtual Assistant</span>
     </a>
   </div>
@@ -123,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./key-takeaway.html">Key Takeaways</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-UI.html">Implementation Methodology</a></li><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-verify-assis.html">Identity and Access Management</a></li><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-verify-assis.html">IBM Security Verify</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -137,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Definition</span></a>
   </div>
 </li>
@@ -152,13 +187,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./prepare.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/solution_overview/prepare.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Prepare</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./environment.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/solution_overview/environment.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Environment</span></a>
   </div>
 </li>
@@ -166,22 +201,22 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Implementation Methodology</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Implementation/imp-UI.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-UI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">User Interface</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Implementation/imp-genai-rout.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-genai-rout.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Generative-AI Driven Routing</span></a>
   </div>
 </li>
@@ -196,13 +231,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Implementation/watsonx-dis.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/watsonx-dis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">watsonx Discovery</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Implementation/watson-dis.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/watson-dis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">watson Discovery</span></a>
   </div>
 </li>
@@ -219,13 +254,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Implementation/watsonx-gov.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/watsonx-gov.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">watsonx Governance</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Implementation/rag-attr-links.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/rag-attr-links.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">RAG Attribution Links</span></a>
   </div>
 </li>
@@ -242,19 +277,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Implementation/imp-snow.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-snow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ServiceNow</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Implementation/imp-workday.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-workday.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Workday</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Implementation/imp-genesys.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-genesys.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Genesys</span></a>
   </div>
 </li>
@@ -271,7 +306,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Implementation/imp-assis-ext.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-assis-ext.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assistant Custom Extension</span></a>
   </div>
 </li>
@@ -279,22 +314,22 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">Identity and Access Management</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Implementation/imp-verify-assis.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-verify-assis.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">IBM Security Verify</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Implementation/imp-sim.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-sim.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Simulation</span></a>
   </div>
 </li>
@@ -304,7 +339,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./key-takeaway.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../src/key-takeaway.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Key Takeaways</span></a>
   </div>
 </li>
@@ -318,12 +353,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#best-practices" id="toc-best-practices" class="nav-link active" data-scroll-target="#best-practices">Best Practices</a>
+  <li><a href="#setting-up-ibm-security-verify" id="toc-setting-up-ibm-security-verify" class="nav-link active" data-scroll-target="#setting-up-ibm-security-verify">Setting up IBM Security Verify</a>
   <ul class="collapse">
-  <li><a href="#leverage-llms-as-routing-tools" id="toc-leverage-llms-as-routing-tools" class="nav-link" data-scroll-target="#leverage-llms-as-routing-tools"><strong>Leverage LLMs as routing tools</strong></a></li>
-  <li><a href="#focused-retrieval-augmented-generation-rag" id="toc-focused-retrieval-augmented-generation-rag" class="nav-link" data-scroll-target="#focused-retrieval-augmented-generation-rag"><strong>Focused Retrieval-Augmented Generation (RAG)</strong></a></li>
-  <li><a href="#govern-genai-driven-workflows" id="toc-govern-genai-driven-workflows" class="nav-link" data-scroll-target="#govern-genai-driven-workflows"><strong>Govern GenAI driven Workflows</strong></a></li>
-  <li><a href="#securing-the-chatbot-with-identity-and-access-management-iam" id="toc-securing-the-chatbot-with-identity-and-access-management-iam" class="nav-link" data-scroll-target="#securing-the-chatbot-with-identity-and-access-management-iam"><strong>Securing the Chatbot with Identity and Access Management (IAM)</strong></a></li>
+  <li><a href="#create-users-and-groups" id="toc-create-users-and-groups" class="nav-link" data-scroll-target="#create-users-and-groups">Create Users and Groups</a></li>
+  <li><a href="#create-api-client" id="toc-create-api-client" class="nav-link" data-scroll-target="#create-api-client">Create API Client</a></li>
+  </ul></li>
+  <li><a href="#assistant-custom-extension" id="toc-assistant-custom-extension" class="nav-link" data-scroll-target="#assistant-custom-extension">Assistant Custom Extension</a>
+  <ul class="collapse">
+  <li><a href="#identify-openapi-spec-values" id="toc-identify-openapi-spec-values" class="nav-link" data-scroll-target="#identify-openapi-spec-values">Identify OpenAPI spec values</a></li>
+  <li><a href="#create-the-custom-extension" id="toc-create-the-custom-extension" class="nav-link" data-scroll-target="#create-the-custom-extension">Create the Custom Extension</a></li>
+  <li><a href="#action-integration" id="toc-action-integration" class="nav-link" data-scroll-target="#action-integration">Action Integration</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -331,9 +370,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-UI.html">Implementation Methodology</a></li><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-verify-assis.html">Identity and Access Management</a></li><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-verify-assis.html">IBM Security Verify</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Key Takeaways</h1>
+<h1 class="title">IBM Security Verify</h1>
 </div>
 
 
@@ -350,26 +389,168 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The Unified Virtual Assistant solution leverages watson<span style="color:#2c62f5;">x</span> Orchestrate to govern LLM-driven workflows and create a dynamic, unified chatbot experience. By integrating this orchestration layer, we can effectively manage interactions, automate decision-making processes, and route users to the appropriate workflows. This approach not only streamlines the user experience but also ensures that AI-driven actions are consistently monitored and optimized for performance, compliance, and security. The combination of LLMs with watson<span style="color:#2c62f5;">x</span> Orchestrate provides an adaptable and scalable chatbot solution capable of evolving with the needs of the business.</p>
-<section id="best-practices" class="level2">
-<h2 class="anchored" data-anchor-id="best-practices">Best Practices</h2>
-<section id="leverage-llms-as-routing-tools" class="level3">
-<h3 class="anchored" data-anchor-id="leverage-llms-as-routing-tools"><strong>Leverage LLMs as routing tools</strong></h3>
-<p>Large Language Models (LLMs) serve as powerful tools for intelligently routing users to defined workflows, including those that involve third-party applications like ServiceNow or Workday. By configuring the chatbot to leverage the strengths of LLMs, we can enhance the user experience, ensuring that interactions are seamlessly guided to the appropriate business processes, tasks, or even mediated conversations with other chatbots. This creates a dynamic and personalized response system that integrates with a variety of enterprise tools, all based on user inputs.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Prerequisite: <a href="../../environment.html#identity-and-access-management">IBM Security Verify Software Requirement</a></p>
+</div>
+</div>
+<p>This section will go over how to setup IBM Security Verify and integrate it with Watsonx Assistant to verify users, authenticate using a one time password (OTP) , and reset passwords.</p>
+<section id="setting-up-ibm-security-verify" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-ibm-security-verify">Setting up IBM Security Verify</h2>
+<div style="{{" borderbottom:="" '1px="" solid="" #000',="" margintop:="" '20px',="" marginbottom:="" '20px'="" }}=""></div>
+<section id="create-users-and-groups" class="level3">
+<h3 class="anchored" data-anchor-id="create-users-and-groups">Create Users and Groups</h3>
+<ol type="1">
+<li>Login into the dedicated IBM Security Verify instance</li>
+<li>Click on the user profile in the top right corner and select “Switch to admin”</li>
+<li>In the sidebar, navigate to “Directory” -&gt; “Users and Groups”</li>
+<li>Select “Add User+” and fill out the necessary fields. :::note - Provide an email you have access to for each added user. - Make sure to “View extended profile” to fill out the other fields if applicable :::</li>
+<li>Navigate to the “Groups” tab and select “Add Group” and fill out the required fields and assign the appropriate users.</li>
+</ol>
 </section>
-<section id="focused-retrieval-augmented-generation-rag" class="level3">
-<h3 class="anchored" data-anchor-id="focused-retrieval-augmented-generation-rag"><strong>Focused Retrieval-Augmented Generation (RAG)</strong></h3>
-<p>To ensure that the chatbot only retrieves and processes relevant information, we implemented an AI-driven approach for RAG that identifies the right data indexes. This allows us to narrow the scope of retrieval to what’s most pertinent, making the interaction more efficient and contextually relevant.</p>
+<section id="create-api-client" class="level3">
+<h3 class="anchored" data-anchor-id="create-api-client">Create API Client</h3>
+<ol type="1">
+<li>Login into the dedicated IBM Security Verify instance</li>
+<li>Click on the user profile in the top right corner and select “Switch to admin”</li>
+<li>In the sidebar, navigate to “Security” -&gt; “API Access”</li>
+<li>Select “Add API Client +”</li>
+<li>Fill out the necessary fields and save the “Client ID” and “Client Secret” values for later reference</li>
+</ol>
 </section>
-<section id="govern-genai-driven-workflows" class="level3">
-<h3 class="anchored" data-anchor-id="govern-genai-driven-workflows"><strong>Govern GenAI driven Workflows</strong></h3>
-<p>Ensuring governance over AI-driven workflows is critical to maintaining performance and compliance. With watson<span style="color:#2c62f5;">x</span>.governance, we established mechanisms to monitor the lifecycle of LLMs used within the chatbot, tracking key metrics such as bias, accuracy, drift, and overall model health. This ensures transparency and trustworthiness in all chatbot operations.</p>
 </section>
-<section id="securing-the-chatbot-with-identity-and-access-management-iam" class="level3">
-<h3 class="anchored" data-anchor-id="securing-the-chatbot-with-identity-and-access-management-iam"><strong>Securing the Chatbot with Identity and Access Management (IAM)</strong></h3>
-<p>Security is paramount in a unified chatbot solution. By implementing IAM protocols and leveraging methods like two-factor authentication (2FA), we ensure that only authorized users can access sensitive workflows. This approach protects user data and ensures that interactions are secure and compliant with organizational policies.</p>
+<section id="assistant-custom-extension" class="level2">
+<h2 class="anchored" data-anchor-id="assistant-custom-extension">Assistant Custom Extension</h2>
+<p>Before jumping to the custom watsonx assistant we created for IBM Security Verify, it would be prudent to explore the included postman collection for the Verify API. Because of the way that watsonx assistant handles json arrays (or to be more specific, doesn’t handle json arrays), you will need to manually set some of the inputs in case they are arrays. Making API calls using the postman collection makes this process quite a bit easier.</p>
+<section id="identify-openapi-spec-values" class="level3">
+<h3 class="anchored" data-anchor-id="identify-openapi-spec-values">Identify OpenAPI spec values</h3>
+<p>Three values will be needed to connect to IBM Security Verify:</p>
+<ul>
+<li>verify instance url</li>
+<li>client_id</li>
+<li>client_secret</li>
+</ul>
+<p>The client_id and client_secret will need to be for a corresponding admin account. TODO: Add instructions for getting these values</p>
+</section>
+<section id="create-the-custom-extension" class="level3">
+<h3 class="anchored" data-anchor-id="create-the-custom-extension">Create the Custom Extension</h3>
+<ol type="1">
+<li>Navigate and download the OpenAPI spec for another assistant bot <a href="https://github.ibm.com/ibm-client-engineering/solution-watsonx-orchestrate/tree/main/assets/openAPI_specs/IBM%20Verify/Verify_Spec_V3.json">here</a></li>
+<li>Modify the server url at line 10 with the <code>service instance url</code> from step 3 <a href="#identify-openapi-spec-values">here</a></li>
+<li>Navigate to the integrations section within the Assistant Builder sidebar</li>
+<li>Select “Build custom extension” and name the extension</li>
+<li>Upload the OpenApi spec from step 1 and press “Finish”</li>
+<li>Select “Add+” within the newly configured extension</li>
+<li>Select “Next” and update values:
+<ul>
+<li>Authentication type: Oauth 2.0</li>
+<li>Client ID: client_id</li>
+<li>Client Secret: client_secret</li>
+</ul></li>
+</ol>
+</section>
+<section id="action-integration" class="level3">
+<h3 class="anchored" data-anchor-id="action-integration">Action Integration</h3>
+<p>This extension has 3 features with 4 api calls total</p>
+<ol type="1">
+<li><a href="#verify-a-username-and-password">Verify username and password</a></li>
+<li><a href="#authenticate-using-a-one-time-password-(otp)">Authenticate using a OTP</a> (has two api calls)</li>
+<li><a href="#reset-password">Reset Password</a></li>
+</ol>
+<section id="verify-a-username-and-password" class="level4">
+<h4 class="anchored" data-anchor-id="verify-a-username-and-password"><strong>Verify a Username and Password</strong></h4>
+<ol type="1">
+<li>Within the appropriate action, create a step and under “And then” select “Use an extension”</li>
+<li>Select the appropriate subordinate bot extension made <a href="#create-the-custom-extension">here</a></li>
+<li>Select the Operation as “verify user and pass”</li>
+<li>Set the Parameters to:
+<ul>
+<li><strong>returnUserRecord</strong>: <em>true</em> or <em>false</em> depending on if you want the user data to be returned</li>
+<li><strong>Accept</strong>: */* see the note below</li>
+<li><strong>schemas</strong>: <em>[“urn:ietf:params:scim:schemas:ibm:core:2.0:AuthenticateUser”]</em> see the note below</li>
+<li><strong>userName</strong>: The username for the user logging in</li>
+<li><strong>password</strong>: The password for the user logging in</li>
+</ul></li>
+</ol>
+</section>
+<section id="authenticate-using-a-one-time-password-otp" class="level4">
+<h4 class="anchored" data-anchor-id="authenticate-using-a-one-time-password-otp"><strong>Authenticate using a One Time Password (OTP)</strong></h4>
+<ol type="1">
+<li>Create a new step after the step with the “create a session” extension (either in the same action or another)</li>
+<li>Under the “And then” Section, select “Use an extension”</li>
+<li>Select the appropriate subordinate bot extension made <a href="#assistant-custom-extension">here</a></li>
+<li>Select the Operation as “Create and email otp transaction”</li>
+<li>Set the Parameters to:
+<ul>
+<li><strong>correlation</strong>: any sequence of 4 numbers (these will appear to the verifying user as a sequence before a dash, followed by the actual verification code)</li>
+<li><strong>emailAddress</strong>: The email address to send the verification code to. If <strong>returnUserRecord</strong> is set to true above, the response json will include a list of all of the user’s associated emails.</li>
+</ul></li>
+<li>Add a step and prompt the user to input the verification code they recieved less correlation.</li>
+<li>Add another extension call in a further step using the “Attempt email OTP verification” Operation</li>
+<li>Set the Parameters to:
+<ul>
+<li><strong>trxnid</strong>: body.id from the extension call in step 3/4</li>
+<li><strong>otp</strong>: The user input</li>
+</ul></li>
+</ol>
+</section>
+<section id="reset-password" class="level4">
+<h4 class="anchored" data-anchor-id="reset-password"><strong>Reset Password</strong></h4>
+<ol type="1">
+<li>Create a new step after the step with the “create a session” extension (either in the same action or another)</li>
+<li>Under the “And then” Section, select “Use an extension”</li>
+<li>Select the appropriate subordinate bot extension made <a href="#assistant-custom-extension">here</a></li>
+<li>Select the Operation as “Change user’s password”</li>
+<li>Set the Parameters to:
+<ul>
+<li><strong>userid</strong>: The user’s verify userid, if <strong>returnUserRecord</strong> is set to true above, the response json will include the user’s userid.</li>
+<li><strong>content-type</strong>: <em>application/scim+json</em> see this note</li>
+<li><strong>Accept</strong>: */* see the note below</li>
+<li><strong>schemas</strong>: <em>[“urn:ietf:params:scim:api:messages:2.0:PatchOp”]</em> see the note below</li>
+<li><strong>operations</strong>:</li>
+</ul></li>
+</ol>
+<div style="margin-left: 65px;">
+<div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>[{</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>"op":"replace",</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>"value": {</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    "password": "new_pass", </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    "urn:ietf:params:scim:schemas:extension:ibm:2.0:Notification":{</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        "notifyType":"EMAIL",</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        "notifyPassword": true}</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p>replace new_pass with the new password you would like, and if you would like to disable email notifications set “notifyPassword” to false. For clarity on why it neeeds to be this way, see the note below</p></li>
+<li><p>replace new_pass with the new password you would like, and if you would like to disable email notifications set “notifyPassword” to false. For clarity on why it neeeds to be this way, see the note below</p></li>
+</ul>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+A note on schemas and arrays
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It may have been observed that certain inputs required for these extensions are unconventional. The primary objective of Watsonx Assistant is to simplify complex technical processes, allowing users to focus on designing the chatbot flows they need. While this approach is effective in most scenarios, challenges arise when users need to integrate custom extensions involving more intricate request or response data formats.</p>
+<p>Specifically, any input involving a JSON array must be manually specified as an expression. This is the case for the schema inputs mentioned earlier, as well as the operations input required for the reset password action. Furthermore, Watsonx Assistant lacks a native mechanism for accessing data within JSON arrays. Users are required to identify the step at which a JSON array is received and subsequently write a custom expression to extract the array values.</p>
+<p>Additionally, for the Accept and Content-Type fields, IBM Security Verify necessitates these values to be configured precisely as specified. Failure to do so results in the integration not functioning as intended.</p>
+</div>
+</div>
 
 
+</section>
 </section>
 </section>
 
@@ -793,11 +974,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Implementation/imp-sim.html" class="pagination-link" aria-label="Simulation">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Simulation</span>
+      <a href="../../src/implementation_methodology/imp-assis-ext.html" class="pagination-link" aria-label="Assistant Custom Extension">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Assistant Custom Extension</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../../src/implementation_methodology/imp-sim.html" class="pagination-link" aria-label="Simulation">
+        <span class="nav-page-text">Simulation</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

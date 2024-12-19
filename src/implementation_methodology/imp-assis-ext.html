@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>User Interface – Unified Virtual Assistant</title>
+<title>Assistant Custom Extension – Unified Virtual Assistant</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../Implementation/imp-genai-rout.html" rel="next">
-<link href="../environment.html" rel="prev">
-<link href="../images/bee.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c5d66fdff0ab8b4959478e7a18c370f1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../src/implementation_methodology/imp-verify-assis.html" rel="next">
+<link href="../../src/implementation_methodology/imp-genesys.html" rel="prev">
+<link href="../../images/bee.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c5d66fdff0ab8b4959478e7a18c370f1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,10 +78,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../images/IBMlogo.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/IBMlogo.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Unified Virtual Assistant</span>
     </a>
   </div>
@@ -124,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Implementation/imp-UI.html">Implementation Methodology</a></li><li class="breadcrumb-item"><a href="../Implementation/imp-UI.html">User Interface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-UI.html">Implementation Methodology</a></li><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-assis-ext.html">Subordinate Bots</a></li><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-assis-ext.html">Assistant Custom Extension</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Definition</span></a>
   </div>
 </li>
@@ -153,13 +153,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../prepare.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/solution_overview/prepare.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Prepare</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../environment.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/solution_overview/environment.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Environment</span></a>
   </div>
 </li>
@@ -176,13 +176,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-UI.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../src/implementation_methodology/imp-UI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">User Interface</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-genai-rout.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-genai-rout.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Generative-AI Driven Routing</span></a>
   </div>
 </li>
@@ -197,13 +197,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/watsonx-dis.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/watsonx-dis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">watsonx Discovery</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/watson-dis.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/watson-dis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">watson Discovery</span></a>
   </div>
 </li>
@@ -220,13 +220,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/watsonx-gov.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/watsonx-gov.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">watsonx Governance</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/rag-attr-links.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/rag-attr-links.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">RAG Attribution Links</span></a>
   </div>
 </li>
@@ -243,19 +243,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-snow.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-snow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ServiceNow</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-workday.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-workday.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Workday</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-genesys.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-genesys.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Genesys</span></a>
   </div>
 </li>
@@ -263,16 +263,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Subordinate Bots</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-assis-ext.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-assis-ext.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Assistant Custom Extension</span></a>
   </div>
 </li>
@@ -289,13 +289,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-verify-assis.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-verify-assis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">IBM Security Verify</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-sim.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-sim.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Simulation</span></a>
   </div>
 </li>
@@ -305,7 +305,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../key-takeaway.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/key-takeaway.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Key Takeaways</span></a>
   </div>
 </li>
@@ -319,13 +319,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#static-webpage-build" id="toc-static-webpage-build" class="nav-link" data-scroll-target="#static-webpage-build">Static-Webpage Build</a>
+  <li><a href="#assistant-custom-extension" id="toc-assistant-custom-extension" class="nav-link active" data-scroll-target="#assistant-custom-extension">Assistant Custom Extension</a>
   <ul class="collapse">
-  <li><a href="#embed-assistant-webchat-into-html-file" id="toc-embed-assistant-webchat-into-html-file" class="nav-link" data-scroll-target="#embed-assistant-webchat-into-html-file">Embed Assistant Webchat into HTML file</a></li>
-  <li><a href="#create-cloud-object-storage-cos-instance" id="toc-create-cloud-object-storage-cos-instance" class="nav-link" data-scroll-target="#create-cloud-object-storage-cos-instance">Create Cloud Object Storage (COS) Instance</a></li>
-  <li><a href="#create-a-custom-cos-bucket" id="toc-create-a-custom-cos-bucket" class="nav-link" data-scroll-target="#create-a-custom-cos-bucket">Create a Custom COS Bucket</a></li>
-  <li><a href="#upload-html-file" id="toc-upload-html-file" class="nav-link" data-scroll-target="#upload-html-file"><strong>Upload HTML file</strong></a></li>
+  <li><a href="#generate-api-key" id="toc-generate-api-key" class="nav-link" data-scroll-target="#generate-api-key">Generate API Key</a></li>
+  <li><a href="#identify-openapi-spec-values" id="toc-identify-openapi-spec-values" class="nav-link" data-scroll-target="#identify-openapi-spec-values">Identify OpenAPI spec values</a></li>
+  <li><a href="#create-the-custom-extension" id="toc-create-the-custom-extension" class="nav-link" data-scroll-target="#create-the-custom-extension">Create the Custom Extension</a></li>
+  <li><a href="#action-integration" id="toc-action-integration" class="nav-link" data-scroll-target="#action-integration">Action Integration</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -333,9 +332,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Implementation/imp-UI.html">Implementation Methodology</a></li><li class="breadcrumb-item"><a href="../Implementation/imp-UI.html">User Interface</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-UI.html">Implementation Methodology</a></li><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-assis-ext.html">Subordinate Bots</a></li><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-assis-ext.html">Assistant Custom Extension</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">User Interface</h1>
+<h1 class="title">Assistant Custom Extension</h1>
 </div>
 
 
@@ -352,59 +351,105 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This document will go through how to build the user interface for a Unified Virtual Assistant. The method that was leveraged to build the user interface was leveraging a static-webpage with Cloud Object Storage.</p>
+<p>This section will describe how we were able to query one watson<span style="color:#2c62f5;">x</span> assistant from another using the watson<span style="color:#2c62f5;">x</span> assistant API. In addition, this guide will also include information about how to update session variables on the subordinate bot from the calling bot. Ways to integrate with a subordinate watson<span style="color:#2c62f5;">x</span> assisant bot:</p>
+<ol type="1">
+<li><a href="#assistant-custom-extension">Assistant Custom Extension</a></li>
+</ol>
+<section id="assistant-custom-extension" class="level2">
+<h2 class="anchored" data-anchor-id="assistant-custom-extension">Assistant Custom Extension</h2>
+<div style="{{" borderbottom:="" '1px="" solid="" #000',="" margintop:="" '20px',="" marginbottom:="" '20px'="" }}=""></div>
+<section id="generate-api-key" class="level3">
+<h3 class="anchored" data-anchor-id="generate-api-key">Generate API Key</h3>
+<ol type="1">
+<li>Navigate to the subordinate bot instance</li>
+<li>In the sidebar, navigate to “Assistant Settings”</li>
+<li>Under “Assistant IDs and API details”, select “Generate API key” and save it for later</li>
+</ol>
 </section>
-<section id="static-webpage-build" class="level2">
-<h2 class="anchored" data-anchor-id="static-webpage-build">Static-Webpage Build</h2>
-<p>This doc will go through how to build an externally accessible webpage with the embedded assitant webchat for public access. This webpage is created using a static html script which is hosted within a Cloud Object Storage Bucket.</p>
-<p><strong>Software Requirements:</strong></p>
+<section id="identify-openapi-spec-values" class="level3">
+<h3 class="anchored" data-anchor-id="identify-openapi-spec-values">Identify OpenAPI spec values</h3>
+<p>Two values will be needed to connect to a subordinate Assistant: * service instance url * environmentID</p>
+<ol type="1">
+<li>Within the Assistant Builder’s sidebar, navigate to the “Assistant Settings”</li>
+<li>Under “Assistant IDs and API details”, select “View details”</li>
+<li>Save/copy the values for:
 <ul>
-<li>IBM Cloud Object Storage - Lite</li>
-<li>watson<span style="color:#2c62f5;">x</span> Orchestrate or watson<span style="color:#2c62f5;">x</span> Assistant</li>
-</ul>
-<section id="embed-assistant-webchat-into-html-file" class="level3">
-<h3 class="anchored" data-anchor-id="embed-assistant-webchat-into-html-file">Embed Assistant Webchat into HTML file</h3>
-<ol type="1">
-<li>Within the Assitant Builder’s sidebar, navigate to the “Integrations” section</li>
-<li>Under the “Essential channels” section select “Open” within the “Webchat” channel</li>
-<li>Select the appropriate environment and navigate to the “Embed” tab</li>
-<li>Copy the provided script and insert into html script</li>
-<li>Optional : Add <code>showRestartButton: true</code> after <code>window.watsonAssistantChatOptions ={}</code> to display web-chat restart button</li>
+<li><code>service instance URL</code></li>
+<li><code>Draft/Live Environment ID</code> (whichever is applicable)</li>
+</ul></li>
 </ol>
 </section>
-<section id="create-cloud-object-storage-cos-instance" class="level3">
-<h3 class="anchored" data-anchor-id="create-cloud-object-storage-cos-instance">Create Cloud Object Storage (COS) Instance</h3>
+<section id="create-the-custom-extension" class="level3">
+<h3 class="anchored" data-anchor-id="create-the-custom-extension">Create the Custom Extension</h3>
 <ol type="1">
-<li>Go to the dedicated IBM Cloud Account “Resource” List <a href="https://cloud.ibm.com/resources">here</a> and click “Create Resource +”</li>
-<li>Search and select “Object Storage”</li>
-<li>Select “IBM Cloud” as the infrastructure and the appropriate pricing plan</li>
-<li>Name the service and click “Create”</li>
+<li>Navigate and download the OpenAPI spec for another assistant bot <a href="https://github.ibm.com/ibm-client-engineering/solution-watson%3Cspan%20style=%22color:#2c62f5;%22%3Ex%3C/span%3E-orchestrate/tree/main/assets/openAPI_specs/otherBot">here</a></li>
+<li>Modify the server url at line 10 with the <code>service instance url</code> from step 3 <a href="#identify-openapi-spec-values">here</a></li>
+<li>Navigate to the integrations section within the Assistant Builder sidebar</li>
+<li>Select “Build custom extension” and name the extension</li>
+<li>Upload the OpenApi spec from step 1 and press “Finish”</li>
+<li>Select “Add+” within the newly configured extension</li>
+<li>Select “Next” and update values:
+<ul>
+<li>Authentication type: Basic auth</li>
+<li>Username: apikey</li>
+<li>Password: Password from <a href="#create-an-ibm-cloud-api-key">here</a></li>
+</ul></li>
 </ol>
 </section>
-<section id="create-a-custom-cos-bucket" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-custom-cos-bucket">Create a Custom COS Bucket</h3>
+<section id="action-integration" class="level3">
+<h3 class="anchored" data-anchor-id="action-integration">Action Integration</h3>
+<p>Two api calls are needed to successfully integrate this extension:</p>
 <ol type="1">
-<li>From the “Resource” List select the newly created COS instance</li>
-<li>Click “Create a Custom Bucket”</li>
-<li>Enter a valid bucket name and select the appropriate values for “Resiliency”, “Location”, “Storage class”, “Object Versioning” and “Immutablity”</li>
-<li>Within the section “Advanced configurations (optional)” click the “Add +” for “Static website hosting”</li>
+<li><a href="#create-a-session-id">Create a session id for the subordinate bot</a></li>
+<li><a href="#make-a-dialog-request">Make a dialog request to the subordinate bot</a></li>
 </ol>
-<p><img src="../images/COS_status_config.png" class="img-fluid"></p>
-<ol start="5" type="1">
-<li>Ensure the “Public access” toggle is switched to “On”</li>
-<li>Enter the name of the target html file which will be used to build the desired web app</li>
-<li>Click “Save” and then click “Create bucket”</li>
+<section id="create-a-session-id" class="level4">
+<h4 class="anchored" data-anchor-id="create-a-session-id"><strong>Create a session id</strong></h4>
+<ol type="1">
+<li>Within the appropriate action, create a step and under “And then” select “Use an extension”</li>
+<li>Select the appropriate subordinate bot extension made <a href="#assistant-custom-extension">here</a></li>
+<li>Select the Operation as “Create Session”</li>
+<li>Set the Parameters to:
+<ul>
+<li><strong>environment_id</strong>: Environment ID from step 3 of <a href="#identify-openapi-spec-values">Identify OpenAPI spec values</a> :::tip Make sure the “environment_id” variable type is ‘text’ :::</li>
+</ul></li>
 </ol>
 </section>
-<section id="upload-html-file" class="level3">
-<h3 class="anchored" data-anchor-id="upload-html-file"><strong>Upload HTML file</strong></h3>
+<section id="make-a-dialog-request" class="level4">
+<h4 class="anchored" data-anchor-id="make-a-dialog-request"><strong>Make a dialog request</strong></h4>
 <ol type="1">
-<li>Upload the HTML file from <a href="#embed-assistant-webchat-into-html-file">here</a></li>
+<li>Create a new step after the action with the “create a session” extension<br>
+</li>
+<li>Under the “And then” Section, select “Use an extension”</li>
+<li>Select the appropriate subordinate bot extension made <a href="#assistant-custom-extension">here</a></li>
+<li>Select the Operation as “Make dialog request”</li>
+<li>Set the Parameters to:
+<ul>
+<li><strong>input.text</strong>: input.text</li>
+<li><strong>input.message_type</strong>: text</li>
+<li><strong>useContext.skills.actions skill.skill_variables</strong> : <code>{"DEFINED_VARIABLE" : "VARIABLE_VALUE"}</code></li>
+<li><strong>session_id</strong>: [session_id from previous step w/ “Create Session” call]</li>
+<li><strong>environment_id</strong>: Environment ID from step 3 of <a href="#identify-openapi-spec-values">Identify OpenAPI spec values</a></li>
+</ul></li>
 </ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>A note about session variables</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Session variables play a crucial role in storing and managing information within and across watson<span style="color:#2c62f5;">x</span> Assistant actions. These variables can be defined either by the user or automatically by the assistant, with each session maintaining a distinct instance of each variable.</p>
+<p>When there is a need to pass additional information beyond the input query to a subordinate bot, session variables are the appropriate mechanism. To facilitate this, the session variable must first be defined on the subordinate side before its value can be updated via a dialog request. Once defined, the variable can be updated by including its name and the desired value in a JSON object under the useContext.skills.actions.skill.skill_variables field.</p>
+<p>This approach ensures smooth communication and data transfer between actions, enabling more dynamic and complex chatbot workflows.</p>
+</div>
+</div>
 
 
+</section>
 </section>
 </section>
 
@@ -828,13 +873,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../environment.html" class="pagination-link" aria-label="Environment">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Environment</span>
+      <a href="../../src/implementation_methodology/imp-genesys.html" class="pagination-link" aria-label="Genesys">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Genesys</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../Implementation/imp-genai-rout.html" class="pagination-link" aria-label="Generative-AI Driven Routing">
-        <span class="nav-page-text">Generative-AI Driven Routing</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../src/implementation_methodology/imp-verify-assis.html" class="pagination-link" aria-label="IBM Security Verify">
+        <span class="nav-page-text">IBM Security Verify</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

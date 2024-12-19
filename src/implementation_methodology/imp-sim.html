@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>GenAI Driven Routing – Unified Virtual Assistant</title>
+<title>Simulation – Unified Virtual Assistant</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../Implementation/watsonx-dis.html" rel="next">
-<link href="../Implementation/imp-UI.html" rel="prev">
-<link href="../images/bee.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c5d66fdff0ab8b4959478e7a18c370f1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../src/key-takeaway.html" rel="next">
+<link href="../../src/implementation_methodology/imp-verify-assis.html" rel="prev">
+<link href="../../images/bee.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c5d66fdff0ab8b4959478e7a18c370f1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,10 +112,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../images/IBMlogo.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/IBMlogo.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Unified Virtual Assistant</span>
     </a>
   </div>
@@ -124,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Implementation/imp-UI.html">Implementation Methodology</a></li><li class="breadcrumb-item"><a href="../Implementation/imp-genai-rout.html">Generative-AI Driven Routing</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-UI.html">Implementation Methodology</a></li><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-verify-assis.html">Identity and Access Management</a></li><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-sim.html">Simulation</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -138,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Definition</span></a>
   </div>
 </li>
@@ -153,13 +187,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../prepare.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/solution_overview/prepare.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Prepare</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../environment.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/solution_overview/environment.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Environment</span></a>
   </div>
 </li>
@@ -176,13 +210,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-UI.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-UI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">User Interface</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-genai-rout.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../src/implementation_methodology/imp-genai-rout.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Generative-AI Driven Routing</span></a>
   </div>
 </li>
@@ -197,13 +231,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/watsonx-dis.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/watsonx-dis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">watsonx Discovery</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/watson-dis.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/watson-dis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">watson Discovery</span></a>
   </div>
 </li>
@@ -220,13 +254,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/watsonx-gov.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/watsonx-gov.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">watsonx Governance</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/rag-attr-links.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/rag-attr-links.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">RAG Attribution Links</span></a>
   </div>
 </li>
@@ -243,19 +277,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-snow.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-snow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ServiceNow</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-workday.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-workday.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Workday</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-genesys.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-genesys.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Genesys</span></a>
   </div>
 </li>
@@ -272,7 +306,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-assis-ext.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-assis-ext.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assistant Custom Extension</span></a>
   </div>
 </li>
@@ -280,22 +314,22 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">Identity and Access Management</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-verify-assis.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-verify-assis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">IBM Security Verify</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-sim.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-sim.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Simulation</span></a>
   </div>
 </li>
@@ -305,7 +339,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../key-takeaway.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/key-takeaway.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Key Takeaways</span></a>
   </div>
 </li>
@@ -319,18 +353,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#watsonx.ai" id="toc-watsonx.ai" class="nav-link" data-scroll-target="#watsonx.ai">watson<span style="color:#2c62f5;">x</span>.ai</a></li>
-  <li><a href="#watsonx.gov" id="toc-watsonx.gov" class="nav-link" data-scroll-target="#watsonx.gov">watson<span style="color:#2c62f5;">x</span>.gov</a></li>
+  <li><a href="#variable-creation" id="toc-variable-creation" class="nav-link active" data-scroll-target="#variable-creation">Variable Creation</a></li>
+  <li><a href="#modify-greet-customer-action" id="toc-modify-greet-customer-action" class="nav-link" data-scroll-target="#modify-greet-customer-action">Modify “Greet Customer” action</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Implementation/imp-UI.html">Implementation Methodology</a></li><li class="breadcrumb-item"><a href="../Implementation/imp-genai-rout.html">Generative-AI Driven Routing</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-UI.html">Implementation Methodology</a></li><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-verify-assis.html">Identity and Access Management</a></li><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-sim.html">Simulation</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">GenAI Driven Routing</h1>
+<h1 class="title">Simulation</h1>
 </div>
 
 
@@ -347,43 +380,80 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This documentation walks through how to leverage generative AI to route a user’s request to the most appropriate action/workflow or perform RAG on the most relevant data corpuses. This generative AI routing can be carried out by one of two methods:</p>
+<p>This section will go through how to simulate Identity and Access Management for an Assistant. The steps consist of:</p>
+<ol type="1">
+<li>Create a variable assigned to an expression of a dictionary within the assistant platfrom and include the necessary users and their appropriate metadata within the dictionary.</li>
+<li>Modify the “Greet Customer” action within the assistant</li>
+</ol>
+<section id="variable-creation" class="level3">
+<h3 class="anchored" data-anchor-id="variable-creation">Variable Creation</h3>
+<ol type="1">
+<li>Within the “Actions” section of the Assistant navigate to the “Created by you” variables and select “New Variable+”</li>
+<li>Create a variable name and set variable type to “Any”</li>
+<li>Update the “initial value”:
 <ul>
-<li>watson<span style="color:#2c62f5;">x</span>.ai</li>
-<li>watson<span style="color:#2c62f5;">x</span>.gov</li>
+<li>Toggle the “Use Expression” to on</li>
+<li>Create dictionary value:</li>
+</ul></li>
+</ol>
+<div style="margin-left: 40px;">
+<p>ex)</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"name"</span><span class="fu">:</span><span class="st">"martha"</span><span class="fu">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"password"</span><span class="fu">:</span><span class="st">"MARTHA"</span><span class="fu">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"access"</span><span class="fu">:</span><span class="st">"Admin"</span><span class="fu">,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"role"</span><span class="fu">:</span><span class="st">"Manager"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"name"</span><span class="fu">:</span><span class="st">"robert"</span><span class="fu">,</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"password"</span><span class="fu">:</span><span class="st">"ROBERT"</span><span class="fu">,</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"access"</span><span class="fu">:</span><span class="st">"Employee"</span><span class="fu">,</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"role"</span><span class="fu">:</span><span class="st">"Employee"</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="4" type="1">
+<li>Click “Save”</li>
+</ol>
+</section>
+<section id="modify-greet-customer-action" class="level3">
+<h3 class="anchored" data-anchor-id="modify-greet-customer-action">Modify “Greet Customer” action</h3>
+<ul>
+<li>Within the “Actions” section of the Assistant, navigate to the “Greet Customer” action</li>
 </ul>
-</section>
-<section id="watsonx.ai" class="level2">
-<h2 class="anchored" data-anchor-id="watsonx.ai">watson<span style="color:#2c62f5;">x</span>.ai</h2>
-<section id="create-watsonx.ai-custom-extension" class="level4">
-<h4 class="anchored" data-anchor-id="create-watsonx.ai-custom-extension"><strong>Create watson<span style="color:#2c62f5;">x</span>.ai custom extension</strong></h4>
+<section id="authenticate-user" class="level4">
+<h4 class="anchored" data-anchor-id="authenticate-user"><strong>Authenticate User</strong></h4>
 <ol type="1">
-<li>In your assistant, navigate to Integrations page, click “Build custom extension” -&gt; click “Next” -&gt; Input Extension name <code>watson&lt;span style="color:#2c62f5;"&gt;x&lt;/span&gt;</code> -&gt; click “Next” .</li>
-<li>download json file: <a href="https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-watson%3Cspan%20style=%22color:#2c62f5;%22%3Ex%3C/span%3E/watson%3Cspan%20style=%22color:#2c62f5;%22%3Ex%3C/span%3E-openapi.json">watson<span style="color:#2c62f5;">x</span>-openapi.json</a> and import file to WA</li>
-<li>click “Next” -&gt; click “Finish”</li>
-<li>Lower Right corner of the watson<span style="color:#2c62f5;">x</span> extension, click “Add” -&gt; click “Add” -&gt; click “Next”</li>
-<li>In Authentication page, in the Authentication type dropdown, select “OAuth 2.0”
-<ol type="1">
-<li>For Apikey, create and copy a new API key from <a href="https://cloud.ibm.com/iam/apikeys">API key</a></li>
-</ol></li>
-<li>Click “Next”, click “Finish”, click “Close”</li>
+<li><p>Check valid user by setting a new boolean variable to an expression value of:</p>
+<p><code>!(( [users variable from "Variable Creation" step above]).filter("user", "user.name ==  [current_user value]")).isEmpty())</code></p>
+<p>Example)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/valid_user_example.png" class="img-fluid figure-img"></p>
+<figcaption>Valid User Example</figcaption>
+</figure>
+</div></li>
+<li><p>Ensure valid password by creating conditional statement with expression value of :</p>
+<p><code>[current_password value] == (users.filter("user", "user.name == [current_user value]"))[0].password</code></p>
+<p>Example)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/valid_pass_example.png" class="img-fluid figure-img"></p>
+<figcaption>Valid Password Example</figcaption>
+</figure>
+</div></li>
 </ol>
 </section>
-<section id="action-configuration" class="level4">
-<h4 class="anchored" data-anchor-id="action-configuration"><strong>Action configuration</strong></h4>
+<section id="change-users-password" class="level4">
+<h4 class="anchored" data-anchor-id="change-users-password"><strong>Change User’s Password</strong></h4>
 <ol type="1">
-<li>Create a new action leveraging the extension created above</li>
-<li>Configure the model parameters to the appropriate values for the desired use case</li>
+<li>Set a new password for the current user with an expression like: <code>((( ${users}.filter(\"user\", \"user.name ==  ${current_user} \"))[0]).password) = ${new_pass}</code></li>
+<li>Validate changed password with: <code>((( ${users}.filter(\"user\", \"user.name ==  ${current_user} \"))[0]).password)</code></li>
 </ol>
-</section>
-</section>
-<section id="watsonx.gov" class="level2">
-<h2 class="anchored" data-anchor-id="watsonx.gov">watson<span style="color:#2c62f5;">x</span>.gov</h2>
-<p>Follow the instructions from <a href="../Implementation/watsonx-gov.html">here</a></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -806,13 +876,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../Implementation/imp-UI.html" class="pagination-link" aria-label="User Interface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">User Interface</span>
+      <a href="../../src/implementation_methodology/imp-verify-assis.html" class="pagination-link" aria-label="IBM Security Verify">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">IBM Security Verify</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../Implementation/watsonx-dis.html" class="pagination-link" aria-label="watsonx Discovery">
-        <span class="nav-page-text">watsonx Discovery</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../src/key-takeaway.html" class="pagination-link" aria-label="Key Takeaways">
+        <span class="nav-page-text">Key Takeaways</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

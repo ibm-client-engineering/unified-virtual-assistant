@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Genesys – Unified Virtual Assistant</title>
+<title>prepare – Unified Virtual Assistant</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,61 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../Implementation/imp-assis-ext.html" rel="next">
-<link href="../Implementation/imp-workday.html" rel="prev">
-<link href="../images/bee.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c5d66fdff0ab8b4959478e7a18c370f1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../src/solution_overview/environment.html" rel="next">
+<link href="../../index.html" rel="prev">
+<link href="../../images/bee.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c5d66fdff0ab8b4959478e7a18c370f1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -112,10 +78,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../images/IBMlogo.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/IBMlogo.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Unified Virtual Assistant</span>
     </a>
   </div>
@@ -158,7 +124,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Implementation/imp-UI.html">Implementation Methodology</a></li><li class="breadcrumb-item"><a href="../Implementation/imp-snow.html">Third-Party Applications</a></li><li class="breadcrumb-item"><a href="../Implementation/imp-genesys.html">Genesys</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/solution_overview/prepare.html">Solution Overview</a></li><li class="breadcrumb-item"><a href="../../src/solution_overview/prepare.html">Prepare</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -172,28 +138,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Definition</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Solution Overview</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../prepare.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/solution_overview/prepare.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Prepare</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../environment.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/solution_overview/environment.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Environment</span></a>
   </div>
 </li>
@@ -201,22 +167,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Implementation Methodology</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-UI.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-UI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">User Interface</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-genai-rout.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-genai-rout.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Generative-AI Driven Routing</span></a>
   </div>
 </li>
@@ -231,13 +197,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/watsonx-dis.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/watsonx-dis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">watsonx Discovery</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/watson-dis.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/watson-dis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">watson Discovery</span></a>
   </div>
 </li>
@@ -254,13 +220,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/watsonx-gov.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/watsonx-gov.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">watsonx Governance</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/rag-attr-links.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/rag-attr-links.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">RAG Attribution Links</span></a>
   </div>
 </li>
@@ -268,28 +234,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
  <span class="menu-text">Third-Party Applications</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-snow.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-snow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ServiceNow</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-workday.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-workday.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Workday</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-genesys.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../src/implementation_methodology/imp-genesys.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Genesys</span></a>
   </div>
 </li>
@@ -306,7 +272,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-assis-ext.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-assis-ext.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assistant Custom Extension</span></a>
   </div>
 </li>
@@ -323,13 +289,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-verify-assis.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-verify-assis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">IBM Security Verify</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-sim.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/implementation_methodology/imp-sim.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Simulation</span></a>
   </div>
 </li>
@@ -339,7 +305,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../key-takeaway.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/key-takeaway.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Key Takeaways</span></a>
   </div>
 </li>
@@ -353,160 +319,199 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#setup-genesys-web-messenger" id="toc-setup-genesys-web-messenger" class="nav-link active" data-scroll-target="#setup-genesys-web-messenger">1. Setup Genesys Web Messenger</a></li>
-  <li><a href="#connect-genesys-to-watson-assistant" id="toc-connect-genesys-to-watson-assistant" class="nav-link" data-scroll-target="#connect-genesys-to-watson-assistant">2. Connect Genesys to Watson Assistant</a>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#solution-components" id="toc-solution-components" class="nav-link" data-scroll-target="#solution-components">Solution Components</a>
   <ul class="collapse">
-  <li><a href="#congfigure-html-file-for-genesys" id="toc-congfigure-html-file-for-genesys" class="nav-link" data-scroll-target="#congfigure-html-file-for-genesys">Congfigure HTML File for Genesys</a></li>
-  <li><a href="#configure-bot-connector-in-assistant" id="toc-configure-bot-connector-in-assistant" class="nav-link" data-scroll-target="#configure-bot-connector-in-assistant">Configure Bot Connector in Assistant</a></li>
+  <li><a href="#web-chat-interface" id="toc-web-chat-interface" class="nav-link" data-scroll-target="#web-chat-interface"><strong>Web-Chat Interface</strong></a></li>
+  <li><a href="#identity-and-access-management-iam" id="toc-identity-and-access-management-iam" class="nav-link" data-scroll-target="#identity-and-access-management-iam"><strong>Identity and Access Management (IAM)</strong></a>
+  <ul class="collapse">
+  <li><a href="#ibm-security-verify-sso" id="toc-ibm-security-verify-sso" class="nav-link" data-scroll-target="#ibm-security-verify-sso"><strong>IBM Security Verify SSO</strong></a></li>
+  <li><a href="#simulation" id="toc-simulation" class="nav-link" data-scroll-target="#simulation"><strong>Simulation</strong></a></li>
   </ul></li>
-  <li><a href="#using-genesys-live-agent" id="toc-using-genesys-live-agent" class="nav-link" data-scroll-target="#using-genesys-live-agent">3. Using Genesys Live Agent</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#conversational-engine" id="toc-conversational-engine" class="nav-link" data-scroll-target="#conversational-engine"><strong>Conversational Engine</strong></a>
+  <ul class="collapse">
+  <li><a href="#genai-routing" id="toc-genai-routing" class="nav-link" data-scroll-target="#genai-routing">GenAI Routing</a></li>
+  </ul></li>
+  <li><a href="#integrations" id="toc-integrations" class="nav-link" data-scroll-target="#integrations"><strong>Integrations</strong></a>
+  <ul class="collapse">
+  <li><a href="#rag-document-search" id="toc-rag-document-search" class="nav-link" data-scroll-target="#rag-document-search"><strong>RAG Document Search</strong></a></li>
+  <li><a href="#governance" id="toc-governance" class="nav-link" data-scroll-target="#governance"><strong>Governance</strong></a></li>
+  <li><a href="#rd-party-applications" id="toc-rd-party-applications" class="nav-link" data-scroll-target="#rd-party-applications"><strong>3rd-Party Applications</strong></a></li>
+  <li><a href="#subordinate-bot" id="toc-subordinate-bot" class="nav-link" data-scroll-target="#subordinate-bot"><strong>Subordinate Bot</strong></a></li>
+  <li><a href="#data-repository" id="toc-data-repository" class="nav-link" data-scroll-target="#data-repository"><strong>Data Repository</strong></a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Implementation/imp-UI.html">Implementation Methodology</a></li><li class="breadcrumb-item"><a href="../Implementation/imp-snow.html">Third-Party Applications</a></li><li class="breadcrumb-item"><a href="../Implementation/imp-genesys.html">Genesys</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">Genesys</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/solution_overview/prepare.html">Solution Overview</a></li><li class="breadcrumb-item"><a href="../../src/solution_overview/prepare.html">Prepare</a></li></ol></nav></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Prerequisite: <a href="../environment.html#third-party-applications">Genesys Requirement</a></p>
-</div>
-</div>
-<section id="setup-genesys-web-messenger" class="level2">
-<h2 class="anchored" data-anchor-id="setup-genesys-web-messenger">1. Setup Genesys Web Messenger</h2>
-<div style="{{" borderbottom:="" '1px="" solid="" #000',="" margintop:="" '20px',="" marginbottom:="" '20px'="" }}=""></div>
-<ol type="1">
-<li>Sign up for a free trial of Genesys Cloud CX at <a href="https://www.genesys.com/campaign/try-genesys-cloud-for-free">this link.</a> This trial will last for 14 days.</li>
-<li>Once Genesys Cloud CX is running, configure the web messenger following <a href="https://help.mypurecloud.com/articles/configure-messenger/">these steps:</a>
-<ol type="1">
-<li>Click <strong>Admin</strong>.</li>
-<li>Under <strong>Message</strong>, click <strong>Messenger Configurations</strong>.</li>
-<li>Enter a name and description for your web messenger.</li>
-<li>In the <strong>Appearance</strong> tab, select <strong>Hide</strong> for <strong>Set your Launcher Button Visibility</strong> and select <strong>Off</strong> for the <strong>User Interface</strong>.</li>
-<li>The other settings are optional for basic set up. Once you have looked over all the options, click <strong>Save New Version</strong>.</li>
-</ol></li>
-<li>Once your web messenger is configured, deploy the messenger following <a href="https://help.mypurecloud.com/articles/deploy-messenger/">these steps:</a>
-<ol type="1">
-<li>Click <strong>Admin</strong>.</li>
-<li>Under <strong>Message</strong>, click <strong>Messenger Deployments</strong>.</li>
-<li>Click <strong>New Deployment</strong>.</li>
-<li>Enter a name and description.</li>
-<li>Set the <strong>Status</strong> to <strong>Active</strong>.</li>
-<li>Under <strong>Select your Configuration</strong> click <strong>Select Configuration</strong> and select the verision of web messenger that you configured in the previous section.</li>
-<li>Under <strong>Restrrict domain access</strong> select <strong>Allow all domains</strong> for testing and development purposes.</li>
-<li>Click <strong>Save</strong>. The <strong>Messenger Deployments</strong> page now displays your deployed messenger which you can click to access the deployment script which will be used in the next section to integrate with Watson Assistant.</li>
-</ol></li>
-</ol>
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<p>The objective of this solution is to demonstrate a chatbot which has the ability to orchestrate conversations to the appropriate channels and/or 3rd-party applications while leveraging generative AI technologies. This unified agent solution revolves around six key capabilities:</p>
+<p><strong>Core Products:</strong> watson<span style="color:#2c62f5;">x</span> Orchestrate, IBM Cloud Object Storage</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Capability</th>
+<th style="text-align: left;">IBM Product</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Identity Access Management</td>
+<td style="text-align: left;">IBM Security Verify</td>
+</tr>
+<tr class="even">
+<td>Generative AI-Driven Conversational Routing</td>
+<td style="text-align: left;">watson<span style="color:#2c62f5;">x</span>.gov or watson<span style="color:#2c62f5;">x</span>.ai <br> Watson Matchine Learning</td>
+</tr>
+<tr class="odd">
+<td>RAG Document Search</td>
+<td style="text-align: left;">watson<span style="color:#2c62f5;">x</span> Discovery <br> watson<span style="color:#2c62f5;">x</span>.ai<br> Watson Machine Learning</td>
+</tr>
+<tr class="even">
+<td>3rd-Party Application Integrations</td>
+<td style="text-align: left;">watson<span style="color:#2c62f5;">x</span> Orchestrate</td>
+</tr>
+<tr class="odd">
+<td>Governance</td>
+<td style="text-align: left;">watson<span style="color:#2c62f5;">x</span>.gov</td>
+</tr>
+<tr class="even">
+<td>Subordinate Bot Integration</td>
+<td style="text-align: left;">watson<span style="color:#2c62f5;">x</span> Orchestrate Assistant</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../../images/component_arch.png" class="img-fluid"></p>
 </section>
-<section id="connect-genesys-to-watson-assistant" class="level2">
-<h2 class="anchored" data-anchor-id="connect-genesys-to-watson-assistant">2. Connect Genesys to Watson Assistant</h2>
-<div style="{{" borderbottom:="" '1px="" solid="" #000',="" margintop:="" '20px',="" marginbottom:="" '20px'="" }}=""></div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Prerequisite: <a href="../01-Webchat Interface/01-Static-Webpage.mdx">Webchat Interface</a></p>
-<p>Note: The Genesys SDK does not work if launched from a local HTML file opened directly in your browser (using file://). It needs to be served from a server (which can be localhost) over HTTP. You can use <a href="https://www.npmjs.com/package/http-server">http-server</a> if you need a simple local server for testing purposes.</p>
-</div>
-</div>
-<section id="congfigure-html-file-for-genesys" class="level3">
-<h3 class="anchored" data-anchor-id="congfigure-html-file-for-genesys">Congfigure HTML File for Genesys</h3>
-<ol type="1">
-<li>Get the <strong>script URL, environment, and deployment ID</strong> values from the <strong>Mesenger Deployments</strong> page on Genesys and have them ready to add to the Watson Assistant Embed Script.</li>
-<li>Follow the sample script which shows how to enable the Genesys integration at <a href="https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-genesys#enabling">this link.</a>
-<ol type="i">
-<li>The serviceDesk portion of the script enables the Genesys integration. Simply add those values to where you have the Watson Assistant Embed script written out. Shown Below.</li>
-</ol></li>
-</ol>
-<div style="margin-left: 50px;">
-<div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>        <span class="bu">window</span><span class="op">.</span><span class="at">watsonAssistantChatOptions</span> <span class="op">=</span> {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">showRestartButton</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="co">//Optional</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">integrationID</span><span class="op">:</span> <span class="st">"[instance instegraionID]"</span><span class="op">,</span> <span class="co">//From embed details of Assistant</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">region</span><span class="op">:</span> <span class="st">"aws-us-east-1"</span><span class="op">,</span> <span class="co">//From embed details of Assistant</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="dt">serviceInstanceID</span><span class="op">:</span> <span class="st">"[service instanceID]"</span><span class="op">,</span> <span class="co">//From embed details of Assistant</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">/*GENESYS SCRIPT </span><span class="re">BEGIN</span><span class="co">*/</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">serviceDesk</span><span class="op">:</span> {</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>            <span class="dt">integrationType</span><span class="op">:</span> <span class="st">'genesyswebmessenger'</span><span class="op">,</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>            <span class="dt">genesysMessenger</span><span class="op">:</span> {</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>            <span class="dt">scriptURL</span><span class="op">:</span> <span class="st">'[URL]'</span><span class="op">,</span><span class="co">//Provided by Genesys console</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>            <span class="dt">deploymentID</span><span class="op">:</span> <span class="st">'[DEPLOYMENT ID]'</span><span class="op">,</span> <span class="co">//Provided by Genesys console</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>            <span class="dt">environment</span><span class="op">:</span> <span class="st">'[ENVIRONMENT]'</span><span class="op">,</span> <span class="co">//Provided by Genesys console</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        }<span class="op">,</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="co">/*GENESYS SCRIPT </span><span class="re">END</span><span class="co">*/</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="dt">onLoad</span><span class="op">:</span> <span class="kw">async</span> (instance) <span class="kw">=&gt;</span> { <span class="cf">await</span> instance<span class="op">.</span><span class="fu">render</span>()<span class="op">;</span> }</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        }<span class="op">;</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="pp">setTimeout</span>(<span class="kw">function</span>(){</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> t<span class="op">=</span><span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">'script'</span>)<span class="op">;</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        t<span class="op">.</span><span class="at">src</span><span class="op">=</span><span class="st">"https://web-chat.global.assistant.watson.appdomain.cloud/versions/"</span> <span class="op">+</span> (<span class="bu">window</span><span class="op">.</span><span class="at">watsonAssistantChatOptions</span><span class="op">.</span><span class="at">clientVersion</span> <span class="op">||</span> <span class="st">'latest'</span>) <span class="op">+</span> <span class="st">"/WatsonAssistantChatEntry.js"</span><span class="op">;</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        <span class="bu">document</span><span class="op">.</span><span class="at">head</span><span class="op">.</span><span class="fu">appendChild</span>(t)<span class="op">;</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        })<span class="op">;</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="configure-bot-connector-in-assistant" class="level3">
-<h3 class="anchored" data-anchor-id="configure-bot-connector-in-assistant">Configure Bot Connector in Assistant</h3>
-<ol type="1">
-<li>Navigate to the Assistant side bar and select “Integrations”</li>
-<li>Within the “Channels” section select “Genesys Bot Connector”</li>
-<li>Select the appropriate environment</li>
-<li>Fill out the necessary credentials from the Genesys Console</li>
-</ol>
-</section>
-</section>
-<section id="using-genesys-live-agent" class="level2">
-<h2 class="anchored" data-anchor-id="using-genesys-live-agent">3. Using Genesys Live Agent</h2>
-<div style="{{" borderbottom:="" '1px="" solid="" #000',="" margintop:="" '20px',="" marginbottom:="" '20px'="" }}=""></div>
-<ol type="1">
-<li>Log in to your Genesys trial account and toggle the <strong>Off Queue</strong> option in the top right to become <strong>On Queue</strong>.</li>
-<li>Open your Watson Assistant that has been integrated with Genesys (over HTTP not on the UI or local HTML file) and follow action to connect to live agent.</li>
-<li>Once you have clicked <strong>Connect to Live Agent</strong> go back to the Genesys account and you should see an incoming message which you can accept or decline. Click <strong>Accept</strong> and now you are able to communicate with a live customer using your Watson Assistant instance.</li>
-</ol>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<div style="{{" borderbottom:="" '1px="" solid="" #000',="" margintop:="" '20px',="" marginbottom:="" '20px'="" }}=""></div>
+<section id="solution-components" class="level1">
+<h1>Solution Components</h1>
+<section id="web-chat-interface" class="level2">
+<h2 class="anchored" data-anchor-id="web-chat-interface"><strong>Web-Chat Interface</strong></h2>
 <ul>
-<li><a href="https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-deploy-genesys">Integrating Watson Assistant with Genesys</a></li>
+<li>Leveraging IBM Cloud Object Storage to host a static website for the chatbot.
+<ul>
+<li>Configuration Steps <a href="../../Implementation/imp-UI.html">here</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="identity-and-access-management-iam" class="level2">
+<h2 class="anchored" data-anchor-id="identity-and-access-management-iam"><strong>Identity and Access Management (IAM)</strong></h2>
+<p>IAM can be carried out in one of two methods:</p>
+<ul>
+<li>Security Verify SSO<br>
+</li>
+<li>Simulation</li>
+</ul>
+<section id="ibm-security-verify-sso" class="level3">
+<h3 class="anchored" data-anchor-id="ibm-security-verify-sso"><strong>IBM Security Verify SSO</strong></h3>
+<p>Leverage the IBM Security Verify API to carry differnt actions like authenticating user logins and resetting passwords within the Assistant builder UI.</p>
+<p><a href="../../Implementation/imp-verify-assis.html">Implementation Guide Here</a></p>
+</section>
+<section id="simulation" class="level3">
+<h3 class="anchored" data-anchor-id="simulation"><strong>Simulation</strong></h3>
+<p>Simulating user login within watson<span style="color:#2c62f5;">x</span> Orchestrate Assistant Builder can be achieved by storing simulated individuals in a data structure. This data structure, typically a list or map, can store information about each simulated user, such as their name, access level, and other relevant details. By initializing this data structure with a set of simulated users, you can create a realistic login scenario where the system checks user credentials and grants or denies access accordingly.</p>
+<p>Storing simulated individuals in a data structure within watson<span style="color:#2c62f5;">x</span> Orchestrate Assistant Builder allows you to test the login functionality and ensure that the system behaves as expected. This can help identify potential issues early in the development process, saving time and resources. Additionally, you can customize the simulated users’ data to represent different user types, enabling you to test the system’s access control mechanisms and ensure that users are only granted access to the appropriate actions and data.</p>
+<p>By using simulated users in this manner, you can thoroughly test the user login functionality and ensure that the unified agent with generative AI capabilities is secure, reliable, and user-friendly.</p>
+<p><a href="../../Implementation/imp-sim.html">Implementation Guide Here</a></p>
+</section>
+</section>
+<section id="conversational-engine" class="level2">
+<h2 class="anchored" data-anchor-id="conversational-engine"><strong>Conversational Engine</strong></h2>
+<p>The conversational engine was built using watson<span style="color:#2c62f5;">x</span> Orchestrate Assistant Builder where generative AI-driven routing was configured to direct users to the most appropriate workflows and data based on their access permissions.</p>
+<section id="genai-routing" class="level3">
+<h3 class="anchored" data-anchor-id="genai-routing">GenAI Routing</h3>
+<p>Configuration Steps <a href="../../Implementation/imp-genai-rout.html">here</a></p>
+</section>
+</section>
+<section id="integrations" class="level2">
+<h2 class="anchored" data-anchor-id="integrations"><strong>Integrations</strong></h2>
+<section id="rag-document-search" class="level3">
+<h3 class="anchored" data-anchor-id="rag-document-search"><strong>RAG Document Search</strong></h3>
+<p>RAG Document Search can be carried out in one of two methods:</p>
+<section id="watsonx-discovery" class="level4">
+<h4 class="anchored" data-anchor-id="watsonx-discovery">1. <strong>watson<span style="color:#2c62f5;">x</span> Discovery:</strong></h4>
+<p>This pattern consists of creating an integration with watson<span style="color:#2c62f5;">x</span> Discovery. watson<span style="color:#2c62f5;">x</span> Discovery leverage a vectorDB to store data corpus’s embeddings to enable RAG. <br> <strong>Required Integrations:</strong></p>
+<ul>
+<li>watson<span style="color:#2c62f5;">x</span> Discovery</li>
+<li>watson<span style="color:#2c62f5;">x</span>.ai</li>
+</ul>
+<p><a href="../../Implementation/watsonx-dis.html">Implementation Guide Here</a></p>
+</section>
+<section id="watson-discovery" class="level4">
+<h4 class="anchored" data-anchor-id="watson-discovery">2. <strong>watson Discovery:</strong></h4>
+<p>This pattern consists of creating two integrations with watson Discovery and watson<span style="color:#2c62f5;">x</span>.ai. Watson Discovery is used to store and carry out searches on data collections.</p>
+<p><strong>Required Integrations:</strong></p>
+<ul>
+<li>watson Discovery</li>
+<li>watson<span style="color:#2c62f5;">x</span>.ai</li>
+</ul>
+<p><a href="../../Implementation/watson-dis.html">Implementation Guide Here</a></p>
+</section>
+</section>
+<section id="governance" class="level3">
+<h3 class="anchored" data-anchor-id="governance"><strong>Governance</strong></h3>
+<p>Governance is exemplified in two key ways:</p>
+<ul>
+<li><strong>watson<span style="color:#2c62f5;">x</span>.gov:</strong> IBM’s enterprise governance platform for monitoring key metrics associated with LLMs</li>
+<li><strong>RAG Source Attribution Links</strong></li>
+</ul>
+<section id="watsonx.gov" class="level4">
+<h4 class="anchored" data-anchor-id="watsonx.gov">watson<span style="color:#2c62f5;">x</span>.gov</h4>
+<p><img src="./images/gov_arch.png" class="img-fluid"></p>
+<p>In summary, the implementation of IBM® watson<span style="color:#2c62f5;">x</span>.governance™ provides a comprehensive and seamless solution for the development, evaluation, deployment, and monitoring of AI models, ensuring compliance, transparency, and optimal performance throughout the AI lifecycle.</p>
+<p><strong>Required Integrations:</strong></p>
+<ul>
+<li>watson<span style="color:#2c62f5;">x</span>.gov</li>
+</ul>
+<p><a href="../../Implementation/watsonx-gov.html">Implementation Guide Here</a></p>
+</section>
+<section id="rag-source-links" class="level4">
+<h4 class="anchored" data-anchor-id="rag-source-links">RAG Source Links</h4>
+<p>For every user query that involves RAG Document Search, a source link will be provided with each response to ensure transparency by clearly indicating the data corpus from which the answer was derived.</p>
+<p><a href="../../Implementation/rag-attr-links.html">Implementation Guide Here</a></p>
+</section>
+</section>
+<section id="rd-party-applications" class="level3">
+<h3 class="anchored" data-anchor-id="rd-party-applications"><strong>3rd-Party Applications</strong></h3>
+<ul>
+<li>Leverage native assistant builder extensions to integrate with Genesys.
+<ul>
+<li>Genesys Configuration Steps <a href="../../Implementation/imp-genesys.html">here</a></li>
+</ul></li>
+<li>Leverage watson<span style="color:#2c62f5;">x</span> Orchestrate skills to integrate with ServiceNow and Workday
+<ul>
+<li>ServiceNow Configuration Steps <a href="../../Implementation/imp-snow.html">here</a></li>
+<li>Workday Configuration Steps <a href="../../Implementation/imp-workday.html">here</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="subordinate-bot" class="level3">
+<h3 class="anchored" data-anchor-id="subordinate-bot"><strong>Subordinate Bot</strong></h3>
+<ul>
+<li>Leverage native assistant builder extensions to integrate with other watson<span style="color:#2c62f5;">x</span> Assistants</li>
+<li>Configuration Steps <a href="../../Implementation/imp-assis-ext.html">here</a></li>
+</ul>
+</section>
+<section id="data-repository" class="level3">
+<h3 class="anchored" data-anchor-id="data-repository"><strong>Data Repository</strong></h3>
+<ul>
+<li>Leverage Cloud Object Storage to store documents relevant to the use case</li>
 </ul>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -929,13 +934,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../Implementation/imp-workday.html" class="pagination-link" aria-label="Workday">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Workday</span>
+      <a href="../../index.html" class="pagination-link" aria-label="Problem Definition">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Problem Definition</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../Implementation/imp-assis-ext.html" class="pagination-link" aria-label="Assistant Custom Extension">
-        <span class="nav-page-text">Assistant Custom Extension</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../src/solution_overview/environment.html" class="pagination-link" aria-label="Environment">
+        <span class="nav-page-text">Environment</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

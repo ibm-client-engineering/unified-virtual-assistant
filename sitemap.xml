@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/prepare.html</loc>
-    <lastmod>2024-12-19T18:28:11.994Z</lastmod>
-  </url>
-  <url>
     <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/index.html</loc>
-    <lastmod>2024-12-19T18:28:11.994Z</lastmod>
+    <lastmod>2024-12-19T18:46:16.705Z</lastmod>
   </url>
   <url>
-    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/Implementation/watsonx-gov.html</loc>
-    <lastmod>2024-12-19T18:28:11.979Z</lastmod>
+    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/src/implementation_methodology/rag-attr-links.html</loc>
+    <lastmod>2024-12-19T18:46:16.706Z</lastmod>
   </url>
   <url>
-    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/Implementation/imp-verify-assis.html</loc>
-    <lastmod>2024-12-19T18:28:11.978Z</lastmod>
+    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/src/implementation_methodology/imp-workday.html</loc>
+    <lastmod>2024-12-19T18:46:16.706Z</lastmod>
   </url>
   <url>
-    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/Implementation/watson-dis.html</loc>
-    <lastmod>2024-12-19T18:28:11.978Z</lastmod>
+    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/src/implementation_methodology/imp-UI.html</loc>
+    <lastmod>2024-12-19T18:46:16.706Z</lastmod>
   </url>
   <url>
-    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/Implementation/imp-genesys.html</loc>
-    <lastmod>2024-12-19T18:28:11.978Z</lastmod>
+    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/src/implementation_methodology/imp-genai-rout.html</loc>
+    <lastmod>2024-12-19T18:46:16.706Z</lastmod>
   </url>
   <url>
-    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/Implementation/imp-snow.html</loc>
-    <lastmod>2024-12-19T18:28:11.978Z</lastmod>
+    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/src/implementation_methodology/imp-assis-ext.html</loc>
+    <lastmod>2024-12-19T18:46:16.706Z</lastmod>
   </url>
   <url>
-    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/Implementation/imp-sim.html</loc>
-    <lastmod>2024-12-19T18:28:11.978Z</lastmod>
+    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/src/implementation_methodology/watsonx-dis.html</loc>
+    <lastmod>2024-12-19T18:46:16.707Z</lastmod>
   </url>
   <url>
-    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/Implementation/watsonx-dis.html</loc>
-    <lastmod>2024-12-19T18:28:11.978Z</lastmod>
+    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/src/solution_overview/environment.html</loc>
+    <lastmod>2024-12-19T18:46:16.707Z</lastmod>
   </url>
   <url>
-    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/Implementation/imp-assis-ext.html</loc>
-    <lastmod>2024-12-19T18:28:11.978Z</lastmod>
+    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/src/key-takeaway.html</loc>
+    <lastmod>2024-12-19T18:46:16.707Z</lastmod>
   </url>
   <url>
-    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/Implementation/imp-genai-rout.html</loc>
-    <lastmod>2024-12-19T18:28:11.978Z</lastmod>
+    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/src/solution_overview/prepare.html</loc>
+    <lastmod>2024-12-19T18:46:16.707Z</lastmod>
   </url>
   <url>
-    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/Implementation/imp-UI.html</loc>
-    <lastmod>2024-12-19T18:28:11.978Z</lastmod>
+    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/src/implementation_methodology/imp-sim.html</loc>
+    <lastmod>2024-12-19T18:46:16.706Z</lastmod>
   </url>
   <url>
-    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/Implementation/imp-workday.html</loc>
-    <lastmod>2024-12-19T18:28:11.978Z</lastmod>
+    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/src/implementation_methodology/imp-snow.html</loc>
+    <lastmod>2024-12-19T18:46:16.706Z</lastmod>
   </url>
   <url>
-    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/Implementation/rag-attr-links.html</loc>
-    <lastmod>2024-12-19T18:28:11.978Z</lastmod>
+    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/src/implementation_methodology/imp-genesys.html</loc>
+    <lastmod>2024-12-19T18:46:16.706Z</lastmod>
   </url>
   <url>
-    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/key-takeaway.html</loc>
-    <lastmod>2024-12-19T18:28:11.994Z</lastmod>
+    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/src/implementation_methodology/watson-dis.html</loc>
+    <lastmod>2024-12-19T18:46:16.706Z</lastmod>
   </url>
   <url>
-    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/environment.html</loc>
-    <lastmod>2024-12-19T18:28:11.980Z</lastmod>
+    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/src/implementation_methodology/imp-verify-assis.html</loc>
+    <lastmod>2024-12-19T18:46:16.706Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ibm-client-engineering.github.io/unified-virtual-assistant/src/implementation_methodology/watsonx-gov.html</loc>
+    <lastmod>2024-12-19T18:46:16.707Z</lastmod>
   </url>
 </urlset>

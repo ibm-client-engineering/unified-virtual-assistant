@@ -1,8 +1,0 @@
----
-title: "Key Takeaways"
-format: html
----
-
-### Best Practices
-(Capture the main takeaways and results of the project)
-

@@ -4,7 +4,7 @@ format: html
 ---
 
 ::: {.callout-warning}
-Prerequisite: [watsonx Discovery Software Requirement](/environment.html#watsonx-discovery)
+Prerequisite: [watsonx Discovery Software Requirement](/environment.html#rag-document-search)
 :::
 ## Build setup
 <div
@@ -15,8 +15,8 @@ Prerequisite: [watsonx Discovery Software Requirement](/environment.html#watsonx
   }}
 ></div>
 
-Navigate to this [github](https://github.ibm.com/skol-assets/watsonx-RAG-w-watsonxdiscovery-method2/) 
-and download [this project file](https://github.ibm.com/skol-assets/watsonx-RAG-w-watsonxdiscovery-method2/blob/main/project/WatsonStudioProjectTemplate.zip)
+Navigate to this [github](https://github.ibm.com/skol-assets/watson<span style="color:#2c62f5;">x</span>-RAG-w-watson<span style="color:#2c62f5;">x</span>discovery-method2/) 
+and download [this project file](https://github.ibm.com/skol-assets/watson<span style="color:#2c62f5;">x</span>-RAG-w-watson<span style="color:#2c62f5;">x</span>discovery-method2/blob/main/project/WatsonStudioProjectTemplate.zip)
 
 
 ## Build Walkthrough
@@ -57,8 +57,8 @@ Create an IBM Cloud API key in IBM Cloud [here](https://cloud.ibm.com/iam/apikey
 
 ### **Create the Watson Studio Project**
 
-1. Download the "WatsonStudioProjectTemplate.zip"[here](https://github.ibm.com/skol-assets/watsonx-RAG-w-watsonxdiscovery-method2/tree/main/project).
-2. Navigate to the Projects section of Watson Studio and change the context from "Watson Studio" to "watsonx". You can change the context in the top right corner of the UI.
+1. Download the "WatsonStudioProjectTemplate.zip"[here](https://github.ibm.com/skol-assets/watson<span style="color:#2c62f5;">x</span>-RAG-w-watson<span style="color:#2c62f5;">x</span>discovery-method2/tree/main/project).
+2. Navigate to the Projects section of Watson Studio and change the context from "Watson Studio" to "watson<span style="color:#2c62f5;">x</span>". You can change the context in the top right corner of the UI.
 3. Select `New Project` -> `Create a new project from a sample or file` and upload the zip file from [the "Build Setup"](#build-setup)
 
 #### Assiciate WML instance
@@ -72,13 +72,13 @@ Create an IBM Cloud API key in IBM Cloud [here](https://cloud.ibm.com/iam/apikey
 
 #### **Complete Connection to Databases for Elasticsearch**
 
-1. Click on the `WatsonxDiscovery` connection in the project.
+1. Click on the `watson<span style="color:#2c62f5;">x</span>Discovery` connection in the project.
 2. In a separate tab, navigate to the Databases for Elasticsearch service on IBM Cloud.
 3. Within the `Overview` tab scroll down to the `Endpoints` section and select the `HTTPS` tab.
 4. Copy the **hostname**, **port**, and **TLS certificate**.
 5. Go to the service credentials tab of the service and create a `New Credential`.
 6. Copy the username and password under `connection.https.authentication` in the new service credential JSON.
-7. Return to the Watson Studio project's `WatsonxDiscovery` connection and set the following fields:
+7. Return to the Watson Studio project's `watson<span style="color:#2c62f5;">x</span>Discovery` connection and set the following fields:
    - Edit the URL with the saved values for the `HOSTNAME` and `PORT` with the format of `https://{HOSTNAME}:{PORT}`.
    - The username and password should be the ones copied from the service credentials.
    - The SSL certificate should be the TLS certificate.
@@ -112,7 +112,8 @@ The `1-file-ingestion-from-dis` notebook in the project handles document ingesti
    - Navigate to the "Access control" and copy the existing token to be used in the notebook.
 
 2. Install the necessary python libraries:
-   :::note
+   
+   ::: {.callout-note}
    Only need too install python libs on the first run of the notebook
    :::
 
@@ -145,9 +146,11 @@ The `1-file-ingestion-from-cos` notebook in the project handles document ingesti
    - Navigate to the "Access control" and copy the existing token to be used in the notebook.
 
 2. Install the necessary python libraries:
-   :::note
+
+   ::: {.callout-note}
    Only need too install python libs on the first run of the notebook
    :::
+
    Insert new cell and run
    ```
    !pip install nltk --quiet
@@ -163,7 +166,7 @@ The `1-file-ingestion-from-cos` notebook in the project handles document ingesti
 
 #### **Deploy RAG Function in Watson Machine Learning**
 
-The `2-deploy-rag-function-in-wml` notebook in the project handles the deployment of a Python function that performs RAG using the Databases for Elasticsearch database and watsonx.ai. This step is not necessary if you plan to use the native search integration in watsonx Assistant. Optionally, you can test your deployment using the third notebook `3-test-rag-deployment` in the project. This notebook calls the deployment endpoint and reformats the deployment responses for better readability.
+The `2-deploy-rag-function-in-wml` notebook in the project handles the deployment of a Python function that performs RAG using the Databases for Elasticsearch database and watson<span style="color:#2c62f5;">x</span>.ai. This step is not necessary if you plan to use the native search integration in watson<span style="color:#2c62f5;">x</span> Assistant. Optionally, you can test your deployment using the third notebook `3-test-rag-deployment` in the project. This notebook calls the deployment endpoint and reformats the deployment responses for better readability.
 
 1. Update Project ID and Project Token Values
 
@@ -183,7 +186,8 @@ The `2-deploy-rag-function-in-wml` notebook in the project handles the deploymen
    ````
 
 3. Deploy seperate functions for each index created
-   :::tip
+
+   ::: {.callout-tip}
    Note down the `deployment_id` for each function for each index to be leveraged for the Assistant integration
    :::
 
@@ -193,14 +197,14 @@ The `2-deploy-rag-function-in-wml` notebook in the project handles the deploymen
 
 ### **Assistant Integration**
 
-watsonx Assistant provides the query interface, using either:
+watson<span style="color:#2c62f5;">x</span> Assistant provides the query interface, using either:
 
 - [Custom Extension for RAG Deploment Configuration](#deploy-rag-function-in-watson-machine-learning)
-  :::tip
+
+  ::: {.callout-tip}
   Useful for routing queries/requests to different collections of data
   :::
 - Native Extension.
-  - The assets for setting up watsonx Assistant are located in the [assistant folder](./assistant/) of this repository, and are also included in the Watson Studio project for convenience.
 
 #### **Custom Extension**
 
@@ -213,9 +217,9 @@ watsonx Assistant provides the query interface, using either:
 
 #### **Native Extension**
 
-To configure watsonx Assistant to use the native search extension, follow these steps:
+To configure watson<span style="color:#2c62f5;">x</span> Assistant to use the native search extension, follow these steps:
 
-1. In the integrations tab on the bottom left of the watsonx Assistant user interface, select the search extension and then Elasticsearch.
+1. In the integrations tab on the bottom left of the watson<span style="color:#2c62f5;">x</span> Assistant user interface, select the search extension and then Elasticsearch.
 2. Use the Databases for Elasticsearch credentials obtained in the [Complete Connection to Databases For Elasticsearch section](#complete-connection-to-databases-for-elasticsearch) to fill out the next page.
    - Note that "https://" should be appended before the hostname obtained from the Elasticsearch credentials.
    - The index name should be the `es_index_name` from your project's parameter set.
@@ -257,7 +261,7 @@ Dependent Steps: [Assistant Integration](#assistant-integration)
 
 #### **Assistant Action Integrationn**
 
-1. Within the appropriate action step select "And then" option as "Use an extension" and select the appropriate watsonx Discovery extension
+1. Within the appropriate action step select "And then" option as "Use an extension" and select the appropriate watson<span style="color:#2c62f5;">x</span> Discovery extension
 2. For "Operation" select "Get the predications"
 3. For the "Parameters" set:
    - input_data: Expression type as `[{"fields": ["Text"],"values": [[input.text]]}]`

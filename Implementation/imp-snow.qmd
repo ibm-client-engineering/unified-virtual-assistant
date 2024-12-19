@@ -27,11 +27,11 @@ Follow steps [here](https://developer.servicenow.com/dev.do#!/learn/learning-pla
 <div style={{ borderBottom: '1px solid #000', marginTop: '20px', marginBottom: '20px' }}></div>
 There are two ways in which the ServiceNow application can be integrated to the Assistant:
 
-* [watsonx Orchestrate Skill](#watsonx-orchestrate-skill)
+* [watson<span style="color:#2c62f5;">x</span> Orchestrate Skill](#watson<span style="color:#2c62f5;">x</span>-orchestrate-skill)
 * [Assistant Custom Extension](#assistant-custom-extension)
 
-### watsonx Orchestrate Skill
-1. Within the watsonx orchestrate platform,  navigate to the sidebar and select "Chat"
+### watson<span style="color:#2c62f5;">x</span> Orchestrate Skill
+1. Within the watson<span style="color:#2c62f5;">x</span> orchestrate platform,  navigate to the sidebar and select "Chat"
 2. In the dropdown menu in the top select the right target Assistant environment
 3. Select "Add skills from the catalog" and select "ServiceNow"
 4. In the top right select "Connect App"
@@ -64,7 +64,7 @@ There are two ways in which the ServiceNow application can be integrated to the 
 3. Add BasicAuth Component to the OpenAPI spec (make sure each block is comma delimited):
 
 <div style="margin-left: 35px;">
-```sh
+```json
 "components":{
     "securitySchemes": {
         "basicAuth": {
@@ -78,7 +78,7 @@ There are two ways in which the ServiceNow application can be integrated to the 
 4. Save file
 
 #### **Build Custom Extenstion**
-1. Within watsonX Assistant, navigate to the sidebar and select "Integrations"
+1. Within watson<span style="color:#2c62f5;">x</span> Assistant, navigate to the sidebar and select "Integrations"
 2. Select "Build Custom Extension"
 3. For the "Basic Information" page fill out all appropriate fields and click "Next"
 4. Upload the Service Now OpenAPI spec, click "Next" and then "Finish"

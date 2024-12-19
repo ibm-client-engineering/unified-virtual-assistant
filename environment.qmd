@@ -4,33 +4,33 @@ format: html
 ---
 
 ## **Web-chat Interface**
-- *watsonx Orchestrate*
+- *watson<span style="color:#2c62f5;">x</span> Orchestrate*
     - Dedicated WxO Tenant with Admin access
 - *IBM Cloud Object Storage*: Lite Plan
 
 ## **RAG Document Search**
 For RAG Document  Search you can leverage two different methods:
 - watson Discovery
-- watsonx Discovery
+- watson<span style="color:#2c62f5;">x</span> Discovery
 
 
 ### Watson Discovery
 - *watson Discovery*: Plus Plan
-- *watsonx.ai*
+- *watson<span style="color:#2c62f5;">x</span>.ai*
     - *Watson Machine Learning*: Standard Plan
-    - *watsonx Studio*: Lite Plan
+    - *watson<span style="color:#2c62f5;">x</span> Studio*: Lite Plan
 
-### watsonx Discovery
-- *watsonx Discovery*: Platinum Plan (Probably need more than 16GB of RAM)
-- *watsonx.ai*
+### watson<span style="color:#2c62f5;">x</span> Discovery
+- *watson<span style="color:#2c62f5;">x</span> Discovery*: Platinum Plan (Probably need more than 16GB of RAM)
+- *watson<span style="color:#2c62f5;">x</span>.ai*
     - *Watson Machine Learning*: Standard Plan
-    - *watsonx Studio*: Lite Plan
+    - *watson<span style="color:#2c62f5;">x</span> Studio*: Lite Plan
 - *IBM Cloud Object Storage*: Lite Plan
 
 ## **Governance**
-- *watsonx.ai*
+- *watson<span style="color:#2c62f5;">x</span>.ai*
     - *Watson Machine Learning*: Standard Plan
-- *watsonx.governance*: Essentials Plan
+- *watson<span style="color:#2c62f5;">x</span>.governance*: Essentials Plan
 
 ## **Third Party Applications**
 
@@ -43,5 +43,5 @@ For RAG Document  Search you can leverage two different methods:
 ### Genesys
 - Genesys Cloud CX Account
 
-## **User Authentication**
+## **Identity and Access Management**
 - *IBM Security Verify*

@@ -4,10 +4,9 @@ format: html
 ---
 
 ## Assistant Integration
-<div style={{ borderBottom: '1px solid #000', marginTop: '20px', marginBottom: '20px' }}></div>
 
-### watsonx Orchestrate Skill
-1. Within the watsonx orchestrate platform,  navigate to the sidebar and select "Chat"
+### watson<span style="color:#2c62f5;">x</span> Orchestrate Skill
+1. Within the watson<span style="color:#2c62f5;">x</span> orchestrate platform,  navigate to the sidebar and select "Chat"
 2. In the dropdown menu in the top select the right target Assistant environment
 3. Select "Add skills from the catalog" and select "Workday"
 4. In the top right select "Connect App"

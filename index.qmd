@@ -1,13 +1,13 @@
 
 ---
 title: "Unified Virtual Assistant"
-subtitle: "Subtitle"
+subtitle: "Leverage watsonx Orchestrate to build a unified user experiance with gen-AI routing, IAM, governance, RAG, and third-party integrations."
 author: Eashan Thakuria, John Scott
 format: html
 ---
 
 ---
-Description: "Project Name"
+Description: "Leverage watsonx Orchestrate to build a unified user experiance with gen-AI routing, IAM, governance, RAG, and third-party integrations."
 ---
 
 ## Overview
@@ -91,9 +91,9 @@ Integrating third-party applications with a chatbot is pivotal for predefined wo
 This solution covers integrations with ServiceNow to showcase how to leveragae workflows that require opening tickets.
 
 ### **Governance**
-Implementing watsonx governance mechanisms is critical for managing the complexities and risks of AI model deployments. Clear guidelines and oversight help mitigate risks like data bias and model drift, ensure real-time monitoring, and foster transparency by documenting processes, data sources, and decision criteria.
+Implementing watson<span style="color:#2c62f5;">x</span> governance mechanisms is critical for managing the complexities and risks of AI model deployments. Clear guidelines and oversight help mitigate risks like data bias and model drift, ensure real-time monitoring, and foster transparency by documenting processes, data sources, and decision criteria.
 
-Governance frameworks also optimize resource allocation by prioritizing high-value AI initiatives, ensuring efficient use of resources. IBM® watsonx.governance™ provides a comprehensive framework to enhance transparency, accountability, and compliance, empowering organizations to responsibly harness AI's potential while minimizing risks.
+Governance frameworks also optimize resource allocation by prioritizing high-value AI initiatives, ensuring efficient use of resources. IBM® watson<span style="color:#2c62f5;">x</span>.governance™ provides a comprehensive framework to enhance transparency, accountability, and compliance, empowering organizations to responsibly harness AI's potential while minimizing risks.
 
 ### **Subordinate Bot Mediation**
 One aspect of creating a unifying platform is the ability to connect and interface with existing chatbots which may have their own data corpuses or access policies. The parent or unifying agent should be able to hand-off requests to the relevant chatbots. 

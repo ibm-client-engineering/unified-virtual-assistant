@@ -319,12 +319,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#steps-to-track-models-in-the-watsonx.gov-platform" id="toc-steps-to-track-models-in-the-watsonx.gov-platform" class="nav-link active" data-scroll-target="#steps-to-track-models-in-the-watsonx.gov-platform">Steps to Track Models in the watsonx.gov Platform</a></li>
+  <li><a href="#steps-to-track-models-in-the-watsonx.gov-platform" id="toc-steps-to-track-models-in-the-watsonx.gov-platform" class="nav-link active" data-scroll-target="#steps-to-track-models-in-the-watsonx.gov-platform">Steps to Track Models in the watson<span style="color:#2c62f5;">x</span>.gov Platform</a></li>
   <li><a href="#assistant-integration" id="toc-assistant-integration" class="nav-link" data-scroll-target="#assistant-integration">Assistant Integration</a>
   <ul class="collapse">
   <li><a href="#create-custom-extension" id="toc-create-custom-extension" class="nav-link" data-scroll-target="#create-custom-extension">Create Custom Extension</a></li>
   <li><a href="#assistant-action-configuration" id="toc-assistant-action-configuration" class="nav-link" data-scroll-target="#assistant-action-configuration">Assistant Action Configuration</a></li>
-  <li><a href="#retrieve-relevant-watsonx.gov-metadata" id="toc-retrieve-relevant-watsonx.gov-metadata" class="nav-link" data-scroll-target="#retrieve-relevant-watsonx.gov-metadata">Retrieve Relevant watsonx.gov Metadata</a></li>
+  <li><a href="#retrieve-relevant-watsonx.gov-metadata" id="toc-retrieve-relevant-watsonx.gov-metadata" class="nav-link" data-scroll-target="#retrieve-relevant-watsonx.gov-metadata">Retrieve Relevant watson<span style="color:#2c62f5;">x</span>.gov Metadata</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -364,9 +364,9 @@ Warning
 <p>Prerequisite: <a href="../Prepare/Requirements#governance">watsonx.gov Software Requirement</a></p>
 </div>
 </div>
-<p>This portion of the Create tab will walk you through how to create and integrate the watsonx.gov platform with the Orchestrate solutions. That way, you can monitor, track, and update your models in real-time and before deployment. To check out how watsonx.gov adds to the Business Value of this particular use case, visit the <a href="../Business Overview/Use Cases/Governance#overview">Business Use Case</a> tab.</p>
+<p>This portion of the Create tab will walk you through how to create and integrate the watson<span style="color:#2c62f5;">x</span>.gov platform with the Orchestrate solutions. That way, you can monitor, track, and update your models in real-time and before deployment. To check out how watson<span style="color:#2c62f5;">x</span>.gov adds to the Business Value of this particular use case, visit the <a href="..">Problem Definition</a> section.</p>
 <section id="steps-to-track-models-in-the-watsonx.gov-platform" class="level2">
-<h2 class="anchored" data-anchor-id="steps-to-track-models-in-the-watsonx.gov-platform">Steps to Track Models in the watsonx.gov Platform</h2>
+<h2 class="anchored" data-anchor-id="steps-to-track-models-in-the-watsonx.gov-platform">Steps to Track Models in the watson<span style="color:#2c62f5;">x</span>.gov Platform</h2>
 <ol type="1">
 <li>Save your Prompt Lab as a Prompt Template.</li>
 <li>Within the project underneath <em>Assets</em>, click on the vertical 3 dots –&gt; “Go to AI Factsheet” button.</li>
@@ -376,7 +376,7 @@ Warning
 </ul></li>
 <li>Now, back in your project underneath <em>Assets</em>, please click on the vertical 3 dots again –&gt; “Promote to space” button.
 <ul>
-<li>If you do not have a deployment space created yet, please create one on the main watsonx.ai homepage in order to hold all the deployed models that you create.
+<li>If you do not have a deployment space created yet, please create one on the main watson<span style="color:#2c62f5;">x</span>.ai homepage in order to hold all the deployed models that you create.
 <ul>
 <li>OPTIONAL: It might be beneficial to create a Pre-Production and a Post-Production deployment for the same model. This is beneficial because at different stages of deployments, there are different metrics unlocked in order to showcase the attributes of the model.</li>
 </ul></li>
@@ -391,7 +391,7 @@ Warning
 <ul>
 <li>Also, note that if you set your model to Production, then you will be able to perform a Drift evaluation. This requires another dataset called the payload dataset, which is typically shorter than the feedback one but similarly has synthetic data in it. Drift will track whether or not your model degrades over time.</li>
 </ul></li>
-<li>Once deploying and evaluation the models on the watsonx.ai platform, you will be able to view your models in OpenScale where additional metrics regarding quality and model health will be shared. Within OpenScale, you can also perform various evaluations on your models and readjust thresholds.</li>
+<li>Once deploying and evaluation the models on the watson<span style="color:#2c62f5;">x</span>.ai platform, you will be able to view your models in OpenScale where additional metrics regarding quality and model health will be shared. Within OpenScale, you can also perform various evaluations on your models and readjust thresholds.</li>
 </ol>
 </section>
 <section id="assistant-integration" class="level2">
@@ -399,11 +399,11 @@ Warning
 <section id="create-custom-extension" class="level3">
 <h3 class="anchored" data-anchor-id="create-custom-extension">Create Custom Extension</h3>
 <ol type="1">
-<li>Within the watsonx Orchestrate instance, navigate to the sidebar and go to the header “AI Assistant Builder”</li>
+<li>Within the watson<span style="color:#2c62f5;">x</span> Orchestrate instance, navigate to the sidebar and go to the header “AI Assistant Builder”</li>
 <li>Once you’ve entered the AI Assistant Builder, navigate to the sidebar and go to the header “Integrations”</li>
-<li>Under the “Extensions” tab, click on “Build custom extension” so that you can create a custom extension for watsonx.gov in your assistant.
+<li>Under the “Extensions” tab, click on “Build custom extension” so that you can create a custom extension for watson<span style="color:#2c62f5;">x</span>.gov in your assistant.
 <ul>
-<li>Name the extension something descriptive. When it asks for the OpenAPI Spec, you can either create your own OpenAPI Spec, or utilize the one that we provide, located <a href="https://github.com/ibm-client-engineering/solution-unified-virtual-agent/blob/main/assets/openAPI_specs/watsonx_governance/governance_openapi_spec.json">here</a>.</li>
+<li>Name the extension something descriptive. When it asks for the OpenAPI Spec, you can either create your own OpenAPI Spec, or utilize the one that we provide, located <a href="https://github.com/ibm-client-engineering/solution-unified-virtual-agent/blob/main/assets/openAPI_specs/watson%3Cspan%20style=%22color:#2c62f5;%22%3Ex%3C/span%3E_governance/governance_openapi_spec.json">here</a>.</li>
 </ul></li>
 <li>Once you’ve created the extension, you need to add it to the assistant by clicking the “Add +” button on the Integrations homepage.
 <ul>
@@ -424,9 +424,9 @@ Warning
 </ol>
 </section>
 <section id="retrieve-relevant-watsonx.gov-metadata" class="level3">
-<h3 class="anchored" data-anchor-id="retrieve-relevant-watsonx.gov-metadata">Retrieve Relevant watsonx.gov Metadata</h3>
+<h3 class="anchored" data-anchor-id="retrieve-relevant-watsonx.gov-metadata">Retrieve Relevant watson<span style="color:#2c62f5;">x</span>.gov Metadata</h3>
 <ol type="1">
-<li>Within the watsonx Orchestrate instance, navigate to the sidebar and go to the header “AI Assistant Builder”</li>
+<li>Within the watson<span style="color:#2c62f5;">x</span> Orchestrate instance, navigate to the sidebar and go to the header “AI Assistant Builder”</li>
 <li>Once you’ve entered the AI Assistant Builder, navigate to the sidebar and go to the header “Assistant”</li>
 <li>Go to the action where you utilize the custom extension (the action that you built in the last section). Navigate to the conversation step where you added “Use an extension” then click on “New Step +” to add a step after this extension.</li>
 <li>In that new step, set a new variab</li>

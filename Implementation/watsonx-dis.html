@@ -400,13 +400,13 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Prerequisite: <a href="../environment.html#watsonx-discovery">watsonx Discovery Software Requirement</a></p>
+<p>Prerequisite: <a href="../environment.html#rag-document-search">watsonx Discovery Software Requirement</a></p>
 </div>
 </div>
 <section id="build-setup" class="level2">
 <h2 class="anchored" data-anchor-id="build-setup">Build setup</h2>
 <div style="{{" borderbottom:="" "1px="" solid="" #000",="" margintop:="" "20px",="" marginbottom:="" }}=""></div>
-<p>Navigate to this <a href="https://github.ibm.com/skol-assets/watsonx-RAG-w-watsonxdiscovery-method2/">github</a> and download <a href="https://github.ibm.com/skol-assets/watsonx-RAG-w-watsonxdiscovery-method2/blob/main/project/WatsonStudioProjectTemplate.zip">this project file</a></p>
+<p>Navigate to this <a href="https://github.ibm.com/skol-assets/watson%3Cspan%20style=%22color:#2c62f5;%22%3Ex%3C/span%3E-RAG-w-watson%3Cspan%20style=%22color:#2c62f5;%22%3Ex%3C/span%3Ediscovery-method2/">github</a> and download <a href="https://github.ibm.com/skol-assets/watson%3Cspan%20style=%22color:#2c62f5;%22%3Ex%3C/span%3E-RAG-w-watson%3Cspan%20style=%22color:#2c62f5;%22%3Ex%3C/span%3Ediscovery-method2/blob/main/project/WatsonStudioProjectTemplate.zip">this project file</a></p>
 </section>
 <section id="build-walkthrough" class="level2">
 <h2 class="anchored" data-anchor-id="build-walkthrough">Build Walkthrough</h2>
@@ -455,8 +455,8 @@ Note
 <section id="create-the-watson-studio-project" class="level3">
 <h3 class="anchored" data-anchor-id="create-the-watson-studio-project"><strong>Create the Watson Studio Project</strong></h3>
 <ol type="1">
-<li>Download the “WatsonStudioProjectTemplate.zip”<a href="https://github.ibm.com/skol-assets/watsonx-RAG-w-watsonxdiscovery-method2/tree/main/project">here</a>.</li>
-<li>Navigate to the Projects section of Watson Studio and change the context from “Watson Studio” to “watsonx”. You can change the context in the top right corner of the UI.</li>
+<li>Download the “WatsonStudioProjectTemplate.zip”<a href="https://github.ibm.com/skol-assets/watson%3Cspan%20style=%22color:#2c62f5;%22%3Ex%3C/span%3E-RAG-w-watson%3Cspan%20style=%22color:#2c62f5;%22%3Ex%3C/span%3Ediscovery-method2/tree/main/project">here</a>.</li>
+<li>Navigate to the Projects section of Watson Studio and change the context from “Watson Studio” to “watson<span style="color:#2c62f5;">x</span>”. You can change the context in the top right corner of the UI.</li>
 <li>Select <code>New Project</code> -&gt; <code>Create a new project from a sample or file</code> and upload the zip file from <a href="#build-setup">the “Build Setup”</a></li>
 </ol>
 <section id="assiciate-wml-instance" class="level4">
@@ -475,13 +475,13 @@ Note
 <section id="complete-connection-to-databases-for-elasticsearch" class="level4">
 <h4 class="anchored" data-anchor-id="complete-connection-to-databases-for-elasticsearch"><strong>Complete Connection to Databases for Elasticsearch</strong></h4>
 <ol type="1">
-<li>Click on the <code>WatsonxDiscovery</code> connection in the project.</li>
+<li>Click on the <code>watson&lt;span style="color:#2c62f5;"&gt;x&lt;/span&gt;Discovery</code> connection in the project.</li>
 <li>In a separate tab, navigate to the Databases for Elasticsearch service on IBM Cloud.</li>
 <li>Within the <code>Overview</code> tab scroll down to the <code>Endpoints</code> section and select the <code>HTTPS</code> tab.</li>
 <li>Copy the <strong>hostname</strong>, <strong>port</strong>, and <strong>TLS certificate</strong>.</li>
 <li>Go to the service credentials tab of the service and create a <code>New Credential</code>.</li>
 <li>Copy the username and password under <code>connection.https.authentication</code> in the new service credential JSON.</li>
-<li>Return to the Watson Studio project’s <code>WatsonxDiscovery</code> connection and set the following fields:
+<li>Return to the Watson Studio project’s <code>watson&lt;span style="color:#2c62f5;"&gt;x&lt;/span&gt;Discovery</code> connection and set the following fields:
 <ul>
 <li>Edit the URL with the saved values for the <code>HOSTNAME</code> and <code>PORT</code> with the format of <code>https://{HOSTNAME}:{PORT}</code>.</li>
 <li>The username and password should be the ones copied from the service credentials.</li>
@@ -519,7 +519,20 @@ Note
 <li>Navigate to the “Manage” Tab of the watson Studio project and copy the “Project ID” to be used in the notebook.</li>
 <li>Navigate to the “Access control” and copy the existing token to be used in the notebook.</li>
 </ul></li>
-<li><p>Install the necessary python libraries: :::note Only need too install python libs on the first run of the notebook :::</p>
+<li><p>Install the necessary python libraries:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Only need too install python libs on the first run of the notebook</p>
+</div>
+</div>
 <p>Insert new cell and run</p>
 <pre class="shell"><code>!pip install nltk --quiet
 !pip install ibm_watson --quiet
@@ -546,7 +559,21 @@ Note
 <li>Navigate to the “Manage” Tab of the watson Studio project and copy the “Project ID” to be used in the notebook.</li>
 <li>Navigate to the “Access control” and copy the existing token to be used in the notebook.</li>
 </ul></li>
-<li><p>Install the necessary python libraries: :::note Only need too install python libs on the first run of the notebook ::: Insert new cell and run</p>
+<li><p>Install the necessary python libraries:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Only need too install python libs on the first run of the notebook</p>
+</div>
+</div>
+<p>Insert new cell and run</p>
 <pre><code>!pip install nltk --quiet
 !pip install ibm_watson --quiet
 !pip install elasticsearch --quiet
@@ -559,7 +586,7 @@ Note
 </section>
 <section id="deploy-rag-function-in-watson-machine-learning" class="level4">
 <h4 class="anchored" data-anchor-id="deploy-rag-function-in-watson-machine-learning"><strong>Deploy RAG Function in Watson Machine Learning</strong></h4>
-<p>The <code>2-deploy-rag-function-in-wml</code> notebook in the project handles the deployment of a Python function that performs RAG using the Databases for Elasticsearch database and watsonx.ai. This step is not necessary if you plan to use the native search integration in watsonx Assistant. Optionally, you can test your deployment using the third notebook <code>3-test-rag-deployment</code> in the project. This notebook calls the deployment endpoint and reformats the deployment responses for better readability.</p>
+<p>The <code>2-deploy-rag-function-in-wml</code> notebook in the project handles the deployment of a Python function that performs RAG using the Databases for Elasticsearch database and watson<span style="color:#2c62f5;">x</span>.ai. This step is not necessary if you plan to use the native search integration in watson<span style="color:#2c62f5;">x</span> Assistant. Optionally, you can test your deployment using the third notebook <code>3-test-rag-deployment</code> in the project. This notebook calls the deployment endpoint and reformats the deployment responses for better readability.</p>
 <ol type="1">
 <li><p>Update Project ID and Project Token Values</p>
 <ul>
@@ -574,7 +601,20 @@ Note
     !pip install llama_index.vector_stores.elasticsearch --quiet
     ```
 </code></pre></li>
-<li><p>Deploy seperate functions for each index created :::tip Note down the <code>deployment_id</code> for each function for each index to be leveraged for the Assistant integration :::</p></li>
+<li><p>Deploy seperate functions for each index created</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note down the <code>deployment_id</code> for each function for each index to be leveraged for the Assistant integration</p>
+</div>
+</div></li>
 <li><p>Run cell under “Update project assets” to generate the OpenApi Spec for assistant integrations (if applicable)</p></li>
 </ol>
 <hr>
@@ -582,13 +622,23 @@ Note
 </section>
 <section id="assistant-integration" class="level3">
 <h3 class="anchored" data-anchor-id="assistant-integration"><strong>Assistant Integration</strong></h3>
-<p>watsonx Assistant provides the query interface, using either:</p>
+<p>watson<span style="color:#2c62f5;">x</span> Assistant provides the query interface, using either:</p>
 <ul>
-<li><a href="#deploy-rag-function-in-watson-machine-learning">Custom Extension for RAG Deploment Configuration</a> :::tip Useful for routing queries/requests to different collections of data :::</li>
-<li>Native Extension.
-<ul>
-<li>The assets for setting up watsonx Assistant are located in the <a href="./assistant/">assistant folder</a> of this repository, and are also included in the Watson Studio project for convenience.</li>
-</ul></li>
+<li><p><a href="#deploy-rag-function-in-watson-machine-learning">Custom Extension for RAG Deploment Configuration</a></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Useful for routing queries/requests to different collections of data</p>
+</div>
+</div></li>
+<li><p>Native Extension.</p></li>
 </ul>
 <section id="custom-extension" class="level4">
 <h4 class="anchored" data-anchor-id="custom-extension"><strong>Custom Extension</strong></h4>
@@ -603,9 +653,9 @@ Note
 </section>
 <section id="native-extension" class="level4">
 <h4 class="anchored" data-anchor-id="native-extension"><strong>Native Extension</strong></h4>
-<p>To configure watsonx Assistant to use the native search extension, follow these steps:</p>
+<p>To configure watson<span style="color:#2c62f5;">x</span> Assistant to use the native search extension, follow these steps:</p>
 <ol type="1">
-<li>In the integrations tab on the bottom left of the watsonx Assistant user interface, select the search extension and then Elasticsearch.</li>
+<li>In the integrations tab on the bottom left of the watson<span style="color:#2c62f5;">x</span> Assistant user interface, select the search extension and then Elasticsearch.</li>
 <li>Use the Databases for Elasticsearch credentials obtained in the <a href="#complete-connection-to-databases-for-elasticsearch">Complete Connection to Databases For Elasticsearch section</a> to fill out the next page.
 <ul>
 <li>Note that “https://” should be appended before the hostname obtained from the Elasticsearch credentials.</li>
@@ -648,7 +698,7 @@ Note
 <section id="assistant-action-integrationn" class="level4">
 <h4 class="anchored" data-anchor-id="assistant-action-integrationn"><strong>Assistant Action Integrationn</strong></h4>
 <ol type="1">
-<li>Within the appropriate action step select “And then” option as “Use an extension” and select the appropriate watsonx Discovery extension</li>
+<li>Within the appropriate action step select “And then” option as “Use an extension” and select the appropriate watson<span style="color:#2c62f5;">x</span> Discovery extension</li>
 <li>For “Operation” select “Get the predications”</li>
 <li>For the “Parameters” set:
 <ul>

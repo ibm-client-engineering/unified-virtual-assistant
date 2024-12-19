@@ -320,7 +320,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#setup-watson-discovery" id="toc-setup-watson-discovery" class="nav-link active" data-scroll-target="#setup-watson-discovery">1. Setup watson Discovery</a></li>
-  <li><a href="#create-watsonx-and-watson-discovery-extensions" id="toc-create-watsonx-and-watson-discovery-extensions" class="nav-link" data-scroll-target="#create-watsonx-and-watson-discovery-extensions">2. Create watsonx and watson Discovery Extensions</a></li>
+  <li><a href="#create-watsonx-and-watson-discovery-extensions" id="toc-create-watsonx-and-watson-discovery-extensions" class="nav-link" data-scroll-target="#create-watsonx-and-watson-discovery-extensions">2. Create watson<span style="color:#2c62f5;">x</span> and watson Discovery Extensions</a></li>
   </ul>
 </nav>
     </div>
@@ -356,17 +356,17 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Prerequisite: <a href="../environment.html#watson-discovery">Watson Disovery Software Requirement</a></p>
+<p>Prerequisite: <a href="../environment.html#rag-document-search">Watson Disovery Software Requirement</a></p>
 </div>
 </div>
 <p>This build consists of three main components:</p>
 <ol type="1">
 <li>Setup watson Discovery</li>
-<li>Create watsonx and Watson Discovery Extensions
+<li>Create watson<span style="color:#2c62f5;">x</span> and Watson Discovery Extensions
 <ol type="1">
 <li>Create watson Discovery custom extension</li>
-<li>Create watsonx custom extension</li>
-<li>Integrate watsonx Search using Watson Discovery to Assistant</li>
+<li>Create watson<span style="color:#2c62f5;">x</span> custom extension</li>
+<li>Integrate watson<span style="color:#2c62f5;">x</span> Search using Watson Discovery to Assistant</li>
 </ol></li>
 <li>Setup Watson Assistant</li>
 </ol>
@@ -382,7 +382,7 @@ Warning
 </ol>
 </section>
 <section id="create-watsonx-and-watson-discovery-extensions" class="level2">
-<h2 class="anchored" data-anchor-id="create-watsonx-and-watson-discovery-extensions">2. Create watsonx and watson Discovery Extensions</h2>
+<h2 class="anchored" data-anchor-id="create-watsonx-and-watson-discovery-extensions">2. Create watson<span style="color:#2c62f5;">x</span> and watson Discovery Extensions</h2>
 <p><strong>Required Steps:</strong></p>
 <section id="create-watson-discovery-custom-extension" class="level4">
 <h4 class="anchored" data-anchor-id="create-watson-discovery-custom-extension"><strong>2.1 Create watson Discovery custom extension</strong></h4>
@@ -402,16 +402,16 @@ Warning
 <li>Click “Next”, click “Finish”, click “Close”</li>
 </ol>
 <ul>
-<li>Reference: <a href="https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/extensions/starter-kits/watson-discovery">starter kit for accessing the IBM Watson Discovery v2 search API via a custom extension to IBM Watson Assistant</a></li>
+<li>Reference: <a href="https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/extensions/starter-kits/watson-discovery">starter kit</a></li>
 </ul>
 </section>
 <section id="create-watsonx-custom-extension" class="level4">
-<h4 class="anchored" data-anchor-id="create-watsonx-custom-extension"><strong>2.2 Create watsonx custom extension</strong></h4>
+<h4 class="anchored" data-anchor-id="create-watsonx-custom-extension"><strong>2.2 Create watson<span style="color:#2c62f5;">x</span> custom extension</strong></h4>
 <ol type="1">
-<li>In your assistant, navigate to Integrations page, click “Build custom extension” -&gt; click “Next” -&gt; Input Extension name <code>watsonx</code> -&gt; click “Next” .</li>
-<li>download json file: <a href="https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-watsonx/watsonx-openapi.json">watsonx-openapi.json</a> and import file to WA</li>
+<li>In your assistant, navigate to Integrations page, click “Build custom extension” -&gt; click “Next” -&gt; Input Extension name <code>watson&lt;span style="color:#2c62f5;"&gt;x&lt;/span&gt;</code> -&gt; click “Next” .</li>
+<li>download json file: <a href="https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-watson%3Cspan%20style=%22color:#2c62f5;%22%3Ex%3C/span%3E/watson%3Cspan%20style=%22color:#2c62f5;%22%3Ex%3C/span%3E-openapi.json">watson<span style="color:#2c62f5;">x</span>-openapi.json</a> and import file to WA</li>
 <li>click “Next” -&gt; click “Finish”</li>
-<li>Lower Right corner of the watsonx extension, click “Add” -&gt; click “Add” -&gt; click “Next”</li>
+<li>Lower Right corner of the watson<span style="color:#2c62f5;">x</span> extension, click “Add” -&gt; click “Add” -&gt; click “Next”</li>
 <li>In Authentication page, in the Authentication type dropdown, select “OAuth 2.0”
 <ol type="1">
 <li>For Apikey, create and copy a new API key from <a href="https://cloud.ibm.com/iam/apikeys">API key</a></li>
@@ -420,23 +420,30 @@ Warning
 </ol>
 </section>
 <section id="integrate-watsonx-search-using-watson-discovery-to-assistant" class="level4">
-<h4 class="anchored" data-anchor-id="integrate-watsonx-search-using-watson-discovery-to-assistant"><strong>2.3 Integrate watsonx Search using Watson Discovery to Assistant</strong></h4>
+<h4 class="anchored" data-anchor-id="integrate-watsonx-search-using-watson-discovery-to-assistant"><strong>2.3 Integrate watson<span style="color:#2c62f5;">x</span> Search using Watson Discovery to Assistant</strong></h4>
 <section id="upload-actions" class="level5">
 <h5 class="anchored" data-anchor-id="upload-actions">Upload Actions:</h5>
 <ol type="1">
-<li>Download <a href="https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-conversational-search/discovery-watsonx-actions.json">discovery-watsonx-actions.json</a></li>
+<li>Download <a href="https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-conversational-search/discovery-watson%3Cspan%20style=%22color:#2c62f5;%22%3Ex%3C/span%3E-actions.json">discovery-watson<span style="color:#2c62f5;">x</span>-actions.json</a></li>
 <li>Navigate to “Actions” page, click “Global Settings” icon on the upper right corner</li>
-<li>Navigate to Upload/Download tab, upload the downloaded JSON file <a href="https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-conversational-search/discovery-watsonx-actions.json">discovery-watsonx-actions.json</a> onto the tab or click to select a file from your local system, then click “Upload”, and “Uplaod and replace”.</li>
-<li>within the Actions page, navigate to “Actions / Variables / Created by you”. Set <code>discovery_project_id</code> and <code>watsonx_project_id</code> session variable :::info <strong>Where to get credentials</strong>
-<ul>
-<li><strong>discovery_project_id</strong>: within Watson Discovery: Upper left Hamburger icon -&gt; Integrate and deploy -&gt; API Information</li>
-<li><strong>watsonx_project_id</strong>:
-<ul>
-<li>Go to <a href="https://dataplatform.cloud.ibm.com/wx/home?context=wx">watsonX Platform</a></li>
-<li>Projects (click on project)-&gt; Manage -&gt; General -&gt; Details -&gt; Project ID :::</li>
-</ul></li>
-</ul></li>
+<li>Navigate to Upload/Download tab, upload the downloaded JSON file <a href="https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-conversational-search/discovery-watson%3Cspan%20style=%22color:#2c62f5;%22%3Ex%3C/span%3E-actions.json">discovery-watson-actions.json</a> onto the tab or click to select a file from your local system, then click “Upload”, and “Uplaod and replace”.</li>
+<li>Within the Actions page, navigate to “Actions / Variables / Created by you”. Set <code>discovery_project_id</code> and <code>watsonx_project_id</code> session variable</li>
 </ol>
+<div style="margin-left: 35px;">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Where to get credentials</strong> - <strong>discovery_project_id</strong>: within Watson Discovery: Upper left Hamburger icon -&gt; Integrate and deploy -&gt; API Information - **watson<span style="color:#2c62f5;">x</span>_project_id**: - Go to <a href="https://dataplatform.cloud.ibm.com/wx/home?context=wx">watson<span style="color:#2c62f5;">x</span> Platform</a> - Projects (click on project)-&gt; Manage -&gt; General -&gt; Details -&gt; Project ID</p>
+</div>
+</div>
+</div>
 </section>
 <section id="no-action-matches-setup" class="level5">
 <h5 class="anchored" data-anchor-id="no-action-matches-setup">No action matches Setup</h5>

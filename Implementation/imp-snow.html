@@ -360,7 +360,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#assistant-integration" id="toc-assistant-integration" class="nav-link" data-scroll-target="#assistant-integration">Assistant Integration</a>
   <ul class="collapse">
-  <li><a href="#watsonx-orchestrate-skill" id="toc-watsonx-orchestrate-skill" class="nav-link" data-scroll-target="#watsonx-orchestrate-skill">watsonx Orchestrate Skill</a></li>
+  <li><a href="#watsonx-orchestrate-skill" id="toc-watsonx-orchestrate-skill" class="nav-link" data-scroll-target="#watsonx-orchestrate-skill">watson<span style="color:#2c62f5;">x</span> Orchestrate Skill</a></li>
   <li><a href="#assistant-custom-extension" id="toc-assistant-custom-extension" class="nav-link" data-scroll-target="#assistant-custom-extension">Assistant Custom Extension</a></li>
   </ul></li>
   </ul>
@@ -418,13 +418,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div style="{{" borderbottom:="" '1px="" solid="" #000',="" margintop:="" '20px',="" marginbottom:="" '20px'="" }}=""></div>
 <p>There are two ways in which the ServiceNow application can be integrated to the Assistant:</p>
 <ul>
-<li><a href="#watsonx-orchestrate-skill">watsonx Orchestrate Skill</a></li>
+<li><a href="#watson%3Cspan%20style=%22color:#2c62f5;%22%3Ex%3C/span%3E-orchestrate-skill">watson<span style="color:#2c62f5;">x</span> Orchestrate Skill</a></li>
 <li><a href="#assistant-custom-extension">Assistant Custom Extension</a></li>
 </ul>
 <section id="watsonx-orchestrate-skill" class="level3">
-<h3 class="anchored" data-anchor-id="watsonx-orchestrate-skill">watsonx Orchestrate Skill</h3>
+<h3 class="anchored" data-anchor-id="watsonx-orchestrate-skill">watson<span style="color:#2c62f5;">x</span> Orchestrate Skill</h3>
 <ol type="1">
-<li>Within the watsonx orchestrate platform, navigate to the sidebar and select “Chat”</li>
+<li>Within the watson<span style="color:#2c62f5;">x</span> orchestrate platform, navigate to the sidebar and select “Chat”</li>
 <li>In the dropdown menu in the top select the right target Assistant environment</li>
 <li>Select “Add skills from the catalog” and select “ServiceNow”</li>
 <li>In the top right select “Connect App”</li>
@@ -462,14 +462,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Add BasicAuth Component to the OpenAPI spec (make sure each block is comma delimited):</li>
 </ol>
 <div style="margin-left: 35px;">
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="st">"components"</span><span class="ex">:{</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"securitySchemes"</span><span class="ex">:</span> {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">"basicAuth"</span><span class="ex">:</span> {</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>            <span class="st">"type"</span><span class="ex">:</span> <span class="st">"http"</span>,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>            <span class="st">"scheme"</span><span class="ex">:</span> <span class="st">"basic"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="er">}</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="er">}</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="er">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="er">"components":</span><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"securitySchemes"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"basicAuth"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"http"</span><span class="fu">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"scheme"</span><span class="fu">:</span> <span class="st">"basic"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">}</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="4" type="1">
 <li>Save file</li>
@@ -478,7 +478,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="build-custom-extenstion" class="level4">
 <h4 class="anchored" data-anchor-id="build-custom-extenstion"><strong>Build Custom Extenstion</strong></h4>
 <ol type="1">
-<li>Within watsonX Assistant, navigate to the sidebar and select “Integrations”</li>
+<li>Within watson<span style="color:#2c62f5;">x</span> Assistant, navigate to the sidebar and select “Integrations”</li>
 <li>Select “Build Custom Extension”</li>
 <li>For the “Basic Information” page fill out all appropriate fields and click “Next”</li>
 <li>Upload the Service Now OpenAPI spec, click “Next” and then “Finish”</li>

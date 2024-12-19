@@ -401,7 +401,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Leveraging IBM Cloud Object Storage to host a static website for the chatbot.
 <ul>
-<li>Configuration Steps <a href="../../Implementation/imp-UI.html">here</a></li>
+<li>Configuration Steps <a href="../implementation_methodology/imp-UI.html">here</a></li>
 </ul></li>
 </ul>
 </section>
@@ -409,21 +409,20 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="identity-and-access-management-iam"><strong>Identity and Access Management (IAM)</strong></h2>
 <p>IAM can be carried out in one of two methods:</p>
 <ul>
-<li>Security Verify SSO<br>
-</li>
+<li>Security Verify SSO</li>
 <li>Simulation</li>
 </ul>
 <section id="ibm-security-verify-sso" class="level3">
 <h3 class="anchored" data-anchor-id="ibm-security-verify-sso"><strong>IBM Security Verify SSO</strong></h3>
 <p>Leverage the IBM Security Verify API to carry differnt actions like authenticating user logins and resetting passwords within the Assistant builder UI.</p>
-<p><a href="../../Implementation/imp-verify-assis.html">Implementation Guide Here</a></p>
+<p><a href="../implementation_methodology/imp-verify-assis.html">Implementation Guide Here</a></p>
 </section>
 <section id="simulation" class="level3">
 <h3 class="anchored" data-anchor-id="simulation"><strong>Simulation</strong></h3>
 <p>Simulating user login within watson<span style="color:#2c62f5;">x</span> Orchestrate Assistant Builder can be achieved by storing simulated individuals in a data structure. This data structure, typically a list or map, can store information about each simulated user, such as their name, access level, and other relevant details. By initializing this data structure with a set of simulated users, you can create a realistic login scenario where the system checks user credentials and grants or denies access accordingly.</p>
 <p>Storing simulated individuals in a data structure within watson<span style="color:#2c62f5;">x</span> Orchestrate Assistant Builder allows you to test the login functionality and ensure that the system behaves as expected. This can help identify potential issues early in the development process, saving time and resources. Additionally, you can customize the simulated users’ data to represent different user types, enabling you to test the system’s access control mechanisms and ensure that users are only granted access to the appropriate actions and data.</p>
 <p>By using simulated users in this manner, you can thoroughly test the user login functionality and ensure that the unified agent with generative AI capabilities is secure, reliable, and user-friendly.</p>
-<p><a href="../../Implementation/imp-sim.html">Implementation Guide Here</a></p>
+<p><a href="../implementation_methodology/imp-sim.html">Implementation Guide Here</a></p>
 </section>
 </section>
 <section id="conversational-engine" class="level2">
@@ -431,7 +430,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The conversational engine was built using watson<span style="color:#2c62f5;">x</span> Orchestrate Assistant Builder where generative AI-driven routing was configured to direct users to the most appropriate workflows and data based on their access permissions.</p>
 <section id="genai-routing" class="level3">
 <h3 class="anchored" data-anchor-id="genai-routing">GenAI Routing</h3>
-<p>Configuration Steps <a href="../../Implementation/imp-genai-rout.html">here</a></p>
+<p>Configuration Steps <a href="../implementation_methodology/imp-genai-rout.html">here</a></p>
 </section>
 </section>
 <section id="integrations" class="level2">
@@ -446,7 +445,7 @@ ul.task-list li input[type="checkbox"] {
 <li>watson<span style="color:#2c62f5;">x</span> Discovery</li>
 <li>watson<span style="color:#2c62f5;">x</span>.ai</li>
 </ul>
-<p><a href="../../Implementation/watsonx-dis.html">Implementation Guide Here</a></p>
+<p><a href="../implementation_methodology/watsonx-dis.html">Implementation Guide Here</a></p>
 </section>
 <section id="watson-discovery" class="level4">
 <h4 class="anchored" data-anchor-id="watson-discovery">2. <strong>watson Discovery:</strong></h4>
@@ -456,7 +455,7 @@ ul.task-list li input[type="checkbox"] {
 <li>watson Discovery</li>
 <li>watson<span style="color:#2c62f5;">x</span>.ai</li>
 </ul>
-<p><a href="../../Implementation/watson-dis.html">Implementation Guide Here</a></p>
+<p><a href="../implementation_methodology/watson-dis.html">Implementation Guide Here</a></p>
 </section>
 </section>
 <section id="governance" class="level3">
@@ -468,18 +467,18 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <section id="watsonx.gov" class="level4">
 <h4 class="anchored" data-anchor-id="watsonx.gov">watson<span style="color:#2c62f5;">x</span>.gov</h4>
-<p><img src="./images/gov_arch.png" class="img-fluid"></p>
+<p><img src="../../images/gov_arch.png" class="img-fluid"></p>
 <p>In summary, the implementation of IBM® watson<span style="color:#2c62f5;">x</span>.governance™ provides a comprehensive and seamless solution for the development, evaluation, deployment, and monitoring of AI models, ensuring compliance, transparency, and optimal performance throughout the AI lifecycle.</p>
 <p><strong>Required Integrations:</strong></p>
 <ul>
 <li>watson<span style="color:#2c62f5;">x</span>.gov</li>
 </ul>
-<p><a href="../../Implementation/watsonx-gov.html">Implementation Guide Here</a></p>
+<p><a href="../implementation_methodology/watsonx-gov.html">Implementation Guide Here</a></p>
 </section>
 <section id="rag-source-links" class="level4">
 <h4 class="anchored" data-anchor-id="rag-source-links">RAG Source Links</h4>
 <p>For every user query that involves RAG Document Search, a source link will be provided with each response to ensure transparency by clearly indicating the data corpus from which the answer was derived.</p>
-<p><a href="../../Implementation/rag-attr-links.html">Implementation Guide Here</a></p>
+<p><a href="../implementation_methodology/rag-attr-links.html">Implementation Guide Here</a></p>
 </section>
 </section>
 <section id="rd-party-applications" class="level3">
@@ -487,12 +486,12 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Leverage native assistant builder extensions to integrate with Genesys.
 <ul>
-<li>Genesys Configuration Steps <a href="../../Implementation/imp-genesys.html">here</a></li>
+<li>Genesys Configuration Steps <a href="../implementation_methodology/imp-genesys.html">here</a></li>
 </ul></li>
 <li>Leverage watson<span style="color:#2c62f5;">x</span> Orchestrate skills to integrate with ServiceNow and Workday
 <ul>
-<li>ServiceNow Configuration Steps <a href="../../Implementation/imp-snow.html">here</a></li>
-<li>Workday Configuration Steps <a href="../../Implementation/imp-workday.html">here</a></li>
+<li>ServiceNow Configuration Steps <a href="../implementation_methodology/imp-snow.html">here</a></li>
+<li>Workday Configuration Steps <a href="../implementation_methodology/imp-workday.html">here</a></li>
 </ul></li>
 </ul>
 </section>
@@ -500,7 +499,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="subordinate-bot"><strong>Subordinate Bot</strong></h3>
 <ul>
 <li>Leverage native assistant builder extensions to integrate with other watson<span style="color:#2c62f5;">x</span> Assistants</li>
-<li>Configuration Steps <a href="../../Implementation/imp-assis-ext.html">here</a></li>
+<li>Configuration Steps <a href="../implementation_methodology/imp-assis-ext.html">here</a></li>
 </ul>
 </section>
 <section id="data-repository" class="level3">

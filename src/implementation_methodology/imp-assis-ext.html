@@ -382,7 +382,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="create-the-custom-extension" class="level3">
 <h3 class="anchored" data-anchor-id="create-the-custom-extension">Create the Custom Extension</h3>
 <ol type="1">
-<li>Navigate and download the OpenAPI spec for another assistant bot <a href="https://github.ibm.com/ibm-client-engineering/solution-watson%3Cspan%20style=%22color:#2c62f5;%22%3Ex%3C/span%3E-orchestrate/tree/main/assets/openAPI_specs/otherBot">here</a></li>
+<li>Navigate and download the OpenAPI spec for another assistant bot <a href="https://github.com/ibm-client-engineering/unified-virtual-assistant/blob/main/assets/OpenAPI_Specs/Subordinate%20Bot/assistantBot_openapi_spec.json" target="_blank">here</a></li>
 <li>Modify the server url at line 10 with the <code>service instance url</code> from step 3 <a href="#identify-openapi-spec-values">here</a></li>
 <li>Navigate to the integrations section within the Assistant Builder sidebar</li>
 <li>Select “Build custom extension” and name the extension</li>
@@ -411,9 +411,22 @@ ul.task-list li input[type="checkbox"] {
 <li>Select the Operation as “Create Session”</li>
 <li>Set the Parameters to:
 <ul>
-<li><strong>environment_id</strong>: Environment ID from step 3 of <a href="#identify-openapi-spec-values">Identify OpenAPI spec values</a> :::tip Make sure the “environment_id” variable type is ‘text’ :::</li>
+<li><strong>environment_id</strong>: Environment ID from step 3 of <a href="#identify-openapi-spec-values">Identify OpenAPI spec values</a></li>
 </ul></li>
 </ol>
+<div class="indent callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make sure the “environment_id” variable type is ‘text’</p>
+</div>
+</div>
 </section>
 <section id="make-a-dialog-request" class="level4">
 <h4 class="anchored" data-anchor-id="make-a-dialog-request"><strong>Make a dialog request</strong></h4>

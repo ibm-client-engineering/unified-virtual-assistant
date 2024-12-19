@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>watsonx Discovery – Unified Virtual Assistant</title>
+<title>IBM Security Verify – Unified Virtual Assistant</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -63,8 +29,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../Implementation/watson-dis.html" rel="next">
-<link href="../Implementation/imp-genai-rout.html" rel="prev">
+<link href="../Implementation/imp-sim.html" rel="next">
+<link href="../Implementation/imp-genesys.html" rel="prev">
 <link href="../images/bee.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -158,7 +124,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Implementation/imp-UI.html">Implementation Methodology</a></li><li class="breadcrumb-item"><a href="../Implementation/watsonx-dis.html">RAG Document Search</a></li><li class="breadcrumb-item"><a href="../Implementation/watsonx-dis.html">watsonx Discovery</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Implementation/imp-UI.html">Implementation Methodology</a></li><li class="breadcrumb-item"><a href="../Implementation/imp-verify-assis.html">Identity and Access Management</a></li><li class="breadcrumb-item"><a href="../Implementation/imp-verify-assis.html">IBM Security Verify</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -222,16 +188,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">RAG Document Search</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/watsonx-dis.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Implementation/watsonx-dis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">watsonx Discovery</span></a>
   </div>
 </li>
@@ -297,16 +263,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Identity and Access Management</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Implementation/imp-verify-assis.html" class="sidebar-item-text sidebar-link">
+  <a href="../Implementation/imp-verify-assis.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">IBM Security Verify</span></a>
   </div>
 </li>
@@ -331,32 +297,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#build-setup" id="toc-build-setup" class="nav-link active" data-scroll-target="#build-setup">Build setup</a></li>
-  <li><a href="#build-walkthrough" id="toc-build-walkthrough" class="nav-link" data-scroll-target="#build-walkthrough">Build Walkthrough</a>
-  <ul class="collapse">
-  <li><a href="#create-elasticsearch-resource" id="toc-create-elasticsearch-resource" class="nav-link" data-scroll-target="#create-elasticsearch-resource"><strong>Create Elasticsearch Resource</strong></a></li>
-  <li><a href="#create-watson-machine-learning-deployment-space" id="toc-create-watson-machine-learning-deployment-space" class="nav-link" data-scroll-target="#create-watson-machine-learning-deployment-space"><strong>Create Watson Machine Learning Deployment Space</strong></a></li>
-  <li><a href="#upload-documents-to-cos-bucket" id="toc-upload-documents-to-cos-bucket" class="nav-link" data-scroll-target="#upload-documents-to-cos-bucket"><strong>Upload Documents to COS Bucket</strong></a></li>
-  <li><a href="#create-an-ibm-cloud-api-key" id="toc-create-an-ibm-cloud-api-key" class="nav-link" data-scroll-target="#create-an-ibm-cloud-api-key"><strong>Create an IBM Cloud API Key</strong></a></li>
-  <li><a href="#create-the-watson-studio-project" id="toc-create-the-watson-studio-project" class="nav-link" data-scroll-target="#create-the-watson-studio-project"><strong>Create the Watson Studio Project</strong></a></li>
-  <li><a href="#run-notebooks" id="toc-run-notebooks" class="nav-link" data-scroll-target="#run-notebooks"><strong>Run Notebooks</strong></a></li>
-  <li><a href="#assistant-integration" id="toc-assistant-integration" class="nav-link" data-scroll-target="#assistant-integration"><strong>Assistant Integration</strong></a></li>
-  <li><a href="#assistant-integration-utility" id="toc-assistant-integration-utility" class="nav-link" data-scroll-target="#assistant-integration-utility"><strong>Assistant Integration Utility</strong></a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Implementation/imp-UI.html">Implementation Methodology</a></li><li class="breadcrumb-item"><a href="../Implementation/watsonx-dis.html">RAG Document Search</a></li><li class="breadcrumb-item"><a href="../Implementation/watsonx-dis.html">watsonx Discovery</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Implementation/imp-UI.html">Implementation Methodology</a></li><li class="breadcrumb-item"><a href="../Implementation/imp-verify-assis.html">Identity and Access Management</a></li><li class="breadcrumb-item"><a href="../Implementation/imp-verify-assis.html">IBM Security Verify</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">watsonx Discovery</h1>
+<h1 class="title">IBM Security Verify</h1>
 </div>
 
 
@@ -373,284 +322,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Prerequisite: <a href="../environment.html#watsonx-discovery">watsonx Discovery Software Requirement</a></p>
-</div>
-</div>
-<section id="build-setup" class="level2">
-<h2 class="anchored" data-anchor-id="build-setup">Build setup</h2>
-<div style="{{" borderbottom:="" "1px="" solid="" #000",="" margintop:="" "20px",="" marginbottom:="" }}=""></div>
-<p>Navigate to this <a href="https://github.ibm.com/skol-assets/watsonx-RAG-w-watsonxdiscovery-method2/">github</a> and download <a href="https://github.ibm.com/skol-assets/watsonx-RAG-w-watsonxdiscovery-method2/blob/main/project/WatsonStudioProjectTemplate.zip">this project file</a></p>
-</section>
-<section id="build-walkthrough" class="level2">
-<h2 class="anchored" data-anchor-id="build-walkthrough">Build Walkthrough</h2>
-<div style="{{" borderbottom:="" "1px="" solid="" #000",="" margintop:="" "20px",="" marginbottom:="" }}=""></div>
-<section id="create-elasticsearch-resource" class="level3">
-<h3 class="anchored" data-anchor-id="create-elasticsearch-resource"><strong>Create Elasticsearch Resource</strong></h3>
-<p>Make sure to select the Platinum version with native ELSIR model, and be mindful of the RAM allocation.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>We ran into issues with extremely high RAM usage and unreliability, so we provisioned an instance of Elasticsearch with 64GB of RAM, 100GB of storage, and 16 cores.</p>
-</div>
-</div>
-</section>
-<section id="create-watson-machine-learning-deployment-space" class="level3">
-<h3 class="anchored" data-anchor-id="create-watson-machine-learning-deployment-space"><strong>Create Watson Machine Learning Deployment Space</strong></h3>
-<ol type="1">
-<li>Navigate to the Deployments section of Watson Studio.</li>
-<li>Create a new deployment space.
-<ul>
-<li>The storage service should automatically be assigned to your Cloud Object Storage service.</li>
-<li>Assign your Watson Machine Learning service to the Machine Learning Service. Once the deployment space is created, navigate to the space’s Manage tab and copy the Space GUID.</li>
-</ul></li>
-</ol>
-</section>
-<section id="upload-documents-to-cos-bucket" class="level3">
-<h3 class="anchored" data-anchor-id="upload-documents-to-cos-bucket"><strong>Upload Documents to COS Bucket</strong></h3>
-<ol type="1">
-<li>Navigate to the appropriate “Cloud Object Storage” resource and select “Create Bucket”</li>
-<li>Select “Create a Custom Bucket” and fill out the necessary fields and press “Create”</li>
-<li>Upload the relevant documents</li>
-<li>Create a “Content Reader” credential for the Cloud Object Storage resource</li>
-</ol>
-</section>
-<section id="create-an-ibm-cloud-api-key" class="level3">
-<h3 class="anchored" data-anchor-id="create-an-ibm-cloud-api-key"><strong>Create an IBM Cloud API Key</strong></h3>
-<p>Create an IBM Cloud API key in IBM Cloud <a href="https://cloud.ibm.com/iam/apikeys">here</a> and save it.</p>
-</section>
-<section id="create-the-watson-studio-project" class="level3">
-<h3 class="anchored" data-anchor-id="create-the-watson-studio-project"><strong>Create the Watson Studio Project</strong></h3>
-<ol type="1">
-<li>Download the “WatsonStudioProjectTemplate.zip”<a href="https://github.ibm.com/skol-assets/watsonx-RAG-w-watsonxdiscovery-method2/tree/main/project">here</a>.</li>
-<li>Navigate to the Projects section of Watson Studio and change the context from “Watson Studio” to “watsonx”. You can change the context in the top right corner of the UI.</li>
-<li>Select <code>New Project</code> -&gt; <code>Create a new project from a sample or file</code> and upload the zip file from <a href="#build-setup">the “Build Setup”</a></li>
-</ol>
-<section id="assiciate-wml-instance" class="level4">
-<h4 class="anchored" data-anchor-id="assiciate-wml-instance">Assiciate WML instance</h4>
-<ol type="1">
-<li>Navigate to the “<code>Manage</code> Tab and Select <code>Associate service +</code> and select the appropriate WML instance</li>
-</ol>
-</section>
-<section id="populate-parameter-set" class="level4">
-<h4 class="anchored" data-anchor-id="populate-parameter-set"><strong>Populate Parameter Set</strong></h4>
-<ol type="1">
-<li>Click on the <code>Notebook_and_Deployment_Parameters</code> parameter set in the project.</li>
-<li>Set the <code>wml_space_id</code> and <code>ibm_cloud_apikey</code> to the Space GUID and IBM Cloud API key, respectively.</li>
-</ol>
-</section>
-<section id="complete-connection-to-databases-for-elasticsearch" class="level4">
-<h4 class="anchored" data-anchor-id="complete-connection-to-databases-for-elasticsearch"><strong>Complete Connection to Databases for Elasticsearch</strong></h4>
-<ol type="1">
-<li>Click on the <code>WatsonxDiscovery</code> connection in the project.</li>
-<li>In a separate tab, navigate to the Databases for Elasticsearch service on IBM Cloud.</li>
-<li>Within the <code>Overview</code> tab scroll down to the <code>Endpoints</code> section and select the <code>HTTPS</code> tab.</li>
-<li>Copy the <strong>hostname</strong>, <strong>port</strong>, and <strong>TLS certificate</strong>.</li>
-<li>Go to the service credentials tab of the service and create a <code>New Credential</code>.</li>
-<li>Copy the username and password under <code>connection.https.authentication</code> in the new service credential JSON.</li>
-<li>Return to the Watson Studio project’s <code>WatsonxDiscovery</code> connection and set the following fields:
-<ul>
-<li>Edit the URL with the saved values for the <code>HOSTNAME</code> and <code>PORT</code> with the format of <code>https://{HOSTNAME}:{PORT}</code>.</li>
-<li>The username and password should be the ones copied from the service credentials.</li>
-<li>The SSL certificate should be the TLS certificate.</li>
-</ul></li>
-<li>Select <code>Test connection</code> in the top right corner to validate a working connection.</li>
-</ol>
-</section>
-<section id="complete-connection-to-databases-for-elasticsearch-1" class="level4">
-<h4 class="anchored" data-anchor-id="complete-connection-to-databases-for-elasticsearch-1"><strong>Complete Connection to Databases for Elasticsearch</strong></h4>
-<ol type="1">
-<li>Click on the <code>CloudObjectStorage</code> connection in the project.</li>
-<li>Set the bucket name to the name of the bucket created in the <a href="#add-documents-to-cloud-object-storage">“Add Documents to Cloud Object Storage” step</a>.</li>
-<li>In the configuration tab of the bucket in Cloud Object Storage, copy the public endpoint to the Login URL field.</li>
-<li>Paste the Cloud Object Storage service credential you created earlier into the “Service credentials” field.</li>
-<li>Test the connection by clicking the “Test connection” button. The test should be successful.</li>
-</ol>
-</section>
-</section>
-<section id="run-notebooks" class="level3">
-<h3 class="anchored" data-anchor-id="run-notebooks"><strong>Run Notebooks</strong></h3>
-<p>Once the setup is complete, the notebooks in the project can be run without errors. For each of the notebooks, make sure to insert the project token via the top-right menu in the notebook UI before running any cells. This creates a cell that connects your notebook to the project and its assets.</p>
-<p>Steps:</p>
-<ol type="1">
-<li>Ingest documents into Elasticsearch via COS or Watson Discovery</li>
-<li>Deploy RAG function</li>
-</ol>
-<hr>
-<section id="watson-discovery-ingest-documents-to-elasticsearch" class="level4">
-<h4 class="anchored" data-anchor-id="watson-discovery-ingest-documents-to-elasticsearch"><strong>Watson Discovery: Ingest Documents to Elasticsearch</strong></h4>
-<p>The <code>1-file-ingestion-from-dis</code> notebook in the project handles document ingestion from Watson Discovery for Elasticsearch.</p>
-<ol type="1">
-<li><p>Update Project ID and Project Token Values:</p>
-<ul>
-<li>Navigate to the “Manage” Tab of the watson Studio project and copy the “Project ID” to be used in the notebook.</li>
-<li>Navigate to the “Access control” and copy the existing token to be used in the notebook.</li>
-</ul></li>
-<li><p>Install the necessary python libraries: :::note Only need too install python libs on the first run of the notebook :::</p>
-<p>Insert new cell and run</p>
-<pre class="shell"><code>!pip install nltk --quiet
-!pip install ibm_watson --quiet
-!pip install elasticsearch --quiet
-!pip install llama-index --quiet
-!pip install llama_index.vector_stores.elasticsearch --quiet</code></pre></li>
-<li><p>Update the Watson Discovery credentials</p>
-<ol type="1">
-<li>On the IBM Cloud resource list select the “Watson Discovery” instance</li>
-<li>On the “Manage” under “Overview” copy the “API Key” and “URL” value</li>
-<li>Click “Launch Discovery” -&gt; “Select the relevant Project” -&gt; “Manage Collections” -&gt; click relevanty collection</li>
-<li>Grab the Collection ID from the url after “/collection/”</li>
-<li>Under the “Integrate and Deploy” section copy the “Project ID”</li>
-</ol></li>
-</ol>
-<hr>
-</section>
-<section id="cos-ingest-documents-to-elasticsearch" class="level4">
-<h4 class="anchored" data-anchor-id="cos-ingest-documents-to-elasticsearch"><strong>COS: Ingest Documents to Elasticsearch</strong></h4>
-<p>The <code>1-file-ingestion-from-cos</code> notebook in the project handles document ingestion from Watson Discovery for Elasticsearch.</p>
-<ol type="1">
-<li><p>Update Project ID and Project Token Values:</p>
-<ul>
-<li>Navigate to the “Manage” Tab of the watson Studio project and copy the “Project ID” to be used in the notebook.</li>
-<li>Navigate to the “Access control” and copy the existing token to be used in the notebook.</li>
-</ul></li>
-<li><p>Install the necessary python libraries: :::note Only need too install python libs on the first run of the notebook ::: Insert new cell and run</p>
-<pre><code>!pip install nltk --quiet
-!pip install ibm_watson --quiet
-!pip install elasticsearch --quiet
-!pip install llama-index --quiet
-!pip install llama_index.vector_stores.elasticsearch --quiet</code></pre></li>
-<li><p>Update the COS credentials</p></li>
-<li><p>Create a new <code>index_name</code> for each new collection of data (if applicable)</p></li>
-</ol>
-<hr>
-</section>
-<section id="deploy-rag-function-in-watson-machine-learning" class="level4">
-<h4 class="anchored" data-anchor-id="deploy-rag-function-in-watson-machine-learning"><strong>Deploy RAG Function in Watson Machine Learning</strong></h4>
-<p>The <code>2-deploy-rag-function-in-wml</code> notebook in the project handles the deployment of a Python function that performs RAG using the Databases for Elasticsearch database and watsonx.ai. This step is not necessary if you plan to use the native search integration in watsonx Assistant. Optionally, you can test your deployment using the third notebook <code>3-test-rag-deployment</code> in the project. This notebook calls the deployment endpoint and reformats the deployment responses for better readability.</p>
-<ol type="1">
-<li><p>Update Project ID and Project Token Values</p>
-<ul>
-<li>Navigate to the “Manage” Tab of the watson Studio project and copy the “Project ID” to be used in the notebook.</li>
-<li>Navigate to the “Access control” and copy the existing token to be used in the notebook.</li>
-</ul></li>
-<li><p>Install the following libraries:</p>
-<pre class="shell"><code>    !pip install nltk --quiet
-    !pip install ibm_watson --quiet
-    !pip install elasticsearch --quiet
-    !pip install llama-index --quiet
-    !pip install llama_index.vector_stores.elasticsearch --quiet
-    ```
-</code></pre></li>
-<li><p>Deploy seperate functions for each index created :::tip Note down the <code>deployment_id</code> for each function for each index to be leveraged for the Assistant integration :::</p></li>
-<li><p>Run cell under “Update project assets” to generate the OpenApi Spec for assistant integrations (if applicable)</p></li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="assistant-integration" class="level3">
-<h3 class="anchored" data-anchor-id="assistant-integration"><strong>Assistant Integration</strong></h3>
-<p>watsonx Assistant provides the query interface, using either:</p>
-<ul>
-<li><a href="#deploy-rag-function-in-watson-machine-learning">Custom Extension for RAG Deploment Configuration</a> :::tip Useful for routing queries/requests to different collections of data :::</li>
-<li>Native Extension.
-<ul>
-<li>The assets for setting up watsonx Assistant are located in the <a href="./assistant/">assistant folder</a> of this repository, and are also included in the Watson Studio project for convenience.</li>
-</ul></li>
-</ul>
-<section id="custom-extension" class="level4">
-<h4 class="anchored" data-anchor-id="custom-extension"><strong>Custom Extension</strong></h4>
-<ol type="1">
-<li>Within the Assistant Builder’s sidebar navigate to the “Integrations” section and</li>
-<li>Select “Build custom extension”</li>
-<li>Upload the OpenApi spec from step 4 of <a href="#deploy-rag-function-in-watson-machine-learning">RAG Deploment Extension Configuration</a> and press “Finish”</li>
-<li>Select “Add+” within the newly configured extension</li>
-<li>Select “Next” -&gt; “Authentication type: OAuth 2.0”</li>
-<li>Enter the API Key value from <a href="#create-an-ibm-cloud-api-key">here</a></li>
-</ol>
-</section>
-<section id="native-extension" class="level4">
-<h4 class="anchored" data-anchor-id="native-extension"><strong>Native Extension</strong></h4>
-<p>To configure watsonx Assistant to use the native search extension, follow these steps:</p>
-<ol type="1">
-<li>In the integrations tab on the bottom left of the watsonx Assistant user interface, select the search extension and then Elasticsearch.</li>
-<li>Use the Databases for Elasticsearch credentials obtained in the <a href="#complete-connection-to-databases-for-elasticsearch">Complete Connection to Databases For Elasticsearch section</a> to fill out the next page.
-<ul>
-<li>Note that “https://” should be appended before the hostname obtained from the Elasticsearch credentials.</li>
-<li>The index name should be the <code>es_index_name</code> from your project’s parameter set.</li>
-</ul></li>
-<li>In the “Configure result content” section, set the Title to <code>file_name</code>, Body to <code>text_field</code>, and URL to <code>url</code>. If you modified your <code>es_index_text_field</code> in your static notebooks parameters, the body should be set to the modified value.</li>
-<li>Under “Advanced Elasticsearch settings”, set the query body to</li>
-</ol>
-<div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"sort"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"_score"</span><span class="fu">:</span> <span class="st">"desc"</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"query"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"text_expansion"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"ml.tokens"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"model_id"</span><span class="fu">:</span> <span class="st">".elser_model_1"</span><span class="fu">,</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"model_text"</span><span class="fu">:</span> <span class="st">"$QUERY$"</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="5" type="1">
-<li>Enable conversational search and save the extension. Conversational search is a beta feature that you need to request access for <a href="https://form.asana.com/?k=U0gIIpwhM2_LY8r8LC_qDw&amp;d=8612789739828">here</a>.</li>
-</ol>
-<p>Once you have finished configuring the search extension, configure the assistant’s actions as follows:</p>
-<ol start="6" type="1">
-<li>In the “No action matches” action, set the assistant “Search for the answer”.</li>
-<li>Save your action and navigate to the preview tab. Your assistant is now configured. Test it out by passing in natural language queries regarding your document collection.</li>
-</ol>
-<p>Please refer to <a href="https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add">the official documentation</a> for more information on using the native search extension.</p>
-</section>
-</section>
-<section id="assistant-integration-utility" class="level3">
-<h3 class="anchored" data-anchor-id="assistant-integration-utility"><strong>Assistant Integration Utility</strong></h3>
-<div class="warning">
-<p>Dependent Steps: <a href="#assistant-integration">Assistant Integration</a></p>
-</div>
-<section id="assistant-action-integrationn" class="level4">
-<h4 class="anchored" data-anchor-id="assistant-action-integrationn"><strong>Assistant Action Integrationn</strong></h4>
-<ol type="1">
-<li>Within the appropriate action step select “And then” option as “Use an extension” and select the appropriate watsonx Discovery extension</li>
-<li>For “Operation” select “Get the predications”</li>
-<li>For the “Parameters” set:
-<ul>
-<li>input_data: Expression type as <code>[{"fields": ["Text"],"values": [[input.text]]}]</code></li>
-<li>wml_deploment_id”: deployment_id from step 3 of <a href="#deploy-rag-function-in-watson-machine-learning">Custom Extension for RAG Deploment Configuration</a></li>
-</ul></li>
-</ol>
-</section>
-<section id="extract-wxd-values-to-user" class="level4">
-<h4 class="anchored" data-anchor-id="extract-wxd-values-to-user"><strong>Extract WxD Values to User</strong></h4>
-<p>llm_response value:</p>
-<p><code>${[APPROPRIATE_STEP]_result_1.body.predictions[0].llm_response}</code></p>
-<p>Source links:</p>
-<p><code>${[APPROPRIATE_STEP]_result_1.body.references[VALUE].metadata.file_name}</code></p>
 
 
-</section>
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1072,13 +745,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../Implementation/imp-genai-rout.html" class="pagination-link" aria-label="Generative-AI Driven Routing">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Generative-AI Driven Routing</span>
+      <a href="../Implementation/imp-genesys.html" class="pagination-link" aria-label="Genesys">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Genesys</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../Implementation/watson-dis.html" class="pagination-link" aria-label="watson Discovery">
-        <span class="nav-page-text">watson Discovery</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../Implementation/imp-sim.html" class="pagination-link" aria-label="Simulation">
+        <span class="nav-page-text">Simulation</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

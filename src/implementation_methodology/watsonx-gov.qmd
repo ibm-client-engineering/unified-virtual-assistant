@@ -4,7 +4,7 @@ format: html
 ---
 
 ::: {.callout-warning}
-Prerequisite: [watsonx.gov Software Requirement](/Prepare/Requirements#governance)
+Prerequisite: [watsonx.gov Software Requirement](../solution_overview/environment.html#watsonx-discovery)
 :::
 
 This portion of the Create tab will walk you through how to create and integrate the watson<span style="color:#2c62f5;">x</span>.gov platform with the Orchestrate solutions. That way, you can monitor, track, and update your models in real-time and before deployment. To check out how watson<span style="color:#2c62f5;">x</span>.gov adds to the Business Value of this particular use case, visit the [Problem Definition](/) section.
@@ -33,9 +33,9 @@ This portion of the Create tab will walk you through how to create and integrate
 1. Within the watson<span style="color:#2c62f5;">x</span> Orchestrate instance, navigate to the sidebar and go to the header "AI Assistant Builder"
 2. Once you've entered the AI Assistant Builder, navigate to the sidebar and go to the header "Integrations"
 3. Under the "Extensions" tab, click on "Build custom extension" so that you can create a custom extension for watson<span style="color:#2c62f5;">x</span>.gov in your assistant.
-   - Name the extension something descriptive. When it asks for the OpenAPI Spec, you can either create your own OpenAPI Spec, or utilize the one that we provide, located [here](https://github.com/ibm-client-engineering/solution-unified-virtual-agent/blob/main/assets/openAPI_specs/watson<span style="color:#2c62f5;">x</span>_governance/governance_openapi_spec.json).
+   - Name the extension something descriptive. When it asks for the OpenAPI Spec, you can either create your own OpenAPI Spec, or utilize the one that we provide, located [here](https://github.com/ibm-client-engineering/unified-virtual-assistant/blob/main/assets/OpenAPI_Specs/watsonx_governance/governance_openapi_spec.json){target="_blank"}.
 4. Once you've created the extension, you need to add it to the assistant by clicking the "Add +" button on the Integrations homepage.
-   - Click on Next, then click OAuth authentication. To create an API Key, please go to IBM Cloud at this [link](https://cloud.ibm.com/iam/apikeys) then create a new API key and paste it into where it asks for an API key.
+   - Click on Next, then click OAuth authentication. To create an API Key, please go to IBM Cloud at this [link](https://cloud.ibm.com/iam/apikeys){target="_blank"} then create a new API key and paste it into where it asks for an API key.
 
 ### Assistant Action Configuration
 

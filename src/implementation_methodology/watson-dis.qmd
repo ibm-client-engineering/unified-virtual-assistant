@@ -1,4 +1,4 @@
----
+--
 title: "watson Discovery"
 format: html
 ---
@@ -31,40 +31,40 @@ This build consists of three main components:
 #### **2.1 Create watson Discovery custom extension**
 1. In your assistant, navigate to "Integrations" page. 
 2. Click "Build custom extensions" -> click "Next" -> Input Extension name `Watson Discovery` -> click "Next"
-3. download json file: [watson-discovery-query-openapi.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/watson-discovery/watson-discovery-query-openapi.json) and import file to WA
+3. download json file: [watson-discovery-query-openapi.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/watson-discovery/watson-discovery-query-openapi.json){target="_blank"} and import file to WA
 4. click "Next" -> click "Finish"
 5. Lower Right corner of the Watson Disovery extension, click "Add" -> click "Add" -> click "Next"
 6. In Authentication page, in the Authentication type dropdown, select "Basic auth"
     1. For Username enter `apikey`
-    2. For password, create and copy a new API key from [API key](https://cloud.ibm.com/iam/apikeys)
+    2. For password, create and copy a new API key from [API key](https://cloud.ibm.com/iam/apikeys){target="_blank"}
     3. For discovery_url, within IBM Cloud -> resource list -> Watson Discovery Instance -> Manage -> Credentials -> URL
     4. Paste URL into discovery_url and remove `https://` from the beginning of the string
 7. Click "Next", click "Finish", click "Close"
 
-- Reference: [starter kit](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/extensions/starter-kits/watson-discovery)
+- Reference: [starter kit](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/extensions/starter-kits/watson-discovery){target="_blank"}
 
 #### **2.2 Create watson<span style="color:#2c62f5;">x</span> custom extension**
 1.  In your assistant, navigate to Integrations page, click "Build custom extension" -> click "Next" -> Input Extension name `watson<span style="color:#2c62f5;">x</span>` -> click "Next" .
-2. download json file: [watson<span style="color:#2c62f5;">x</span>-openapi.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-watson<span style="color:#2c62f5;">x</span>/watson<span style="color:#2c62f5;">x</span>-openapi.json) and import file to WA
+2. download json file: [watsonx-openapi.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-watsonx/watsonx-openapi.json){target="_blank"} and import file to WA
 3. click "Next" -> click "Finish"
 4. Lower Right corner of the watson<span style="color:#2c62f5;">x</span> extension, click "Add" -> click "Add" -> click "Next"
 5. In Authentication page, in the Authentication type dropdown, select "OAuth 2.0"
-    1. For Apikey, create and copy a new API key from [API key](https://cloud.ibm.com/iam/apikeys)
+    1. For Apikey, create and copy a new API key from [API key](https://cloud.ibm.com/iam/apikeys){target="_blank"}
 6. Click "Next", click "Finish", click "Close"
 
 #### **2.3 Integrate watson<span style="color:#2c62f5;">x</span> Search using Watson Discovery to Assistant**
 ##### Upload Actions:
-1. Download [discovery-watson<span style="color:#2c62f5;">x</span>-actions.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-conversational-search/discovery-watson<span style="color:#2c62f5;">x</span>-actions.json)
+1. Download [discovery-watsonx-actions.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-conversational-search/discovery-watsonx-actions.json){target="_blank"}
 2. Navigate to "Actions" page, click "Global Settings" icon on the upper right corner
-3. Navigate to Upload/Download tab, upload the downloaded JSON file [discovery-watson-actions.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-conversational-search/discovery-watson<span style="color:#2c62f5;">x</span>-actions.json) onto the tab or click to select a file from your local system, then click "Upload", and "Uplaod and replace".
+3. Navigate to Upload/Download tab, upload the downloaded JSON file [discovery-watson-actions.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-conversational-search/discovery-watsonx-actions.json){target="_blank"} onto the tab or click to select a file from your local system, then click "Upload", and "Uplaod and replace".
 4. Within the Actions page, navigate to "Actions / Variables / Created by you". Set `discovery_project_id` and `watsonx_project_id` session variable
 
 <div style="margin-left: 35px;">
 ::: {.callout-note}
-**Where to get credentials**
-- **discovery_project_id**: within Watson Discovery: Upper left Hamburger icon -> Integrate and deploy -> API Information
-- **watson<span style="color:#2c62f5;">x</span>_project_id**: 
-    - Go to [watson<span style="color:#2c62f5;">x</span> Platform](https://dataplatform.cloud.ibm.com/wx/home?context=wx)
+#### **Where to get credentials:**
+* **discovery_project_id**: within Watson Discovery: Upper left Hamburger icon -> Integrate and deploy -> API Information
+* <b>watson<span style="color:#2c62f5;">x</span>_project_id</b>:
+    - Go to [watson<span style="color:#2c62f5;">x</span> Platform](https://dataplatform.cloud.ibm.com/wx/home?context=wx){target="_blank"}
     - Projects (click on project)-> Manage -> General -> Details -> Project ID
 :::
 </div>

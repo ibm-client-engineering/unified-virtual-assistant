@@ -36,7 +36,7 @@ ex)
 </div>
 4. Click "Save"
 
-### Modify "Greet Customer" action
+### Modify "Greet Customer" Action
 - Within the "Actions" section of the Assistant, navigate to the "Greet Customer" action
 
 #### **Authenticate User**
@@ -46,7 +46,7 @@ ex)
 
     Example)
     
-    ![Valid User Example](../images/valid_user_example.png)
+    ![Valid User Example](../../images/valid_user_example.png)
 
 
 2. Ensure valid password by creating conditional statement with expression value of :
@@ -55,7 +55,7 @@ ex)
 
     Example)
 
-   ![Valid Password Example](../images/valid_pass_example.png)
+   ![Valid Password Example](../../images/valid_pass_example.png)
 
 #### **Change User's Password**
 1. Set a new password for the current user with an expression like:

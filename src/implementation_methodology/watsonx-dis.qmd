@@ -7,16 +7,12 @@ format: html
 Prerequisite: [watsonx Discovery Software Requirement](/environment.html#rag-document-search)
 :::
 ## Build setup
-<div
-  style={{
-    borderBottom: "1px solid #000",
-    marginTop: "20px",
-    marginBottom: "20px",
-  }}
-></div>
 
-Navigate to this [github](https://github.ibm.com/skol-assets/watson<span style="color:#2c62f5;">x</span>-RAG-w-watson<span style="color:#2c62f5;">x</span>discovery-method2/) 
-and download [this project file](https://github.ibm.com/skol-assets/watson<span style="color:#2c62f5;">x</span>-RAG-w-watson<span style="color:#2c62f5;">x</span>discovery-method2/blob/main/project/WatsonStudioProjectTemplate.zip)
+::: {.callout-warning}
+This repo can only be access with an IBM Account
+:::
+Navigate to this [github](https://github.ibm.com/skol-assets/watsonx-RAG-w-watsonxdiscovery-method2/){target="_blank"}
+and download [this project file](https://github.ibm.com/skol-assets/watsonx-RAG-w-watsonxdiscovery-method2/blob/main/project/WatsonStudioProjectTemplate.zip){target="_blank"}
 
 
 ## Build Walkthrough

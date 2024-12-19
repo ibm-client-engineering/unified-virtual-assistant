@@ -24,18 +24,18 @@ appropriate channels and/or 3rd-party applications while leveraging generative A
 # Solution Components
 ## **Web-Chat Interface**
 * Leveraging IBM Cloud Object Storage to host a static website for the chatbot.
-    * Configuration Steps [here](/Implementation/imp-UI.html)
+    * Configuration Steps [here](../implementation_methodology/imp-UI.html)
 
 ## **Identity and Access Management (IAM)**
 IAM can be carried out in one of two methods:  
 
-* Security Verify SSO  
+* Security Verify SSO
 * Simulation
 
 ### **IBM Security Verify SSO**
 Leverage the IBM Security Verify API to carry differnt actions like authenticating user logins and resetting passwords within the Assistant builder UI.
 
-[Implementation Guide Here](/Implementation/imp-verify-assis.html)
+[Implementation Guide Here](../implementation_methodology/imp-verify-assis.html)
 
 ### **Simulation**
 Simulating user login within watson<span style="color:#2c62f5;">x</span> Orchestrate Assistant Builder can be achieved by storing simulated individuals in a data structure. This data structure, typically a list or map, can store information about each simulated user, such as their name, access level, and other relevant details. By initializing this data structure with a set of simulated users, you can create a realistic login scenario where the system checks user credentials and grants or denies access accordingly.
@@ -44,13 +44,13 @@ Storing simulated individuals in a data structure within watson<span style="colo
 
 By using simulated users in this manner, you can thoroughly test the user login functionality and ensure that the unified agent with generative AI capabilities is secure, reliable, and user-friendly.
 
-[Implementation Guide Here](/Implementation/imp-sim.html)
+[Implementation Guide Here](../implementation_methodology/imp-sim.html)
 
 ## **Conversational Engine**
 The conversational engine was built using watson<span style="color:#2c62f5;">x</span> Orchestrate Assistant Builder where generative AI-driven routing was configured to direct users to the most appropriate workflows and data based on their access permissions.
 
 ### GenAI Routing
-Configuration Steps [here](/Implementation/imp-genai-rout.html)
+Configuration Steps [here](../implementation_methodology/imp-genai-rout.html)
 
 ## **Integrations**
 
@@ -64,7 +64,7 @@ This pattern consists of creating an integration with watson<span style="color:#
 * watson<span style="color:#2c62f5;">x</span> Discovery
 * watson<span style="color:#2c62f5;">x</span>.ai
 
-[Implementation Guide Here](/Implementation/watsonx-dis.html)
+[Implementation Guide Here](../implementation_methodology/watsonx-dis.html)
 
 #### 2. **watson Discovery:**
 This pattern consists of creating two integrations with watson Discovery and watson<span style="color:#2c62f5;">x</span>.ai. Watson Discovery is used to store and carry out searches on data collections.
@@ -74,7 +74,7 @@ This pattern consists of creating two integrations with watson Discovery and wat
 * watson Discovery
 * watson<span style="color:#2c62f5;">x</span>.ai
 
-[Implementation Guide Here](/Implementation/watson-dis.html)
+[Implementation Guide Here](../implementation_methodology/watson-dis.html)
 
 ### **Governance**
 Governance is exemplified in two key ways:
@@ -83,7 +83,7 @@ Governance is exemplified in two key ways:
 * **RAG Source Attribution Links**
 
 #### watson<span style="color:#2c62f5;">x</span>.gov
-![](./images/gov_arch.png)
+![](../../images/gov_arch.png)
 
 In summary, the implementation of IBM® watson<span style="color:#2c62f5;">x</span>.governance™ provides a comprehensive and seamless solution for the development, evaluation, deployment, and monitoring of AI models, ensuring compliance, transparency, and optimal performance throughout the AI lifecycle.
 
@@ -91,23 +91,23 @@ In summary, the implementation of IBM® watson<span style="color:#2c62f5;">x</sp
 
 * watson<span style="color:#2c62f5;">x</span>.gov
 
-[Implementation Guide Here](/Implementation/watsonx-gov.html)
+[Implementation Guide Here](../implementation_methodology/watsonx-gov.html)
 
 #### RAG Source Links
 For every user query that involves RAG Document Search, a source link will be provided with each response to ensure transparency by clearly indicating the data corpus from which the answer was derived.
 
-[Implementation Guide Here](/Implementation/rag-attr-links.html)
+[Implementation Guide Here](../implementation_methodology/rag-attr-links.html)
 
 ### **3rd-Party Applications**
 * Leverage native assistant builder extensions to integrate with Genesys.
-    * Genesys Configuration Steps [here](/Implementation/imp-genesys.html)
+    * Genesys Configuration Steps [here](../implementation_methodology/imp-genesys.html)
 * Leverage watson<span style="color:#2c62f5;">x</span> Orchestrate skills to integrate with ServiceNow and Workday
-    * ServiceNow Configuration Steps [here](/Implementation/imp-snow.html)
-    * Workday Configuration Steps [here](/Implementation/imp-workday.html)
+    * ServiceNow Configuration Steps [here](../implementation_methodology/imp-snow.html)
+    * Workday Configuration Steps [here](../implementation_methodology/imp-workday.html)
 
 ### **Subordinate Bot**
 * Leverage native assistant builder extensions to integrate with other watson<span style="color:#2c62f5;">x</span> Assistants
-* Configuration Steps [here](/Implementation/imp-assis-ext.html)
+* Configuration Steps [here](../implementation_methodology/imp-assis-ext.html)
 
 ### **Data Repository**
 * Leverage Cloud Object Storage to store documents relevant to the use case

@@ -18,10 +18,11 @@ This section will go over how to setup IBM Security Verify and integrate it with
 2. Click on the user profile in the top right corner and select "Switch to admin"
 3. In the sidebar, navigate to "Directory" -> "Users and Groups"
 4. Select "Add User+" and fill out the necessary fields.
-    :::note
-        - Provide an email you have access to for each added user.
-        - Make sure to "View extended profile" to fill out the other fields if applicable
-    :::
+
+::: {.callout-note .indent}
+- Provide an email you have access to for each added user.
+- Make sure to "View extended profile" to fill out the other fields if applicable
+:::
 5. Navigate to the "Groups" tab and select "Add Group" and fill out the required fields and assign the appropriate users.
 
 ### Create API Client
@@ -47,7 +48,7 @@ TODO: Add instructions for getting these values
 
 
 ### Create the Custom Extension
-1. Navigate and download the OpenAPI spec for another assistant bot [here](https://github.ibm.com/ibm-client-engineering/solution-watsonx-orchestrate/tree/main/assets/openAPI_specs/IBM%20Verify/Verify_Spec_V3.json)
+1. Navigate and download the OpenAPI spec for another assistant bot [here](https://github.com/ibm-client-engineering/unified-virtual-assistant/blob/main/assets/OpenAPI_Specs/IBM%20Verify/ibmVerify_openapi_spec.json){target="_blank"}
 2. Modify the server url at line 10 with the ```service instance url``` from step 3 [here](#identify-openapi-spec-values)
 3. Navigate to the integrations section within the Assistant Builder sidebar
 4. Select "Build custom extension" and name the extension
@@ -57,7 +58,6 @@ TODO: Add instructions for getting these values
     * Authentication type: Oauth 2.0
     * Client ID: client_id
     * Client Secret: client_secret
-
 
 ### Action Integration
 This extension has 3 features with 4 api calls total

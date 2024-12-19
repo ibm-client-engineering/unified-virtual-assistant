@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -29,7 +63,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../Implementation/imp-verify-assis.html" rel="next">
+<link href="../Implementation/imp-assis-ext.html" rel="next">
 <link href="../Implementation/imp-workday.html" rel="prev">
 <link href="../images/bee.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -264,12 +298,29 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
- <span class="menu-text">Identity and Access Management</span></a>
+ <span class="menu-text">Subordinate Bots</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Implementation/imp-assis-ext.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assistant Custom Extension</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Identity and Access Management</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Implementation/imp-verify-assis.html" class="sidebar-item-text sidebar-link">
@@ -297,8 +348,21 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#setup-genesys-web-messenger" id="toc-setup-genesys-web-messenger" class="nav-link active" data-scroll-target="#setup-genesys-web-messenger">1. Setup Genesys Web Messenger</a></li>
+  <li><a href="#connect-genesys-to-watson-assistant" id="toc-connect-genesys-to-watson-assistant" class="nav-link" data-scroll-target="#connect-genesys-to-watson-assistant">2. Connect Genesys to Watson Assistant</a>
+  <ul class="collapse">
+  <li><a href="#congfigure-html-file-for-genesys" id="toc-congfigure-html-file-for-genesys" class="nav-link" data-scroll-target="#congfigure-html-file-for-genesys">Congfigure HTML File for Genesys</a></li>
+  <li><a href="#configure-bot-connector-in-assistant" id="toc-configure-bot-connector-in-assistant" class="nav-link" data-scroll-target="#configure-bot-connector-in-assistant">Configure Bot Connector in Assistant</a></li>
+  </ul></li>
+  <li><a href="#using-genesys-live-agent" id="toc-using-genesys-live-agent" class="nav-link" data-scroll-target="#using-genesys-live-agent">3. Using Genesys Live Agent</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -322,8 +386,128 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Prerequisite: <a href="../Prepare/Requirements#genesys">Genesys Requirement</a></p>
+</div>
+</div>
+<section id="setup-genesys-web-messenger" class="level2">
+<h2 class="anchored" data-anchor-id="setup-genesys-web-messenger">1. Setup Genesys Web Messenger</h2>
+<div style="{{" borderbottom:="" '1px="" solid="" #000',="" margintop:="" '20px',="" marginbottom:="" '20px'="" }}=""></div>
+<ol type="1">
+<li>Sign up for a free trial of Genesys Cloud CX at <a href="https://www.genesys.com/campaign/try-genesys-cloud-for-free">this link.</a> This trial will last for 14 days.</li>
+<li>Once Genesys Cloud CX is running, configure the web messenger following <a href="https://help.mypurecloud.com/articles/configure-messenger/">these steps:</a>
+<ol type="1">
+<li>Click <strong>Admin</strong>.</li>
+<li>Under <strong>Message</strong>, click <strong>Messenger Configurations</strong>.</li>
+<li>Enter a name and description for your web messenger.</li>
+<li>In the <strong>Appearance</strong> tab, select <strong>Hide</strong> for <strong>Set your Launcher Button Visibility</strong> and select <strong>Off</strong> for the <strong>User Interface</strong>.</li>
+<li>The other settings are optional for basic set up. Once you have looked over all the options, click <strong>Save New Version</strong>.</li>
+</ol></li>
+<li>Once your web messenger is configured, deploy the messenger following <a href="https://help.mypurecloud.com/articles/deploy-messenger/">these steps:</a>
+<ol type="1">
+<li>Click <strong>Admin</strong>.</li>
+<li>Under <strong>Message</strong>, click <strong>Messenger Deployments</strong>.</li>
+<li>Click <strong>New Deployment</strong>.</li>
+<li>Enter a name and description.</li>
+<li>Set the <strong>Status</strong> to <strong>Active</strong>.</li>
+<li>Under <strong>Select your Configuration</strong> click <strong>Select Configuration</strong> and select the verision of web messenger that you configured in the previous section.</li>
+<li>Under <strong>Restrrict domain access</strong> select <strong>Allow all domains</strong> for testing and development purposes.</li>
+<li>Click <strong>Save</strong>. The <strong>Messenger Deployments</strong> page now displays your deployed messenger which you can click to access the deployment script which will be used in the next section to integrate with Watson Assistant.</li>
+</ol></li>
+</ol>
+</section>
+<section id="connect-genesys-to-watson-assistant" class="level2">
+<h2 class="anchored" data-anchor-id="connect-genesys-to-watson-assistant">2. Connect Genesys to Watson Assistant</h2>
+<div style="{{" borderbottom:="" '1px="" solid="" #000',="" margintop:="" '20px',="" marginbottom:="" '20px'="" }}=""></div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Prerequisite: <a href="../01-Webchat Interface/01-Static-Webpage.mdx">Webchat Interface</a></p>
+<p>Note: The Genesys SDK does not work if launched from a local HTML file opened directly in your browser (using file://). It needs to be served from a server (which can be localhost) over HTTP. You can use <a href="https://www.npmjs.com/package/http-server">http-server</a> if you need a simple local server for testing purposes.</p>
+</div>
+</div>
+<section id="congfigure-html-file-for-genesys" class="level3">
+<h3 class="anchored" data-anchor-id="congfigure-html-file-for-genesys">Congfigure HTML File for Genesys</h3>
+<ol type="1">
+<li>Get the <strong>script URL, environment, and deployment ID</strong> values from the <strong>Mesenger Deployments</strong> page on Genesys and have them ready to add to the Watson Assistant Embed Script.</li>
+<li>Follow the sample script which shows how to enable the Genesys integration at <a href="https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-genesys#enabling">this link.</a>
+<ol type="i">
+<li>The serviceDesk portion of the script enables the Genesys integration. Simply add those values to where you have the Watson Assistant Embed script written out. Shown Below.</li>
+</ol></li>
+</ol>
+<div style="margin-left: 50px;">
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>script<span class="op">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>        <span class="ex">window.watsonAssistantChatOptions</span> = {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="ex">showRestartButton:</span> true, //Optional</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="ex">integrationID:</span> <span class="st">"[instance instegraionID]"</span>, //From embed details of Assistant</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="ex">region:</span> <span class="st">"aws-us-east-1"</span>, //From embed details of Assistant</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="ex">serviceInstanceID:</span> <span class="st">"[service instanceID]"</span>, //From embed details of Assistant</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="ex">/*GENESYS</span> SCRIPT BEGIN<span class="pp">*</span>/</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="ex">serviceDesk:</span> {</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>            <span class="ex">integrationType:</span> <span class="st">'genesyswebmessenger'</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>            <span class="ex">genesysMessenger:</span> {</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>            <span class="ex">scriptURL:</span> <span class="st">'[URL]'</span>,//Provided by Genesys console</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>            <span class="ex">deploymentID:</span> <span class="st">'[DEPLOYMENT ID]'</span>, //Provided by Genesys console</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>            <span class="ex">environment:</span> <span class="st">'[ENVIRONMENT]'</span>, //Provided by Genesys console</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>            <span class="er">}</span><span class="ex">,</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="er">}</span><span class="ex">,</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="ex">/*GENESYS</span> SCRIPT END<span class="pp">*</span>/</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="ex">onLoad:</span> async <span class="er">(</span><span class="ex">instance</span><span class="kw">)</span> <span class="ex">=</span><span class="op">&gt;</span> { await instance.render<span class="er">(</span><span class="kw">);</span> <span class="er">}</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="er">}</span><span class="kw">;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="ex">setTimeout</span><span class="er">(</span><span class="kw">function(){</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="ex">const</span> t=document.createElement<span class="er">(</span><span class="st">'script'</span><span class="kw">);</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        <span class="ex">t.src=</span><span class="st">"https://web-chat.global.assistant.watson.appdomain.cloud/versions/"</span> + <span class="er">(</span><span class="ex">window.watsonAssistantChatOptions.clientVersion</span> <span class="kw">||</span> <span class="st">'latest'</span><span class="kw">)</span> <span class="ex">+</span> <span class="st">"/WatsonAssistantChatEntry.js"</span><span class="kw">;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        <span class="ex">document.head.appendChild</span><span class="er">(</span><span class="ex">t</span><span class="kw">);</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        <span class="kw">});</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>/script<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="configure-bot-connector-in-assistant" class="level3">
+<h3 class="anchored" data-anchor-id="configure-bot-connector-in-assistant">Configure Bot Connector in Assistant</h3>
+<ol type="1">
+<li>Navigate to the Assistant side bar and select “Integrations”</li>
+<li>Within the “Channels” section select “Genesys Bot Connector”</li>
+<li>Select the appropriate environment</li>
+<li>Fill out the necessary credentials from the Genesys Console</li>
+</ol>
+</section>
+</section>
+<section id="using-genesys-live-agent" class="level2">
+<h2 class="anchored" data-anchor-id="using-genesys-live-agent">3. Using Genesys Live Agent</h2>
+<div style="{{" borderbottom:="" '1px="" solid="" #000',="" margintop:="" '20px',="" marginbottom:="" '20px'="" }}=""></div>
+<ol type="1">
+<li>Log in to your Genesys trial account and toggle the <strong>Off Queue</strong> option in the top right to become <strong>On Queue</strong>.</li>
+<li>Open your Watson Assistant that has been integrated with Genesys (over HTTP not on the UI or local HTML file) and follow action to connect to live agent.</li>
+<li>Once you have clicked <strong>Connect to Live Agent</strong> go back to the Genesys account and you should see an incoming message which you can accept or decline. Click <strong>Accept</strong> and now you are able to communicate with a live customer using your Watson Assistant instance.</li>
+</ol>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div style="{{" borderbottom:="" '1px="" solid="" #000',="" margintop:="" '20px',="" marginbottom:="" '20px'="" }}=""></div>
+<ul>
+<li><a href="https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-deploy-genesys">Integrating Watson Assistant with Genesys</a></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -750,8 +934,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../Implementation/imp-verify-assis.html" class="pagination-link" aria-label="IBM Security Verify">
-        <span class="nav-page-text">IBM Security Verify</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../Implementation/imp-assis-ext.html" class="pagination-link" aria-label="Assistant Custom Extension">
+        <span class="nav-page-text">Assistant Custom Extension</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

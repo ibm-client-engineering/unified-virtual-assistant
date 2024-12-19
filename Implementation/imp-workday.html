@@ -264,12 +264,29 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
- <span class="menu-text">Identity and Access Management</span></a>
+ <span class="menu-text">Subordinate Bots</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Implementation/imp-assis-ext.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assistant Custom Extension</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Identity and Access Management</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Implementation/imp-verify-assis.html" class="sidebar-item-text sidebar-link">
@@ -297,8 +314,17 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#assistant-integration" id="toc-assistant-integration" class="nav-link active" data-scroll-target="#assistant-integration">Assistant Integration</a>
+  <ul class="collapse">
+  <li><a href="#watsonx-orchestrate-skill" id="toc-watsonx-orchestrate-skill" class="nav-link" data-scroll-target="#watsonx-orchestrate-skill">watsonx Orchestrate Skill</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -322,8 +348,25 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="assistant-integration" class="level2">
+<h2 class="anchored" data-anchor-id="assistant-integration">Assistant Integration</h2>
+<div style="{{" borderbottom:="" '1px="" solid="" #000',="" margintop:="" '20px',="" marginbottom:="" '20px'="" }}=""></div>
+<section id="watsonx-orchestrate-skill" class="level3">
+<h3 class="anchored" data-anchor-id="watsonx-orchestrate-skill">watsonx Orchestrate Skill</h3>
+<ol type="1">
+<li>Within the watsonx orchestrate platform, navigate to the sidebar and select “Chat”</li>
+<li>In the dropdown menu in the top select the right target Assistant environment</li>
+<li>Select “Add skills from the catalog” and select “Workday”</li>
+<li>In the top right select “Connect App”</li>
+<li>Enter the appropriate values</li>
+<li>Select “Connect App”</li>
+<li>Navigate to the platforms sidebar and select “AI Assistant Builder”</li>
+<li>Within the “Actions” section of the buider, select “New Action+” -&gt; “Action from skills” -&gt; appropriate Workday skill</li>
+</ol>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

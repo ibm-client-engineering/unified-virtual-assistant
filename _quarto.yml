@@ -63,6 +63,10 @@ website:
                   href: ./Implementation/imp-workday.qmd
                 - text: Genesys
                   href: ./Implementation/imp-genesys.qmd
+            - section: Subordinate Bots
+              contents:
+                - text: Assistant Custom Extension
+                  href: ./Implementation/imp-assis-ext.qmd
             - section: Identity and Access Management
               contents:
                 - text: IBM Security Verify

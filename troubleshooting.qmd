@@ -1,6 +1,0 @@
----
-title: "Step Three"
-format: html
----
-
-### Step Three Solution

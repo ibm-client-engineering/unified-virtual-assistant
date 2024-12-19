@@ -1,197 +1,237 @@
 /*-- scss:functions --*/
+// Function for converting a color to RGB format (currently not used but can be utilized for dynamic color rendering)
 // @function colorToRGB ($color) {
 //     @return "rgb(" + red($color) + ", " + green($color) + ", " + blue($color)+ ")";
 // }
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* Import IBM Plex Sans font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 /*-- scss:defaults --*/
-
+/* Define a root variable for consistent margin calculation */
 :root {
     --margin-max-width: calc((100% - calc(1550px - 1.5em)) / 2)
 }
 
-// $h2-font-size:          1.6rem !default;
-// $headings-font-weight:  500 !default;
-
 /*-- scss:rules --*/
-// h1, h2, h3, h4, h5, h6 {
-//     text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
-// }
+/* General Navbar Styling */
 .navbar {
-    background-color: #f4f4f4;
-    border-block-end: 1px solid #E0E0E0;
+    background-color: #ffffff; /* Light gray background */
+    border-block-end: 1px solid #E0E0E0; /* Bottom border with a light gray color */
 }
 
-.navbar-logo
-{
-    max-height: 48px;
+/* Navbar Logo Size */
+.navbar-logo {
+    max-height: 75px; /* Restrict the height of the logo */
 }
 
-
+/* Menu Text Styling */
 .menu-text {
     color: black;
-    font-size: 14pt;
-    line-height: 120%;
-    color: inherit;
-    
-}
-
-.nav-page .nav-page-text {
-    font-size: 16pt;
-    color: #0f62fe !important;
-    
-}
-
-
-/* Sets the navbar chosen option to Blue and Underlined*/
-div.sidebar-item-container .active, div.sidebar-item-container .show > .nav-link, div.sidebar-item-container .sidebar-link > code {
-    color: #0f62fe !important;
-}
-
-.sidebar-item {
-    font-weight: 500 !important;
-    padding: .3rem;
-}
-
-
-.collapse list-unstyled sidebar-section  {
+    font-size: 14pt; /* Set font size */
+    line-height: 120%; /* Consistent line spacing */
     font-weight: 400;
 }
 
-.sidebar-menu-container
-{
-    color: #0f62fe !important;
+
+/* Navbar Page Text Styling */
+.nav-page .nav-page-text {
+    font-size: 16pt; /* Larger font size for emphasis */
+    color: #0f62fe !important; /* IBM primary blue color */
 }
 
-.quarto-sidebar-section-1{
+/* Sidebar Active Item Highlight Styling */
+div.sidebar-item-container .active, div.sidebar-item-container .show > .nav-link, div.sidebar-item-container .sidebar-link > code {
+    color: #0f62fe !important; /* Text color in IBM primary blue */
+    background-color: #E9E9E9; /* Light blue background for active state */
+    border-left: 4px solid #0f62fe; /* Thin blue line on the left */
+    border-radius: 0 4px 4px 0; /* Rounded corners only on the right side */
+    padding: 0.5rem 0.75rem; /* Internal padding for spacing */
+    margin-left: -0.75rem; /* Adjust alignment with the left margin */
+}
+
+/* Bold Top-Level Headings in Sidebar */
+.sidebar nav[role=doc-toc] ul>li>a {
+    font-weight: 600; /* Bold font weight for primary headings */
+}
+
+/* Normal Font Weight for Subheadings */
+.sidebar nav[role=doc-toc] ul>li>ul>li>a {
+    font-weight: 100; /* Normal font weight for subheadings */
+}
+
+/* General Sidebar Item Padding */
+.sidebar-item {
+    padding: .3rem; /* Adds padding for better spacing */
+}
+
+/* Sidebar Menu Container Text Color */
+.sidebar-menu-container {
+    color: #0f62fe !important; /* IBM primary blue color */
+}
+
+/* Reduce Padding for First Sidebar Section */
+.quarto-sidebar-section-1 {
     padding-bottom: 0;
 }
 
+/* Navbar Brand Text Styling */
 .navbar-brand {
-    color: black;
-    font-size: 18pt;
-   
+    color: black; /* Default color */
+    font-size: 18pt; /* Large font size */
 }
+
+/* Navbar Brand Hover State */
 .navbar-brand:hover {
-    color: black;
+    color: black; /* Prevents color change on hover */
 }
 
+/* Margin Sidebar Background Color */
 #quarto-margin-sidebar {
-    background-color: #FFFFFF;
+    background-color: #FFFFFF; /* White background for margin sidebar */
 }
 
-
+/* Remove Border and Padding for Sidebar TOC Links */
 .sidebar nav[role=doc-toc] ul>li>ul>li>a, .sidebar nav[role=doc-toc]>ul a {
-    border-left: none;
-    padding-left: 0;
+    border-left: none; /* Removes border from TOC links */
+    padding-left: 0; /* No extra padding on the left */
 }
 
+/* Highlight Active State in Sidebar TOC */
 .sidebar nav[role=doc-toc] ul>li>a.active, .sidebar nav[role=doc-toc] ul>li>ul>li>a.active {
-    border-left: none;//4px solid #0f62fe;
-    color: #0f62fe !important;
+    border-left: 4px solid #0f62fe; /* Thin blue left border */
+    color: #0f62fe !important; /* Blue text color */
+    background-color: #E9E9E9; /* Light blue background */
+    border-radius: 0 4px 4px 0; /* Rounded right corners */
+    padding: 0.5rem 0.75rem; /* Internal spacing */
+    margin-left: -0.75rem; /* Aligns active items to the left */
 }
 
+/* Autocomplete Search Form Width */
 .navbar .aa-Autocomplete .aa-Form {
-    width: 250px;
+    width: 250px; /* Fixed width for the search bar */
 }
 
+/* Body and Global Font Styling */
 body {
-    font-family: "IBM Plex Sans", serif;
-    background-color: #FFFFFF;
+    font-family: "IBM Plex Sans", serif; /* Consistent font family */
+    background-color: #FFFFFF; /* White background */
 }
 
 * {
-    font-family: "IBM Plex Sans", serif;
+    font-family: "IBM Plex Sans", serif; /* Enforces font globally */
 }
 
-.bi-github{
-    color:black
-}
-.bi-linkedin{
-    color: #0077B5;
-    height: 25px;
-    width: 25px;
+.navbar #quarto-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon {
+    width: 26px;
+    height: 26px;
+    color: #525252;
+    opacity: 1;
 }
 
+nav .nav-link i, nav .dropdown-item i {
+    height: 26px;
+    width: 26px;
+}
 
+/* Icon Styling for GitHub and LinkedIn */
+.bi-github {
+    color: black; /* GitHub icon in black */
+}
+.bi-linkedin {
+    color: #0077B5; /* LinkedIn icon in blue */
+    height: 25px; /* Icon height */
+    width: 25px; /* Icon width */
+}
+
+/* Media Query for Grid Layout on Larger Screens */
 @media (min-width: 992px) {
-    #quarto-content.page-columns{
-        grid-template-columns: [screen-start] 1.5em [screen-start-inset page-start] minmax(50px, 100px) [page-start-inset] 50px [body-start-outset] 150px [body-start] minmax(1.5em, var(--margin-max-width)) [body-content-start] minmax(500px, calc(1000px - 3em)) [body-content-end] minmax(1.5em, var(--margin-max-width)) [body-end] 50px [body-end-outset] minmax(50px, 100px) [page-end-inset] 50px [page-end] 5fr [screen-end-inset] 1.5em [screen-end];
+    #quarto-content.page-columns {
+        grid-template-columns: 2.5em [screen-start] 1.5em [screen-start-inset page-start] minmax(50px, 100px) [page-start-inset] 50px [body-start-outset] 150px [body-start] minmax(1.5em, var(--margin-max-width)) [body-content-start] minmax(500px, calc(1000px - 3em)) [body-content-end] minmax(1.5em, var(--margin-max-width)) [body-end] 50px [body-end-outset] minmax(50px, 100px) [page-end-inset] 50px [page-end] 5fr [screen-end-inset] 1.5em [screen-end];
     }
 }
 
-.footer{
-    
-
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.125rem;
-    letter-spacing: .16px;
-    width: 100%;
-    background: #000;
-    color: #FFFFFF;
-    position: relative;
-    z-index: 2;
+/* Footer Styling */
+.footer {
+    font-size: 1rem; /* Base font size */
+    font-weight: 400; /* Regular font weight */
+    line-height: 1.125rem; /* Line height */
+    letter-spacing: .16px; /* Consistent letter spacing */
+    width: 100%; /* Full-width footer */
+    background: #000; /* Black background */
+    color: #FFFFFF; /* White text */
+    position: relative; /* Keeps footer above other elements */
+    z-index: 2; /* Ensures stacking context */
 }
+
+/* Footer Navigation Container */
 .nav-footer {
-    align-items: center;
-    min-height: 370px;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    justify-content: space-between;
-    color:#e8e8e8
-    
-       
+    align-items: center; /* Center align items vertically */
+    min-height: 370px; /* Minimum height for the footer */
+    padding-top: 2rem; /* Top padding */
+    padding-bottom: 2rem; /* Bottom padding */
+    justify-content: space-between; /* Space between elements */
+    color: #e8e8e8; /* Light gray text color */
 }
 
-.nav-footer-left
-{
-    padding-left: 5rem;
+/* Footer Left Section */
+.nav-footer-left {
+    text-align: left; /* Aligns content to the center */
+    vertical-align: top; /* Aligns to the top */
+}
+
+/* Footer Center Image Styling */
+.nav-footer-left img {
     text-align: left;
-    
-}
-.nav-footer-center img
-{
-    text-align: center;
-    vertical-align: top;    
-}
-.nav-footer-center 
-{
-    text-align: center;
-    vertical-align: top;    
+    vertical-align: top; /* Aligns image to the top */
+    margin-left: -10px; /* Aligns image to the IBM logo in the header */
 }
 
-.nav-footer-right
-{
-    text-align: left;
+/* Footer Center Section */
+.nav-footer-center {
+    text-align: center; /* Aligns content to the center */
+    vertical-align: top; /* Aligns to the top */
 }
 
-.CEText
-{
-    text-align: left;
-    padding-left: 40px;
-   
+/* Footer Right Section */
+.nav-footer-right {
+    text-align: left; /* Aligns text to the left */
 }
 
+/* Text Alignment for CE Section */
+.CEText {
+    text-align: left; /* Aligns text to the left */
+    padding-left: 40px; /* Adds padding on the left */
+}
+
+/* List Item Styling */
 .listitem {
-    width: 100%;
-    margin-left: 0;
+    width: 100%; /* Full width for list items */
+    margin-left: 0; /* No margin on the left */
 }
 
 a[role=listitem] {
-    color: #e8e8e8;
-    
+    color: #e8e8e8; /* Light gray link color */
 }
 
-
+/* Footer Bottom Section */
 .footer__bottom {
-    width: 100%;
-    text-align: center;
+    width: 100%; /* Full width */
+    text-align: center; /* Center align content */
 }
 
+/* Footer Logo Styling */
 .footerLogo {
-    color: #f4f4f4;
-    vertical-align: top;
+    color: #f7f2f2; /* Light gray logo color */
+    vertical-align: top; /* Aligns logo to the top */
 }
 
+.callout-note.indent { 
+    font-style: italic;         
+    padding: 12px;
+    margin-left: 35px;               
+}
+
+.indent {
+    margin-left: 35px;
+}

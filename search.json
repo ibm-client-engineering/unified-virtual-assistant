@@ -466,9 +466,9 @@
   {
     "objectID": "src/implementation_methodology/watson-dis.html",
     "href": "src/implementation_methodology/watson-dis.html",
-    "title": "Unified Virtual Assistant",
+    "title": "watson Discovery",
     "section": "",
-    "text": "title: “watson Discovery” format: html\nThis build consists of three main components:",
+    "text": "Warning\n\n\n\nPrerequisite: Watson Disovery Software Requirement\nThis build consists of three main components:",
     "crumbs": [
       "Implementation Methodology",
       "RAG Document Search",
@@ -478,7 +478,7 @@
   {
     "objectID": "src/implementation_methodology/watson-dis.html#setup-watson-discovery",
     "href": "src/implementation_methodology/watson-dis.html#setup-watson-discovery",
-    "title": "Unified Virtual Assistant",
+    "title": "watson Discovery",
     "section": "1. Setup watson Discovery",
     "text": "1. Setup watson Discovery\n\nNew projects, input Project Name, select an option “None of the above — I’m working on a custom project”, click “Next”\nselect the appropriatae method of upload, click “Next”\nInput Collection Name\nUpper left Hamburger icon -&gt; Manage Collections -&gt; New collections\nSelect data source\nIf webcrawl, input url links to “Starting URLs” and click “Add” -&gt; Finish",
     "crumbs": [
@@ -490,7 +490,7 @@
   {
     "objectID": "src/implementation_methodology/watson-dis.html#create-watsonx-and-watson-discovery-extensions",
     "href": "src/implementation_methodology/watson-dis.html#create-watsonx-and-watson-discovery-extensions",
-    "title": "Unified Virtual Assistant",
+    "title": "watson Discovery",
     "section": "2. Create watsonx and watson Discovery Extensions",
     "text": "2. Create watsonx and watson Discovery Extensions\nRequired Steps:\n\n2.1 Create watson Discovery custom extension\n\nIn your assistant, navigate to “Integrations” page.\nClick “Build custom extensions” -&gt; click “Next” -&gt; Input Extension name Watson Discovery -&gt; click “Next”\ndownload json file: watson-discovery-query-openapi.json and import file to WA\nclick “Next” -&gt; click “Finish”\nLower Right corner of the Watson Disovery extension, click “Add” -&gt; click “Add” -&gt; click “Next”\nIn Authentication page, in the Authentication type dropdown, select “Basic auth”\n\nFor Username enter apikey\nFor password, create and copy a new API key from API key\nFor discovery_url, within IBM Cloud -&gt; resource list -&gt; Watson Discovery Instance -&gt; Manage -&gt; Credentials -&gt; URL\nPaste URL into discovery_url and remove https:// from the beginning of the string\n\nClick “Next”, click “Finish”, click “Close”\n\n\nReference: starter kit\n\n\n\n2.2 Create watsonx custom extension\n\nIn your assistant, navigate to Integrations page, click “Build custom extension” -&gt; click “Next” -&gt; Input Extension name watson&lt;span style=\"color:#2c62f5;\"&gt;x&lt;/span&gt; -&gt; click “Next” .\ndownload json file: watsonx-openapi.json and import file to WA\nclick “Next” -&gt; click “Finish”\nLower Right corner of the watsonx extension, click “Add” -&gt; click “Add” -&gt; click “Next”\nIn Authentication page, in the Authentication type dropdown, select “OAuth 2.0”\n\nFor Apikey, create and copy a new API key from API key\n\nClick “Next”, click “Finish”, click “Close”\n\n\n\n2.3 Integrate watsonx Search using Watson Discovery to Assistant\n\nUpload Actions:\n\nDownload discovery-watsonx-actions.json\nNavigate to “Actions” page, click “Global Settings” icon on the upper right corner\nNavigate to Upload/Download tab, upload the downloaded JSON file discovery-watson-actions.json onto the tab or click to select a file from your local system, then click “Upload”, and “Uplaod and replace”.\nWithin the Actions page, navigate to “Actions / Variables / Created by you”. Set discovery_project_id and watsonx_project_id session variable\n\n\n\n\n\n\n\n\nWhere to get credentials:\n\n\n\n\ndiscovery_project_id: within Watson Discovery: Upper left Hamburger icon -&gt; Integrate and deploy -&gt; API Information\nwatsonx_project_id:\n\nGo to watsonx Platform\nProjects (click on project)-&gt; Manage -&gt; General -&gt; Details -&gt; Project ID\n\n\n\n\n\n\n\nNo action matches Setup\n\nNavigate to “All items” -&gt; “Set by assistant” -&gt; “No action matches”.\nClick on the “No action matches” action and delete the existing step 1 and step 2.\n“New Step”. In the “And then” section, select “go to a subaction” -&gt; select “Search” in the dropdown options -&gt; “Apply”.\n“Save” and “Close”\nYou’re all set. Navigate to “Preview” to test the integration!",
     "crumbs": [

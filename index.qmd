@@ -45,7 +45,7 @@ Description: "Leverage watsonx Orchestrate to build a unified user experiance wi
 
 ## Solution Description
 
-To build a unified virtual assistant and achieve the desired outcomes for success, this solution will leverage <span style="color:#2c62f5;">x</span> Orchestrate to deliver:
+To build a unified virtual assistant and achieve the desired outcomes for success, this solution will leverage watson<span style="color:#2c62f5;">x</span> Orchestrate to deliver:
 
 * **Identity and Access Management (IAM):**
     * Secure Login: Authenticates users based on roles.

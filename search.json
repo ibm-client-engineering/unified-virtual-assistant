@@ -20,11 +20,11 @@
     ]
   },
   {
-    "objectID": "index.html#core-capabilities",
-    "href": "index.html#core-capabilities",
+    "objectID": "index.html#solution-description",
+    "href": "index.html#solution-description",
     "title": "Unified Virtual Assistant",
-    "section": "Core Capabilities",
-    "text": "Core Capabilities\nA comprehensive assistant solution leverages the following key components to enhance functionality and user experience:\n\nIdentity and Access Management (IAM):\n\nSecure Login: Authenticates users based on roles.\nAccess Control: Restricts actions to authorized data and features.\nRole-Based Privileges:\n\nAdmins: Access advanced features like global password changes.\nUsers: Limited to basic functions, ensuring simplicity and security.\n\n\nGenerative AI-Driven Routing: Classifies user prompts into categories, improving conversation routing accuracy and streamlining interactions.\nRAG Document Search: Ensures accurate, reliable search results by combining a Data Repository, Vector Database, and Large Language Model, with up-to-date information and source links.\nThird-Party Integrations: Connects the chatbot to platforms like ServiceNow to automate workflows, reduce silos, and enable customized, efficient operations.\nGovernance: Implements IBM® watsonx.governance™ to manage AI risks, ensure compliance, monitor models, and document processes, fostering transparency and accountability.\nSubordinate Bot Mediation: Enables seamless collaboration with existing chatbots by delegating domain-specific requests while providing unified responses through the parent bot.",
+    "section": "Solution Description",
+    "text": "Solution Description\nTo build a unified virtual assistant and achieve the desired outcomes for success, this solution will leverage x Orchestrate to deliver:\n\nIdentity and Access Management (IAM):\n\nSecure Login: Authenticates users based on roles.\nAccess Control: Restricts actions to authorized data and features.\nRole-Based Privileges:\n\nAdmins: Access advanced features like global password changes.\nUsers: Limited to basic functions, ensuring simplicity and security.\n\n\nGenerative AI-Driven Routing: Classifies user prompts into categories, improving conversation routing accuracy and streamlining interactions.\nRAG Document Search: Ensures accurate, reliable search results by combining a Data Repository, Vector Database, and Large Language Model, with up-to-date information and source links.\nThird-Party Integrations: Connects the chatbot to platforms like ServiceNow to automate workflows, reduce silos, and enable customized, efficient operations.\nGovernance: Implements IBM® watsonx.governance™ to manage AI risks, ensure compliance, monitor models, and document processes, fostering transparency and accountability.\nSubordinate Bot Mediation: Enables seamless collaboration with existing chatbots by delegating domain-specific requests while providing unified responses through the parent bot.",
     "crumbs": [
       "Problem Definition"
     ]
@@ -305,18 +305,18 @@
     "href": "src/solution_overview/prepare.html",
     "title": "Overview",
     "section": "",
-    "text": "The objective of this solution is to demonstrate a chatbot which has the ability to orchestrate conversations to the appropriate channels and/or 3rd-party applications while leveraging generative AI technologies. This unified agent solution revolves around six key capabilities:\nCore Products: watsonx Orchestrate, IBM Cloud Object Storage\n\n\n\n\n\n\n\nCapability\nIBM Product\n\n\n\n\nIdentity Access Management\nIBM Security Verify\n\n\nGenerative AI-Driven Conversational Routing\nwatsonx.gov or watsonx.ai  Watson Matchine Learning\n\n\nRAG Document Search\nwatsonx Discovery  watsonx.ai Watson Machine Learning\n\n\n3rd-Party Application Integrations\nwatsonx Orchestrate\n\n\nGovernance\nwatsonx.gov\n\n\nSubordinate Bot Integration\nwatsonx Orchestrate Assistant",
+    "text": "The objective of this solution is to demonstrate a chatbot which has the ability to orchestrate conversations to the appropriate channels and/or 3rd-party applications while leveraging generative AI technologies. This unified agent solution revolves around six key capabilities:\nCore Product: watsonx Orchestrate\n\n\n\n\n\n\n\nCapability\nIBM Product\n\n\n\n\nIdentity Access Management\nIBM Security Verify\n\n\nGenerative AI-Driven Conversational Routing\nwatsonx.gov or watsonx.ai  Watson Matchine Learning\n\n\nRAG Document Search\nwatsonx Discovery  watsonx.ai Watson Machine Learning\n\n\n3rd-Party Application Integrations\nwatsonx Orchestrate\n\n\nGovernance\nwatsonx.gov\n\n\nSubordinate Bot Integration\nwatsonx Orchestrate Assistant",
     "crumbs": [
       "Solution Overview",
       "Prepare"
     ]
   },
   {
-    "objectID": "src/solution_overview/prepare.html#web-chat-interface",
-    "href": "src/solution_overview/prepare.html#web-chat-interface",
+    "objectID": "src/solution_overview/prepare.html#user-interface",
+    "href": "src/solution_overview/prepare.html#user-interface",
     "title": "Overview",
-    "section": "Web-Chat Interface",
-    "text": "Web-Chat Interface\n\nLeveraging IBM Cloud Object Storage to host a static website for the chatbot.\n\nConfiguration Steps here",
+    "section": "User Interface",
+    "text": "User Interface\n\nLeveraging IBM Cloud Object Storage to host a static website for the chatbot.\n\nConfiguration Steps here",
     "crumbs": [
       "Solution Overview",
       "Prepare"

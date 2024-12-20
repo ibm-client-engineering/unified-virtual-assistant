@@ -8,7 +8,7 @@ format: html
 The objective of this solution is to demonstrate a chatbot which has the ability to orchestrate conversations to the
 appropriate channels and/or 3rd-party applications while leveraging generative AI technologies. This unified agent solution revolves around six key capabilities:
 
-**Core Products:** watson<span style="color:#2c62f5;">x</span> Orchestrate, IBM Cloud Object Storage
+**Core Product:** watson<span style="color:#2c62f5;">x</span> Orchestrate
 
 | Capability    | IBM Product |
 | -------- |:-------|
@@ -22,7 +22,7 @@ appropriate channels and/or 3rd-party applications while leveraging generative A
 ![](../../images/component_arch.png)
 
 # Solution Components
-## **Web-Chat Interface**
+## **User Interface**
 * Leveraging IBM Cloud Object Storage to host a static website for the chatbot.
     * Configuration Steps [here](../implementation_methodology/imp-UI.html)
 

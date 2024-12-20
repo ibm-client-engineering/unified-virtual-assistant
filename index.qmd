@@ -43,9 +43,9 @@ Description: "Leverage watsonx Orchestrate to build a unified user experiance wi
 - Cost and Operational Efficiency Gains: reduced duplicated efforts and a scalable framework
 - Enhanced Compliance and Governance: a united framework enables clearer centralized oversight - including models deployed, model health, source information, governed access to sensitive material
 
-## Core Capabilities
+## Solution Description
 
-A comprehensive assistant solution leverages the following key components to enhance functionality and user experience:
+To build a unified virtual assistant and achieve the desired outcomes for success, this solution will leverage <span style="color:#2c62f5;">x</span> Orchestrate to deliver:
 
 * **Identity and Access Management (IAM):**
     * Secure Login: Authenticates users based on roles.

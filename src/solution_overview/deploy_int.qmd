@@ -110,3 +110,5 @@ Once all the relevant technologies have been integrated the solution is ready to
 
 
 ### Process Flow
+
+![](../../images/user_workflow.png)

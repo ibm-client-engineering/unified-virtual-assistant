@@ -1,0 +1,112 @@
+---
+title: "Integrations & Deployment"
+format: html
+---
+
+## Integrations
+Several integrations between the various technologies mentioned are necessary to achieve a *Unified Virtual Assistant* solution with the capabilities mentioned below: 
+
+| Capability    | IBM Product |
+| -------- |:-------|
+| Identity Access Management  |  IBM Security Verify   |
+| GenAI-Driven Conversational Routing |  watson<span style="color:#2c62f5;">x</span>.gov or watson<span style="color:#2c62f5;">x</span>.ai <br /> Watson Machine Learning   |
+| RAG Document Search    | watson<span style="color:#2c62f5;">x</span> Discovery <br /> watson<span style="color:#2c62f5;">x</span>.ai<br /> Watson Machine Learning</div> |
+| 3rd-Party Application Integrations    | watson<span style="color:#2c62f5;">x</span> Orchestrate |
+| Governance   | watson<span style="color:#2c62f5;">x</span>.gov |
+| Subordinate Bot Integration   | watson<span style="color:#2c62f5;">x</span> Orchestrate Assistant |
+<br>
+
+![](../../images/component_arch2.png)
+
+### Identity and Access Management
+
+#### IBM Security Verify
+**Integration Method:** OpenAPI Spec <br>
+
+Integrated to the assistant via "Custom Extension" with an [OpenAPI spec](../../assets/OpenAPI_Specs/IBM%20Verify/ibmVerify_openapi_spec.json) our team developed to carry various actions with Verify's API:
+<ol>
+  <li>Authenticate Username and Password</li>
+  <li>Resetting Password</li>
+  <li>Retrieve User's Information</li>
+  <li>Initiate Email OTP</li>
+  <li>Verify Email OTP</li>
+</ol>
+
+### GenAI-Driven Conversational Routing
+
+:::{.callout-note}
+You can use either watson<span style="color:#2c62f5;">x</span>.gov **OR** watson<span style="color:#2c62f5;">x</span>.ai to carry out GenAI routing.
+:::
+#### watson<span style="color:#2c62f5;">x</span>.gov
+**Integration Method:** Watson Machine Learning Deployment OpenAPI Spec<br>
+**High-Level Steps:**
+<ol>
+<li>Build prompts in watson<span style="color:#2c62f5;">x</span>.gov
+<li>Integrated watson<span style="color:#2c62f5;">x</span>.gov prompts to the assistant via "Custom Extension" with an [OpenAPI spec](../../assets/OpenAPI_Specs/watsonx_governance/governance_openapi_spec.json).
+<li> Configured the relevant Actions in the assistant.
+</ol>
+
+#### watson<span style="color:#2c62f5;">x</span>.ai
+**Integration Method:** OpenAPI Spec<br>
+**High-Level Steps:**
+<ol>
+<li>Integrated to the assistant via "Custom Extension" with an [OpenAPI spec](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-watsonx/watsonx-openapi.json)
+<li> Configured an "Action" within the Assistant to send prompts for generative AI use cases.
+</ol>
+
+### RAG Document Search
+
+#### watson<span style="color:#2c62f5;">x</span> Discovery
+**Integration Method:** Watson Machine Learning Deployment OpenAPI spec<br>
+**High-Level Steps:**
+<ol>
+<li>Leveraged Watson Studio to ingest and embed documents into the appropriate vectorDB indices.
+<li>Deployed a function to carry out RAG for each index with Watson Machine Learning.
+<li>Integrated to the assistant via "Custom Extension" with an [OpenAPI Spec](../../assets/OpenAPI_Specs/watsonx_Discovery/wxD_wml_openapi_spec.json)
+<li>Configured an "Action" within the Assistant to initiate RAG.
+</ol>
+
+### 3rd-Party Application Integrations
+
+#### ServiceNow and Workday
+**Integration Method:** watson<span style="color:#2c62f5;">x</span> Orchestrate Skills <br>
+**High-Level Steps:**
+<ol>
+<li>Use the appropriate credentials to connect to the skills in watson<span style="color:#2c62f5;">x</span> Orchestrate's skill catalog.
+<li>Connect to the relevant assistant
+<li>Configured an "Action" within the Assistant to initiate each skill.
+</ol>
+
+#### Genesys
+**Integration Method:** native assistant channel integration <br>
+**High-Level Steps:**
+<ol>
+<li>Configure Genesys account.
+<li>Connect to the relevant assistant.
+</ol>
+
+### Governance
+**Integration Method:** Watson Machine Learning Deployment OpenAPI Spec<br>
+**High-Level Steps:**
+<ol>
+<li>Build prompts in watson<span style="color:#2c62f5;">x</span>.gov
+<li>Integrated watson<span style="color:#2c62f5;">x</span>.gov prompts to the assistant via "Custom Extension" with an [OpenAPI spec](../../assets/OpenAPI_Specs/watsonx_governance/governance_openapi_spec.json).
+<li> Configured the relevant Actions in the assistant.
+</ol>
+
+### Subordinate Bot Mediation
+**Integration Method:** OpenAPI Spec<br>
+**High-Level Steps:**
+<ol>
+<li>Integrated to the assistant via "Custom Extension" with an [OpenAPI spec](../../assets/OpenAPI_Specs/Subordinate%20Bot/assistantBot_openapi_spec.json)
+<li> Configured an "Action" within the Assistant to initiate bot mediation.
+</ol>
+
+## Deployment
+Once all the relevant technologies have been integrated the solution is ready to be deployed. To carry out the deployment for this solution we leveraged IBM Cloud Object Storage to host a static website with the assistant we created embedded on the website.
+
+### User Interface
+![](../../images/ui_output.png)
+
+
+### Process Flow

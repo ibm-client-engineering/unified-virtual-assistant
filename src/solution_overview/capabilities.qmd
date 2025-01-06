@@ -34,8 +34,8 @@ within an the chatbot.
 
 #### Technologies Leveraged
 * **watson<span style="color:#2c62f5;">x</span> Orchestrate:** Serves as the core platform to integrate seamlessly with generative-AI (More Info [here](#)). 
-* **watson<span style="color:#2c62f5;">x</span>.gov:** Serves as a platform to build and deploy prompts to carry out generative AI decisions while providing governance tools (More Info [here](#)). **OR**
-* **watson<span style="color:#2c62f5;">x</span>.ai**: Serves as a platform to build and deploy prompts to carry out generative AI decisions (More Info [here](#)).
+* **watson<span style="color:#2c62f5;">x</span>.gov:** Serves as a platform to build and deploy prompts to carry out generative AI decisions while providing governance tools. **OR**
+* **watson<span style="color:#2c62f5;">x</span>.ai**: Serves as a platform to build and deploy prompts to carry out generative AI decisions.
 
 ::: {.callout-note .indent}
 **watson<span style="color:#2c62f5;">x</span>.gov OR watson<span style="color:#2c62f5;">x</span>.ai can be levered to carry out gen-AI decision making.**<br>
@@ -48,21 +48,21 @@ By leveraging a RAG pipeline to help users query a given knowledge base corpus, 
 * RAG searches on different collections of data based on the user's request and access.
 
 #### Technologies Leveraged
-* **watson<span style="color:#2c62f5;">x</span> Orchestrate:** Serves as the core platform to integrate seamlessly with RAG technologies (More Info [here](#)). 
-* **watson<span style="color:#2c62f5;">x</span>.ai**: Serves as a platform to build and deploy prompts to carry out RAG with generative AI (More Info [here](#)).
-* **watson<span style="color:#2c62f5;">x</span> Discovery**: Serves as a vectorDB to store document embeddings and carry out RAG (More Info [here](#)).
-* **Watson Machine Learning**: Serves as the platform to deploy RAG functions (More Info [here](#)).
-* **Watson Studio**: Serves as the platform to edit python notebooks to build RAG pipelines (More Info [here](#)).
+* **watson<span style="color:#2c62f5;">x</span> Orchestrate:** Serves as the core platform to integrate seamlessly with RAG technologies. 
+* **watson<span style="color:#2c62f5;">x</span>.ai**: Serves as a platform to build and deploy prompts to carry out RAG with generative AI.
+* **watson<span style="color:#2c62f5;">x</span> Discovery**: Serves as a vectorDB to store document embeddings and carry out RAG.
+* **Watson Machine Learning**: Serves as the platform to deploy RAG functions.
+* **Watson Studio**: Serves as the platform to edit python notebooks to build RAG pipelines.
 
 ## 3rd-Party Application Integrations
 Integrating third-party applications with a chatbot transforms it into a central hub for workflow automation, enabling seamless interaction with various systems. This reduces silos, enhances agility, and allows organizations to customize workflows, making the chatbot a flexible, powerful tool tailored to their needs.
 
 #### Use Cases
 * Connect to 3rd party SaaS vendors such as ServiceNOW
-* Initiate workflows in ServiceNOW such as openining tickets.
+* Initiate workflows in ServiceNOW such as opening tickets.
 
 #### Technologies Leveraged
-* **watson<span style="color:#2c62f5;">x</span> Orchestrate:** Serves as the core platform to integrate seamlessly with 3rd-party applications via "Skills" (More Info [here](#)).
+* **watson<span style="color:#2c62f5;">x</span> Orchestrate:** Serves as the core platform to integrate seamlessly with 3rd-party applications via "Skills".
 
 ## Governance
 Implementing watsonx governance is critical to managing AI deployment risks and complexities. It mitigates issues like data bias and model drift through clear guidelines, real-time monitoring, and oversight. Governance also fosters transparency by documenting model development, data sources, and decision criteria, building trust among stakeholders. Additionally, it optimizes resource allocation by prioritizing AI initiatives with measurable business value.
@@ -71,12 +71,12 @@ Implementing watsonx governance is critical to managing AI deployment risks and 
 * Provide a platform to govern drift, and bias.
 * Monitor prompt lifecycle management.
 * Provide insights on model throughput and model parameters.
-* Rource Attribution for RAG.
+* Source Attribution for RAG.
 
 #### Technologies Leveraged
-* **watson<span style="color:#2c62f5;">x</span> Orchestrate:** Serves as the core platform to integrate seamlessly with governance technologies (More Info [here](#)). 
-* **watson<span style="color:#2c62f5;">x</span>.gov:** Provides a comprehensive framework to ensure compliance, accountability, and efficient AI use, enabling organizations to responsibly harness AI’s potential while minimizing risks (More Info [here](#)).
-* **IBM Cloud Object Storage:** Serves as a document storage for accessing pdfs for source attribution links.
+* **watson<span style="color:#2c62f5;">x</span> Orchestrate:** Serves as the core platform to integrate seamlessly with governance technologies. 
+* **watson<span style="color:#2c62f5;">x</span>.gov:** Provides a comprehensive framework to ensure compliance, accountability, and efficient AI use, enabling organizations to responsibly harness AI’s potential while minimizing risks.
+* **IBM Cloud Object Storage:** Serves as a document storage for accessing PDF for source attribution links.
 
 ## Subordinate Bot Mediation
 One aspect of creating a unifying platform is the ability to connect and interface with existing chatbots which may have their own data corpuses or access policies. The parent or unifying agent should be able to hand-off requests to the relevant chatbots. 
@@ -87,4 +87,4 @@ For example, if there is an existing chatbot which has access to financial analy
 * Enable seamless hand-offs to other chatbots, each with its own secure data access and workflows.
 
 #### Technologies Leveraged
-* **watson<span style="color:#2c62f5;">x</span> Orchestrate:** Serves as the core platform to integrate seamlessly with other chatbots (More Info [here](#)). 
+* **watson<span style="color:#2c62f5;">x</span> Orchestrate:** Serves as the core platform to integrate seamlessly with other chatbots. 

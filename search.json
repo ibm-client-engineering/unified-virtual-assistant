@@ -20,16 +20,6 @@
     ]
   },
   {
-    "objectID": "index.html#solution-description",
-    "href": "index.html#solution-description",
-    "title": "Unified Virtual Assistant",
-    "section": "Solution Description",
-    "text": "Solution Description\nTo build a unified virtual assistant and achieve the desired outcomes for success, this solution will leverage watsonx Orchestrate to deliver:\n\nIdentity and Access Management (IAM):\n\nSecure Login: Authenticates users based on roles.\nAccess Control: Restricts actions to authorized data and features.\nRole-Based Privileges:\n\nAdmins: Access advanced features like global password changes.\nUsers: Limited to basic functions, ensuring simplicity and security.\n\n\nGenerative AI-Driven Routing: Classifies user prompts into categories, improving conversation routing accuracy and streamlining interactions.\nRAG Document Search: Ensures accurate, reliable search results by combining a Data Repository, Vector Database, and Large Language Model, with up-to-date information and source links.\nThird-Party Integrations: Connects the chatbot to platforms like ServiceNow to automate workflows, reduce silos, and enable customized, efficient operations.\nGovernance: Implements IBM® watsonx.governance™ to manage AI risks, ensure compliance, monitor models, and document processes, fostering transparency and accountability.\nSubordinate Bot Mediation: Enables seamless collaboration with existing chatbots by delegating domain-specific requests while providing unified responses through the parent bot.",
-    "crumbs": [
-      "Problem Definition"
-    ]
-  },
-  {
     "objectID": "src/implementation_methodology/rag-attr-links.html",
     "href": "src/implementation_methodology/rag-attr-links.html",
     "title": "RAG Attribution Links",

@@ -17,7 +17,7 @@
   },
   "servers": [
     {
-      "url": "https://api.us-east-1.aws.watsonassistant.ibm.com/instances/[INSERT_INSTANCE_ID]"
+      "url": "[INSERT_INSTANCE_ID]"
     }
   ],
   "components": {

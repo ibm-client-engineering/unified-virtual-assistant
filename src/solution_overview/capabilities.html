@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>User Interface – Unified Virtual Assistant</title>
+<title>Capabilities – Unified Virtual Assistant</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../src/implementation_methodology/imp-genai-rout.html" rel="next">
-<link href="../../src/solution_overview/environment.html" rel="prev">
+<link href="../../src/solution_overview/deploy_int.html" rel="next">
+<link href="../../src/solution_overview/overview.html" rel="prev">
 <link href="../../images/bee.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -124,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-UI.html">Implementation Methodology</a></li><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-UI.html">User Interface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/solution_overview/overview.html">Solution Overview</a></li><li class="breadcrumb-item"><a href="../../src/solution_overview/capabilities.html">Capabilities</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -144,13 +144,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Solution Overview</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/solution_overview/overview.html" class="sidebar-item-text sidebar-link">
@@ -159,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/solution_overview/capabilities.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/solution_overview/capabilities.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Capabilities</span></a>
   </div>
 </li>
@@ -179,16 +179,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Implementation Methodology</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/implementation_methodology/imp-UI.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../src/implementation_methodology/imp-UI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">User Interface</span></a>
   </div>
 </li>
@@ -331,23 +331,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#static-webpage-build" id="toc-static-webpage-build" class="nav-link" data-scroll-target="#static-webpage-build">Static-Webpage Build</a>
-  <ul class="collapse">
-  <li><a href="#embed-assistant-webchat-into-html-file" id="toc-embed-assistant-webchat-into-html-file" class="nav-link" data-scroll-target="#embed-assistant-webchat-into-html-file">Embed Assistant Webchat into HTML file</a></li>
-  <li><a href="#create-cloud-object-storage-cos-instance" id="toc-create-cloud-object-storage-cos-instance" class="nav-link" data-scroll-target="#create-cloud-object-storage-cos-instance">Create Cloud Object Storage (COS) Instance</a></li>
-  <li><a href="#create-a-custom-cos-bucket" id="toc-create-a-custom-cos-bucket" class="nav-link" data-scroll-target="#create-a-custom-cos-bucket">Create a Custom COS Bucket</a></li>
-  <li><a href="#upload-html-file" id="toc-upload-html-file" class="nav-link" data-scroll-target="#upload-html-file"><strong>Upload HTML file</strong></a></li>
-  </ul></li>
+  <li><a href="#identity-and-access-management-iam" id="toc-identity-and-access-management-iam" class="nav-link active" data-scroll-target="#identity-and-access-management-iam">Identity and Access Management (IAM)</a></li>
+  <li><a href="#gen-ai-driven-decision-making" id="toc-gen-ai-driven-decision-making" class="nav-link" data-scroll-target="#gen-ai-driven-decision-making">Gen-AI Driven Decision Making</a></li>
+  <li><a href="#rag-document-search" id="toc-rag-document-search" class="nav-link" data-scroll-target="#rag-document-search">RAG Document Search</a></li>
+  <li><a href="#rd-party-application-integrations" id="toc-rd-party-application-integrations" class="nav-link" data-scroll-target="#rd-party-application-integrations">3rd-Party Application Integrations</a></li>
+  <li><a href="#governance" id="toc-governance" class="nav-link" data-scroll-target="#governance">Governance</a></li>
+  <li><a href="#subordinate-bot-mediation" id="toc-subordinate-bot-mediation" class="nav-link" data-scroll-target="#subordinate-bot-mediation">Subordinate Bot Mediation</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-UI.html">Implementation Methodology</a></li><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-UI.html">User Interface</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/solution_overview/overview.html">Solution Overview</a></li><li class="breadcrumb-item"><a href="../../src/solution_overview/capabilities.html">Capabilities</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">User Interface</h1>
+<h1 class="title">Capabilities</h1>
 </div>
 
 
@@ -364,57 +362,148 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This document will go through how to build the user interface for a Unified Virtual Assistant. The method that was leveraged to build the user interface was leveraging a static-webpage with Cloud Object Storage.</p>
-</section>
-<section id="static-webpage-build" class="level2">
-<h2 class="anchored" data-anchor-id="static-webpage-build">Static-Webpage Build</h2>
-<p>This doc will go through how to build an externally accessible webpage with the embedded assitant webchat for public access. This webpage is created using a static html script which is hosted within a Cloud Object Storage Bucket.</p>
-<p><strong>Software Requirements:</strong></p>
+<strong>This <em>Unified Virtual Assistant</em> solution revolves around six key capabilities:</strong>
+<ol>
+<li>
+Identity and Access Management (IAM)
+</li>
+<li>
+Gen-AI Driven Decision Making
+</li>
+<li>
+RAG Document Search
+</li>
+<li>
+3rd-Party Application Integration
+</li>
+<li>
+Governance
+</li>
+<li>
+Subordinate Chatbot Mediation
+</li>
+</ol>
+<section id="identity-and-access-management-iam" class="level2">
+<h2 class="anchored" data-anchor-id="identity-and-access-management-iam">Identity and Access Management (IAM)</h2>
+<p>Implementing secure user login functionality is essential for enhancing security and access control within the chatbot. By integrating role-based access control (RBAC), users can authenticate securely and access only the actions and features aligned with their roles. This ensures personalized, controlled interactions while protecting sensitive data.</p>
+<section id="use-cases" class="level4">
+<h4 class="anchored" data-anchor-id="use-cases">Use Cases</h4>
 <ul>
-<li>IBM Cloud Object Storage - Lite</li>
-<li>watson<span style="color:#2c62f5;">x</span> Orchestrate or watson<span style="color:#2c62f5;">x</span> Assistant</li>
+<li><strong>Administrative Access:</strong> Administrators can manage user permissions, change passwords, and configure chatbot settings.</li>
+<li><strong>Role-Specific Features:</strong> Regular users access only basic functions, such as viewing their data or requesting support.</li>
+<li><strong>Data Security:</strong> Users interact only with data they are authorized to access, reducing risks.</li>
 </ul>
-<section id="embed-assistant-webchat-into-html-file" class="level3">
-<h3 class="anchored" data-anchor-id="embed-assistant-webchat-into-html-file">Embed Assistant Webchat into HTML file</h3>
-<ol type="1">
-<li>Within the Assitant Builder’s sidebar, navigate to the “Integrations” section</li>
-<li>Under the “Essential channels” section select “Open” within the “Webchat” channel</li>
-<li>Select the appropriate environment and navigate to the “Embed” tab</li>
-<li>Copy the provided script and insert into html script</li>
-<li>Optional : Add <code>showRestartButton: true</code> after <code>window.watsonAssistantChatOptions ={}</code> to display web-chat restart button</li>
-</ol>
 </section>
-<section id="create-cloud-object-storage-cos-instance" class="level3">
-<h3 class="anchored" data-anchor-id="create-cloud-object-storage-cos-instance">Create Cloud Object Storage (COS) Instance</h3>
-<ol type="1">
-<li>Go to the dedicated IBM Cloud Account “Resource” List <a href="https://cloud.ibm.com/resources" target="_blank">here</a> and click “Create Resource +”</li>
-<li>Search and select “Object Storage”</li>
-<li>Select “IBM Cloud” as the infrastructure and the appropriate pricing plan</li>
-<li>Name the service and click “Create”</li>
-</ol>
+<section id="technologies-leveraged" class="level4">
+<h4 class="anchored" data-anchor-id="technologies-leveraged">Technologies Leveraged</h4>
+<ul>
+<li><strong>watson<span style="color:#2c62f5;">x</span> Orchestrate:</strong> serves as the core platform to integrate seamlessly with IAM services (More Info <a href="#">here</a>).</li>
+<li><strong>IBM Security Verify:</strong> Serves as the IAM service for this pilot (More Info <a href="#">here</a>).</li>
+</ul>
 </section>
-<section id="create-a-custom-cos-bucket" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-custom-cos-bucket">Create a Custom COS Bucket</h3>
-<ol type="1">
-<li>From the “Resource” List select the newly created COS instance</li>
-<li>Click “Create a Custom Bucket”</li>
-<li>Enter a valid bucket name and select the appropriate values for “Resiliency”, “Location”, “Storage class”, “Object Versioning” and “Immutablity”</li>
-<li>Within the section “Advanced configurations (optional)” click the “Add +” for “Static website hosting”</li>
-</ol>
-<p><img src="../../images/COS_status_config.png" class="img-fluid"></p>
-<ol start="5" type="1">
-<li>Ensure the “Public access” toggle is switched to “On”</li>
-<li>Enter the name of the target html file which will be used to build the desired web app</li>
-<li>Click “Save” and then click “Create bucket”</li>
-</ol>
 </section>
-<section id="upload-html-file" class="level3">
-<h3 class="anchored" data-anchor-id="upload-html-file"><strong>Upload HTML file</strong></h3>
-<ol type="1">
-<li>Upload the HTML file from <a href="#embed-assistant-webchat-into-html-file">here</a></li>
-</ol>
+<section id="gen-ai-driven-decision-making" class="level2">
+<h2 class="anchored" data-anchor-id="gen-ai-driven-decision-making">Gen-AI Driven Decision Making</h2>
+<p>Leveraging generative AI to help classify user prompts as different groups can significantly improve the routing of conversations to the right actions within an the chatbot.</p>
+<section id="use-cases-1" class="level4">
+<h4 class="anchored" data-anchor-id="use-cases-1">Use Cases</h4>
+<p><img src="../../images/genai_usecase.png" class="img-fluid"></p>
+</section>
+<section id="technologies-leveraged-1" class="level4">
+<h4 class="anchored" data-anchor-id="technologies-leveraged-1">Technologies Leveraged</h4>
+<ul>
+<li><strong>watson<span style="color:#2c62f5;">x</span> Orchestrate:</strong> Serves as the core platform to integrate seamlessly with generative-AI (More Info <a href="#">here</a>).</li>
+<li><strong>watson<span style="color:#2c62f5;">x</span>.gov:</strong> Serves as a platform to build and deploy prompts to carry out generative AI decisions while providing governance tools (More Info <a href="#">here</a>). <strong>OR</strong></li>
+<li><strong>watson<span style="color:#2c62f5;">x</span>.ai</strong>: Serves as a platform to build and deploy prompts to carry out generative AI decisions (More Info <a href="#">here</a>).</li>
+</ul>
+<div class="indent callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>watson<span style="color:#2c62f5;">x</span>.gov OR watson<span style="color:#2c62f5;">x</span>.ai can be levered to carry out gen-AI decision making.</strong><br></p>
+</div>
+</div>
+</section>
+</section>
+<section id="rag-document-search" class="level2">
+<h2 class="anchored" data-anchor-id="rag-document-search">RAG Document Search</h2>
+<p>By leveraging a RAG pipeline to help users query a given knowledge base corpus, the Assistant can provide a more reliable and accurate knowledge base search experience. This not only enhances the overall user experience but also ensures that users receive the most relevant and up-to-date information possible by providing source links to the provided answers.</p>
+<section id="use-cases-2" class="level4">
+<h4 class="anchored" data-anchor-id="use-cases-2">Use Cases</h4>
+<ul>
+<li>RAG searches on different collections of data based on the user’s request and access.</li>
+</ul>
+</section>
+<section id="technologies-leveraged-2" class="level4">
+<h4 class="anchored" data-anchor-id="technologies-leveraged-2">Technologies Leveraged</h4>
+<ul>
+<li><strong>watson<span style="color:#2c62f5;">x</span> Orchestrate:</strong> Serves as the core platform to integrate seamlessly with RAG technologies (More Info <a href="#">here</a>).</li>
+<li><strong>watson<span style="color:#2c62f5;">x</span>.ai</strong>: Serves as a platform to build and deploy prompts to carry out RAG with generative AI (More Info <a href="#">here</a>).</li>
+<li><strong>watson<span style="color:#2c62f5;">x</span> Discovery</strong>: Serves as a vectorDB to store document embeddings and carry out RAG (More Info <a href="#">here</a>).</li>
+<li><strong>Watson Machine Learning</strong>: Serves as the platform to deploy RAG functions (More Info <a href="#">here</a>).</li>
+<li><strong>Watson Studio</strong>: Serves as the platform to edit python notebooks to build RAG pipelines (More Info <a href="#">here</a>).</li>
+</ul>
+</section>
+</section>
+<section id="rd-party-application-integrations" class="level2">
+<h2 class="anchored" data-anchor-id="rd-party-application-integrations">3rd-Party Application Integrations</h2>
+<p>Integrating third-party applications with a chatbot transforms it into a central hub for workflow automation, enabling seamless interaction with various systems. This reduces silos, enhances agility, and allows organizations to customize workflows, making the chatbot a flexible, powerful tool tailored to their needs.</p>
+<section id="use-cases-3" class="level4">
+<h4 class="anchored" data-anchor-id="use-cases-3">Use Cases</h4>
+<ul>
+<li>Connect to 3rd party SaaS vendors such as ServiceNOW</li>
+<li>Initiate workflows in ServiceNOW such as openining tickets.</li>
+</ul>
+</section>
+<section id="technologies-leveraged-3" class="level4">
+<h4 class="anchored" data-anchor-id="technologies-leveraged-3">Technologies Leveraged</h4>
+<ul>
+<li><strong>watson<span style="color:#2c62f5;">x</span> Orchestrate:</strong> Serves as the core platform to integrate seamlessly with 3rd-party applications via “Skills” (More Info <a href="#">here</a>).</li>
+</ul>
+</section>
+</section>
+<section id="governance" class="level2">
+<h2 class="anchored" data-anchor-id="governance">Governance</h2>
+<p>Implementing watsonx governance is critical to managing AI deployment risks and complexities. It mitigates issues like data bias and model drift through clear guidelines, real-time monitoring, and oversight. Governance also fosters transparency by documenting model development, data sources, and decision criteria, building trust among stakeholders. Additionally, it optimizes resource allocation by prioritizing AI initiatives with measurable business value.</p>
+<section id="use-cases-4" class="level4">
+<h4 class="anchored" data-anchor-id="use-cases-4">Use Cases</h4>
+<ul>
+<li>Provide a platform to govern drift, and bias.</li>
+<li>Monitor prompt lifecycle management.</li>
+<li>Provide insights on model throughput and model parameters.</li>
+<li>Rource Attribution for RAG.</li>
+</ul>
+</section>
+<section id="technologies-leveraged-4" class="level4">
+<h4 class="anchored" data-anchor-id="technologies-leveraged-4">Technologies Leveraged</h4>
+<ul>
+<li><strong>watson<span style="color:#2c62f5;">x</span> Orchestrate:</strong> Serves as the core platform to integrate seamlessly with governance technologies (More Info <a href="#">here</a>).</li>
+<li><strong>watson<span style="color:#2c62f5;">x</span>.gov:</strong> Provides a comprehensive framework to ensure compliance, accountability, and efficient AI use, enabling organizations to responsibly harness AI’s potential while minimizing risks (More Info <a href="#">here</a>).</li>
+<li><strong>IBM Cloud Object Storage:</strong> Serves as a document storage for accessing pdfs for source attribution links.</li>
+</ul>
+</section>
+</section>
+<section id="subordinate-bot-mediation" class="level2">
+<h2 class="anchored" data-anchor-id="subordinate-bot-mediation">Subordinate Bot Mediation</h2>
+<p>One aspect of creating a unifying platform is the ability to connect and interface with existing chatbots which may have their own data corpuses or access policies. The parent or unifying agent should be able to hand-off requests to the relevant chatbots.</p>
+<p>For example, if there is an existing chatbot which has access to financial analyst reports data source, the parent/unifying bot should be able to hand-off questions to that chatbot’s domain and return it back to the user in the parent bot.</p>
+<section id="use-cases-5" class="level4">
+<h4 class="anchored" data-anchor-id="use-cases-5">Use Cases</h4>
+<ul>
+<li>Enable seamless hand-offs to other chatbots, each with its own secure data access and workflows.</li>
+</ul>
+</section>
+<section id="technologies-leveraged-5" class="level4">
+<h4 class="anchored" data-anchor-id="technologies-leveraged-5">Technologies Leveraged</h4>
+<ul>
+<li><strong>watson<span style="color:#2c62f5;">x</span> Orchestrate:</strong> Serves as the core platform to integrate seamlessly with other chatbots (More Info <a href="#">here</a>).</li>
+</ul>
 
 
 </section>
@@ -840,13 +929,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../src/solution_overview/environment.html" class="pagination-link" aria-label="Environment">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Environment</span>
+      <a href="../../src/solution_overview/overview.html" class="pagination-link" aria-label="Overview">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Overview</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../src/implementation_methodology/imp-genai-rout.html" class="pagination-link" aria-label="Generative-AI Driven Routing">
-        <span class="nav-page-text">Generative-AI Driven Routing</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../src/solution_overview/deploy_int.html" class="pagination-link" aria-label="Integrations and Deployment">
+        <span class="nav-page-text">Integrations and Deployment</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

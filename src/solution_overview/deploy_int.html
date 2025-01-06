@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>User Interface – Unified Virtual Assistant</title>
+<title>Integrations &amp; Deployment – Unified Virtual Assistant</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../src/implementation_methodology/imp-genai-rout.html" rel="next">
-<link href="../../src/solution_overview/environment.html" rel="prev">
+<link href="../../src/solution_overview/environment.html" rel="next">
+<link href="../../src/solution_overview/capabilities.html" rel="prev">
 <link href="../../images/bee.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -124,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-UI.html">Implementation Methodology</a></li><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-UI.html">User Interface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/solution_overview/overview.html">Solution Overview</a></li><li class="breadcrumb-item"><a href="../../src/solution_overview/deploy_int.html">Integrations and Deployment</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -144,13 +144,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Solution Overview</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/solution_overview/overview.html" class="sidebar-item-text sidebar-link">
@@ -165,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/solution_overview/deploy_int.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/solution_overview/deploy_int.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Integrations and Deployment</span></a>
   </div>
 </li>
@@ -179,16 +179,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Implementation Methodology</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/implementation_methodology/imp-UI.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../src/implementation_methodology/imp-UI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">User Interface</span></a>
   </div>
 </li>
@@ -331,13 +331,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#static-webpage-build" id="toc-static-webpage-build" class="nav-link" data-scroll-target="#static-webpage-build">Static-Webpage Build</a>
+  <li><a href="#integrations" id="toc-integrations" class="nav-link active" data-scroll-target="#integrations">Integrations</a>
   <ul class="collapse">
-  <li><a href="#embed-assistant-webchat-into-html-file" id="toc-embed-assistant-webchat-into-html-file" class="nav-link" data-scroll-target="#embed-assistant-webchat-into-html-file">Embed Assistant Webchat into HTML file</a></li>
-  <li><a href="#create-cloud-object-storage-cos-instance" id="toc-create-cloud-object-storage-cos-instance" class="nav-link" data-scroll-target="#create-cloud-object-storage-cos-instance">Create Cloud Object Storage (COS) Instance</a></li>
-  <li><a href="#create-a-custom-cos-bucket" id="toc-create-a-custom-cos-bucket" class="nav-link" data-scroll-target="#create-a-custom-cos-bucket">Create a Custom COS Bucket</a></li>
-  <li><a href="#upload-html-file" id="toc-upload-html-file" class="nav-link" data-scroll-target="#upload-html-file"><strong>Upload HTML file</strong></a></li>
+  <li><a href="#identity-and-access-management" id="toc-identity-and-access-management" class="nav-link" data-scroll-target="#identity-and-access-management">Identity and Access Management</a></li>
+  <li><a href="#genai-driven-conversational-routing" id="toc-genai-driven-conversational-routing" class="nav-link" data-scroll-target="#genai-driven-conversational-routing">GenAI-Driven Conversational Routing</a></li>
+  <li><a href="#rag-document-search" id="toc-rag-document-search" class="nav-link" data-scroll-target="#rag-document-search">RAG Document Search</a></li>
+  <li><a href="#rd-party-application-integrations" id="toc-rd-party-application-integrations" class="nav-link" data-scroll-target="#rd-party-application-integrations">3rd-Party Application Integrations</a></li>
+  <li><a href="#governance" id="toc-governance" class="nav-link" data-scroll-target="#governance">Governance</a></li>
+  <li><a href="#subordinate-bot-mediation" id="toc-subordinate-bot-mediation" class="nav-link" data-scroll-target="#subordinate-bot-mediation">Subordinate Bot Mediation</a></li>
+  </ul></li>
+  <li><a href="#deployment" id="toc-deployment" class="nav-link" data-scroll-target="#deployment">Deployment</a>
+  <ul class="collapse">
+  <li><a href="#user-interface" id="toc-user-interface" class="nav-link" data-scroll-target="#user-interface">User Interface</a></li>
+  <li><a href="#process-flow" id="toc-process-flow" class="nav-link" data-scroll-target="#process-flow">Process Flow</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -345,9 +351,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-UI.html">Implementation Methodology</a></li><li class="breadcrumb-item"><a href="../../src/implementation_methodology/imp-UI.html">User Interface</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/solution_overview/overview.html">Solution Overview</a></li><li class="breadcrumb-item"><a href="../../src/solution_overview/deploy_int.html">Integrations and Deployment</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">User Interface</h1>
+<h1 class="title">Integrations &amp; Deployment</h1>
 </div>
 
 
@@ -364,57 +370,186 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This document will go through how to build the user interface for a Unified Virtual Assistant. The method that was leveraged to build the user interface was leveraging a static-webpage with Cloud Object Storage.</p>
-</section>
-<section id="static-webpage-build" class="level2">
-<h2 class="anchored" data-anchor-id="static-webpage-build">Static-Webpage Build</h2>
-<p>This doc will go through how to build an externally accessible webpage with the embedded assitant webchat for public access. This webpage is created using a static html script which is hosted within a Cloud Object Storage Bucket.</p>
-<p><strong>Software Requirements:</strong></p>
-<ul>
-<li>IBM Cloud Object Storage - Lite</li>
-<li>watson<span style="color:#2c62f5;">x</span> Orchestrate or watson<span style="color:#2c62f5;">x</span> Assistant</li>
-</ul>
-<section id="embed-assistant-webchat-into-html-file" class="level3">
-<h3 class="anchored" data-anchor-id="embed-assistant-webchat-into-html-file">Embed Assistant Webchat into HTML file</h3>
-<ol type="1">
-<li>Within the Assitant Builder’s sidebar, navigate to the “Integrations” section</li>
-<li>Under the “Essential channels” section select “Open” within the “Webchat” channel</li>
-<li>Select the appropriate environment and navigate to the “Embed” tab</li>
-<li>Copy the provided script and insert into html script</li>
-<li>Optional : Add <code>showRestartButton: true</code> after <code>window.watsonAssistantChatOptions ={}</code> to display web-chat restart button</li>
+<section id="integrations" class="level2">
+<h2 class="anchored" data-anchor-id="integrations">Integrations</h2>
+<p>Several integrations between the various technologies mentioned are necessary to achieve a <em>Unified Virtual Assistant</em> solution with the capabilities mentioned below:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Capability</th>
+<th style="text-align: left;">IBM Product</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Identity Access Management</td>
+<td style="text-align: left;">IBM Security Verify</td>
+</tr>
+<tr class="even">
+<td>GenAI-Driven Conversational Routing</td>
+<td style="text-align: left;">watson<span style="color:#2c62f5;">x</span>.gov or watson<span style="color:#2c62f5;">x</span>.ai <br> Watson Machine Learning</td>
+</tr>
+<tr class="odd">
+<td>RAG Document Search</td>
+<td style="text-align: left;">watson<span style="color:#2c62f5;">x</span> Discovery <br> watson<span style="color:#2c62f5;">x</span>.ai<br> Watson Machine Learning</td>
+</tr>
+<tr class="even">
+<td>3rd-Party Application Integrations</td>
+<td style="text-align: left;">watson<span style="color:#2c62f5;">x</span> Orchestrate</td>
+</tr>
+<tr class="odd">
+<td>Governance</td>
+<td style="text-align: left;">watson<span style="color:#2c62f5;">x</span>.gov</td>
+</tr>
+<tr class="even">
+<td>Subordinate Bot Integration</td>
+<td style="text-align: left;">watson<span style="color:#2c62f5;">x</span> Orchestrate Assistant</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><img src="../../images/component_arch2.png" class="img-fluid"></p>
+<section id="identity-and-access-management" class="level3">
+<h3 class="anchored" data-anchor-id="identity-and-access-management">Identity and Access Management</h3>
+<section id="ibm-security-verify" class="level4">
+<h4 class="anchored" data-anchor-id="ibm-security-verify">IBM Security Verify</h4>
+<p><strong>Integration Method:</strong> OpenAPI Spec <br></p>
+Integrated to the assistant via “Custom Extension” with an <a href="../../assets/OpenAPI_Specs/IBM Verify/ibmVerify_openapi_spec.json">OpenAPI spec</a> our team developed to carry various actions with Verify’s API:
+<ol>
+<li>
+Authenticate Username and Password
+</li>
+<li>
+Resetting Password
+</li>
+<li>
+Retrieve User’s Information
+</li>
+<li>
+Initiate Email OTP
+</li>
+<li>
+Verify Email OTP
+</li>
 </ol>
 </section>
-<section id="create-cloud-object-storage-cos-instance" class="level3">
-<h3 class="anchored" data-anchor-id="create-cloud-object-storage-cos-instance">Create Cloud Object Storage (COS) Instance</h3>
-<ol type="1">
-<li>Go to the dedicated IBM Cloud Account “Resource” List <a href="https://cloud.ibm.com/resources" target="_blank">here</a> and click “Create Resource +”</li>
-<li>Search and select “Object Storage”</li>
-<li>Select “IBM Cloud” as the infrastructure and the appropriate pricing plan</li>
-<li>Name the service and click “Create”</li>
-</ol>
 </section>
-<section id="create-a-custom-cos-bucket" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-custom-cos-bucket">Create a Custom COS Bucket</h3>
-<ol type="1">
-<li>From the “Resource” List select the newly created COS instance</li>
-<li>Click “Create a Custom Bucket”</li>
-<li>Enter a valid bucket name and select the appropriate values for “Resiliency”, “Location”, “Storage class”, “Object Versioning” and “Immutablity”</li>
-<li>Within the section “Advanced configurations (optional)” click the “Add +” for “Static website hosting”</li>
-</ol>
-<p><img src="../../images/COS_status_config.png" class="img-fluid"></p>
-<ol start="5" type="1">
-<li>Ensure the “Public access” toggle is switched to “On”</li>
-<li>Enter the name of the target html file which will be used to build the desired web app</li>
-<li>Click “Save” and then click “Create bucket”</li>
-</ol>
+<section id="genai-driven-conversational-routing" class="level3">
+<h3 class="anchored" data-anchor-id="genai-driven-conversational-routing">GenAI-Driven Conversational Routing</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can use either watson<span style="color:#2c62f5;">x</span>.gov <strong>OR</strong> watson<span style="color:#2c62f5;">x</span>.ai to carry out GenAI routing.</p>
+</div>
+</div>
+<section id="watsonx.gov" class="level4">
+<h4 class="anchored" data-anchor-id="watsonx.gov">watson<span style="color:#2c62f5;">x</span>.gov</h4>
+<strong>Integration Method:</strong> Watson Machine Learning Deployment OpenAPI Spec<br> <strong>High-Level Steps:</strong>
+<ol>
+<li>
+Build prompts in watson<span style="color:#2c62f5;">x</span>.gov
+</li><li>
+Integrated watson<span style="color:#2c62f5;">x</span>.gov prompts to the assistant via “Custom Extension” with an <a href="../../assets/OpenAPI_Specs/watsonx_governance/governance_openapi_spec.json">OpenAPI spec</a>.
+</li><li>
+Configured the relevant Actions in the assistant.
+</li></ol>
 </section>
-<section id="upload-html-file" class="level3">
-<h3 class="anchored" data-anchor-id="upload-html-file"><strong>Upload HTML file</strong></h3>
-<ol type="1">
-<li>Upload the HTML file from <a href="#embed-assistant-webchat-into-html-file">here</a></li>
-</ol>
+<section id="watsonx.ai" class="level4">
+<h4 class="anchored" data-anchor-id="watsonx.ai">watson<span style="color:#2c62f5;">x</span>.ai</h4>
+<strong>Integration Method:</strong> OpenAPI Spec<br> <strong>High-Level Steps:</strong>
+<ol>
+<li>
+Integrated to the assistant via “Custom Extension” with an <a href="https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-watsonx/watsonx-openapi.json">OpenAPI spec</a>
+</li><li>
+Configured an “Action” within the Assistant to send prompts for generative AI use cases.
+</li></ol>
+</section>
+</section>
+<section id="rag-document-search" class="level3">
+<h3 class="anchored" data-anchor-id="rag-document-search">RAG Document Search</h3>
+<section id="watsonx-discovery" class="level4">
+<h4 class="anchored" data-anchor-id="watsonx-discovery">watson<span style="color:#2c62f5;">x</span> Discovery</h4>
+<strong>Integration Method:</strong> Watson Machine Learning Deployment OpenAPI spec<br> <strong>High-Level Steps:</strong>
+<ol>
+<li>
+Leveraged Watson Studio to ingest and embed documents into the appropriate vectorDB indices.
+</li><li>
+Deployed a function to carry out RAG for each index with Watson Machine Learning.
+</li><li>
+Integrated to the assistant via “Custom Extension” with an <a href="../../assets/OpenAPI_Specs/watsonx_Discovery/wxD_wml_openapi_spec.json">OpenAPI Spec</a>
+</li><li>
+Configured an “Action” within the Assistant to initiate RAG.
+</li></ol>
+</section>
+</section>
+<section id="rd-party-application-integrations" class="level3">
+<h3 class="anchored" data-anchor-id="rd-party-application-integrations">3rd-Party Application Integrations</h3>
+<section id="servicenow-and-workday" class="level4">
+<h4 class="anchored" data-anchor-id="servicenow-and-workday">ServiceNow and Workday</h4>
+<strong>Integration Method:</strong> watson<span style="color:#2c62f5;">x</span> Orchestrate Skills <br> <strong>High-Level Steps:</strong>
+<ol>
+<li>
+Use the appropriate credentials to connect to the skills in watson<span style="color:#2c62f5;">x</span> Orchestrate’s skill catalog.
+</li><li>
+Connect to the relevant assistant
+</li><li>
+Configured an “Action” within the Assistant to initiate each skill.
+</li></ol>
+</section>
+<section id="genesys" class="level4">
+<h4 class="anchored" data-anchor-id="genesys">Genesys</h4>
+<strong>Integration Method:</strong> native assistant channel integration <br> <strong>High-Level Steps:</strong>
+<ol>
+<li>
+Configure Genesys account.
+</li><li>
+Connect to the relevant assistant.
+</li></ol>
+</section>
+</section>
+<section id="governance" class="level3">
+<h3 class="anchored" data-anchor-id="governance">Governance</h3>
+<strong>Integration Method:</strong> Watson Machine Learning Deployment OpenAPI Spec<br> <strong>High-Level Steps:</strong>
+<ol>
+<li>
+Build prompts in watson<span style="color:#2c62f5;">x</span>.gov
+</li><li>
+Integrated watson<span style="color:#2c62f5;">x</span>.gov prompts to the assistant via “Custom Extension” with an <a href="../../assets/OpenAPI_Specs/watsonx_governance/governance_openapi_spec.json">OpenAPI spec</a>.
+</li><li>
+Configured the relevant Actions in the assistant.
+</li></ol>
+</section>
+<section id="subordinate-bot-mediation" class="level3">
+<h3 class="anchored" data-anchor-id="subordinate-bot-mediation">Subordinate Bot Mediation</h3>
+<strong>Integration Method:</strong> OpenAPI Spec<br> <strong>High-Level Steps:</strong>
+<ol>
+<li>
+Integrated to the assistant via “Custom Extension” with an <a href="../../assets/OpenAPI_Specs/Subordinate Bot/assistantBot_openapi_spec.json">OpenAPI spec</a>
+</li><li>
+Configured an “Action” within the Assistant to initiate bot mediation.
+</li></ol>
+</section>
+</section>
+<section id="deployment" class="level2">
+<h2 class="anchored" data-anchor-id="deployment">Deployment</h2>
+<p>Once all the relevant technologies have been integrated the solution is ready to be deployed. To carry out the deployment for this solution we leveraged IBM Cloud Object Storage to host a static website with the assistant we created embedded on the website.</p>
+<section id="user-interface" class="level3">
+<h3 class="anchored" data-anchor-id="user-interface">User Interface</h3>
+<p><img src="../../images/ui_output.png" class="img-fluid"></p>
+</section>
+<section id="process-flow" class="level3">
+<h3 class="anchored" data-anchor-id="process-flow">Process Flow</h3>
 
 
 </section>
@@ -840,13 +975,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../src/solution_overview/environment.html" class="pagination-link" aria-label="Environment">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Environment</span>
+      <a href="../../src/solution_overview/capabilities.html" class="pagination-link" aria-label="Capabilities">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Capabilities</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../src/implementation_methodology/imp-genai-rout.html" class="pagination-link" aria-label="Generative-AI Driven Routing">
-        <span class="nav-page-text">Generative-AI Driven Routing</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../src/solution_overview/environment.html" class="pagination-link" aria-label="Environment">
+        <span class="nav-page-text">Environment</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

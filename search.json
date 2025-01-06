@@ -281,6 +281,28 @@
     ]
   },
   {
+    "objectID": "src/solution_overview/overview.html",
+    "href": "src/solution_overview/overview.html",
+    "title": "Overview",
+    "section": "",
+    "text": "The objective of this solution is to demonstrate a chatbot which has the ability to orchestrate conversations to the appropriate channels and/or 3rd-party applications while leveraging generative AI technologies. To build a unified virtual assistant and achieve the desired outcomes for success, this solution will leverage watsonx Orchestrate to deliver six core capabilities:",
+    "crumbs": [
+      "Solution Overview",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "src/solution_overview/overview.html#technology-overview",
+    "href": "src/solution_overview/overview.html#technology-overview",
+    "title": "Overview",
+    "section": "Technology Overview",
+    "text": "Technology Overview\nCore Platform: watsonx Orchestrate  IBM watsonx Orchestrate is a collaborative AI platform that automates workflows and manages complex business processes through seamless integration with enterprise systems which empowers users to streamline operations and boost productivity while enabling different capabilities like:\n\n\n\n\n\n\n\nCapability\nIBM Product\n\n\n\n\nIdentity Access Management\nIBM Security Verify\n\n\nGenerative AI-Driven Conversational Routing\nwatsonx.gov or watsonx.ai  Watson Machine Learning\n\n\nRAG Document Search\nwatsonx Discovery  watsonx.ai Watson Machine Learning\n\n\n3rd-Party Application Integrations\nwatsonx Orchestrate\n\n\nGovernance\nwatsonx.gov\n\n\nSubordinate Bot Integration\nwatsonx Orchestrate Assistant\n\n\n\n\nIBM Security Verify: Identity and access management solution ensuring secure authentication to protect digital assets and manage user identities.\nIBM watsonx.ai: Generative AI development platform offering preconfigured tools to carry out prompt engineering, and data science capabilities for efficient model building and deployment.\nIBM watsonx Discovery: An enterprise ready platform which ingests and embeds documents into a vectorDB to enable RAG practices across enterprise data.\nIBM watsonx.gov: A platform which supports end-to-end AI governance, automating processes from use case selection to model deployment and monitoring.\nIBM Watson Machine Learning: The platform for deployment, management, and operationalization of AI and machine learning models at scale which integrates seamlessly with various data sources and development environments.",
+    "crumbs": [
+      "Solution Overview",
+      "Overview"
+    ]
+  },
+  {
     "objectID": "src/key-takeaway.html",
     "href": "src/key-takeaway.html",
     "title": "Key Takeaways",
@@ -301,59 +323,149 @@
     ]
   },
   {
+    "objectID": "src/solution_overview/capabilities.html",
+    "href": "src/solution_overview/capabilities.html",
+    "title": "Capabilities",
+    "section": "",
+    "text": "This Unified Virtual Assistant solution revolves around six key capabilities:",
+    "crumbs": [
+      "Solution Overview",
+      "Capabilities"
+    ]
+  },
+  {
+    "objectID": "src/solution_overview/capabilities.html#identity-and-access-management-iam",
+    "href": "src/solution_overview/capabilities.html#identity-and-access-management-iam",
+    "title": "Capabilities",
+    "section": "Identity and Access Management (IAM)",
+    "text": "Identity and Access Management (IAM)\nImplementing secure user login functionality is essential for enhancing security and access control within the chatbot. By integrating role-based access control (RBAC), users can authenticate securely and access only the actions and features aligned with their roles. This ensures personalized, controlled interactions while protecting sensitive data.\n\nUse Cases\n\nAdministrative Access: Administrators can manage user permissions, change passwords, and configure chatbot settings.\nRole-Specific Features: Regular users access only basic functions, such as viewing their data or requesting support.\nData Security: Users interact only with data they are authorized to access, reducing risks.\n\n\n\nTechnologies Leveraged\n\nwatsonx Orchestrate: serves as the core platform to integrate seamlessly with IAM services (More Info here).\nIBM Security Verify: Serves as the IAM service for this pilot (More Info here).",
+    "crumbs": [
+      "Solution Overview",
+      "Capabilities"
+    ]
+  },
+  {
+    "objectID": "src/solution_overview/capabilities.html#gen-ai-driven-decision-making",
+    "href": "src/solution_overview/capabilities.html#gen-ai-driven-decision-making",
+    "title": "Capabilities",
+    "section": "Gen-AI Driven Decision Making",
+    "text": "Gen-AI Driven Decision Making\nLeveraging generative AI to help classify user prompts as different groups can significantly improve the routing of conversations to the right actions within an the chatbot.\n\nUse Cases\n\n\n\nTechnologies Leveraged\n\nwatsonx Orchestrate: Serves as the core platform to integrate seamlessly with generative-AI (More Info here).\nwatsonx.gov: Serves as a platform to build and deploy prompts to carry out generative AI decisions while providing governance tools (More Info here). OR\nwatsonx.ai: Serves as a platform to build and deploy prompts to carry out generative AI decisions (More Info here).\n\n\n\n\n\n\n\nNote\n\n\n\nwatsonx.gov OR watsonx.ai can be levered to carry out gen-AI decision making.",
+    "crumbs": [
+      "Solution Overview",
+      "Capabilities"
+    ]
+  },
+  {
+    "objectID": "src/solution_overview/capabilities.html#rag-document-search",
+    "href": "src/solution_overview/capabilities.html#rag-document-search",
+    "title": "Capabilities",
+    "section": "RAG Document Search",
+    "text": "RAG Document Search\nBy leveraging a RAG pipeline to help users query a given knowledge base corpus, the Assistant can provide a more reliable and accurate knowledge base search experience. This not only enhances the overall user experience but also ensures that users receive the most relevant and up-to-date information possible by providing source links to the provided answers.\n\nUse Cases\n\nRAG searches on different collections of data based on the user’s request and access.\n\n\n\nTechnologies Leveraged\n\nwatsonx Orchestrate: Serves as the core platform to integrate seamlessly with RAG technologies (More Info here).\nwatsonx.ai: Serves as a platform to build and deploy prompts to carry out RAG with generative AI (More Info here).\nwatsonx Discovery: Serves as a vectorDB to store document embeddings and carry out RAG (More Info here).\nWatson Machine Learning: Serves as the platform to deploy RAG functions (More Info here).\nWatson Studio: Serves as the platform to edit python notebooks to build RAG pipelines (More Info here).",
+    "crumbs": [
+      "Solution Overview",
+      "Capabilities"
+    ]
+  },
+  {
+    "objectID": "src/solution_overview/capabilities.html#rd-party-application-integrations",
+    "href": "src/solution_overview/capabilities.html#rd-party-application-integrations",
+    "title": "Capabilities",
+    "section": "3rd-Party Application Integrations",
+    "text": "3rd-Party Application Integrations\nIntegrating third-party applications with a chatbot transforms it into a central hub for workflow automation, enabling seamless interaction with various systems. This reduces silos, enhances agility, and allows organizations to customize workflows, making the chatbot a flexible, powerful tool tailored to their needs.\n\nUse Cases\n\nConnect to 3rd party SaaS vendors such as ServiceNOW\nInitiate workflows in ServiceNOW such as openining tickets.\n\n\n\nTechnologies Leveraged\n\nwatsonx Orchestrate: Serves as the core platform to integrate seamlessly with 3rd-party applications via “Skills” (More Info here).",
+    "crumbs": [
+      "Solution Overview",
+      "Capabilities"
+    ]
+  },
+  {
+    "objectID": "src/solution_overview/capabilities.html#governance",
+    "href": "src/solution_overview/capabilities.html#governance",
+    "title": "Capabilities",
+    "section": "Governance",
+    "text": "Governance\nImplementing watsonx governance is critical to managing AI deployment risks and complexities. It mitigates issues like data bias and model drift through clear guidelines, real-time monitoring, and oversight. Governance also fosters transparency by documenting model development, data sources, and decision criteria, building trust among stakeholders. Additionally, it optimizes resource allocation by prioritizing AI initiatives with measurable business value.\n\nUse Cases\n\nProvide a platform to govern drift, and bias.\nMonitor prompt lifecycle management.\nProvide insights on model throughput and model parameters.\nRource Attribution for RAG.\n\n\n\nTechnologies Leveraged\n\nwatsonx Orchestrate: Serves as the core platform to integrate seamlessly with governance technologies (More Info here).\nwatsonx.gov: Provides a comprehensive framework to ensure compliance, accountability, and efficient AI use, enabling organizations to responsibly harness AI’s potential while minimizing risks (More Info here).\nIBM Cloud Object Storage: Serves as a document storage for accessing pdfs for source attribution links.",
+    "crumbs": [
+      "Solution Overview",
+      "Capabilities"
+    ]
+  },
+  {
+    "objectID": "src/solution_overview/capabilities.html#subordinate-bot-mediation",
+    "href": "src/solution_overview/capabilities.html#subordinate-bot-mediation",
+    "title": "Capabilities",
+    "section": "Subordinate Bot Mediation",
+    "text": "Subordinate Bot Mediation\nOne aspect of creating a unifying platform is the ability to connect and interface with existing chatbots which may have their own data corpuses or access policies. The parent or unifying agent should be able to hand-off requests to the relevant chatbots.\nFor example, if there is an existing chatbot which has access to financial analyst reports data source, the parent/unifying bot should be able to hand-off questions to that chatbot’s domain and return it back to the user in the parent bot.\n\nUse Cases\n\nEnable seamless hand-offs to other chatbots, each with its own secure data access and workflows.\n\n\n\nTechnologies Leveraged\n\nwatsonx Orchestrate: Serves as the core platform to integrate seamlessly with other chatbots (More Info here).",
+    "crumbs": [
+      "Solution Overview",
+      "Capabilities"
+    ]
+  },
+  {
+    "objectID": "src/solution_overview/deploy_int.html",
+    "href": "src/solution_overview/deploy_int.html",
+    "title": "Integrations & Deployment",
+    "section": "",
+    "text": "Several integrations between the various technologies mentioned are necessary to achieve a Unified Virtual Assistant solution with the capabilities mentioned below:\n\n\n\n\n\n\n\nCapability\nIBM Product\n\n\n\n\nIdentity Access Management\nIBM Security Verify\n\n\nGenAI-Driven Conversational Routing\nwatsonx.gov or watsonx.ai  Watson Machine Learning\n\n\nRAG Document Search\nwatsonx Discovery  watsonx.ai Watson Machine Learning\n\n\n3rd-Party Application Integrations\nwatsonx Orchestrate\n\n\nGovernance\nwatsonx.gov\n\n\nSubordinate Bot Integration\nwatsonx Orchestrate Assistant\n\n\n\n\n\n\n\n\n\nIntegration Method: OpenAPI Spec \nIntegrated to the assistant via “Custom Extension” with an OpenAPI spec our team developed to carry various actions with Verify’s API:\n\n\nAuthenticate Username and Password\n\n\nResetting Password\n\n\nRetrieve User’s Information\n\n\nInitiate Email OTP\n\n\nVerify Email OTP\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nYou can use either watsonx.gov OR watsonx.ai to carry out GenAI routing.\n\n\n\n\nIntegration Method: Watson Machine Learning Deployment OpenAPI Spec High-Level Steps:\n\n\nBuild prompts in watsonx.gov\n\nIntegrated watsonx.gov prompts to the assistant via “Custom Extension” with an OpenAPI spec.\n\nConfigured the relevant Actions in the assistant.\n\n\n\n\nIntegration Method: OpenAPI Spec High-Level Steps:\n\n\nIntegrated to the assistant via “Custom Extension” with an OpenAPI spec\n\nConfigured an “Action” within the Assistant to send prompts for generative AI use cases.\n\n\n\n\n\n\n\nIntegration Method: Watson Machine Learning Deployment OpenAPI spec High-Level Steps:\n\n\nLeveraged Watson Studio to ingest and embed documents into the appropriate vectorDB indices.\n\nDeployed a function to carry out RAG for each index with Watson Machine Learning.\n\nIntegrated to the assistant via “Custom Extension” with an OpenAPI Spec\n\nConfigured an “Action” within the Assistant to initiate RAG.\n\n\n\n\n\n\n\nIntegration Method: watsonx Orchestrate Skills  High-Level Steps:\n\n\nUse the appropriate credentials to connect to the skills in watsonx Orchestrate’s skill catalog.\n\nConnect to the relevant assistant\n\nConfigured an “Action” within the Assistant to initiate each skill.\n\n\n\n\nIntegration Method: native assistant channel integration  High-Level Steps:\n\n\nConfigure Genesys account.\n\nConnect to the relevant assistant.\n\n\n\n\n\nIntegration Method: Watson Machine Learning Deployment OpenAPI Spec High-Level Steps:\n\n\nBuild prompts in watsonx.gov\n\nIntegrated watsonx.gov prompts to the assistant via “Custom Extension” with an OpenAPI spec.\n\nConfigured the relevant Actions in the assistant.\n\n\n\n\nIntegration Method: OpenAPI Spec High-Level Steps:\n\n\nIntegrated to the assistant via “Custom Extension” with an OpenAPI spec\n\nConfigured an “Action” within the Assistant to initiate bot mediation.",
+    "crumbs": [
+      "Solution Overview",
+      "Integrations and Deployment"
+    ]
+  },
+  {
+    "objectID": "src/solution_overview/deploy_int.html#integrations",
+    "href": "src/solution_overview/deploy_int.html#integrations",
+    "title": "Integrations & Deployment",
+    "section": "",
+    "text": "Several integrations between the various technologies mentioned are necessary to achieve a Unified Virtual Assistant solution with the capabilities mentioned below:\n\n\n\n\n\n\n\nCapability\nIBM Product\n\n\n\n\nIdentity Access Management\nIBM Security Verify\n\n\nGenAI-Driven Conversational Routing\nwatsonx.gov or watsonx.ai  Watson Machine Learning\n\n\nRAG Document Search\nwatsonx Discovery  watsonx.ai Watson Machine Learning\n\n\n3rd-Party Application Integrations\nwatsonx Orchestrate\n\n\nGovernance\nwatsonx.gov\n\n\nSubordinate Bot Integration\nwatsonx Orchestrate Assistant\n\n\n\n\n\n\n\n\n\nIntegration Method: OpenAPI Spec \nIntegrated to the assistant via “Custom Extension” with an OpenAPI spec our team developed to carry various actions with Verify’s API:\n\n\nAuthenticate Username and Password\n\n\nResetting Password\n\n\nRetrieve User’s Information\n\n\nInitiate Email OTP\n\n\nVerify Email OTP\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nYou can use either watsonx.gov OR watsonx.ai to carry out GenAI routing.\n\n\n\n\nIntegration Method: Watson Machine Learning Deployment OpenAPI Spec High-Level Steps:\n\n\nBuild prompts in watsonx.gov\n\nIntegrated watsonx.gov prompts to the assistant via “Custom Extension” with an OpenAPI spec.\n\nConfigured the relevant Actions in the assistant.\n\n\n\n\nIntegration Method: OpenAPI Spec High-Level Steps:\n\n\nIntegrated to the assistant via “Custom Extension” with an OpenAPI spec\n\nConfigured an “Action” within the Assistant to send prompts for generative AI use cases.\n\n\n\n\n\n\n\nIntegration Method: Watson Machine Learning Deployment OpenAPI spec High-Level Steps:\n\n\nLeveraged Watson Studio to ingest and embed documents into the appropriate vectorDB indices.\n\nDeployed a function to carry out RAG for each index with Watson Machine Learning.\n\nIntegrated to the assistant via “Custom Extension” with an OpenAPI Spec\n\nConfigured an “Action” within the Assistant to initiate RAG.\n\n\n\n\n\n\n\nIntegration Method: watsonx Orchestrate Skills  High-Level Steps:\n\n\nUse the appropriate credentials to connect to the skills in watsonx Orchestrate’s skill catalog.\n\nConnect to the relevant assistant\n\nConfigured an “Action” within the Assistant to initiate each skill.\n\n\n\n\nIntegration Method: native assistant channel integration  High-Level Steps:\n\n\nConfigure Genesys account.\n\nConnect to the relevant assistant.\n\n\n\n\n\nIntegration Method: Watson Machine Learning Deployment OpenAPI Spec High-Level Steps:\n\n\nBuild prompts in watsonx.gov\n\nIntegrated watsonx.gov prompts to the assistant via “Custom Extension” with an OpenAPI spec.\n\nConfigured the relevant Actions in the assistant.\n\n\n\n\nIntegration Method: OpenAPI Spec High-Level Steps:\n\n\nIntegrated to the assistant via “Custom Extension” with an OpenAPI spec\n\nConfigured an “Action” within the Assistant to initiate bot mediation.",
+    "crumbs": [
+      "Solution Overview",
+      "Integrations and Deployment"
+    ]
+  },
+  {
+    "objectID": "src/solution_overview/deploy_int.html#deployment",
+    "href": "src/solution_overview/deploy_int.html#deployment",
+    "title": "Integrations & Deployment",
+    "section": "Deployment",
+    "text": "Deployment\nOnce all the relevant technologies have been integrated the solution is ready to be deployed. To carry out the deployment for this solution we leveraged IBM Cloud Object Storage to host a static website with the assistant we created embedded on the website.\n\nUser Interface\n\n\n\nProcess Flow",
+    "crumbs": [
+      "Solution Overview",
+      "Integrations and Deployment"
+    ]
+  },
+  {
     "objectID": "src/solution_overview/prepare.html",
     "href": "src/solution_overview/prepare.html",
     "title": "Overview",
     "section": "",
-    "text": "The objective of this solution is to demonstrate a chatbot which has the ability to orchestrate conversations to the appropriate channels and/or 3rd-party applications while leveraging generative AI technologies. This unified agent solution revolves around six key capabilities:\nCore Product: watsonx Orchestrate\n\n\n\n\n\n\n\nCapability\nIBM Product\n\n\n\n\nIdentity Access Management\nIBM Security Verify\n\n\nGenerative AI-Driven Conversational Routing\nwatsonx.gov or watsonx.ai  Watson Matchine Learning\n\n\nRAG Document Search\nwatsonx Discovery  watsonx.ai Watson Machine Learning\n\n\n3rd-Party Application Integrations\nwatsonx Orchestrate\n\n\nGovernance\nwatsonx.gov\n\n\nSubordinate Bot Integration\nwatsonx Orchestrate Assistant",
-    "crumbs": [
-      "Solution Overview",
-      "Prepare"
-    ]
+    "text": "The objective of this solution is to demonstrate a chatbot which has the ability to orchestrate conversations to the appropriate channels and/or 3rd-party applications while leveraging generative AI technologies. This unified agent solution revolves around six key capabilities:\nCore Product: watsonx Orchestrate\n\n\n\n\n\n\n\nCapability\nIBM Product\n\n\n\n\nIdentity Access Management\nIBM Security Verify\n\n\nGenerative AI-Driven Conversational Routing\nwatsonx.gov or watsonx.ai  Watson Matchine Learning\n\n\nRAG Document Search\nwatsonx Discovery  watsonx.ai Watson Machine Learning\n\n\n3rd-Party Application Integrations\nwatsonx Orchestrate\n\n\nGovernance\nwatsonx.gov\n\n\nSubordinate Bot Integration\nwatsonx Orchestrate Assistant"
   },
   {
     "objectID": "src/solution_overview/prepare.html#user-interface",
     "href": "src/solution_overview/prepare.html#user-interface",
     "title": "Overview",
     "section": "User Interface",
-    "text": "User Interface\n\nLeveraging IBM Cloud Object Storage to host a static website for the chatbot.\n\nConfiguration Steps here",
-    "crumbs": [
-      "Solution Overview",
-      "Prepare"
-    ]
+    "text": "User Interface\n\nLeveraging IBM Cloud Object Storage to host a static website for the chatbot.\n\nConfiguration Steps here"
   },
   {
     "objectID": "src/solution_overview/prepare.html#identity-and-access-management-iam",
     "href": "src/solution_overview/prepare.html#identity-and-access-management-iam",
     "title": "Overview",
     "section": "Identity and Access Management (IAM)",
-    "text": "Identity and Access Management (IAM)\nIAM can be carried out in one of two methods:\n\nSecurity Verify SSO\nSimulation\n\n\nIBM Security Verify SSO\nLeverage the IBM Security Verify API to carry differnt actions like authenticating user logins and resetting passwords within the Assistant builder UI.\nImplementation Guide Here\n\n\nSimulation\nSimulating user login within watsonx Orchestrate Assistant Builder can be achieved by storing simulated individuals in a data structure. This data structure, typically a list or map, can store information about each simulated user, such as their name, access level, and other relevant details. By initializing this data structure with a set of simulated users, you can create a realistic login scenario where the system checks user credentials and grants or denies access accordingly.\nStoring simulated individuals in a data structure within watsonx Orchestrate Assistant Builder allows you to test the login functionality and ensure that the system behaves as expected. This can help identify potential issues early in the development process, saving time and resources. Additionally, you can customize the simulated users’ data to represent different user types, enabling you to test the system’s access control mechanisms and ensure that users are only granted access to the appropriate actions and data.\nBy using simulated users in this manner, you can thoroughly test the user login functionality and ensure that the unified agent with generative AI capabilities is secure, reliable, and user-friendly.\nImplementation Guide Here",
-    "crumbs": [
-      "Solution Overview",
-      "Prepare"
-    ]
+    "text": "Identity and Access Management (IAM)\nIAM can be carried out in one of two methods:\n\nSecurity Verify SSO\nSimulation\n\n\nIBM Security Verify SSO\nLeverage the IBM Security Verify API to carry differnt actions like authenticating user logins and resetting passwords within the Assistant builder UI.\nImplementation Guide Here\n\n\nSimulation\nSimulating user login within watsonx Orchestrate Assistant Builder can be achieved by storing simulated individuals in a data structure. This data structure, typically a list or map, can store information about each simulated user, such as their name, access level, and other relevant details. By initializing this data structure with a set of simulated users, you can create a realistic login scenario where the system checks user credentials and grants or denies access accordingly.\nStoring simulated individuals in a data structure within watsonx Orchestrate Assistant Builder allows you to test the login functionality and ensure that the system behaves as expected. This can help identify potential issues early in the development process, saving time and resources. Additionally, you can customize the simulated users’ data to represent different user types, enabling you to test the system’s access control mechanisms and ensure that users are only granted access to the appropriate actions and data.\nBy using simulated users in this manner, you can thoroughly test the user login functionality and ensure that the unified agent with generative AI capabilities is secure, reliable, and user-friendly.\nImplementation Guide Here"
   },
   {
     "objectID": "src/solution_overview/prepare.html#conversational-engine",
     "href": "src/solution_overview/prepare.html#conversational-engine",
     "title": "Overview",
     "section": "Conversational Engine",
-    "text": "Conversational Engine\nThe conversational engine was built using watsonx Orchestrate Assistant Builder where generative AI-driven routing was configured to direct users to the most appropriate workflows and data based on their access permissions.\n\nGenAI Routing\nConfiguration Steps here",
-    "crumbs": [
-      "Solution Overview",
-      "Prepare"
-    ]
+    "text": "Conversational Engine\nThe conversational engine was built using watsonx Orchestrate Assistant Builder where generative AI-driven routing was configured to direct users to the most appropriate workflows and data based on their access permissions.\n\nGenAI Routing\nConfiguration Steps here"
   },
   {
     "objectID": "src/solution_overview/prepare.html#integrations",
     "href": "src/solution_overview/prepare.html#integrations",
     "title": "Overview",
     "section": "Integrations",
-    "text": "Integrations\n\nRAG Document Search\nRAG Document Search can be carried out in one of two methods:\n\n1. watsonx Discovery:\nThis pattern consists of creating an integration with watsonx Discovery. watsonx Discovery leverage a vectorDB to store data corpus’s embeddings to enable RAG.  Required Integrations:\n\nwatsonx Discovery\nwatsonx.ai\n\nImplementation Guide Here\n\n\n2. watson Discovery:\nThis pattern consists of creating two integrations with watson Discovery and watsonx.ai. Watson Discovery is used to store and carry out searches on data collections.\nRequired Integrations:\n\nwatson Discovery\nwatsonx.ai\n\nImplementation Guide Here\n\n\n\nGovernance\nGovernance is exemplified in two key ways:\n\nwatsonx.gov: IBM’s enterprise governance platform for monitoring key metrics associated with LLMs\nRAG Source Attribution Links\n\n\nwatsonx.gov\n\nIn summary, the implementation of IBM® watsonx.governance™ provides a comprehensive and seamless solution for the development, evaluation, deployment, and monitoring of AI models, ensuring compliance, transparency, and optimal performance throughout the AI lifecycle.\nRequired Integrations:\n\nwatsonx.gov\n\nImplementation Guide Here\n\n\nRAG Source Links\nFor every user query that involves RAG Document Search, a source link will be provided with each response to ensure transparency by clearly indicating the data corpus from which the answer was derived.\nImplementation Guide Here\n\n\n\n3rd-Party Applications\n\nLeverage native assistant builder extensions to integrate with Genesys.\n\nGenesys Configuration Steps here\n\nLeverage watsonx Orchestrate skills to integrate with ServiceNow and Workday\n\nServiceNow Configuration Steps here\nWorkday Configuration Steps here\n\n\n\n\nSubordinate Bot\n\nLeverage native assistant builder extensions to integrate with other watsonx Assistants\nConfiguration Steps here\n\n\n\nData Repository\n\nLeverage Cloud Object Storage to store documents relevant to the use case",
-    "crumbs": [
-      "Solution Overview",
-      "Prepare"
-    ]
+    "text": "Integrations\n\nRAG Document Search\nRAG Document Search can be carried out in one of two methods:\n\n1. watsonx Discovery:\nThis pattern consists of creating an integration with watsonx Discovery. watsonx Discovery leverage a vectorDB to store data corpus’s embeddings to enable RAG.  Required Integrations:\n\nwatsonx Discovery\nwatsonx.ai\n\nImplementation Guide Here\n\n\n2. watson Discovery:\nThis pattern consists of creating two integrations with watson Discovery and watsonx.ai. Watson Discovery is used to store and carry out searches on data collections.\nRequired Integrations:\n\nwatson Discovery\nwatsonx.ai\n\nImplementation Guide Here\n\n\n\nGovernance\nGovernance is exemplified in two key ways:\n\nwatsonx.gov: IBM’s enterprise governance platform for monitoring key metrics associated with LLMs\nRAG Source Attribution Links\n\n\nwatsonx.gov\n\nIn summary, the implementation of IBM® watsonx.governance™ provides a comprehensive and seamless solution for the development, evaluation, deployment, and monitoring of AI models, ensuring compliance, transparency, and optimal performance throughout the AI lifecycle.\nRequired Integrations:\n\nwatsonx.gov\n\nImplementation Guide Here\n\n\nRAG Source Links\nFor every user query that involves RAG Document Search, a source link will be provided with each response to ensure transparency by clearly indicating the data corpus from which the answer was derived.\nImplementation Guide Here\n\n\n\n3rd-Party Applications\n\nLeverage native assistant builder extensions to integrate with Genesys.\n\nGenesys Configuration Steps here\n\nLeverage watsonx Orchestrate skills to integrate with ServiceNow and Workday\n\nServiceNow Configuration Steps here\nWorkday Configuration Steps here\n\n\n\n\nSubordinate Bot\n\nLeverage native assistant builder extensions to integrate with other watsonx Assistants\nConfiguration Steps here\n\n\n\nData Repository\n\nLeverage Cloud Object Storage to store documents relevant to the use case"
   },
   {
     "objectID": "src/implementation_methodology/imp-sim.html",

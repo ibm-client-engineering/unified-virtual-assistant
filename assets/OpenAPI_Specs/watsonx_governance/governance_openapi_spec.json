@@ -8,7 +8,7 @@
     "servers": [
       {
         "description": "Watson Machine Learning deployment URL",
-        "url": "https://us-south.ml.cloud.ibm.com"
+        "url": "[URL]"
       }
     ],
     "security": [

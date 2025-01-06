@@ -222,7 +222,7 @@
     "text": "watsonx Orchestrate\n\nDedicated WxO Tenant with Admin access\n\nIBM Cloud Object Storage: Lite Plan",
     "crumbs": [
       "Solution Overview",
-      "Environment"
+      "Software Requirements"
     ]
   },
   {
@@ -233,7 +233,7 @@
     "text": "watsonx Orchestrate\n\nDedicated WxO Tenant with Admin access\n\nIBM Cloud Object Storage: Lite Plan",
     "crumbs": [
       "Solution Overview",
-      "Environment"
+      "Software Requirements"
     ]
   },
   {
@@ -244,7 +244,7 @@
     "text": "RAG Document Search\nFor RAG Document Search you can leverage two different methods: - watson Discovery - watsonx Discovery\n\nWatson Discovery\n\nwatson Discovery: Plus Plan\nwatsonx.ai\n\nWatson Machine Learning: Standard Plan\nwatsonx Studio: Lite Plan\n\n\n\n\nwatsonx Discovery\n\nwatsonx Discovery: Platinum Plan (Probably need more than 16GB of RAM)\nwatsonx.ai\n\nWatson Machine Learning: Standard Plan\nwatsonx Studio: Lite Plan\n\nIBM Cloud Object Storage: Lite Plan",
     "crumbs": [
       "Solution Overview",
-      "Environment"
+      "Software Requirements"
     ]
   },
   {
@@ -255,7 +255,7 @@
     "text": "Governance\n\nwatsonx.ai\n\nWatson Machine Learning: Standard Plan\n\nwatsonx.governance: Essentials Plan",
     "crumbs": [
       "Solution Overview",
-      "Environment"
+      "Software Requirements"
     ]
   },
   {
@@ -266,7 +266,7 @@
     "text": "Third Party Applications\n\nServiceNow\n\nServiceNow developer account\n\n\n\nWorkday\n\nWorkday Application\n\n\n\nGenesys\n\nGenesys Cloud CX Account",
     "crumbs": [
       "Solution Overview",
-      "Environment"
+      "Software Requirements"
     ]
   },
   {
@@ -277,7 +277,7 @@
     "text": "Identity and Access Management\n\nIBM Security Verify",
     "crumbs": [
       "Solution Overview",
-      "Environment"
+      "Software Requirements"
     ]
   },
   {

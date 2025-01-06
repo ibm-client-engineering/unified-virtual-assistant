@@ -39,7 +39,7 @@ website:
               href: src/solution_overview/capabilities.qmd
             - text: Integrations and Deployment
               href: src/solution_overview/deploy_int.qmd
-            - text: Environment
+            - text: Software Requirements
               href: src/solution_overview/environment.qmd
         - section: Implementation Methodology
           contents:

@@ -1,0 +1,34 @@
+---
+title: "Overview"
+format: html
+---
+
+The objective of this solution is to demonstrate a chatbot which has the ability to orchestrate conversations to the
+appropriate channels and/or 3rd-party applications while leveraging generative AI technologies. To build a unified virtual assistant and achieve the desired outcomes for success, this solution will leverage watson<span style="color:#2c62f5;">x</span> Orchestrate to deliver six core capabilities: <br>
+
+![](../../images/capabilties.jpeg)
+
+## Technology Overview
+
+**Core Platform:** watson<span style="color:#2c62f5;">x</span> Orchestrate <br>
+IBM watson<span style="color:#2c62f5;">x</span> Orchestrate is a collaborative AI platform that automates workflows and manages complex business processes through seamless integration with enterprise systems which empowers users to streamline operations and boost productivity while enabling different capabilities like:
+
+| Capability    | IBM Product |
+| -------- |:-------|
+| Identity Access Management  |  IBM Security Verify   |
+| Generative AI-Driven Conversational Routing |  watson<span style="color:#2c62f5;">x</span>.gov or watson<span style="color:#2c62f5;">x</span>.ai <br /> Watson Machine Learning   |
+| RAG Document Search    | watson<span style="color:#2c62f5;">x</span> Discovery <br /> watson<span style="color:#2c62f5;">x</span>.ai<br /> Watson Machine Learning</div> |
+| 3rd-Party Application Integrations    | watson<span style="color:#2c62f5;">x</span> Orchestrate |
+| Governance   | watson<span style="color:#2c62f5;">x</span>.gov |
+| Subordinate Bot Integration   | watson<span style="color:#2c62f5;">x</span> Orchestrate Assistant |
+<br>
+
+**IBM Security Verify:** Identity and access management solution ensuring secure authentication to protect digital assets and manage user identities.
+
+**IBM watson<span style="color:#2c62f5;">x</span>.ai:** Generative AI development platform offering preconfigured tools to carry out prompt engineering, and data science capabilities for efficient model building and deployment.
+
+**IBM watson<span style="color:#2c62f5;">x</span> Discovery:** An enterprise ready platform which ingests and embeds documents into a vectorDB to enable RAG practices across enterprise data.
+
+**IBM watson<span style="color:#2c62f5;">x</span>.gov:** A platform which supports end-to-end AI governance, automating processes from use case selection to model deployment and monitoring.
+
+**IBM Watson Machine Learning:** The platform for deployment, management, and operationalization of AI and machine learning models at scale which integrates seamlessly with various data sources and development environments.

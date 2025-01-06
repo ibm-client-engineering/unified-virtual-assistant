@@ -33,8 +33,12 @@ website:
           text: Problem Definition
         - section: Solution Overview
           contents:
-            - text: Prepare
-              href: src/solution_overview/prepare.qmd
+            - text: Overview
+              href: src/solution_overview/overview.qmd
+            - text: Capabilities
+              href: src/solution_overview/capabilities.qmd
+            - text: Integrations and Deployment
+              href: src/solution_overview/deploy_int.qmd
             - text: Environment
               href: src/solution_overview/environment.qmd
         - section: Implementation Methodology

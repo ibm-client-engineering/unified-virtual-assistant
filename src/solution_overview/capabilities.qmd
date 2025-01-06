@@ -1,0 +1,90 @@
+---
+title: "Capabilities"
+format: html
+---
+
+**This *Unified Virtual Assistant* solution revolves around six key capabilities:**
+<ol>
+  <li>Identity and Access Management (IAM)</li>
+  <li>Gen-AI Driven Decision Making</li>
+  <li>RAG Document Search</li>
+  <li>3rd-Party Application Integration</li>
+  <li>Governance</li>
+  <li>Subordinate Chatbot Mediation</li>
+</ol>
+
+## Identity and Access Management (IAM)
+Implementing secure user login functionality is essential for enhancing security and access control within the chatbot. By integrating role-based access control (RBAC), users can authenticate securely and access only the actions and features aligned with their roles. This ensures personalized, controlled interactions while protecting sensitive data.
+
+#### Use Cases
+* **Administrative Access:** Administrators can manage user permissions, change passwords, and configure chatbot settings.
+* **Role-Specific Features:** Regular users access only basic functions, such as viewing their data or requesting support.
+* **Data Security:** Users interact only with data they are authorized to access, reducing risks.
+
+#### Technologies Leveraged
+* **watson<span style="color:#2c62f5;">x</span> Orchestrate:** serves as the core platform to integrate seamlessly with IAM services (More Info [here](#)).
+* **IBM Security Verify:** Serves as the IAM service for this pilot (More Info [here](#)). 
+
+## Gen-AI Driven Decision Making
+Leveraging generative AI to help classify user prompts as different groups can significantly improve the routing of conversations to the right actions 
+within an the chatbot.
+
+#### Use Cases
+![](../../images/genai_usecase.png)
+
+#### Technologies Leveraged
+* **watson<span style="color:#2c62f5;">x</span> Orchestrate:** Serves as the core platform to integrate seamlessly with generative-AI (More Info [here](#)). 
+* **watson<span style="color:#2c62f5;">x</span>.gov:** Serves as a platform to build and deploy prompts to carry out generative AI decisions while providing governance tools (More Info [here](#)). **OR**
+* **watson<span style="color:#2c62f5;">x</span>.ai**: Serves as a platform to build and deploy prompts to carry out generative AI decisions (More Info [here](#)).
+
+::: {.callout-note .indent}
+**watson<span style="color:#2c62f5;">x</span>.gov OR watson<span style="color:#2c62f5;">x</span>.ai can be levered to carry out gen-AI decision making.**<br>
+:::
+
+## RAG Document Search
+By leveraging a RAG pipeline to help users query a given knowledge base corpus, the Assistant can provide a more reliable and accurate knowledge base search experience. This not only enhances the overall user experience but also ensures that users receive the most relevant and up-to-date information possible by providing source links to the provided answers.
+
+#### Use Cases
+* RAG searches on different collections of data based on the user's request and access.
+
+#### Technologies Leveraged
+* **watson<span style="color:#2c62f5;">x</span> Orchestrate:** Serves as the core platform to integrate seamlessly with RAG technologies (More Info [here](#)). 
+* **watson<span style="color:#2c62f5;">x</span>.ai**: Serves as a platform to build and deploy prompts to carry out RAG with generative AI (More Info [here](#)).
+* **watson<span style="color:#2c62f5;">x</span> Discovery**: Serves as a vectorDB to store document embeddings and carry out RAG (More Info [here](#)).
+* **Watson Machine Learning**: Serves as the platform to deploy RAG functions (More Info [here](#)).
+* **Watson Studio**: Serves as the platform to edit python notebooks to build RAG pipelines (More Info [here](#)).
+
+## 3rd-Party Application Integrations
+Integrating third-party applications with a chatbot transforms it into a central hub for workflow automation, enabling seamless interaction with various systems. This reduces silos, enhances agility, and allows organizations to customize workflows, making the chatbot a flexible, powerful tool tailored to their needs.
+
+#### Use Cases
+* Connect to 3rd party SaaS vendors such as ServiceNOW
+* Initiate workflows in ServiceNOW such as openining tickets.
+
+#### Technologies Leveraged
+* **watson<span style="color:#2c62f5;">x</span> Orchestrate:** Serves as the core platform to integrate seamlessly with 3rd-party applications via "Skills" (More Info [here](#)).
+
+## Governance
+Implementing watsonx governance is critical to managing AI deployment risks and complexities. It mitigates issues like data bias and model drift through clear guidelines, real-time monitoring, and oversight. Governance also fosters transparency by documenting model development, data sources, and decision criteria, building trust among stakeholders. Additionally, it optimizes resource allocation by prioritizing AI initiatives with measurable business value.
+
+#### Use Cases
+* Provide a platform to govern drift, and bias.
+* Monitor prompt lifecycle management.
+* Provide insights on model throughput and model parameters.
+* Rource Attribution for RAG.
+
+#### Technologies Leveraged
+* **watson<span style="color:#2c62f5;">x</span> Orchestrate:** Serves as the core platform to integrate seamlessly with governance technologies (More Info [here](#)). 
+* **watson<span style="color:#2c62f5;">x</span>.gov:** Provides a comprehensive framework to ensure compliance, accountability, and efficient AI use, enabling organizations to responsibly harness AI’s potential while minimizing risks (More Info [here](#)).
+* **IBM Cloud Object Storage:** Serves as a document storage for accessing pdfs for source attribution links.
+
+## Subordinate Bot Mediation
+One aspect of creating a unifying platform is the ability to connect and interface with existing chatbots which may have their own data corpuses or access policies. The parent or unifying agent should be able to hand-off requests to the relevant chatbots. 
+
+For example, if there is an existing chatbot which has access to financial analyst reports data source, the parent/unifying bot should be able to hand-off questions to that chatbot's domain and return it back to the user in the parent bot.
+
+#### Use Cases
+* Enable seamless hand-offs to other chatbots, each with its own secure data access and workflows.
+
+#### Technologies Leveraged
+* **watson<span style="color:#2c62f5;">x</span> Orchestrate:** Serves as the core platform to integrate seamlessly with other chatbots (More Info [here](#)). 

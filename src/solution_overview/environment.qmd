@@ -8,17 +8,12 @@ format: html
     - Dedicated WxO Tenant with Admin access
 - *IBM Cloud Object Storage*: Lite Plan
 
-## **RAG Document Search**
+## **Document Search**
 For RAG Document  Search you can leverage two different methods:
-- watson Discovery
-- watson<span style="color:#2c62f5;">x</span> Discovery
-
-
-### Watson Discovery
-- *watson Discovery*: Plus Plan
-- *watson<span style="color:#2c62f5;">x</span>.ai*
-    - *Watson Machine Learning*: Standard Plan
-    - *watson<span style="color:#2c62f5;">x</span> Studio*: Lite Plan
+<ol>
+<li>watson<span style="color:#2c62f5;">x</span> Discovery
+<li>watson Discovery
+</ol>
 
 ### watson<span style="color:#2c62f5;">x</span> Discovery
 - *watson<span style="color:#2c62f5;">x</span> Discovery*: Platinum Plan (Probably need more than 16GB of RAM)
@@ -26,6 +21,12 @@ For RAG Document  Search you can leverage two different methods:
     - *Watson Machine Learning*: Standard Plan
     - *watson<span style="color:#2c62f5;">x</span> Studio*: Lite Plan
 - *IBM Cloud Object Storage*: Lite Plan
+
+### Watson Discovery
+- *watson Discovery*: Plus Plan
+- *watson<span style="color:#2c62f5;">x</span>.ai*
+    - *Watson Machine Learning*: Standard Plan
+    - *watson<span style="color:#2c62f5;">x</span> Studio*: Lite Plan
 
 ## **Governance**
 - *watson<span style="color:#2c62f5;">x</span>.ai*

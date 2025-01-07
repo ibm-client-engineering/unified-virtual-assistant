@@ -10,7 +10,7 @@ Several integrations between the various technologies mentioned are necessary to
 | -------- |:-------|
 | Identity Access Management  |  IBM Security Verify   |
 | GenAI-Driven Conversational Routing |  watson<span style="color:#2c62f5;">x</span>.gov or watson<span style="color:#2c62f5;">x</span>.ai <br /> Watson Machine Learning   |
-| RAG Document Search    | watson<span style="color:#2c62f5;">x</span> Discovery <br /> watson<span style="color:#2c62f5;">x</span>.ai<br /> Watson Machine Learning</div> |
+| Document Search    | watson<span style="color:#2c62f5;">x</span> Discovery <br /> watson<span style="color:#2c62f5;">x</span>.ai<br /> Watson Machine Learning</div> |
 | 3rd-Party Application Integrations    | watson<span style="color:#2c62f5;">x</span> Orchestrate |
 | Governance   | watson<span style="color:#2c62f5;">x</span>.gov |
 | Subordinate Bot Integration   | watson<span style="color:#2c62f5;">x</span> Orchestrate Assistant |
@@ -54,7 +54,7 @@ You can use either watson<span style="color:#2c62f5;">x</span>.gov **OR** watson
 <li> Configured an "Action" within the Assistant to send prompts for generative AI use cases.
 </ol>
 
-### RAG Document Search
+### Document Search
 
 #### watson<span style="color:#2c62f5;">x</span> Discovery
 **Integration Method:** Watson Machine Learning Deployment OpenAPI spec<br>

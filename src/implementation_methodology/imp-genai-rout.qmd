@@ -11,7 +11,7 @@ This documentation walks through how to leverage generative AI to route a user's
 
 ## watson<span style="color:#2c62f5;">x</span>.ai
 #### **Create watson<span style="color:#2c62f5;">x</span>.ai custom extension**
-1.  In your assistant, navigate to Integrations page, click "Build custom extension" -> click "Next" -> Input Extension name `watson<span style="color:#2c62f5;">x</span>` -> click "Next" .
+1.  In your assistant, navigate to Integrations page, click "Build custom extension" -> click "Next" -> Input Extension name `watsonx.ai` -> click "Next" .
 2. download json file: [watsonx-openapi.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-watsonx/watsonx-openapi.json){target="_blank"} and import file to assistant.
 3. click "Next" -> click "Finish"
 4. Lower Right corner of the watson<span style="color:#2c62f5;">x</span> extension, click "Add" -> click "Add" -> click "Next"

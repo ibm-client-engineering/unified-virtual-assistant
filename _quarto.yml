@@ -47,7 +47,7 @@ website:
               href: src/implementation_methodology/imp-UI.qmd
             - text: Generative-AI Driven Routing
               href: src/implementation_methodology/imp-genai-rout.qmd
-            - section: RAG Document Search
+            - section: Document Search
               contents:
                 - text: watsonx Discovery
                   href: src/implementation_methodology/watsonx-dis.qmd

@@ -14,7 +14,7 @@ appropriate channels and/or 3rd-party applications while leveraging generative A
         * Users: Limited to basic functions, ensuring simplicity and security.
 
 * **Generative AI-Driven Routing:** Classifies user prompts into categories, improving conversation routing accuracy and streamlining interactions.
-* **RAG Document Search:** Ensures accurate, reliable search results by combining a Data Repository, Vector Database, and Large Language Model, with up-to-date information and source links.
+* **Document Search:** Ensures accurate, reliable search results by combining a Data Repository, Vector Database, and Large Language Model, with up-to-date information and source links.
 * **Third-Party Integrations:** Connects the chatbot to platforms like ServiceNow to automate workflows, reduce silos, and enable customized, efficient operations.
 * **Governance:** Implements IBM® watson<span style="color:#2c62f5;">x</span>.governance™ to manage AI risks, ensure compliance, monitor models, and document processes, fostering transparency and accountability.
 * **Subordinate Bot Mediation:** Enables seamless collaboration with existing chatbots by delegating domain-specific requests while providing unified responses through the parent bot.
@@ -30,7 +30,7 @@ IBM watson<span style="color:#2c62f5;">x</span> Orchestrate is a collaborative A
 | -------- |:-------|
 | Identity Access Management  |  IBM Security Verify   |
 | Generative AI-Driven Conversational Routing |  watson<span style="color:#2c62f5;">x</span>.gov or watson<span style="color:#2c62f5;">x</span>.ai <br /> Watson Machine Learning   |
-| RAG Document Search    | watson<span style="color:#2c62f5;">x</span> Discovery <br /> watson<span style="color:#2c62f5;">x</span>.ai<br /> Watson Machine Learning</div> |
+| Document Search    | watson<span style="color:#2c62f5;">x</span> Discovery <br /> watson<span style="color:#2c62f5;">x</span>.ai<br /> Watson Machine Learning</div> |
 | 3rd-Party Application Integrations    | watson<span style="color:#2c62f5;">x</span> Orchestrate |
 | Governance   | watson<span style="color:#2c62f5;">x</span>.gov |
 | Subordinate Bot Integration   | watson<span style="color:#2c62f5;">x</span> Orchestrate Assistant |

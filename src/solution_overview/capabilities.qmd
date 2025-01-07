@@ -7,7 +7,7 @@ format: html
 <ol>
   <li>Identity and Access Management (IAM)</li>
   <li>Gen-AI Driven Decision Making</li>
-  <li>RAG Document Search</li>
+  <li>Document Search</li>
   <li>3rd-Party Application Integration</li>
   <li>Governance</li>
   <li>Subordinate Chatbot Mediation</li>
@@ -41,7 +41,7 @@ within an the chatbot.
 **watson<span style="color:#2c62f5;">x</span>.gov OR watson<span style="color:#2c62f5;">x</span>.ai can be levered to carry out gen-AI decision making.**<br>
 :::
 
-## RAG Document Search
+## Document Search
 By leveraging a RAG pipeline to help users query a given knowledge base corpus, the Assistant can provide a more reliable and accurate knowledge base search experience. This not only enhances the overall user experience but also ensures that users receive the most relevant and up-to-date information possible by providing source links to the provided answers.
 
 #### Use Cases

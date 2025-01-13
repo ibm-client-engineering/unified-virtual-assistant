@@ -40,7 +40,7 @@ There are two ways in which the ServiceNow application can be integrated to the 
 
 ![](../../images/snow_connect_app.png)
 
-3. A pop-up panel will appear. Enter values [Acquire Relevant Instance Credentials](#acquire-relevant-instance-credentials):
+3. A pop-up panel will appear. Select "Team credentials" and select "Connect app". Enter values [Acquire Relevant Instance Credentials](#acquire-relevant-instance-credentials):
     * **Enpoint URL** -> Step 3
     * **Username** -> Step 3
     * **Password** -> Step 3

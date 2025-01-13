@@ -51,10 +51,18 @@ There are two ways in which the ServiceNow application can be integrated to the 
 6. Within the "Actions" section of the builder, select "New Action+" -> "Skill-based action" 
 ![](../../images/snow_create_skillbased_action.png)
 7. Select from the list of ServiceNow Skill that's appropriate for your use case, and click "Next"
+
+*Below is an example of "Create an Incident"*
+
 8. When prompted with "New action", enter starting phrases that users would enter to trigger this action. For example, for "Create an incident" skill, one could enter "create a servicenow incident" and "i want to submit servicenow incident".
 ![](../../images/snow_create_an_incident_example_starter_phrases.png)
 9. Once you've entered a few starting phrase, try click "Preview" and start interacting with the assistant!
 ![](../../images/snow_create_an_incident.png)
+10. To view "Create an incident" information in ServiceNow: 
+    1. Navigate to the "Incidents" view under "Service Desk" in ServiceNow to check the submitted incident.
+        ![](../../images/snow_incidents_table.png)
+    2. View the incident logs
+        ![](../../images/snow_incidents_table_view.png)
 
 
 ### Assistant Custom Extension

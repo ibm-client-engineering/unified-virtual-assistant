@@ -52,7 +52,10 @@ There are two ways in which the ServiceNow application can be integrated to the 
 ![](../../images/snow_create_skillbased_action.png)
 7. Select from the list of ServiceNow Skill that's appropriate for your use case, and click "Next"
 8. When prompted with "New action", enter starting phrases that users would enter to trigger this action. For example, for "Create an incident" skill, one could enter "create a servicenow incident" and "i want to submit servicenow incident".
-![](../../images/snow_create_an_incident_example.png)
+![](../../images/snow_create_an_incident_example_starter_phrases.png)
+9. Once you've entered a few starting phrase, try click "Preview" and start interacting with the assistant!
+![](../../images/snow_create_an_incident.png)
+
 
 ### Assistant Custom Extension
 

@@ -1,103 +1,74 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Unified Virtual Assistant",
+    "objectID": "src/implementation_methodology/imp-verify-assis.html",
+    "href": "src/implementation_methodology/imp-verify-assis.html",
+    "title": "IBM Security Verify",
     "section": "",
-    "text": "Siloed internal chatbots are disrupting enterprise operations, compliance, and architectural standards.\nEmployees are frustrated because they have to locate the right chatbot to answer their specific questions.\nEnterprise Architecture team is frustrated because lines of business will launch their own chatbot to fill their teams’ specific needs.\nCompliance teams are frustrated because there is no single point of oversight to ensures that chatbot responses are grounded on vetted information and that sensitive material remains protected. ​\n\n\n\n\n\nUser Experience challenges:\n\nTime to information: Information is difficult to find in a timely manner, as employees need to first know which chatbot to leverage for their particular question.\nLimited Access: users will only be able to leverage the chatbots they are aware of. Many employees will be without the conversational search of a chatbot unless they have awareness and access to it.\nLimited capabilities and integration: very few chatbots are currently designed to do more than provide information. Employees need to take extra steps in order to action on the insight (like opening tickets, connecting with support, etc)\n\nCost and Operational challenges:\n\nRedundant efforts: lines of business across the business are duplicating efforts by creating redundant chatbots.\nScalability: Without a unified approach, every new chatbot that is added only magnifies the existing user experience challenges and info risk challenges.\n\nInformation Challenges:\n\nVeracity Risk: How can Enterprise Architecture and Compliance teams ensure that the many chatbots across each line of business are providing employees information grounded on vetted source material?\nSecurity and Sensitivity Risk: How can Enterprise Architecture and Compliance teams ensure that sensitive material remains protected across specified clearance levels?\n\nEnterprise-level governance: Enterprise Architecture lacks a single view of all LLMs deployed in the organization.\n\n\n\n\n\nA platform that can unite across lines of business\nFlexibility to connect with existing systems as well as extend to future additions.\nEnable users to take actions (like opening tickets, changing passwords, etc)\nEnable users to answer questions, grounded on pre-approved source material\nGoverned access to sensitive content (only allow access to content that you are cleared for)\nDelegate specified questions to vetted chatbots that may already exist across the enterprise\n\n\n\n\n\nA More Informed Workforce: less noise per inquiry, less time to answers\nCost and Operational Efficiency Gains: reduced duplicated efforts and a scalable framework\nEnhanced Compliance and Governance: a united framework enables clearer centralized oversight - including models deployed, model health, source information, governed access to sensitive material",
-    "crumbs": [
-      "Problem Definition"
-    ]
-  },
-  {
-    "objectID": "index.html#overview",
-    "href": "index.html#overview",
-    "title": "Unified Virtual Assistant",
-    "section": "",
-    "text": "Siloed internal chatbots are disrupting enterprise operations, compliance, and architectural standards.\nEmployees are frustrated because they have to locate the right chatbot to answer their specific questions.\nEnterprise Architecture team is frustrated because lines of business will launch their own chatbot to fill their teams’ specific needs.\nCompliance teams are frustrated because there is no single point of oversight to ensures that chatbot responses are grounded on vetted information and that sensitive material remains protected. ​\n\n\n\n\n\nUser Experience challenges:\n\nTime to information: Information is difficult to find in a timely manner, as employees need to first know which chatbot to leverage for their particular question.\nLimited Access: users will only be able to leverage the chatbots they are aware of. Many employees will be without the conversational search of a chatbot unless they have awareness and access to it.\nLimited capabilities and integration: very few chatbots are currently designed to do more than provide information. Employees need to take extra steps in order to action on the insight (like opening tickets, connecting with support, etc)\n\nCost and Operational challenges:\n\nRedundant efforts: lines of business across the business are duplicating efforts by creating redundant chatbots.\nScalability: Without a unified approach, every new chatbot that is added only magnifies the existing user experience challenges and info risk challenges.\n\nInformation Challenges:\n\nVeracity Risk: How can Enterprise Architecture and Compliance teams ensure that the many chatbots across each line of business are providing employees information grounded on vetted source material?\nSecurity and Sensitivity Risk: How can Enterprise Architecture and Compliance teams ensure that sensitive material remains protected across specified clearance levels?\n\nEnterprise-level governance: Enterprise Architecture lacks a single view of all LLMs deployed in the organization.\n\n\n\n\n\nA platform that can unite across lines of business\nFlexibility to connect with existing systems as well as extend to future additions.\nEnable users to take actions (like opening tickets, changing passwords, etc)\nEnable users to answer questions, grounded on pre-approved source material\nGoverned access to sensitive content (only allow access to content that you are cleared for)\nDelegate specified questions to vetted chatbots that may already exist across the enterprise\n\n\n\n\n\nA More Informed Workforce: less noise per inquiry, less time to answers\nCost and Operational Efficiency Gains: reduced duplicated efforts and a scalable framework\nEnhanced Compliance and Governance: a united framework enables clearer centralized oversight - including models deployed, model health, source information, governed access to sensitive material",
-    "crumbs": [
-      "Problem Definition"
-    ]
-  },
-  {
-    "objectID": "src/implementation_methodology/rag-attr-links.html",
-    "href": "src/implementation_methodology/rag-attr-links.html",
-    "title": "RAG Attribution Links",
-    "section": "",
-    "text": "Warning\n\n\n\nPrerequisite: watsonx Orchestrate Software Requirement\nThis section will go over how to add source links for files within an Assistant. Though there are different methods in which source links can be created, this document will cover these methods:",
+    "text": "Warning\n\n\n\nPrerequisite: IBM Security Verify Software Requirement\nThis section will go over how to setup IBM Security Verify and integrate it with Watsonx Assistant to verify users, authenticate using a one time password (OTP) , and reset passwords.",
     "crumbs": [
       "Implementation Methodology",
-      "Governance",
-      "RAG Attribution Links"
+      "Identity and Access Management",
+      "IBM Security Verify"
     ]
   },
   {
-    "objectID": "src/implementation_methodology/rag-attr-links.html#access-via-cos-cloud-object-storage",
-    "href": "src/implementation_methodology/rag-attr-links.html#access-via-cos-cloud-object-storage",
-    "title": "RAG Attribution Links",
-    "section": "Access via COS (Cloud Object Storage)",
-    "text": "Access via COS (Cloud Object Storage)\n\nIn the appropriate Cloud Object Storage instance create a new “Custom Bucket”\nWithin the new bucket, navigate to the “Permissions” tab\nWithin the “Public Access” Section select “Content Reader” as the “Role for this bucket”\nSelect “Create access policy” to enable public access for the bucket\nUpload the necessary documents which will be the source for the dedicated RAG Document Search\n\n\n\n\n\n\n\nNote\n\n\n\nEnsure the name of the sources are the same as the sources in the target data courpus/source (ie. COS, Watson Discovery, etc.)\n\n\n\nAssistant Integration\n\n\n\n\n\n\nWarning\n\n\n\nPrerequisites: Ensure the necessary documents have been uploaded to the appropriate COS buckets here: Access via COS\n\n\n\n\nExtract Source Links’ Base Url\n\nNavigate to the COS bucket with all the designated source links for the RAG Document Search functionality.\nOn any of the documents click the three dots to the left and find the “Object public url”. May require to refresh the page if “Object public url” is not there.\nWithin the url extract and copy the first part of the link up till the first “/” (ex. “https://[domain].s3.us-south.cloud-object-storage.appdomain.cloud”)\n\n\n\nConfigure to existing metadata\nThere are two ways to retrieve source links from RAG Document Search demonstrated in these docs:\n\nwatson Discovery\nwatsonx Discovery\n\n\nwatsonx Discovery\n\nWithin the appropriate Assistant step concatenante the link value from step 3 to the RAG Document Search metatdata source url\nCreate source link variable with the expression value of:\n\"[BASE URL LINK]\" + ${step_[x]_result_1}.body.references[y].metadata.file_name\n\n\n\n\n\n\n\nNote\n\n\n\n\nReplace “x” with the appropriate step number of the result of the watsonx discovery extension\nReplace “y” with either 0-3 to reference source file_name 1-3\n\n\n\n\nReference Example: \"https://examplebucket.s3.us-south.cloud-object-storage.appdomain.cloud/\" + ${step_001_result_1.body.references[0].file_name}\n\n\nOptional: Insert source link variable in output for click=able links\nFor more information click &lt;a href=\"[source_url session variable from step 2]\" target=\"blank\"&gt;here&lt;/a&gt;\n\n\n\nwatson Discovery\n\nWithin the appropriate Assistant step concatenante the link value from step 3 to the RAG Document Search metatdata source url\nCreate source link variable with the expression value of:\n\"[BASE URL LINK]\" + ${step_[x]_result_2}.body.results[0].metadata.source.url\n\n\n\n\n\n\n\nNote\n\n\n\n- Replace \"x\" with the appropriate step number of the result of the watsonx Discovery extension or choose from the appropriate step variables\n\n\n\nReference Example:\"https://examplebucket.s3.us-south.cloud-object-storage.appdomain.cloud/\" + ${step_001_result_2}.body.results[0].metatdata.source.url\n\n\nOptional: Insert source link variable in output for click=able links\nFor more information click &lt;a href=\"[source_url session variable from step 2]\" target=\"blank\"&gt;here&lt;/a&gt;",
+    "objectID": "src/implementation_methodology/imp-verify-assis.html#setting-up-ibm-security-verify",
+    "href": "src/implementation_methodology/imp-verify-assis.html#setting-up-ibm-security-verify",
+    "title": "IBM Security Verify",
+    "section": "Setting up IBM Security Verify",
+    "text": "Setting up IBM Security Verify\n\n\nCreate Users and Groups\n\nLogin into the dedicated IBM Security Verify instance\nClick on the user profile in the top right corner and select “Switch to admin”\nIn the sidebar, navigate to “Directory” -&gt; “Users and Groups”\nSelect “Add User+” and fill out the necessary fields.\n\n\n\n\n\n\n\nNote\n\n\n\n\nProvide an email you have access to for each added user.\nMake sure to “View extended profile” to fill out the other fields if applicable\n\n\n\n\nNavigate to the “Groups” tab and select “Add Group” and fill out the required fields and assign the appropriate users.\n\n\n\nCreate API Client\n\nLogin into the dedicated IBM Security Verify instance\nClick on the user profile in the top right corner and select “Switch to admin”\nIn the sidebar, navigate to “Security” -&gt; “API Access”\nSelect “Add API Client +”\nFill out the necessary fields and save the “Client ID” and “Client Secret” values for later reference",
     "crumbs": [
       "Implementation Methodology",
-      "Governance",
-      "RAG Attribution Links"
+      "Identity and Access Management",
+      "IBM Security Verify"
     ]
   },
   {
-    "objectID": "src/implementation_methodology/imp-workday.html",
-    "href": "src/implementation_methodology/imp-workday.html",
-    "title": "Workday",
+    "objectID": "src/implementation_methodology/imp-verify-assis.html#assistant-custom-extension",
+    "href": "src/implementation_methodology/imp-verify-assis.html#assistant-custom-extension",
+    "title": "IBM Security Verify",
+    "section": "Assistant Custom Extension",
+    "text": "Assistant Custom Extension\nBefore jumping to the custom watsonx assistant we created for IBM Security Verify, it would be prudent to explore the included postman collection for the Verify API. Because of the way that watsonx assistant handles json arrays (or to be more specific, doesn’t handle json arrays), you will need to manually set some of the inputs in case they are arrays. Making API calls using the postman collection makes this process quite a bit easier.\n\nIdentify OpenAPI spec values\nThree values will be needed to connect to IBM Security Verify:\n\nverify instance url\nclient_id\nclient_secret\n\nThe client_id and client_secret will need to be for a corresponding admin account. TODO: Add instructions for getting these values\n\n\nCreate the Custom Extension\n\nNavigate and download the OpenAPI spec for another assistant bot here\nModify the server url at line 10 with the service instance url from step 3 here\nNavigate to the integrations section within the Assistant Builder sidebar\nSelect “Build custom extension” and name the extension\nUpload the OpenApi spec from step 1 and press “Finish”\nSelect “Add+” within the newly configured extension\nSelect “Next” and update values:\n\nAuthentication type: Oauth 2.0\nClient ID: client_id\nClient Secret: client_secret\n\n\n\n\nAction Integration\nThis extension has 3 features with 4 api calls total\n\nVerify username and password\nAuthenticate using a OTP (has two api calls)\nReset Password\n\n\nVerify a Username and Password\n\nWithin the appropriate action, create a step and under “And then” select “Use an extension”\nSelect the appropriate subordinate bot extension made here\nSelect the Operation as “verify user and pass”\nSet the Parameters to:\n\nreturnUserRecord: true or false depending on if you want the user data to be returned\nAccept: */* see the note below\nschemas: [“urn:ietf:params:scim:schemas:ibm:core:2.0:AuthenticateUser”] see the note below\nuserName: The username for the user logging in\npassword: The password for the user logging in\n\n\n\n\nAuthenticate using a One Time Password (OTP)\n\nCreate a new step after the step with the “create a session” extension (either in the same action or another)\nUnder the “And then” Section, select “Use an extension”\nSelect the appropriate subordinate bot extension made here\nSelect the Operation as “Create and email otp transaction”\nSet the Parameters to:\n\ncorrelation: any sequence of 4 numbers (these will appear to the verifying user as a sequence before a dash, followed by the actual verification code)\nemailAddress: The email address to send the verification code to. If returnUserRecord is set to true above, the response json will include a list of all of the user’s associated emails.\n\nAdd a step and prompt the user to input the verification code they recieved less correlation.\nAdd another extension call in a further step using the “Attempt email OTP verification” Operation\nSet the Parameters to:\n\ntrxnid: body.id from the extension call in step 3/4\notp: The user input\n\n\n\n\nReset Password\n\nCreate a new step after the step with the “create a session” extension (either in the same action or another)\nUnder the “And then” Section, select “Use an extension”\nSelect the appropriate subordinate bot extension made here\nSelect the Operation as “Change user’s password”\nSet the Parameters to:\n\nuserid: The user’s verify userid, if returnUserRecord is set to true above, the response json will include the user’s userid.\ncontent-type: application/scim+json see this note\nAccept: */* see the note below\nschemas: [“urn:ietf:params:scim:api:messages:2.0:PatchOp”] see the note below\noperations:\n\n\n\n[{\n\"op\":\"replace\",\n\"value\": {\n    \"password\": \"new_pass\", \n    \"urn:ietf:params:scim:schemas:extension:ibm:2.0:Notification\":{\n        \"notifyType\":\"EMAIL\",\n        \"notifyPassword\": true}\n    }\n}]\n\nreplace new_pass with the new password you would like, and if you would like to disable email notifications set “notifyPassword” to false. For clarity on why it neeeds to be this way, see the note below\nreplace new_pass with the new password you would like, and if you would like to disable email notifications set “notifyPassword” to false. For clarity on why it neeeds to be this way, see the note below\n\n\n\n\n\n\n\n\nA note on schemas and arrays\n\n\n\nIt may have been observed that certain inputs required for these extensions are unconventional. The primary objective of Watsonx Assistant is to simplify complex technical processes, allowing users to focus on designing the chatbot flows they need. While this approach is effective in most scenarios, challenges arise when users need to integrate custom extensions involving more intricate request or response data formats.\nSpecifically, any input involving a JSON array must be manually specified as an expression. This is the case for the schema inputs mentioned earlier, as well as the operations input required for the reset password action. Furthermore, Watsonx Assistant lacks a native mechanism for accessing data within JSON arrays. Users are required to identify the step at which a JSON array is received and subsequently write a custom expression to extract the array values.\nAdditionally, for the Accept and Content-Type fields, IBM Security Verify necessitates these values to be configured precisely as specified. Failure to do so results in the integration not functioning as intended.",
+    "crumbs": [
+      "Implementation Methodology",
+      "Identity and Access Management",
+      "IBM Security Verify"
+    ]
+  },
+  {
+    "objectID": "src/implementation_methodology/imp-snow.html",
+    "href": "src/implementation_methodology/imp-snow.html",
+    "title": "ServiceNow",
     "section": "",
-    "text": "Within the watsonx orchestrate platform, navigate to the sidebar and select “Chat”\nIn the dropdown menu in the top select the right target Assistant environment\nSelect “Add skills from the catalog” and select “Workday”\nIn the top right select “Connect App”\nEnter the appropriate values\nSelect “Connect App”\nNavigate to the platforms sidebar and select “AI Assistant Builder”\nWithin the “Actions” section of the buider, select “New Action+” -&gt; “Action from skills” -&gt; appropriate Workday skill",
+    "text": "Follow steps here\n\n\n\n\nLogin into the developer site\nClick on the drop down arrow near your profile in top right corner and select “Manage Instance Password” \nSave values for:\n\nInstance URL\nUsername\nPassword\n\nExit. Within “My Instance” view, select “Start Building”\nSelect “All” in the top navigation panel and search “System OAuth” and select “Application Registry”\nIn the top right select “New” and select “Create an OAuth API endpoint for external clients”\nEnter necessary details and save the Client ID and Client Secret for later use",
     "crumbs": [
       "Implementation Methodology",
       "Third-Party Applications",
-      "Workday"
+      "ServiceNow"
     ]
   },
   {
-    "objectID": "src/implementation_methodology/imp-workday.html#assistant-integration",
-    "href": "src/implementation_methodology/imp-workday.html#assistant-integration",
-    "title": "Workday",
+    "objectID": "src/implementation_methodology/imp-snow.html#setup-servicenow-developer-instance",
+    "href": "src/implementation_methodology/imp-snow.html#setup-servicenow-developer-instance",
+    "title": "ServiceNow",
     "section": "",
-    "text": "Within the watsonx orchestrate platform, navigate to the sidebar and select “Chat”\nIn the dropdown menu in the top select the right target Assistant environment\nSelect “Add skills from the catalog” and select “Workday”\nIn the top right select “Connect App”\nEnter the appropriate values\nSelect “Connect App”\nNavigate to the platforms sidebar and select “AI Assistant Builder”\nWithin the “Actions” section of the buider, select “New Action+” -&gt; “Action from skills” -&gt; appropriate Workday skill",
+    "text": "Follow steps here\n\n\n\n\nLogin into the developer site\nClick on the drop down arrow near your profile in top right corner and select “Manage Instance Password” \nSave values for:\n\nInstance URL\nUsername\nPassword\n\nExit. Within “My Instance” view, select “Start Building”\nSelect “All” in the top navigation panel and search “System OAuth” and select “Application Registry”\nIn the top right select “New” and select “Create an OAuth API endpoint for external clients”\nEnter necessary details and save the Client ID and Client Secret for later use",
     "crumbs": [
       "Implementation Methodology",
       "Third-Party Applications",
-      "Workday"
+      "ServiceNow"
     ]
   },
   {
-    "objectID": "src/implementation_methodology/imp-UI.html",
-    "href": "src/implementation_methodology/imp-UI.html",
-    "title": "User Interface",
-    "section": "",
-    "text": "This document will go through how to build the user interface for a Unified Virtual Assistant. The method that was leveraged to build the user interface was leveraging a static-webpage with Cloud Object Storage.",
+    "objectID": "src/implementation_methodology/imp-snow.html#assistant-integration",
+    "href": "src/implementation_methodology/imp-snow.html#assistant-integration",
+    "title": "ServiceNow",
+    "section": "Assistant Integration",
+    "text": "Assistant Integration\nThere are two ways in which the ServiceNow application can be integrated to the Assistant:\n\nwatsonx Orchestrate Skill\nAssistant Custom Extension\n\n\nwatsonx Orchestrate Skill\n\nWithin the watsonx orchestrate platform, navigate to the sidebar and select “Chat”\nIn the dropdown menu in the top select the right target Assistant environment\nSelect “Add skills from the catalog” and select “ServiceNow”\nIn the top right select “Connect App”\nEnter values Acquire Relevant Instance Credentials:\n\nEnpoint URL -&gt; Step 3\nUsername -&gt; Step 3\nPassword -&gt; Step 3\nClient ID -&gt; Step 7\nClient Secret -&gt; Step 7\n\nSelect “Connect App”\nNavigate to the platforms sidebar and select “AI Assistant Builder”\nWithin the “Actions” section of the buider, select “New Action+” -&gt; “Action from skills” -&gt; appropriate ServiceNow skill\n\n\n\nAssistant Custom Extension\n\nGet Developer Instance Credentials and OpenAPI spec\n\nLogin into the developer site\nClick on the drop down arrow near your profile in top right corner and select “Manage Instance Password” \nMake note of the “username” and “password” values (this will be used later)\nExit out of the window and select “Start Building”\nPress “All” in the header and search “REST API Explorer”\nPress “Export OpenAPI Specification (YAML/JSON)”\n\n\n\nEdit Service Now OpenAPI spec\n\nOpen the downloaded API spec\nRemove the forward slash at the end of the url string within the “servers” block\nAdd BasicAuth Component to the OpenAPI spec (make sure each block is comma delimited):\n\n\n\"components\":{\n    \"securitySchemes\": {\n        \"basicAuth\": {\n            \"type\": \"http\",\n            \"scheme\": \"basic\"\n        }\n    }\n}\n\n\nSave file\n\n\n\nBuild Custom Extenstion\n\nWithin watsonx Assistant, navigate to the sidebar and select “Integrations”\nSelect “Build Custom Extension”\nFor the “Basic Information” page fill out all appropriate fields and click “Next”\nUpload the Service Now OpenAPI spec, click “Next” and then “Finish”\nWithin the extensions in Watson Assistant click “Add+” on the recently made Service Now custom extension\nOn the Authentication page fill out the username and password fields with the values saved from “Get Developer Instance Credentials and OpenAPI spec” step 3\nClick “Next” and then “Finish”",
     "crumbs": [
       "Implementation Methodology",
-      "User Interface"
-    ]
-  },
-  {
-    "objectID": "src/implementation_methodology/imp-UI.html#overview",
-    "href": "src/implementation_methodology/imp-UI.html#overview",
-    "title": "User Interface",
-    "section": "",
-    "text": "This document will go through how to build the user interface for a Unified Virtual Assistant. The method that was leveraged to build the user interface was leveraging a static-webpage with Cloud Object Storage.",
-    "crumbs": [
-      "Implementation Methodology",
-      "User Interface"
-    ]
-  },
-  {
-    "objectID": "src/implementation_methodology/imp-UI.html#static-webpage-build",
-    "href": "src/implementation_methodology/imp-UI.html#static-webpage-build",
-    "title": "User Interface",
-    "section": "Static-Webpage Build",
-    "text": "Static-Webpage Build\nThis doc will go through how to build an externally accessible webpage with the embedded assitant webchat for public access. This webpage is created using a static html script which is hosted within a Cloud Object Storage Bucket.\nSoftware Requirements:\n\nIBM Cloud Object Storage - Lite\nwatsonx Orchestrate or watsonx Assistant\n\n\nEmbed Assistant Webchat into HTML file\n\nWithin the Assitant Builder’s sidebar, navigate to the “Integrations” section\nUnder the “Essential channels” section select “Open” within the “Webchat” channel\nSelect the appropriate environment and navigate to the “Embed” tab\nCopy the provided script and insert into html script\nOptional : Add showRestartButton: true after window.watsonAssistantChatOptions ={} to display web-chat restart button\n\n\n\nCreate Cloud Object Storage (COS) Instance\n\nGo to the dedicated IBM Cloud Account “Resource” List here and click “Create Resource +”\nSearch and select “Object Storage”\nSelect “IBM Cloud” as the infrastructure and the appropriate pricing plan\nName the service and click “Create”\n\n\n\nCreate a Custom COS Bucket\n\nFrom the “Resource” List select the newly created COS instance\nClick “Create a Custom Bucket”\nEnter a valid bucket name and select the appropriate values for “Resiliency”, “Location”, “Storage class”, “Object Versioning” and “Immutablity”\nWithin the section “Advanced configurations (optional)” click the “Add +” for “Static website hosting”\n\n\n\nEnsure the “Public access” toggle is switched to “On”\nEnter the name of the target html file which will be used to build the desired web app\nClick “Save” and then click “Create bucket”\n\n\n\nUpload HTML file\n\nUpload the HTML file from here",
-    "crumbs": [
-      "Implementation Methodology",
-      "User Interface"
+      "Third-Party Applications",
+      "ServiceNow"
     ]
   },
   {
@@ -145,63 +116,132 @@
     ]
   },
   {
-    "objectID": "src/implementation_methodology/imp-assis-ext.html",
-    "href": "src/implementation_methodology/imp-assis-ext.html",
-    "title": "Assistant Custom Extension",
+    "objectID": "src/implementation_methodology/imp-UI.html",
+    "href": "src/implementation_methodology/imp-UI.html",
+    "title": "User Interface",
     "section": "",
-    "text": "This section will describe how we were able to query one watsonx assistant from another using the watsonx assistant API. In addition, this guide will also include information about how to update session variables on the subordinate bot from the calling bot. Ways to integrate with a subordinate watsonx assisant bot:",
+    "text": "This document will go through how to build the user interface for a Unified Virtual Assistant. The method that was leveraged to build the user interface was leveraging a static-webpage with Cloud Object Storage.",
     "crumbs": [
       "Implementation Methodology",
-      "Subordinate Bots",
-      "Assistant Custom Extension"
+      "User Interface"
     ]
   },
   {
-    "objectID": "src/implementation_methodology/imp-assis-ext.html#assistant-custom-extension",
-    "href": "src/implementation_methodology/imp-assis-ext.html#assistant-custom-extension",
-    "title": "Assistant Custom Extension",
-    "section": "Assistant Custom Extension",
-    "text": "Assistant Custom Extension\n\n\nGenerate API Key\n\nNavigate to the subordinate bot instance\nIn the sidebar, navigate to “Assistant Settings”\nUnder “Assistant IDs and API details”, select “Generate API key” and save it for later\n\n\n\nIdentify OpenAPI spec values\nTwo values will be needed to connect to a subordinate Assistant: * service instance url * environmentID\n\nWithin the Assistant Builder’s sidebar, navigate to the “Assistant Settings”\nUnder “Assistant IDs and API details”, select “View details”\nSave/copy the values for:\n\nservice instance URL\nDraft/Live Environment ID (whichever is applicable)\n\n\n\n\nCreate the Custom Extension\n\nNavigate and download the OpenAPI spec for another assistant bot here\nModify the server url at line 10 with the service instance url from step 3 here\nNavigate to the integrations section within the Assistant Builder sidebar\nSelect “Build custom extension” and name the extension\nUpload the OpenApi spec from step 1 and press “Finish”\nSelect “Add+” within the newly configured extension\nSelect “Next” and update values:\n\nAuthentication type: Basic auth\nUsername: apikey\nPassword: Password from here\n\n\n\n\nAction Integration\nTwo api calls are needed to successfully integrate this extension:\n\nCreate a session id for the subordinate bot\nMake a dialog request to the subordinate bot\n\n\nCreate a session id\n\nWithin the appropriate action, create a step and under “And then” select “Use an extension”\nSelect the appropriate subordinate bot extension made here\nSelect the Operation as “Create Session”\nSet the Parameters to:\n\nenvironment_id: Environment ID from step 3 of Identify OpenAPI spec values\n\n\n\n\n\n\n\n\nTip\n\n\n\nMake sure the “environment_id” variable type is ‘text’\n\n\n\n\nMake a dialog request\n\nCreate a new step after the action with the “create a session” extension\n\nUnder the “And then” Section, select “Use an extension”\nSelect the appropriate subordinate bot extension made here\nSelect the Operation as “Make dialog request”\nSet the Parameters to:\n\ninput.text: input.text\ninput.message_type: text\nuseContext.skills.actions skill.skill_variables : {\"DEFINED_VARIABLE\" : \"VARIABLE_VALUE\"}\nsession_id: [session_id from previous step w/ “Create Session” call]\nenvironment_id: Environment ID from step 3 of Identify OpenAPI spec values\n\n\n\n\n\n\n\n\nA note about session variables\n\n\n\nSession variables play a crucial role in storing and managing information within and across watsonx Assistant actions. These variables can be defined either by the user or automatically by the assistant, with each session maintaining a distinct instance of each variable.\nWhen there is a need to pass additional information beyond the input query to a subordinate bot, session variables are the appropriate mechanism. To facilitate this, the session variable must first be defined on the subordinate side before its value can be updated via a dialog request. Once defined, the variable can be updated by including its name and the desired value in a JSON object under the useContext.skills.actions.skill.skill_variables field.\nThis approach ensures smooth communication and data transfer between actions, enabling more dynamic and complex chatbot workflows.",
-    "crumbs": [
-      "Implementation Methodology",
-      "Subordinate Bots",
-      "Assistant Custom Extension"
-    ]
-  },
-  {
-    "objectID": "src/implementation_methodology/watsonx-dis.html",
-    "href": "src/implementation_methodology/watsonx-dis.html",
-    "title": "watsonx Discovery",
+    "objectID": "src/implementation_methodology/imp-UI.html#overview",
+    "href": "src/implementation_methodology/imp-UI.html#overview",
+    "title": "User Interface",
     "section": "",
-    "text": "Warning\n\n\n\nPrerequisite: watsonx Discovery Software Requirement",
+    "text": "This document will go through how to build the user interface for a Unified Virtual Assistant. The method that was leveraged to build the user interface was leveraging a static-webpage with Cloud Object Storage.",
     "crumbs": [
       "Implementation Methodology",
-      "Document Search",
-      "watsonx Discovery"
+      "User Interface"
     ]
   },
   {
-    "objectID": "src/implementation_methodology/watsonx-dis.html#build-setup",
-    "href": "src/implementation_methodology/watsonx-dis.html#build-setup",
-    "title": "watsonx Discovery",
-    "section": "Build setup",
-    "text": "Build setup\n\n\n\n\n\n\nWarning\n\n\n\nThis repo can only be access with an IBM Account\n\n\nNavigate to this github and download this project file",
+    "objectID": "src/implementation_methodology/imp-UI.html#static-webpage-build",
+    "href": "src/implementation_methodology/imp-UI.html#static-webpage-build",
+    "title": "User Interface",
+    "section": "Static-Webpage Build",
+    "text": "Static-Webpage Build\nThis doc will go through how to build an externally accessible webpage with the embedded assitant webchat for public access. This webpage is created using a static html script which is hosted within a Cloud Object Storage Bucket.\nSoftware Requirements:\n\nIBM Cloud Object Storage - Lite\nwatsonx Orchestrate or watsonx Assistant\n\n\nEmbed Assistant Webchat into HTML file\n\nWithin the Assitant Builder’s sidebar, navigate to the “Integrations” section\nUnder the “Essential channels” section select “Open” within the “Webchat” channel\nSelect the appropriate environment and navigate to the “Embed” tab\nCopy the provided script and insert into html script\nOptional : Add showRestartButton: true after window.watsonAssistantChatOptions ={} to display web-chat restart button\n\n\n\nCreate Cloud Object Storage (COS) Instance\n\nGo to the dedicated IBM Cloud Account “Resource” List here and click “Create Resource +”\nSearch and select “Object Storage”\nSelect “IBM Cloud” as the infrastructure and the appropriate pricing plan\nName the service and click “Create”\n\n\n\nCreate a Custom COS Bucket\n\nFrom the “Resource” List select the newly created COS instance\nClick “Create a Custom Bucket”\nEnter a valid bucket name and select the appropriate values for “Resiliency”, “Location”, “Storage class”, “Object Versioning” and “Immutablity”\nWithin the section “Advanced configurations (optional)” click the “Add +” for “Static website hosting”\n\n\n\nEnsure the “Public access” toggle is switched to “On”\nEnter the name of the target html file which will be used to build the desired web app\nClick “Save” and then click “Create bucket”\n\n\n\nUpload HTML file\n\nUpload the HTML file from here",
     "crumbs": [
       "Implementation Methodology",
-      "Document Search",
-      "watsonx Discovery"
+      "User Interface"
     ]
   },
   {
-    "objectID": "src/implementation_methodology/watsonx-dis.html#build-walkthrough",
-    "href": "src/implementation_methodology/watsonx-dis.html#build-walkthrough",
-    "title": "watsonx Discovery",
-    "section": "Build Walkthrough",
-    "text": "Build Walkthrough\n\n\nCreate Elasticsearch Resource\nMake sure to select the Platinum version with native ELSIR model, and be mindful of the RAM allocation.\n\n\n\n\n\n\nNote\n\n\n\nWe ran into issues with extremely high RAM usage and unreliability, so we provisioned an instance of Elasticsearch with 64GB of RAM, 100GB of storage, and 16 cores.\n\n\n\n\nCreate Watson Machine Learning Deployment Space\n\nNavigate to the Deployments section of Watson Studio.\nCreate a new deployment space.\n\nThe storage service should automatically be assigned to your Cloud Object Storage service.\nAssign your Watson Machine Learning service to the Machine Learning Service. Once the deployment space is created, navigate to the space’s Manage tab and copy the Space GUID.\n\n\n\n\nUpload Documents to COS Bucket\n\nNavigate to the appropriate “Cloud Object Storage” resource and select “Create Bucket”\nSelect “Create a Custom Bucket” and fill out the necessary fields and press “Create”\nUpload the relevant documents\nCreate a “Content Reader” credential for the Cloud Object Storage resource\n\n\n\nCreate an IBM Cloud API Key\nCreate an IBM Cloud API key in IBM Cloud here and save it.\n\n\nCreate the Watson Studio Project\n\nDownload the “WatsonStudioProjectTemplate.zip”here.\nNavigate to the Projects section of Watson Studio and change the context from “Watson Studio” to “watsonx”. You can change the context in the top right corner of the UI.\nSelect New Project -&gt; Create a new project from a sample or file and upload the zip file from the “Build Setup”\n\n\nAssiciate WML instance\n\nNavigate to the “Manage Tab and Select Associate service + and select the appropriate WML instance\n\n\n\nPopulate Parameter Set\n\nClick on the Notebook_and_Deployment_Parameters parameter set in the project.\nSet the wml_space_id and ibm_cloud_apikey to the Space GUID and IBM Cloud API key, respectively.\n\n\n\nComplete Connection to Databases for Elasticsearch\n\nClick on the watson&lt;span style=\"color:#2c62f5;\"&gt;x&lt;/span&gt;Discovery connection in the project.\nIn a separate tab, navigate to the Databases for Elasticsearch service on IBM Cloud.\nWithin the Overview tab scroll down to the Endpoints section and select the HTTPS tab.\nCopy the hostname, port, and TLS certificate.\nGo to the service credentials tab of the service and create a New Credential.\nCopy the username and password under connection.https.authentication in the new service credential JSON.\nReturn to the Watson Studio project’s watson&lt;span style=\"color:#2c62f5;\"&gt;x&lt;/span&gt;Discovery connection and set the following fields:\n\nEdit the URL with the saved values for the HOSTNAME and PORT with the format of https://{HOSTNAME}:{PORT}.\nThe username and password should be the ones copied from the service credentials.\nThe SSL certificate should be the TLS certificate.\n\nSelect Test connection in the top right corner to validate a working connection.\n\n\n\nComplete Connection to Databases for Elasticsearch\n\nClick on the CloudObjectStorage connection in the project.\nSet the bucket name to the name of the bucket created in the “Add Documents to Cloud Object Storage” step.\nIn the configuration tab of the bucket in Cloud Object Storage, copy the public endpoint to the Login URL field.\nPaste the Cloud Object Storage service credential you created earlier into the “Service credentials” field.\nTest the connection by clicking the “Test connection” button. The test should be successful.\n\n\n\n\nRun Notebooks\nOnce the setup is complete, the notebooks in the project can be run without errors. For each of the notebooks, make sure to insert the project token via the top-right menu in the notebook UI before running any cells. This creates a cell that connects your notebook to the project and its assets.\nSteps:\n\nIngest documents into Elasticsearch via COS or Watson Discovery\nDeploy RAG function\n\n\n\nWatson Discovery: Ingest Documents to Elasticsearch\nThe 1-file-ingestion-from-dis notebook in the project handles document ingestion from Watson Discovery for Elasticsearch.\n\nUpdate Project ID and Project Token Values:\n\nNavigate to the “Manage” Tab of the watson Studio project and copy the “Project ID” to be used in the notebook.\nNavigate to the “Access control” and copy the existing token to be used in the notebook.\n\nInstall the necessary python libraries:\n\n\n\n\n\n\nNote\n\n\n\nOnly need too install python libs on the first run of the notebook\n\n\nInsert new cell and run\n!pip install nltk --quiet\n!pip install ibm_watson --quiet\n!pip install elasticsearch --quiet\n!pip install llama-index --quiet\n!pip install llama_index.vector_stores.elasticsearch --quiet\nUpdate the Watson Discovery credentials\n\nOn the IBM Cloud resource list select the “Watson Discovery” instance\nOn the “Manage” under “Overview” copy the “API Key” and “URL” value\nClick “Launch Discovery” -&gt; “Select the relevant Project” -&gt; “Manage Collections” -&gt; click relevanty collection\nGrab the Collection ID from the url after “/collection/”\nUnder the “Integrate and Deploy” section copy the “Project ID”\n\n\n\n\n\nCOS: Ingest Documents to Elasticsearch\nThe 1-file-ingestion-from-cos notebook in the project handles document ingestion from Watson Discovery for Elasticsearch.\n\nUpdate Project ID and Project Token Values:\n\nNavigate to the “Manage” Tab of the watson Studio project and copy the “Project ID” to be used in the notebook.\nNavigate to the “Access control” and copy the existing token to be used in the notebook.\n\nInstall the necessary python libraries:\n\n\n\n\n\n\nNote\n\n\n\nOnly need too install python libs on the first run of the notebook\n\n\nInsert new cell and run\n!pip install nltk --quiet\n!pip install ibm_watson --quiet\n!pip install elasticsearch --quiet\n!pip install llama-index --quiet\n!pip install llama_index.vector_stores.elasticsearch --quiet\nUpdate the COS credentials\nCreate a new index_name for each new collection of data (if applicable)\n\n\n\n\nDeploy RAG Function in Watson Machine Learning\nThe 2-deploy-rag-function-in-wml notebook in the project handles the deployment of a Python function that performs RAG using the Databases for Elasticsearch database and watsonx.ai. This step is not necessary if you plan to use the native search integration in watsonx Assistant. Optionally, you can test your deployment using the third notebook 3-test-rag-deployment in the project. This notebook calls the deployment endpoint and reformats the deployment responses for better readability.\n\nUpdate Project ID and Project Token Values\n\nNavigate to the “Manage” Tab of the watson Studio project and copy the “Project ID” to be used in the notebook.\nNavigate to the “Access control” and copy the existing token to be used in the notebook.\n\nInstall the following libraries:\n    !pip install nltk --quiet\n    !pip install ibm_watson --quiet\n    !pip install elasticsearch --quiet\n    !pip install llama-index --quiet\n    !pip install llama_index.vector_stores.elasticsearch --quiet\n    ```\n\nDeploy seperate functions for each index created\n\n\n\n\n\n\nTip\n\n\n\nNote down the deployment_id for each function for each index to be leveraged for the Assistant integration\n\n\nRun cell under “Update project assets” to generate the OpenApi Spec for assistant integrations (if applicable)\n\n\n\n\n\nAssistant Integration\nwatsonx Assistant provides the query interface, using either:\n\nCustom Extension for RAG Deploment Configuration\n\n\n\n\n\n\nTip\n\n\n\nUseful for routing queries/requests to different collections of data\n\n\nNative Extension.\n\n\nCustom Extension\n\nWithin the Assistant Builder’s sidebar navigate to the “Integrations” section and\nSelect “Build custom extension”\nUpload the OpenApi spec from step 4 of RAG Deploment Extension Configuration and press “Finish”\nSelect “Add+” within the newly configured extension\nSelect “Next” -&gt; “Authentication type: OAuth 2.0”\nEnter the API Key value from here\n\n\n\nNative Extension\nTo configure watsonx Assistant to use the native search extension, follow these steps:\n\nIn the integrations tab on the bottom left of the watsonx Assistant user interface, select the search extension and then Elasticsearch.\nUse the Databases for Elasticsearch credentials obtained in the Complete Connection to Databases For Elasticsearch section to fill out the next page.\n\nNote that “https://” should be appended before the hostname obtained from the Elasticsearch credentials.\nThe index name should be the es_index_name from your project’s parameter set.\n\nIn the “Configure result content” section, set the Title to file_name, Body to text_field, and URL to url. If you modified your es_index_text_field in your static notebooks parameters, the body should be set to the modified value.\nUnder “Advanced Elasticsearch settings”, set the query body to\n\n{\n  \"sort\": [\n    {\n      \"_score\": \"desc\"\n    }\n  ],\n  \"query\": {\n    \"text_expansion\": {\n      \"ml.tokens\": {\n        \"model_id\": \".elser_model_1\",\n        \"model_text\": \"$QUERY$\"\n      }\n    }\n  }\n}\n\nEnable conversational search and save the extension. Conversational search is a beta feature that you need to request access for here.\n\nOnce you have finished configuring the search extension, configure the assistant’s actions as follows:\n\nIn the “No action matches” action, set the assistant “Search for the answer”.\nSave your action and navigate to the preview tab. Your assistant is now configured. Test it out by passing in natural language queries regarding your document collection.\n\nPlease refer to the official documentation for more information on using the native search extension.\n\n\n\nAssistant Integration Utility\n\nDependent Steps: Assistant Integration\n\n\nAssistant Action Integrationn\n\nWithin the appropriate action step select “And then” option as “Use an extension” and select the appropriate watsonx Discovery extension\nFor “Operation” select “Get the predications”\nFor the “Parameters” set:\n\ninput_data: Expression type as [{\"fields\": [\"Text\"],\"values\": [[input.text]]}]\nwml_deploment_id”: deployment_id from step 3 of Custom Extension for RAG Deploment Configuration\n\n\n\n\nExtract WxD Values to User\nllm_response value:\n${[APPROPRIATE_STEP]_result_1.body.predictions[0].llm_response}\nSource links:\n${[APPROPRIATE_STEP]_result_1.body.references[VALUE].metadata.file_name}",
+    "objectID": "src/implementation_methodology/watson-dis.html",
+    "href": "src/implementation_methodology/watson-dis.html",
+    "title": "watson Discovery",
+    "section": "",
+    "text": "Warning\n\n\n\nPrerequisite: Watson Disovery Software Requirement\nThis build consists of three main components:",
     "crumbs": [
       "Implementation Methodology",
       "Document Search",
-      "watsonx Discovery"
+      "watson Discovery"
+    ]
+  },
+  {
+    "objectID": "src/implementation_methodology/watson-dis.html#setup-watson-discovery",
+    "href": "src/implementation_methodology/watson-dis.html#setup-watson-discovery",
+    "title": "watson Discovery",
+    "section": "1. Setup watson Discovery",
+    "text": "1. Setup watson Discovery\n\nNew projects, input Project Name, select an option “None of the above — I’m working on a custom project”, click “Next”\nselect the appropriatae method of upload, click “Next”\nInput Collection Name\nUpper left Hamburger icon -&gt; Manage Collections -&gt; New collections\nSelect data source\nIf webcrawl, input url links to “Starting URLs” and click “Add” -&gt; Finish",
+    "crumbs": [
+      "Implementation Methodology",
+      "Document Search",
+      "watson Discovery"
+    ]
+  },
+  {
+    "objectID": "src/implementation_methodology/watson-dis.html#create-watsonx-and-watson-discovery-extensions",
+    "href": "src/implementation_methodology/watson-dis.html#create-watsonx-and-watson-discovery-extensions",
+    "title": "watson Discovery",
+    "section": "2. Create watsonx and watson Discovery Extensions",
+    "text": "2. Create watsonx and watson Discovery Extensions\nRequired Steps:\n\n2.1 Create watson Discovery custom extension\n\nIn your assistant, navigate to “Integrations” page.\nClick “Build custom extensions” -&gt; click “Next” -&gt; Input Extension name Watson Discovery -&gt; click “Next”\ndownload json file: watson-discovery-query-openapi.json and import file to WA\nclick “Next” -&gt; click “Finish”\nLower Right corner of the Watson Disovery extension, click “Add” -&gt; click “Add” -&gt; click “Next”\nIn Authentication page, in the Authentication type dropdown, select “Basic auth”\n\nFor Username enter apikey\nFor password, create and copy a new API key from API key\nFor discovery_url, within IBM Cloud -&gt; resource list -&gt; Watson Discovery Instance -&gt; Manage -&gt; Credentials -&gt; URL\nPaste URL into discovery_url and remove https:// from the beginning of the string\n\nClick “Next”, click “Finish”, click “Close”\n\n\nReference: starter kit\n\n\n\n2.2 Create watsonx custom extension\n\nIn your assistant, navigate to Integrations page, click “Build custom extension” -&gt; click “Next” -&gt; Input Extension name watson&lt;span style=\"color:#2c62f5;\"&gt;x&lt;/span&gt; -&gt; click “Next” .\ndownload json file: watsonx-openapi.json and import file to WA\nclick “Next” -&gt; click “Finish”\nLower Right corner of the watsonx extension, click “Add” -&gt; click “Add” -&gt; click “Next”\nIn Authentication page, in the Authentication type dropdown, select “OAuth 2.0”\n\nFor Apikey, create and copy a new API key from API key\n\nClick “Next”, click “Finish”, click “Close”\n\n\n\n2.3 Integrate watsonx Search using Watson Discovery to Assistant\n\nUpload Actions:\n\nDownload discovery-watsonx-actions.json\nNavigate to “Actions” page, click “Global Settings” icon on the upper right corner\nNavigate to Upload/Download tab, upload the downloaded JSON file discovery-watson-actions.json onto the tab or click to select a file from your local system, then click “Upload”, and “Uplaod and replace”.\nWithin the Actions page, navigate to “Actions / Variables / Created by you”. Set discovery_project_id and watsonx_project_id session variable\n\n\n\n\n\n\n\n\nWhere to get credentials:\n\n\n\n\ndiscovery_project_id: within Watson Discovery: Upper left Hamburger icon -&gt; Integrate and deploy -&gt; API Information\nwatsonx_project_id:\n\nGo to watsonx Platform\nProjects (click on project)-&gt; Manage -&gt; General -&gt; Details -&gt; Project ID\n\n\n\n\n\n\n\nNo action matches Setup\n\nNavigate to “All items” -&gt; “Set by assistant” -&gt; “No action matches”.\nClick on the “No action matches” action and delete the existing step 1 and step 2.\n“New Step”. In the “And then” section, select “go to a subaction” -&gt; select “Search” in the dropdown options -&gt; “Apply”.\n“Save” and “Close”\nYou’re all set. Navigate to “Preview” to test the integration!",
+    "crumbs": [
+      "Implementation Methodology",
+      "Document Search",
+      "watson Discovery"
+    ]
+  },
+  {
+    "objectID": "src/implementation_methodology/imp-genesys.html",
+    "href": "src/implementation_methodology/imp-genesys.html",
+    "title": "Genesys",
+    "section": "",
+    "text": "Warning\n\n\n\nPrerequisite: Genesys Requirement",
+    "crumbs": [
+      "Implementation Methodology",
+      "Third-Party Applications",
+      "Genesys"
+    ]
+  },
+  {
+    "objectID": "src/implementation_methodology/imp-genesys.html#setup-genesys-web-messenger",
+    "href": "src/implementation_methodology/imp-genesys.html#setup-genesys-web-messenger",
+    "title": "Genesys",
+    "section": "1. Setup Genesys Web Messenger",
+    "text": "1. Setup Genesys Web Messenger\n\n\nSign up for a free trial of Genesys Cloud CX at this link. This trial will last for 14 days.\nOnce Genesys Cloud CX is running, configure the web messenger following these steps:\n\nClick Admin.\nUnder Message, click Messenger Configurations.\nEnter a name and description for your web messenger.\nIn the Appearance tab, select Hide for Set your Launcher Button Visibility and select Off for the User Interface.\nThe other settings are optional for basic set up. Once you have looked over all the options, click Save New Version.\n\nOnce your web messenger is configured, deploy the messenger following these steps:\n\nClick Admin.\nUnder Message, click Messenger Deployments.\nClick New Deployment.\nEnter a name and description.\nSet the Status to Active.\nUnder Select your Configuration click Select Configuration and select the verision of web messenger that you configured in the previous section.\nUnder Restrrict domain access select Allow all domains for testing and development purposes.\nClick Save. The Messenger Deployments page now displays your deployed messenger which you can click to access the deployment script which will be used in the next section to integrate with Watson Assistant.",
+    "crumbs": [
+      "Implementation Methodology",
+      "Third-Party Applications",
+      "Genesys"
+    ]
+  },
+  {
+    "objectID": "src/implementation_methodology/imp-genesys.html#connect-genesys-to-watson-assistant",
+    "href": "src/implementation_methodology/imp-genesys.html#connect-genesys-to-watson-assistant",
+    "title": "Genesys",
+    "section": "2. Connect Genesys to Watson Assistant",
+    "text": "2. Connect Genesys to Watson Assistant\n\n\n\n\n\n\n\nWarning\n\n\n\nPrerequisite: Webchat Interface\nNote: The Genesys SDK does not work if launched from a local HTML file opened directly in your browser (using file://). It needs to be served from a server (which can be localhost) over HTTP. You can use http-server if you need a simple local server for testing purposes.\n\n\n\nCongfigure HTML File for Genesys\n\nGet the script URL, environment, and deployment ID values from the Mesenger Deployments page on Genesys and have them ready to add to the Watson Assistant Embed Script.\nFollow the sample script which shows how to enable the Genesys integration at this link.\n\nThe serviceDesk portion of the script enables the Genesys integration. Simply add those values to where you have the Watson Assistant Embed script written out. Shown Below.\n\n\n\n&lt;script&gt;\n        window.watsonAssistantChatOptions = {\n        showRestartButton: true, //Optional\n        integrationID: \"[instance instegraionID]\", //From embed details of Assistant\n        region: \"aws-us-east-1\", //From embed details of Assistant\n        serviceInstanceID: \"[service instanceID]\", //From embed details of Assistant\n        \n        /*GENESYS SCRIPT BEGIN*/\n        serviceDesk: {\n            integrationType: 'genesyswebmessenger',\n            genesysMessenger: {\n            scriptURL: '[URL]',//Provided by Genesys console\n            deploymentID: '[DEPLOYMENT ID]', //Provided by Genesys console\n            environment: '[ENVIRONMENT]', //Provided by Genesys console\n            },\n        },\n        /*GENESYS SCRIPT END*/\n\n        onLoad: async (instance) =&gt; { await instance.render(); }\n        };\n        setTimeout(function(){\n        const t=document.createElement('script');\n        t.src=\"https://web-chat.global.assistant.watson.appdomain.cloud/versions/\" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + \"/WatsonAssistantChatEntry.js\";\n        document.head.appendChild(t);\n        });\n    &lt;/script&gt;\n\n\n\nConfigure Bot Connector in Assistant\n\nNavigate to the Assistant side bar and select “Integrations”\nWithin the “Channels” section select “Genesys Bot Connector”\nSelect the appropriate environment\nFill out the necessary credentials from the Genesys Console",
+    "crumbs": [
+      "Implementation Methodology",
+      "Third-Party Applications",
+      "Genesys"
+    ]
+  },
+  {
+    "objectID": "src/implementation_methodology/imp-genesys.html#using-genesys-live-agent",
+    "href": "src/implementation_methodology/imp-genesys.html#using-genesys-live-agent",
+    "title": "Genesys",
+    "section": "3. Using Genesys Live Agent",
+    "text": "3. Using Genesys Live Agent\n\n\nLog in to your Genesys trial account and toggle the Off Queue option in the top right to become On Queue.\nOpen your Watson Assistant that has been integrated with Genesys (over HTTP not on the UI or local HTML file) and follow action to connect to live agent.\nOnce you have clicked Connect to Live Agent go back to the Genesys account and you should see an incoming message which you can accept or decline. Click Accept and now you are able to communicate with a live customer using your Watson Assistant instance.",
+    "crumbs": [
+      "Implementation Methodology",
+      "Third-Party Applications",
+      "Genesys"
+    ]
+  },
+  {
+    "objectID": "src/implementation_methodology/imp-genesys.html#references",
+    "href": "src/implementation_methodology/imp-genesys.html#references",
+    "title": "Genesys",
+    "section": "References",
+    "text": "References\n\n\nIntegrating Watson Assistant with Genesys",
+    "crumbs": [
+      "Implementation Methodology",
+      "Third-Party Applications",
+      "Genesys"
     ]
   },
   {
@@ -271,25 +311,91 @@
     ]
   },
   {
-    "objectID": "src/solution_overview/overview.html",
-    "href": "src/solution_overview/overview.html",
-    "title": "Overview",
+    "objectID": "src/solution_overview/deploy_int.html",
+    "href": "src/solution_overview/deploy_int.html",
+    "title": "Integrations & Deployment",
     "section": "",
-    "text": "The objective of this solution is to demonstrate a chatbot which has the ability to orchestrate conversations to the appropriate channels and/or 3rd-party applications while leveraging generative AI technologies. To build a unified virtual assistant and achieve the desired outcomes for success, this solution will leverage watsonx Orchestrate to deliver six core capabilities:",
+    "text": "Several integrations between the various technologies mentioned are necessary to achieve a Unified Virtual Assistant solution with the capabilities mentioned below:\n\n\n\n\n\n\n\nCapability\nIBM Product\n\n\n\n\nIdentity Access Management\nIBM Security Verify\n\n\nGenAI-Driven Conversational Routing\nwatsonx.gov or watsonx.ai  Watson Machine Learning\n\n\nDocument Search\nwatsonx Discovery  watsonx.ai Watson Machine Learning\n\n\n3rd-Party Application Integrations\nwatsonx Orchestrate\n\n\nGovernance\nwatsonx.gov\n\n\nSubordinate Bot Integration\nwatsonx Orchestrate Assistant\n\n\n\n\n\n\n\n\n\nIntegration Method: OpenAPI Spec \nIntegrated to the assistant via “Custom Extension” with an OpenAPI spec our team developed to carry various actions with Verify’s API:\n\n\nAuthenticate Username and Password\n\n\nResetting Password\n\n\nRetrieve User’s Information\n\n\nInitiate Email OTP\n\n\nVerify Email OTP\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nYou can use either watsonx.gov OR watsonx.ai to carry out GenAI routing.\n\n\n\n\nIntegration Method: Watson Machine Learning Deployment OpenAPI Spec High-Level Steps:\n\n\nBuild prompts in watsonx.gov\n\nIntegrated watsonx.gov prompts to the assistant via “Custom Extension” with an OpenAPI spec.\n\nConfigured the relevant Actions in the assistant.\n\n\n\n\nIntegration Method: OpenAPI Spec High-Level Steps:\n\n\nIntegrated to the assistant via “Custom Extension” with an OpenAPI spec\n\nConfigured an “Action” within the Assistant to send prompts for generative AI use cases.\n\n\n\n\n\n\n\nIntegration Method: Watson Machine Learning Deployment OpenAPI spec High-Level Steps:\n\n\nLeveraged Watson Studio to ingest and embed documents into the appropriate vectorDB indices.\n\nDeployed a function to carry out RAG for each index with Watson Machine Learning.\n\nIntegrated to the assistant via “Custom Extension” with an OpenAPI Spec\n\nConfigured an “Action” within the Assistant to initiate RAG.\n\n\n\n\n\n\n\nIntegration Method: watsonx Orchestrate Skills  High-Level Steps:\n\n\nUse the appropriate credentials to connect to the skills in watsonx Orchestrate’s skill catalog.\n\nConnect to the relevant assistant\n\nConfigured an “Action” within the Assistant to initiate each skill.\n\n\n\n\nIntegration Method: native assistant channel integration  High-Level Steps:\n\n\nConfigure Genesys account.\n\nConnect to the relevant assistant.\n\n\n\n\n\nIntegration Method: Watson Machine Learning Deployment OpenAPI Spec High-Level Steps:\n\n\nBuild prompts in watsonx.gov\n\nIntegrated watsonx.gov prompts to the assistant via “Custom Extension” with an OpenAPI spec.\n\nConfigured the relevant Actions in the assistant.\n\n\n\n\nIntegration Method: OpenAPI Spec High-Level Steps:\n\n\nIntegrated to the assistant via “Custom Extension” with an OpenAPI spec\n\nConfigured an “Action” within the Assistant to initiate bot mediation.",
     "crumbs": [
       "Solution Overview",
-      "Overview"
+      "Integrations and Deployment"
     ]
   },
   {
-    "objectID": "src/solution_overview/overview.html#technology-overview",
-    "href": "src/solution_overview/overview.html#technology-overview",
-    "title": "Overview",
-    "section": "Technology Overview",
-    "text": "Technology Overview\nCore Platform: watsonx Orchestrate  IBM watsonx Orchestrate is a collaborative AI platform that automates workflows and manages complex business processes through seamless integration with enterprise systems which empowers users to streamline operations and boost productivity while enabling different capabilities like:\n\n\n\n\n\n\n\nCapability\nIBM Product\n\n\n\n\nIdentity Access Management\nIBM Security Verify\n\n\nGenerative AI-Driven Conversational Routing\nwatsonx.gov or watsonx.ai  Watson Machine Learning\n\n\nDocument Search\nwatsonx Discovery  watsonx.ai Watson Machine Learning\n\n\n3rd-Party Application Integrations\nwatsonx Orchestrate\n\n\nGovernance\nwatsonx.gov\n\n\nSubordinate Bot Integration\nwatsonx Orchestrate Assistant\n\n\n\n\nIBM Security Verify: Identity and access management solution ensuring secure authentication to protect digital assets and manage user identities.\nIBM watsonx.ai: Generative AI development platform offering preconfigured tools to carry out prompt engineering, and data science capabilities for efficient model building and deployment.\nIBM watsonx Discovery: An enterprise ready platform which ingests and embeds documents into a vectorDB to enable RAG practices across enterprise data.\nIBM watsonx.gov: A platform which supports end-to-end AI governance, automating processes from use case selection to model deployment and monitoring.\nIBM Watson Machine Learning: The platform for deployment, management, and operationalization of AI and machine learning models at scale which integrates seamlessly with various data sources and development environments.",
+    "objectID": "src/solution_overview/deploy_int.html#integrations",
+    "href": "src/solution_overview/deploy_int.html#integrations",
+    "title": "Integrations & Deployment",
+    "section": "",
+    "text": "Several integrations between the various technologies mentioned are necessary to achieve a Unified Virtual Assistant solution with the capabilities mentioned below:\n\n\n\n\n\n\n\nCapability\nIBM Product\n\n\n\n\nIdentity Access Management\nIBM Security Verify\n\n\nGenAI-Driven Conversational Routing\nwatsonx.gov or watsonx.ai  Watson Machine Learning\n\n\nDocument Search\nwatsonx Discovery  watsonx.ai Watson Machine Learning\n\n\n3rd-Party Application Integrations\nwatsonx Orchestrate\n\n\nGovernance\nwatsonx.gov\n\n\nSubordinate Bot Integration\nwatsonx Orchestrate Assistant\n\n\n\n\n\n\n\n\n\nIntegration Method: OpenAPI Spec \nIntegrated to the assistant via “Custom Extension” with an OpenAPI spec our team developed to carry various actions with Verify’s API:\n\n\nAuthenticate Username and Password\n\n\nResetting Password\n\n\nRetrieve User’s Information\n\n\nInitiate Email OTP\n\n\nVerify Email OTP\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nYou can use either watsonx.gov OR watsonx.ai to carry out GenAI routing.\n\n\n\n\nIntegration Method: Watson Machine Learning Deployment OpenAPI Spec High-Level Steps:\n\n\nBuild prompts in watsonx.gov\n\nIntegrated watsonx.gov prompts to the assistant via “Custom Extension” with an OpenAPI spec.\n\nConfigured the relevant Actions in the assistant.\n\n\n\n\nIntegration Method: OpenAPI Spec High-Level Steps:\n\n\nIntegrated to the assistant via “Custom Extension” with an OpenAPI spec\n\nConfigured an “Action” within the Assistant to send prompts for generative AI use cases.\n\n\n\n\n\n\n\nIntegration Method: Watson Machine Learning Deployment OpenAPI spec High-Level Steps:\n\n\nLeveraged Watson Studio to ingest and embed documents into the appropriate vectorDB indices.\n\nDeployed a function to carry out RAG for each index with Watson Machine Learning.\n\nIntegrated to the assistant via “Custom Extension” with an OpenAPI Spec\n\nConfigured an “Action” within the Assistant to initiate RAG.\n\n\n\n\n\n\n\nIntegration Method: watsonx Orchestrate Skills  High-Level Steps:\n\n\nUse the appropriate credentials to connect to the skills in watsonx Orchestrate’s skill catalog.\n\nConnect to the relevant assistant\n\nConfigured an “Action” within the Assistant to initiate each skill.\n\n\n\n\nIntegration Method: native assistant channel integration  High-Level Steps:\n\n\nConfigure Genesys account.\n\nConnect to the relevant assistant.\n\n\n\n\n\nIntegration Method: Watson Machine Learning Deployment OpenAPI Spec High-Level Steps:\n\n\nBuild prompts in watsonx.gov\n\nIntegrated watsonx.gov prompts to the assistant via “Custom Extension” with an OpenAPI spec.\n\nConfigured the relevant Actions in the assistant.\n\n\n\n\nIntegration Method: OpenAPI Spec High-Level Steps:\n\n\nIntegrated to the assistant via “Custom Extension” with an OpenAPI spec\n\nConfigured an “Action” within the Assistant to initiate bot mediation.",
     "crumbs": [
       "Solution Overview",
-      "Overview"
+      "Integrations and Deployment"
+    ]
+  },
+  {
+    "objectID": "src/solution_overview/deploy_int.html#deployment",
+    "href": "src/solution_overview/deploy_int.html#deployment",
+    "title": "Integrations & Deployment",
+    "section": "Deployment",
+    "text": "Deployment\nOnce all the relevant technologies have been integrated the solution is ready to be deployed. To carry out the deployment for this solution we leveraged IBM Cloud Object Storage to host a static website with the assistant we created embedded on the website.\n\nUser Interface\n\n\n\nProcess Flow",
+    "crumbs": [
+      "Solution Overview",
+      "Integrations and Deployment"
+    ]
+  },
+  {
+    "objectID": "src/solution_overview/prepare.html",
+    "href": "src/solution_overview/prepare.html",
+    "title": "Overview",
+    "section": "",
+    "text": "The objective of this solution is to demonstrate a chatbot which has the ability to orchestrate conversations to the appropriate channels and/or 3rd-party applications while leveraging generative AI technologies. This unified agent solution revolves around six key capabilities:\nCore Product: watsonx Orchestrate\n\n\n\n\n\n\n\nCapability\nIBM Product\n\n\n\n\nIdentity Access Management\nIBM Security Verify\n\n\nGenerative AI-Driven Conversational Routing\nwatsonx.gov or watsonx.ai  Watson Matchine Learning\n\n\nRAG Document Search\nwatsonx Discovery  watsonx.ai Watson Machine Learning\n\n\n3rd-Party Application Integrations\nwatsonx Orchestrate\n\n\nGovernance\nwatsonx.gov\n\n\nSubordinate Bot Integration\nwatsonx Orchestrate Assistant"
+  },
+  {
+    "objectID": "src/solution_overview/prepare.html#user-interface",
+    "href": "src/solution_overview/prepare.html#user-interface",
+    "title": "Overview",
+    "section": "User Interface",
+    "text": "User Interface\n\nLeveraging IBM Cloud Object Storage to host a static website for the chatbot.\n\nConfiguration Steps here"
+  },
+  {
+    "objectID": "src/solution_overview/prepare.html#identity-and-access-management-iam",
+    "href": "src/solution_overview/prepare.html#identity-and-access-management-iam",
+    "title": "Overview",
+    "section": "Identity and Access Management (IAM)",
+    "text": "Identity and Access Management (IAM)\nIAM can be carried out in one of two methods:\n\nSecurity Verify SSO\nSimulation\n\n\nIBM Security Verify SSO\nLeverage the IBM Security Verify API to carry differnt actions like authenticating user logins and resetting passwords within the Assistant builder UI.\nImplementation Guide Here\n\n\nSimulation\nSimulating user login within watsonx Orchestrate Assistant Builder can be achieved by storing simulated individuals in a data structure. This data structure, typically a list or map, can store information about each simulated user, such as their name, access level, and other relevant details. By initializing this data structure with a set of simulated users, you can create a realistic login scenario where the system checks user credentials and grants or denies access accordingly.\nStoring simulated individuals in a data structure within watsonx Orchestrate Assistant Builder allows you to test the login functionality and ensure that the system behaves as expected. This can help identify potential issues early in the development process, saving time and resources. Additionally, you can customize the simulated users’ data to represent different user types, enabling you to test the system’s access control mechanisms and ensure that users are only granted access to the appropriate actions and data.\nBy using simulated users in this manner, you can thoroughly test the user login functionality and ensure that the unified agent with generative AI capabilities is secure, reliable, and user-friendly.\nImplementation Guide Here"
+  },
+  {
+    "objectID": "src/solution_overview/prepare.html#conversational-engine",
+    "href": "src/solution_overview/prepare.html#conversational-engine",
+    "title": "Overview",
+    "section": "Conversational Engine",
+    "text": "Conversational Engine\nThe conversational engine was built using watsonx Orchestrate Assistant Builder where generative AI-driven routing was configured to direct users to the most appropriate workflows and data based on their access permissions.\n\nGenAI Routing\nConfiguration Steps here"
+  },
+  {
+    "objectID": "src/solution_overview/prepare.html#integrations",
+    "href": "src/solution_overview/prepare.html#integrations",
+    "title": "Overview",
+    "section": "Integrations",
+    "text": "Integrations\n\nRAG Document Search\nRAG Document Search can be carried out in one of two methods:\n\n1. watsonx Discovery:\nThis pattern consists of creating an integration with watsonx Discovery. watsonx Discovery leverage a vectorDB to store data corpus’s embeddings to enable RAG.  Required Integrations:\n\nwatsonx Discovery\nwatsonx.ai\n\nImplementation Guide Here\n\n\n2. watson Discovery:\nThis pattern consists of creating two integrations with watson Discovery and watsonx.ai. Watson Discovery is used to store and carry out searches on data collections.\nRequired Integrations:\n\nwatson Discovery\nwatsonx.ai\n\nImplementation Guide Here\n\n\n\nGovernance\nGovernance is exemplified in two key ways:\n\nwatsonx.gov: IBM’s enterprise governance platform for monitoring key metrics associated with LLMs\nRAG Source Attribution Links\n\n\nwatsonx.gov\n\nIn summary, the implementation of IBM® watsonx.governance™ provides a comprehensive and seamless solution for the development, evaluation, deployment, and monitoring of AI models, ensuring compliance, transparency, and optimal performance throughout the AI lifecycle.\nRequired Integrations:\n\nwatsonx.gov\n\nImplementation Guide Here\n\n\nRAG Source Links\nFor every user query that involves RAG Document Search, a source link will be provided with each response to ensure transparency by clearly indicating the data corpus from which the answer was derived.\nImplementation Guide Here\n\n\n\n3rd-Party Applications\n\nLeverage native assistant builder extensions to integrate with Genesys.\n\nGenesys Configuration Steps here\n\nLeverage watsonx Orchestrate skills to integrate with ServiceNow and Workday\n\nServiceNow Configuration Steps here\nWorkday Configuration Steps here\n\n\n\n\nSubordinate Bot\n\nLeverage native assistant builder extensions to integrate with other watsonx Assistants\nConfiguration Steps here\n\n\n\nData Repository\n\nLeverage Cloud Object Storage to store documents relevant to the use case"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Unified Virtual Assistant",
+    "section": "",
+    "text": "ET",
+    "crumbs": [
+      "Problem Definition"
+    ]
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "Unified Virtual Assistant",
+    "section": "Overview",
+    "text": "Overview\n\nBusiness Statement\n\nSiloed internal chatbots are disrupting enterprise operations, compliance, and architectural standards.\nEmployees are frustrated because they have to locate the right chatbot to answer their specific questions.\nEnterprise Architecture team is frustrated because lines of business will launch their own chatbot to fill their teams’ specific needs.\nCompliance teams are frustrated because there is no single point of oversight to ensures that chatbot responses are grounded on vetted information and that sensitive material remains protected. ​\n\n\n\nChallenges\n\nUser Experience challenges:\n\nTime to information: Information is difficult to find in a timely manner, as employees need to first know which chatbot to leverage for their particular question.\nLimited Access: users will only be able to leverage the chatbots they are aware of. Many employees will be without the conversational search of a chatbot unless they have awareness and access to it.\nLimited capabilities and integration: very few chatbots are currently designed to do more than provide information. Employees need to take extra steps in order to action on the insight (like opening tickets, connecting with support, etc)\n\nCost and Operational challenges:\n\nRedundant efforts: lines of business across the business are duplicating efforts by creating redundant chatbots.\nScalability: Without a unified approach, every new chatbot that is added only magnifies the existing user experience challenges and info risk challenges.\n\nInformation Challenges:\n\nVeracity Risk: How can Enterprise Architecture and Compliance teams ensure that the many chatbots across each line of business are providing employees information grounded on vetted source material?\nSecurity and Sensitivity Risk: How can Enterprise Architecture and Compliance teams ensure that sensitive material remains protected across specified clearance levels?\n\nEnterprise-level governance: Enterprise Architecture lacks a single view of all LLMs deployed in the organization.\n\n\n\nDesired Outcomes\n\nA platform that can unite across lines of business\nFlexibility to connect with existing systems as well as extend to future additions.\nEnable users to take actions (like opening tickets, changing passwords, etc)\nEnable users to answer questions, grounded on pre-approved source material\nGoverned access to sensitive content (only allow access to content that you are cleared for)\nDelegate specified questions to vetted chatbots that may already exist across the enterprise\n\n\n\nExpected Benefits to the business\n\nA More Informed Workforce: less noise per inquiry, less time to answers\nCost and Operational Efficiency Gains: reduced duplicated efforts and a scalable framework\nEnhanced Compliance and Governance: a united framework enables clearer centralized oversight - including models deployed, model health, source information, governed access to sensitive material",
+    "crumbs": [
+      "Problem Definition"
     ]
   },
   {
@@ -390,72 +496,110 @@
     ]
   },
   {
-    "objectID": "src/solution_overview/deploy_int.html",
-    "href": "src/solution_overview/deploy_int.html",
-    "title": "Integrations & Deployment",
+    "objectID": "src/solution_overview/overview.html",
+    "href": "src/solution_overview/overview.html",
+    "title": "Overview",
     "section": "",
-    "text": "Several integrations between the various technologies mentioned are necessary to achieve a Unified Virtual Assistant solution with the capabilities mentioned below:\n\n\n\n\n\n\n\nCapability\nIBM Product\n\n\n\n\nIdentity Access Management\nIBM Security Verify\n\n\nGenAI-Driven Conversational Routing\nwatsonx.gov or watsonx.ai  Watson Machine Learning\n\n\nDocument Search\nwatsonx Discovery  watsonx.ai Watson Machine Learning\n\n\n3rd-Party Application Integrations\nwatsonx Orchestrate\n\n\nGovernance\nwatsonx.gov\n\n\nSubordinate Bot Integration\nwatsonx Orchestrate Assistant\n\n\n\n\n\n\n\n\n\nIntegration Method: OpenAPI Spec \nIntegrated to the assistant via “Custom Extension” with an OpenAPI spec our team developed to carry various actions with Verify’s API:\n\n\nAuthenticate Username and Password\n\n\nResetting Password\n\n\nRetrieve User’s Information\n\n\nInitiate Email OTP\n\n\nVerify Email OTP\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nYou can use either watsonx.gov OR watsonx.ai to carry out GenAI routing.\n\n\n\n\nIntegration Method: Watson Machine Learning Deployment OpenAPI Spec High-Level Steps:\n\n\nBuild prompts in watsonx.gov\n\nIntegrated watsonx.gov prompts to the assistant via “Custom Extension” with an OpenAPI spec.\n\nConfigured the relevant Actions in the assistant.\n\n\n\n\nIntegration Method: OpenAPI Spec High-Level Steps:\n\n\nIntegrated to the assistant via “Custom Extension” with an OpenAPI spec\n\nConfigured an “Action” within the Assistant to send prompts for generative AI use cases.\n\n\n\n\n\n\n\nIntegration Method: Watson Machine Learning Deployment OpenAPI spec High-Level Steps:\n\n\nLeveraged Watson Studio to ingest and embed documents into the appropriate vectorDB indices.\n\nDeployed a function to carry out RAG for each index with Watson Machine Learning.\n\nIntegrated to the assistant via “Custom Extension” with an OpenAPI Spec\n\nConfigured an “Action” within the Assistant to initiate RAG.\n\n\n\n\n\n\n\nIntegration Method: watsonx Orchestrate Skills  High-Level Steps:\n\n\nUse the appropriate credentials to connect to the skills in watsonx Orchestrate’s skill catalog.\n\nConnect to the relevant assistant\n\nConfigured an “Action” within the Assistant to initiate each skill.\n\n\n\n\nIntegration Method: native assistant channel integration  High-Level Steps:\n\n\nConfigure Genesys account.\n\nConnect to the relevant assistant.\n\n\n\n\n\nIntegration Method: Watson Machine Learning Deployment OpenAPI Spec High-Level Steps:\n\n\nBuild prompts in watsonx.gov\n\nIntegrated watsonx.gov prompts to the assistant via “Custom Extension” with an OpenAPI spec.\n\nConfigured the relevant Actions in the assistant.\n\n\n\n\nIntegration Method: OpenAPI Spec High-Level Steps:\n\n\nIntegrated to the assistant via “Custom Extension” with an OpenAPI spec\n\nConfigured an “Action” within the Assistant to initiate bot mediation.",
+    "text": "The objective of this solution is to demonstrate a chatbot which has the ability to orchestrate conversations to the appropriate channels and/or 3rd-party applications while leveraging generative AI technologies. To build a unified virtual assistant and achieve the desired outcomes for success, this solution will leverage watsonx Orchestrate to deliver six core capabilities:",
     "crumbs": [
       "Solution Overview",
-      "Integrations and Deployment"
+      "Overview"
     ]
   },
   {
-    "objectID": "src/solution_overview/deploy_int.html#integrations",
-    "href": "src/solution_overview/deploy_int.html#integrations",
-    "title": "Integrations & Deployment",
-    "section": "",
-    "text": "Several integrations between the various technologies mentioned are necessary to achieve a Unified Virtual Assistant solution with the capabilities mentioned below:\n\n\n\n\n\n\n\nCapability\nIBM Product\n\n\n\n\nIdentity Access Management\nIBM Security Verify\n\n\nGenAI-Driven Conversational Routing\nwatsonx.gov or watsonx.ai  Watson Machine Learning\n\n\nDocument Search\nwatsonx Discovery  watsonx.ai Watson Machine Learning\n\n\n3rd-Party Application Integrations\nwatsonx Orchestrate\n\n\nGovernance\nwatsonx.gov\n\n\nSubordinate Bot Integration\nwatsonx Orchestrate Assistant\n\n\n\n\n\n\n\n\n\nIntegration Method: OpenAPI Spec \nIntegrated to the assistant via “Custom Extension” with an OpenAPI spec our team developed to carry various actions with Verify’s API:\n\n\nAuthenticate Username and Password\n\n\nResetting Password\n\n\nRetrieve User’s Information\n\n\nInitiate Email OTP\n\n\nVerify Email OTP\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nYou can use either watsonx.gov OR watsonx.ai to carry out GenAI routing.\n\n\n\n\nIntegration Method: Watson Machine Learning Deployment OpenAPI Spec High-Level Steps:\n\n\nBuild prompts in watsonx.gov\n\nIntegrated watsonx.gov prompts to the assistant via “Custom Extension” with an OpenAPI spec.\n\nConfigured the relevant Actions in the assistant.\n\n\n\n\nIntegration Method: OpenAPI Spec High-Level Steps:\n\n\nIntegrated to the assistant via “Custom Extension” with an OpenAPI spec\n\nConfigured an “Action” within the Assistant to send prompts for generative AI use cases.\n\n\n\n\n\n\n\nIntegration Method: Watson Machine Learning Deployment OpenAPI spec High-Level Steps:\n\n\nLeveraged Watson Studio to ingest and embed documents into the appropriate vectorDB indices.\n\nDeployed a function to carry out RAG for each index with Watson Machine Learning.\n\nIntegrated to the assistant via “Custom Extension” with an OpenAPI Spec\n\nConfigured an “Action” within the Assistant to initiate RAG.\n\n\n\n\n\n\n\nIntegration Method: watsonx Orchestrate Skills  High-Level Steps:\n\n\nUse the appropriate credentials to connect to the skills in watsonx Orchestrate’s skill catalog.\n\nConnect to the relevant assistant\n\nConfigured an “Action” within the Assistant to initiate each skill.\n\n\n\n\nIntegration Method: native assistant channel integration  High-Level Steps:\n\n\nConfigure Genesys account.\n\nConnect to the relevant assistant.\n\n\n\n\n\nIntegration Method: Watson Machine Learning Deployment OpenAPI Spec High-Level Steps:\n\n\nBuild prompts in watsonx.gov\n\nIntegrated watsonx.gov prompts to the assistant via “Custom Extension” with an OpenAPI spec.\n\nConfigured the relevant Actions in the assistant.\n\n\n\n\nIntegration Method: OpenAPI Spec High-Level Steps:\n\n\nIntegrated to the assistant via “Custom Extension” with an OpenAPI spec\n\nConfigured an “Action” within the Assistant to initiate bot mediation.",
+    "objectID": "src/solution_overview/overview.html#technology-overview",
+    "href": "src/solution_overview/overview.html#technology-overview",
+    "title": "Overview",
+    "section": "Technology Overview",
+    "text": "Technology Overview\nCore Platform: watsonx Orchestrate  IBM watsonx Orchestrate is a collaborative AI platform that automates workflows and manages complex business processes through seamless integration with enterprise systems which empowers users to streamline operations and boost productivity while enabling different capabilities like:\n\n\n\n\n\n\n\nCapability\nIBM Product\n\n\n\n\nIdentity Access Management\nIBM Security Verify\n\n\nGenerative AI-Driven Conversational Routing\nwatsonx.gov or watsonx.ai  Watson Machine Learning\n\n\nDocument Search\nwatsonx Discovery  watsonx.ai Watson Machine Learning\n\n\n3rd-Party Application Integrations\nwatsonx Orchestrate\n\n\nGovernance\nwatsonx.gov\n\n\nSubordinate Bot Integration\nwatsonx Orchestrate Assistant\n\n\n\n\nIBM Security Verify: Identity and access management solution ensuring secure authentication to protect digital assets and manage user identities.\nIBM watsonx.ai: Generative AI development platform offering preconfigured tools to carry out prompt engineering, and data science capabilities for efficient model building and deployment.\nIBM watsonx Discovery: An enterprise ready platform which ingests and embeds documents into a vectorDB to enable RAG practices across enterprise data.\nIBM watsonx.gov: A platform which supports end-to-end AI governance, automating processes from use case selection to model deployment and monitoring.\nIBM Watson Machine Learning: The platform for deployment, management, and operationalization of AI and machine learning models at scale which integrates seamlessly with various data sources and development environments.",
     "crumbs": [
       "Solution Overview",
-      "Integrations and Deployment"
+      "Overview"
     ]
   },
   {
-    "objectID": "src/solution_overview/deploy_int.html#deployment",
-    "href": "src/solution_overview/deploy_int.html#deployment",
-    "title": "Integrations & Deployment",
-    "section": "Deployment",
-    "text": "Deployment\nOnce all the relevant technologies have been integrated the solution is ready to be deployed. To carry out the deployment for this solution we leveraged IBM Cloud Object Storage to host a static website with the assistant we created embedded on the website.\n\nUser Interface\n\n\n\nProcess Flow",
+    "objectID": "src/implementation_methodology/imp-assis-ext.html",
+    "href": "src/implementation_methodology/imp-assis-ext.html",
+    "title": "Assistant Custom Extension",
+    "section": "",
+    "text": "This section will describe how we were able to query one watsonx assistant from another using the watsonx assistant API. In addition, this guide will also include information about how to update session variables on the subordinate bot from the calling bot. Ways to integrate with a subordinate watsonx assisant bot:",
     "crumbs": [
-      "Solution Overview",
-      "Integrations and Deployment"
+      "Implementation Methodology",
+      "Subordinate Bots",
+      "Assistant Custom Extension"
     ]
   },
   {
-    "objectID": "src/solution_overview/prepare.html",
-    "href": "src/solution_overview/prepare.html",
-    "title": "Overview",
+    "objectID": "src/implementation_methodology/imp-assis-ext.html#assistant-custom-extension",
+    "href": "src/implementation_methodology/imp-assis-ext.html#assistant-custom-extension",
+    "title": "Assistant Custom Extension",
+    "section": "Assistant Custom Extension",
+    "text": "Assistant Custom Extension\n\n\nGenerate API Key\n\nNavigate to the subordinate bot instance\nIn the sidebar, navigate to “Assistant Settings”\nUnder “Assistant IDs and API details”, select “Generate API key” and save it for later\n\n\n\nIdentify OpenAPI spec values\nTwo values will be needed to connect to a subordinate Assistant: * service instance url * environmentID\n\nWithin the Assistant Builder’s sidebar, navigate to the “Assistant Settings”\nUnder “Assistant IDs and API details”, select “View details”\nSave/copy the values for:\n\nservice instance URL\nDraft/Live Environment ID (whichever is applicable)\n\n\n\n\nCreate the Custom Extension\n\nNavigate and download the OpenAPI spec for another assistant bot here\nModify the server url at line 10 with the service instance url from step 3 here\nNavigate to the integrations section within the Assistant Builder sidebar\nSelect “Build custom extension” and name the extension\nUpload the OpenApi spec from step 1 and press “Finish”\nSelect “Add+” within the newly configured extension\nSelect “Next” and update values:\n\nAuthentication type: Basic auth\nUsername: apikey\nPassword: Password from here\n\n\n\n\nAction Integration\nTwo api calls are needed to successfully integrate this extension:\n\nCreate a session id for the subordinate bot\nMake a dialog request to the subordinate bot\n\n\nCreate a session id\n\nWithin the appropriate action, create a step and under “And then” select “Use an extension”\nSelect the appropriate subordinate bot extension made here\nSelect the Operation as “Create Session”\nSet the Parameters to:\n\nenvironment_id: Environment ID from step 3 of Identify OpenAPI spec values\n\n\n\n\n\n\n\n\nTip\n\n\n\nMake sure the “environment_id” variable type is ‘text’\n\n\n\n\nMake a dialog request\n\nCreate a new step after the action with the “create a session” extension\n\nUnder the “And then” Section, select “Use an extension”\nSelect the appropriate subordinate bot extension made here\nSelect the Operation as “Make dialog request”\nSet the Parameters to:\n\ninput.text: input.text\ninput.message_type: text\nuseContext.skills.actions skill.skill_variables : {\"DEFINED_VARIABLE\" : \"VARIABLE_VALUE\"}\nsession_id: [session_id from previous step w/ “Create Session” call]\nenvironment_id: Environment ID from step 3 of Identify OpenAPI spec values\n\n\n\n\n\n\n\n\nA note about session variables\n\n\n\nSession variables play a crucial role in storing and managing information within and across watsonx Assistant actions. These variables can be defined either by the user or automatically by the assistant, with each session maintaining a distinct instance of each variable.\nWhen there is a need to pass additional information beyond the input query to a subordinate bot, session variables are the appropriate mechanism. To facilitate this, the session variable must first be defined on the subordinate side before its value can be updated via a dialog request. Once defined, the variable can be updated by including its name and the desired value in a JSON object under the useContext.skills.actions.skill.skill_variables field.\nThis approach ensures smooth communication and data transfer between actions, enabling more dynamic and complex chatbot workflows.",
+    "crumbs": [
+      "Implementation Methodology",
+      "Subordinate Bots",
+      "Assistant Custom Extension"
+    ]
+  },
+  {
+    "objectID": "src/implementation_methodology/rag-attr-links.html",
+    "href": "src/implementation_methodology/rag-attr-links.html",
+    "title": "RAG Attribution Links",
     "section": "",
-    "text": "The objective of this solution is to demonstrate a chatbot which has the ability to orchestrate conversations to the appropriate channels and/or 3rd-party applications while leveraging generative AI technologies. This unified agent solution revolves around six key capabilities:\nCore Product: watsonx Orchestrate\n\n\n\n\n\n\n\nCapability\nIBM Product\n\n\n\n\nIdentity Access Management\nIBM Security Verify\n\n\nGenerative AI-Driven Conversational Routing\nwatsonx.gov or watsonx.ai  Watson Matchine Learning\n\n\nRAG Document Search\nwatsonx Discovery  watsonx.ai Watson Machine Learning\n\n\n3rd-Party Application Integrations\nwatsonx Orchestrate\n\n\nGovernance\nwatsonx.gov\n\n\nSubordinate Bot Integration\nwatsonx Orchestrate Assistant"
+    "text": "Warning\n\n\n\nPrerequisite: watsonx Orchestrate Software Requirement\nThis section will go over how to add source links for files within an Assistant. Though there are different methods in which source links can be created, this document will cover these methods:",
+    "crumbs": [
+      "Implementation Methodology",
+      "Governance",
+      "RAG Attribution Links"
+    ]
   },
   {
-    "objectID": "src/solution_overview/prepare.html#user-interface",
-    "href": "src/solution_overview/prepare.html#user-interface",
-    "title": "Overview",
-    "section": "User Interface",
-    "text": "User Interface\n\nLeveraging IBM Cloud Object Storage to host a static website for the chatbot.\n\nConfiguration Steps here"
+    "objectID": "src/implementation_methodology/rag-attr-links.html#access-via-cos-cloud-object-storage",
+    "href": "src/implementation_methodology/rag-attr-links.html#access-via-cos-cloud-object-storage",
+    "title": "RAG Attribution Links",
+    "section": "Access via COS (Cloud Object Storage)",
+    "text": "Access via COS (Cloud Object Storage)\n\nIn the appropriate Cloud Object Storage instance create a new “Custom Bucket”\nWithin the new bucket, navigate to the “Permissions” tab\nWithin the “Public Access” Section select “Content Reader” as the “Role for this bucket”\nSelect “Create access policy” to enable public access for the bucket\nUpload the necessary documents which will be the source for the dedicated RAG Document Search\n\n\n\n\n\n\n\nNote\n\n\n\nEnsure the name of the sources are the same as the sources in the target data courpus/source (ie. COS, Watson Discovery, etc.)\n\n\n\nAssistant Integration\n\n\n\n\n\n\nWarning\n\n\n\nPrerequisites: Ensure the necessary documents have been uploaded to the appropriate COS buckets here: Access via COS\n\n\n\n\nExtract Source Links’ Base Url\n\nNavigate to the COS bucket with all the designated source links for the RAG Document Search functionality.\nOn any of the documents click the three dots to the left and find the “Object public url”. May require to refresh the page if “Object public url” is not there.\nWithin the url extract and copy the first part of the link up till the first “/” (ex. “https://[domain].s3.us-south.cloud-object-storage.appdomain.cloud”)\n\n\n\nConfigure to existing metadata\nThere are two ways to retrieve source links from RAG Document Search demonstrated in these docs:\n\nwatson Discovery\nwatsonx Discovery\n\n\nwatsonx Discovery\n\nWithin the appropriate Assistant step concatenante the link value from step 3 to the RAG Document Search metatdata source url\nCreate source link variable with the expression value of:\n\"[BASE URL LINK]\" + ${step_[x]_result_1}.body.references[y].metadata.file_name\n\n\n\n\n\n\n\nNote\n\n\n\n\nReplace “x” with the appropriate step number of the result of the watsonx discovery extension\nReplace “y” with either 0-3 to reference source file_name 1-3\n\n\n\n\nReference Example: \"https://examplebucket.s3.us-south.cloud-object-storage.appdomain.cloud/\" + ${step_001_result_1.body.references[0].file_name}\n\n\nOptional: Insert source link variable in output for click=able links\nFor more information click &lt;a href=\"[source_url session variable from step 2]\" target=\"blank\"&gt;here&lt;/a&gt;\n\n\n\nwatson Discovery\n\nWithin the appropriate Assistant step concatenante the link value from step 3 to the RAG Document Search metatdata source url\nCreate source link variable with the expression value of:\n\"[BASE URL LINK]\" + ${step_[x]_result_2}.body.results[0].metadata.source.url\n\n\n\n\n\n\n\nNote\n\n\n\n- Replace \"x\" with the appropriate step number of the result of the watsonx Discovery extension or choose from the appropriate step variables\n\n\n\nReference Example:\"https://examplebucket.s3.us-south.cloud-object-storage.appdomain.cloud/\" + ${step_001_result_2}.body.results[0].metatdata.source.url\n\n\nOptional: Insert source link variable in output for click=able links\nFor more information click &lt;a href=\"[source_url session variable from step 2]\" target=\"blank\"&gt;here&lt;/a&gt;",
+    "crumbs": [
+      "Implementation Methodology",
+      "Governance",
+      "RAG Attribution Links"
+    ]
   },
   {
-    "objectID": "src/solution_overview/prepare.html#identity-and-access-management-iam",
-    "href": "src/solution_overview/prepare.html#identity-and-access-management-iam",
-    "title": "Overview",
-    "section": "Identity and Access Management (IAM)",
-    "text": "Identity and Access Management (IAM)\nIAM can be carried out in one of two methods:\n\nSecurity Verify SSO\nSimulation\n\n\nIBM Security Verify SSO\nLeverage the IBM Security Verify API to carry differnt actions like authenticating user logins and resetting passwords within the Assistant builder UI.\nImplementation Guide Here\n\n\nSimulation\nSimulating user login within watsonx Orchestrate Assistant Builder can be achieved by storing simulated individuals in a data structure. This data structure, typically a list or map, can store information about each simulated user, such as their name, access level, and other relevant details. By initializing this data structure with a set of simulated users, you can create a realistic login scenario where the system checks user credentials and grants or denies access accordingly.\nStoring simulated individuals in a data structure within watsonx Orchestrate Assistant Builder allows you to test the login functionality and ensure that the system behaves as expected. This can help identify potential issues early in the development process, saving time and resources. Additionally, you can customize the simulated users’ data to represent different user types, enabling you to test the system’s access control mechanisms and ensure that users are only granted access to the appropriate actions and data.\nBy using simulated users in this manner, you can thoroughly test the user login functionality and ensure that the unified agent with generative AI capabilities is secure, reliable, and user-friendly.\nImplementation Guide Here"
+    "objectID": "src/implementation_methodology/watsonx-dis.html",
+    "href": "src/implementation_methodology/watsonx-dis.html",
+    "title": "watsonx Discovery",
+    "section": "",
+    "text": "Warning\n\n\n\nPrerequisite: watsonx Discovery Software Requirement",
+    "crumbs": [
+      "Implementation Methodology",
+      "Document Search",
+      "watsonx Discovery"
+    ]
   },
   {
-    "objectID": "src/solution_overview/prepare.html#conversational-engine",
-    "href": "src/solution_overview/prepare.html#conversational-engine",
-    "title": "Overview",
-    "section": "Conversational Engine",
-    "text": "Conversational Engine\nThe conversational engine was built using watsonx Orchestrate Assistant Builder where generative AI-driven routing was configured to direct users to the most appropriate workflows and data based on their access permissions.\n\nGenAI Routing\nConfiguration Steps here"
+    "objectID": "src/implementation_methodology/watsonx-dis.html#build-setup",
+    "href": "src/implementation_methodology/watsonx-dis.html#build-setup",
+    "title": "watsonx Discovery",
+    "section": "Build setup",
+    "text": "Build setup\n\n\n\n\n\n\nWarning\n\n\n\nThis repo can only be access with an IBM Account\n\n\nNavigate to this github and download this project file",
+    "crumbs": [
+      "Implementation Methodology",
+      "Document Search",
+      "watsonx Discovery"
+    ]
   },
   {
-    "objectID": "src/solution_overview/prepare.html#integrations",
-    "href": "src/solution_overview/prepare.html#integrations",
-    "title": "Overview",
-    "section": "Integrations",
-    "text": "Integrations\n\nRAG Document Search\nRAG Document Search can be carried out in one of two methods:\n\n1. watsonx Discovery:\nThis pattern consists of creating an integration with watsonx Discovery. watsonx Discovery leverage a vectorDB to store data corpus’s embeddings to enable RAG.  Required Integrations:\n\nwatsonx Discovery\nwatsonx.ai\n\nImplementation Guide Here\n\n\n2. watson Discovery:\nThis pattern consists of creating two integrations with watson Discovery and watsonx.ai. Watson Discovery is used to store and carry out searches on data collections.\nRequired Integrations:\n\nwatson Discovery\nwatsonx.ai\n\nImplementation Guide Here\n\n\n\nGovernance\nGovernance is exemplified in two key ways:\n\nwatsonx.gov: IBM’s enterprise governance platform for monitoring key metrics associated with LLMs\nRAG Source Attribution Links\n\n\nwatsonx.gov\n\nIn summary, the implementation of IBM® watsonx.governance™ provides a comprehensive and seamless solution for the development, evaluation, deployment, and monitoring of AI models, ensuring compliance, transparency, and optimal performance throughout the AI lifecycle.\nRequired Integrations:\n\nwatsonx.gov\n\nImplementation Guide Here\n\n\nRAG Source Links\nFor every user query that involves RAG Document Search, a source link will be provided with each response to ensure transparency by clearly indicating the data corpus from which the answer was derived.\nImplementation Guide Here\n\n\n\n3rd-Party Applications\n\nLeverage native assistant builder extensions to integrate with Genesys.\n\nGenesys Configuration Steps here\n\nLeverage watsonx Orchestrate skills to integrate with ServiceNow and Workday\n\nServiceNow Configuration Steps here\nWorkday Configuration Steps here\n\n\n\n\nSubordinate Bot\n\nLeverage native assistant builder extensions to integrate with other watsonx Assistants\nConfiguration Steps here\n\n\n\nData Repository\n\nLeverage Cloud Object Storage to store documents relevant to the use case"
+    "objectID": "src/implementation_methodology/watsonx-dis.html#build-walkthrough",
+    "href": "src/implementation_methodology/watsonx-dis.html#build-walkthrough",
+    "title": "watsonx Discovery",
+    "section": "Build Walkthrough",
+    "text": "Build Walkthrough\n\n\nCreate Elasticsearch Resource\nMake sure to select the Platinum version with native ELSIR model, and be mindful of the RAM allocation.\n\n\n\n\n\n\nNote\n\n\n\nWe ran into issues with extremely high RAM usage and unreliability, so we provisioned an instance of Elasticsearch with 64GB of RAM, 100GB of storage, and 16 cores.\n\n\n\n\nCreate Watson Machine Learning Deployment Space\n\nNavigate to the Deployments section of Watson Studio.\nCreate a new deployment space.\n\nThe storage service should automatically be assigned to your Cloud Object Storage service.\nAssign your Watson Machine Learning service to the Machine Learning Service. Once the deployment space is created, navigate to the space’s Manage tab and copy the Space GUID.\n\n\n\n\nUpload Documents to COS Bucket\n\nNavigate to the appropriate “Cloud Object Storage” resource and select “Create Bucket”\nSelect “Create a Custom Bucket” and fill out the necessary fields and press “Create”\nUpload the relevant documents\nCreate a “Content Reader” credential for the Cloud Object Storage resource\n\n\n\nCreate an IBM Cloud API Key\nCreate an IBM Cloud API key in IBM Cloud here and save it.\n\n\nCreate the Watson Studio Project\n\nDownload the “WatsonStudioProjectTemplate.zip”here.\nNavigate to the Projects section of Watson Studio and change the context from “Watson Studio” to “watsonx”. You can change the context in the top right corner of the UI.\nSelect New Project -&gt; Create a new project from a sample or file and upload the zip file from the “Build Setup”\n\n\nAssiciate WML instance\n\nNavigate to the “Manage Tab and Select Associate service + and select the appropriate WML instance\n\n\n\nPopulate Parameter Set\n\nClick on the Notebook_and_Deployment_Parameters parameter set in the project.\nSet the wml_space_id and ibm_cloud_apikey to the Space GUID and IBM Cloud API key, respectively.\n\n\n\nComplete Connection to Databases for Elasticsearch\n\nClick on the watson&lt;span style=\"color:#2c62f5;\"&gt;x&lt;/span&gt;Discovery connection in the project.\nIn a separate tab, navigate to the Databases for Elasticsearch service on IBM Cloud.\nWithin the Overview tab scroll down to the Endpoints section and select the HTTPS tab.\nCopy the hostname, port, and TLS certificate.\nGo to the service credentials tab of the service and create a New Credential.\nCopy the username and password under connection.https.authentication in the new service credential JSON.\nReturn to the Watson Studio project’s watson&lt;span style=\"color:#2c62f5;\"&gt;x&lt;/span&gt;Discovery connection and set the following fields:\n\nEdit the URL with the saved values for the HOSTNAME and PORT with the format of https://{HOSTNAME}:{PORT}.\nThe username and password should be the ones copied from the service credentials.\nThe SSL certificate should be the TLS certificate.\n\nSelect Test connection in the top right corner to validate a working connection.\n\n\n\nComplete Connection to Databases for Elasticsearch\n\nClick on the CloudObjectStorage connection in the project.\nSet the bucket name to the name of the bucket created in the “Add Documents to Cloud Object Storage” step.\nIn the configuration tab of the bucket in Cloud Object Storage, copy the public endpoint to the Login URL field.\nPaste the Cloud Object Storage service credential you created earlier into the “Service credentials” field.\nTest the connection by clicking the “Test connection” button. The test should be successful.\n\n\n\n\nRun Notebooks\nOnce the setup is complete, the notebooks in the project can be run without errors. For each of the notebooks, make sure to insert the project token via the top-right menu in the notebook UI before running any cells. This creates a cell that connects your notebook to the project and its assets.\nSteps:\n\nIngest documents into Elasticsearch via COS or Watson Discovery\nDeploy RAG function\n\n\n\nWatson Discovery: Ingest Documents to Elasticsearch\nThe 1-file-ingestion-from-dis notebook in the project handles document ingestion from Watson Discovery for Elasticsearch.\n\nUpdate Project ID and Project Token Values:\n\nNavigate to the “Manage” Tab of the watson Studio project and copy the “Project ID” to be used in the notebook.\nNavigate to the “Access control” and copy the existing token to be used in the notebook.\n\nInstall the necessary python libraries:\n\n\n\n\n\n\nNote\n\n\n\nOnly need too install python libs on the first run of the notebook\n\n\nInsert new cell and run\n!pip install nltk --quiet\n!pip install ibm_watson --quiet\n!pip install elasticsearch --quiet\n!pip install llama-index --quiet\n!pip install llama_index.vector_stores.elasticsearch --quiet\nUpdate the Watson Discovery credentials\n\nOn the IBM Cloud resource list select the “Watson Discovery” instance\nOn the “Manage” under “Overview” copy the “API Key” and “URL” value\nClick “Launch Discovery” -&gt; “Select the relevant Project” -&gt; “Manage Collections” -&gt; click relevanty collection\nGrab the Collection ID from the url after “/collection/”\nUnder the “Integrate and Deploy” section copy the “Project ID”\n\n\n\n\n\nCOS: Ingest Documents to Elasticsearch\nThe 1-file-ingestion-from-cos notebook in the project handles document ingestion from Watson Discovery for Elasticsearch.\n\nUpdate Project ID and Project Token Values:\n\nNavigate to the “Manage” Tab of the watson Studio project and copy the “Project ID” to be used in the notebook.\nNavigate to the “Access control” and copy the existing token to be used in the notebook.\n\nInstall the necessary python libraries:\n\n\n\n\n\n\nNote\n\n\n\nOnly need too install python libs on the first run of the notebook\n\n\nInsert new cell and run\n!pip install nltk --quiet\n!pip install ibm_watson --quiet\n!pip install elasticsearch --quiet\n!pip install llama-index --quiet\n!pip install llama_index.vector_stores.elasticsearch --quiet\nUpdate the COS credentials\nCreate a new index_name for each new collection of data (if applicable)\n\n\n\n\nDeploy RAG Function in Watson Machine Learning\nThe 2-deploy-rag-function-in-wml notebook in the project handles the deployment of a Python function that performs RAG using the Databases for Elasticsearch database and watsonx.ai. This step is not necessary if you plan to use the native search integration in watsonx Assistant. Optionally, you can test your deployment using the third notebook 3-test-rag-deployment in the project. This notebook calls the deployment endpoint and reformats the deployment responses for better readability.\n\nUpdate Project ID and Project Token Values\n\nNavigate to the “Manage” Tab of the watson Studio project and copy the “Project ID” to be used in the notebook.\nNavigate to the “Access control” and copy the existing token to be used in the notebook.\n\nInstall the following libraries:\n    !pip install nltk --quiet\n    !pip install ibm_watson --quiet\n    !pip install elasticsearch --quiet\n    !pip install llama-index --quiet\n    !pip install llama_index.vector_stores.elasticsearch --quiet\n    ```\n\nDeploy seperate functions for each index created\n\n\n\n\n\n\nTip\n\n\n\nNote down the deployment_id for each function for each index to be leveraged for the Assistant integration\n\n\nRun cell under “Update project assets” to generate the OpenApi Spec for assistant integrations (if applicable)\n\n\n\n\n\nAssistant Integration\nwatsonx Assistant provides the query interface, using either:\n\nCustom Extension for RAG Deploment Configuration\n\n\n\n\n\n\nTip\n\n\n\nUseful for routing queries/requests to different collections of data\n\n\nNative Extension.\n\n\nCustom Extension\n\nWithin the Assistant Builder’s sidebar navigate to the “Integrations” section and\nSelect “Build custom extension”\nUpload the OpenApi spec from step 4 of RAG Deploment Extension Configuration and press “Finish”\nSelect “Add+” within the newly configured extension\nSelect “Next” -&gt; “Authentication type: OAuth 2.0”\nEnter the API Key value from here\n\n\n\nNative Extension\nTo configure watsonx Assistant to use the native search extension, follow these steps:\n\nIn the integrations tab on the bottom left of the watsonx Assistant user interface, select the search extension and then Elasticsearch.\nUse the Databases for Elasticsearch credentials obtained in the Complete Connection to Databases For Elasticsearch section to fill out the next page.\n\nNote that “https://” should be appended before the hostname obtained from the Elasticsearch credentials.\nThe index name should be the es_index_name from your project’s parameter set.\n\nIn the “Configure result content” section, set the Title to file_name, Body to text_field, and URL to url. If you modified your es_index_text_field in your static notebooks parameters, the body should be set to the modified value.\nUnder “Advanced Elasticsearch settings”, set the query body to\n\n{\n  \"sort\": [\n    {\n      \"_score\": \"desc\"\n    }\n  ],\n  \"query\": {\n    \"text_expansion\": {\n      \"ml.tokens\": {\n        \"model_id\": \".elser_model_1\",\n        \"model_text\": \"$QUERY$\"\n      }\n    }\n  }\n}\n\nEnable conversational search and save the extension. Conversational search is a beta feature that you need to request access for here.\n\nOnce you have finished configuring the search extension, configure the assistant’s actions as follows:\n\nIn the “No action matches” action, set the assistant “Search for the answer”.\nSave your action and navigate to the preview tab. Your assistant is now configured. Test it out by passing in natural language queries regarding your document collection.\n\nPlease refer to the official documentation for more information on using the native search extension.\n\n\n\nAssistant Integration Utility\n\nDependent Steps: Assistant Integration\n\n\nAssistant Action Integrationn\n\nWithin the appropriate action step select “And then” option as “Use an extension” and select the appropriate watsonx Discovery extension\nFor “Operation” select “Get the predications”\nFor the “Parameters” set:\n\ninput_data: Expression type as [{\"fields\": [\"Text\"],\"values\": [[input.text]]}]\nwml_deploment_id”: deployment_id from step 3 of Custom Extension for RAG Deploment Configuration\n\n\n\n\nExtract WxD Values to User\nllm_response value:\n${[APPROPRIATE_STEP]_result_1.body.predictions[0].llm_response}\nSource links:\n${[APPROPRIATE_STEP]_result_1.body.references[VALUE].metadata.file_name}",
+    "crumbs": [
+      "Implementation Methodology",
+      "Document Search",
+      "watsonx Discovery"
+    ]
   },
   {
     "objectID": "src/implementation_methodology/imp-sim.html",
@@ -467,174 +611,6 @@
       "Implementation Methodology",
       "Identity and Access Management",
       "Simulation"
-    ]
-  },
-  {
-    "objectID": "src/implementation_methodology/imp-snow.html",
-    "href": "src/implementation_methodology/imp-snow.html",
-    "title": "ServiceNow",
-    "section": "",
-    "text": "Follow steps here\n\n\n\n\nLogin into the developer site\nClick on the drop down arrow near your profile in top right corner and select “Manage Instance Password” \nSave values for:\n\nInstance URL\nUsername\nPassword\n\nExit. Within “My Instance” view, select “Start Building”\nSelect “All” in the top navigation panel and search “System OAuth” and select “Application Registry”\nIn the top right select “New” and select “Create an OAuth API endpoint for external clients”\nEnter necessary details and save the Client ID and Client Secret for later use",
-    "crumbs": [
-      "Implementation Methodology",
-      "Third-Party Applications",
-      "ServiceNow"
-    ]
-  },
-  {
-    "objectID": "src/implementation_methodology/imp-snow.html#setup-servicenow-developer-instance",
-    "href": "src/implementation_methodology/imp-snow.html#setup-servicenow-developer-instance",
-    "title": "ServiceNow",
-    "section": "",
-    "text": "Follow steps here\n\n\n\n\nLogin into the developer site\nClick on the drop down arrow near your profile in top right corner and select “Manage Instance Password” \nSave values for:\n\nInstance URL\nUsername\nPassword\n\nExit. Within “My Instance” view, select “Start Building”\nSelect “All” in the top navigation panel and search “System OAuth” and select “Application Registry”\nIn the top right select “New” and select “Create an OAuth API endpoint for external clients”\nEnter necessary details and save the Client ID and Client Secret for later use",
-    "crumbs": [
-      "Implementation Methodology",
-      "Third-Party Applications",
-      "ServiceNow"
-    ]
-  },
-  {
-    "objectID": "src/implementation_methodology/imp-snow.html#assistant-integration",
-    "href": "src/implementation_methodology/imp-snow.html#assistant-integration",
-    "title": "ServiceNow",
-    "section": "Assistant Integration",
-    "text": "Assistant Integration\nThere are two ways in which the ServiceNow application can be integrated to the Assistant:\n\nwatsonx Orchestrate Skill\nAssistant Custom Extension\n\n\nwatsonx Orchestrate Skill\n\nWithin the watsonx orchestrate platform, navigate to the sidebar and select “Chat”\nIn the dropdown menu in the top select the right target Assistant environment\nSelect “Add skills from the catalog” and select “ServiceNow”\nIn the top right select “Connect App”\nEnter values Acquire Relevant Instance Credentials:\n\nEnpoint URL -&gt; Step 3\nUsername -&gt; Step 3\nPassword -&gt; Step 3\nClient ID -&gt; Step 7\nClient Secret -&gt; Step 7\n\nSelect “Connect App”\nNavigate to the platforms sidebar and select “AI Assistant Builder”\nWithin the “Actions” section of the buider, select “New Action+” -&gt; “Action from skills” -&gt; appropriate ServiceNow skill\n\n\n\nAssistant Custom Extension\n\nGet Developer Instance Credentials and OpenAPI spec\n\nLogin into the developer site\nClick on the drop down arrow near your profile in top right corner and select “Manage Instance Password” \nMake note of the “username” and “password” values (this will be used later)\nExit out of the window and select “Start Building”\nPress “All” in the header and search “REST API Explorer”\nPress “Export OpenAPI Specification (YAML/JSON)”\n\n\n\nEdit Service Now OpenAPI spec\n\nOpen the downloaded API spec\nRemove the forward slash at the end of the url string within the “servers” block\nAdd BasicAuth Component to the OpenAPI spec (make sure each block is comma delimited):\n\n\n\"components\":{\n    \"securitySchemes\": {\n        \"basicAuth\": {\n            \"type\": \"http\",\n            \"scheme\": \"basic\"\n        }\n    }\n}\n\n\nSave file\n\n\n\nBuild Custom Extenstion\n\nWithin watsonx Assistant, navigate to the sidebar and select “Integrations”\nSelect “Build Custom Extension”\nFor the “Basic Information” page fill out all appropriate fields and click “Next”\nUpload the Service Now OpenAPI spec, click “Next” and then “Finish”\nWithin the extensions in Watson Assistant click “Add+” on the recently made Service Now custom extension\nOn the Authentication page fill out the username and password fields with the values saved from “Get Developer Instance Credentials and OpenAPI spec” step 3\nClick “Next” and then “Finish”",
-    "crumbs": [
-      "Implementation Methodology",
-      "Third-Party Applications",
-      "ServiceNow"
-    ]
-  },
-  {
-    "objectID": "src/implementation_methodology/imp-genesys.html",
-    "href": "src/implementation_methodology/imp-genesys.html",
-    "title": "Genesys",
-    "section": "",
-    "text": "Warning\n\n\n\nPrerequisite: Genesys Requirement",
-    "crumbs": [
-      "Implementation Methodology",
-      "Third-Party Applications",
-      "Genesys"
-    ]
-  },
-  {
-    "objectID": "src/implementation_methodology/imp-genesys.html#setup-genesys-web-messenger",
-    "href": "src/implementation_methodology/imp-genesys.html#setup-genesys-web-messenger",
-    "title": "Genesys",
-    "section": "1. Setup Genesys Web Messenger",
-    "text": "1. Setup Genesys Web Messenger\n\n\nSign up for a free trial of Genesys Cloud CX at this link. This trial will last for 14 days.\nOnce Genesys Cloud CX is running, configure the web messenger following these steps:\n\nClick Admin.\nUnder Message, click Messenger Configurations.\nEnter a name and description for your web messenger.\nIn the Appearance tab, select Hide for Set your Launcher Button Visibility and select Off for the User Interface.\nThe other settings are optional for basic set up. Once you have looked over all the options, click Save New Version.\n\nOnce your web messenger is configured, deploy the messenger following these steps:\n\nClick Admin.\nUnder Message, click Messenger Deployments.\nClick New Deployment.\nEnter a name and description.\nSet the Status to Active.\nUnder Select your Configuration click Select Configuration and select the verision of web messenger that you configured in the previous section.\nUnder Restrrict domain access select Allow all domains for testing and development purposes.\nClick Save. The Messenger Deployments page now displays your deployed messenger which you can click to access the deployment script which will be used in the next section to integrate with Watson Assistant.",
-    "crumbs": [
-      "Implementation Methodology",
-      "Third-Party Applications",
-      "Genesys"
-    ]
-  },
-  {
-    "objectID": "src/implementation_methodology/imp-genesys.html#connect-genesys-to-watson-assistant",
-    "href": "src/implementation_methodology/imp-genesys.html#connect-genesys-to-watson-assistant",
-    "title": "Genesys",
-    "section": "2. Connect Genesys to Watson Assistant",
-    "text": "2. Connect Genesys to Watson Assistant\n\n\n\n\n\n\n\nWarning\n\n\n\nPrerequisite: Webchat Interface\nNote: The Genesys SDK does not work if launched from a local HTML file opened directly in your browser (using file://). It needs to be served from a server (which can be localhost) over HTTP. You can use http-server if you need a simple local server for testing purposes.\n\n\n\nCongfigure HTML File for Genesys\n\nGet the script URL, environment, and deployment ID values from the Mesenger Deployments page on Genesys and have them ready to add to the Watson Assistant Embed Script.\nFollow the sample script which shows how to enable the Genesys integration at this link.\n\nThe serviceDesk portion of the script enables the Genesys integration. Simply add those values to where you have the Watson Assistant Embed script written out. Shown Below.\n\n\n\n&lt;script&gt;\n        window.watsonAssistantChatOptions = {\n        showRestartButton: true, //Optional\n        integrationID: \"[instance instegraionID]\", //From embed details of Assistant\n        region: \"aws-us-east-1\", //From embed details of Assistant\n        serviceInstanceID: \"[service instanceID]\", //From embed details of Assistant\n        \n        /*GENESYS SCRIPT BEGIN*/\n        serviceDesk: {\n            integrationType: 'genesyswebmessenger',\n            genesysMessenger: {\n            scriptURL: '[URL]',//Provided by Genesys console\n            deploymentID: '[DEPLOYMENT ID]', //Provided by Genesys console\n            environment: '[ENVIRONMENT]', //Provided by Genesys console\n            },\n        },\n        /*GENESYS SCRIPT END*/\n\n        onLoad: async (instance) =&gt; { await instance.render(); }\n        };\n        setTimeout(function(){\n        const t=document.createElement('script');\n        t.src=\"https://web-chat.global.assistant.watson.appdomain.cloud/versions/\" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + \"/WatsonAssistantChatEntry.js\";\n        document.head.appendChild(t);\n        });\n    &lt;/script&gt;\n\n\n\nConfigure Bot Connector in Assistant\n\nNavigate to the Assistant side bar and select “Integrations”\nWithin the “Channels” section select “Genesys Bot Connector”\nSelect the appropriate environment\nFill out the necessary credentials from the Genesys Console",
-    "crumbs": [
-      "Implementation Methodology",
-      "Third-Party Applications",
-      "Genesys"
-    ]
-  },
-  {
-    "objectID": "src/implementation_methodology/imp-genesys.html#using-genesys-live-agent",
-    "href": "src/implementation_methodology/imp-genesys.html#using-genesys-live-agent",
-    "title": "Genesys",
-    "section": "3. Using Genesys Live Agent",
-    "text": "3. Using Genesys Live Agent\n\n\nLog in to your Genesys trial account and toggle the Off Queue option in the top right to become On Queue.\nOpen your Watson Assistant that has been integrated with Genesys (over HTTP not on the UI or local HTML file) and follow action to connect to live agent.\nOnce you have clicked Connect to Live Agent go back to the Genesys account and you should see an incoming message which you can accept or decline. Click Accept and now you are able to communicate with a live customer using your Watson Assistant instance.",
-    "crumbs": [
-      "Implementation Methodology",
-      "Third-Party Applications",
-      "Genesys"
-    ]
-  },
-  {
-    "objectID": "src/implementation_methodology/imp-genesys.html#references",
-    "href": "src/implementation_methodology/imp-genesys.html#references",
-    "title": "Genesys",
-    "section": "References",
-    "text": "References\n\n\nIntegrating Watson Assistant with Genesys",
-    "crumbs": [
-      "Implementation Methodology",
-      "Third-Party Applications",
-      "Genesys"
-    ]
-  },
-  {
-    "objectID": "src/implementation_methodology/watson-dis.html",
-    "href": "src/implementation_methodology/watson-dis.html",
-    "title": "watson Discovery",
-    "section": "",
-    "text": "Warning\n\n\n\nPrerequisite: Watson Disovery Software Requirement\nThis build consists of three main components:",
-    "crumbs": [
-      "Implementation Methodology",
-      "Document Search",
-      "watson Discovery"
-    ]
-  },
-  {
-    "objectID": "src/implementation_methodology/watson-dis.html#setup-watson-discovery",
-    "href": "src/implementation_methodology/watson-dis.html#setup-watson-discovery",
-    "title": "watson Discovery",
-    "section": "1. Setup watson Discovery",
-    "text": "1. Setup watson Discovery\n\nNew projects, input Project Name, select an option “None of the above — I’m working on a custom project”, click “Next”\nselect the appropriatae method of upload, click “Next”\nInput Collection Name\nUpper left Hamburger icon -&gt; Manage Collections -&gt; New collections\nSelect data source\nIf webcrawl, input url links to “Starting URLs” and click “Add” -&gt; Finish",
-    "crumbs": [
-      "Implementation Methodology",
-      "Document Search",
-      "watson Discovery"
-    ]
-  },
-  {
-    "objectID": "src/implementation_methodology/watson-dis.html#create-watsonx-and-watson-discovery-extensions",
-    "href": "src/implementation_methodology/watson-dis.html#create-watsonx-and-watson-discovery-extensions",
-    "title": "watson Discovery",
-    "section": "2. Create watsonx and watson Discovery Extensions",
-    "text": "2. Create watsonx and watson Discovery Extensions\nRequired Steps:\n\n2.1 Create watson Discovery custom extension\n\nIn your assistant, navigate to “Integrations” page.\nClick “Build custom extensions” -&gt; click “Next” -&gt; Input Extension name Watson Discovery -&gt; click “Next”\ndownload json file: watson-discovery-query-openapi.json and import file to WA\nclick “Next” -&gt; click “Finish”\nLower Right corner of the Watson Disovery extension, click “Add” -&gt; click “Add” -&gt; click “Next”\nIn Authentication page, in the Authentication type dropdown, select “Basic auth”\n\nFor Username enter apikey\nFor password, create and copy a new API key from API key\nFor discovery_url, within IBM Cloud -&gt; resource list -&gt; Watson Discovery Instance -&gt; Manage -&gt; Credentials -&gt; URL\nPaste URL into discovery_url and remove https:// from the beginning of the string\n\nClick “Next”, click “Finish”, click “Close”\n\n\nReference: starter kit\n\n\n\n2.2 Create watsonx custom extension\n\nIn your assistant, navigate to Integrations page, click “Build custom extension” -&gt; click “Next” -&gt; Input Extension name watson&lt;span style=\"color:#2c62f5;\"&gt;x&lt;/span&gt; -&gt; click “Next” .\ndownload json file: watsonx-openapi.json and import file to WA\nclick “Next” -&gt; click “Finish”\nLower Right corner of the watsonx extension, click “Add” -&gt; click “Add” -&gt; click “Next”\nIn Authentication page, in the Authentication type dropdown, select “OAuth 2.0”\n\nFor Apikey, create and copy a new API key from API key\n\nClick “Next”, click “Finish”, click “Close”\n\n\n\n2.3 Integrate watsonx Search using Watson Discovery to Assistant\n\nUpload Actions:\n\nDownload discovery-watsonx-actions.json\nNavigate to “Actions” page, click “Global Settings” icon on the upper right corner\nNavigate to Upload/Download tab, upload the downloaded JSON file discovery-watson-actions.json onto the tab or click to select a file from your local system, then click “Upload”, and “Uplaod and replace”.\nWithin the Actions page, navigate to “Actions / Variables / Created by you”. Set discovery_project_id and watsonx_project_id session variable\n\n\n\n\n\n\n\n\nWhere to get credentials:\n\n\n\n\ndiscovery_project_id: within Watson Discovery: Upper left Hamburger icon -&gt; Integrate and deploy -&gt; API Information\nwatsonx_project_id:\n\nGo to watsonx Platform\nProjects (click on project)-&gt; Manage -&gt; General -&gt; Details -&gt; Project ID\n\n\n\n\n\n\n\nNo action matches Setup\n\nNavigate to “All items” -&gt; “Set by assistant” -&gt; “No action matches”.\nClick on the “No action matches” action and delete the existing step 1 and step 2.\n“New Step”. In the “And then” section, select “go to a subaction” -&gt; select “Search” in the dropdown options -&gt; “Apply”.\n“Save” and “Close”\nYou’re all set. Navigate to “Preview” to test the integration!",
-    "crumbs": [
-      "Implementation Methodology",
-      "Document Search",
-      "watson Discovery"
-    ]
-  },
-  {
-    "objectID": "src/implementation_methodology/imp-verify-assis.html",
-    "href": "src/implementation_methodology/imp-verify-assis.html",
-    "title": "IBM Security Verify",
-    "section": "",
-    "text": "Warning\n\n\n\nPrerequisite: IBM Security Verify Software Requirement\nThis section will go over how to setup IBM Security Verify and integrate it with Watsonx Assistant to verify users, authenticate using a one time password (OTP) , and reset passwords.",
-    "crumbs": [
-      "Implementation Methodology",
-      "Identity and Access Management",
-      "IBM Security Verify"
-    ]
-  },
-  {
-    "objectID": "src/implementation_methodology/imp-verify-assis.html#setting-up-ibm-security-verify",
-    "href": "src/implementation_methodology/imp-verify-assis.html#setting-up-ibm-security-verify",
-    "title": "IBM Security Verify",
-    "section": "Setting up IBM Security Verify",
-    "text": "Setting up IBM Security Verify\n\n\nCreate Users and Groups\n\nLogin into the dedicated IBM Security Verify instance\nClick on the user profile in the top right corner and select “Switch to admin”\nIn the sidebar, navigate to “Directory” -&gt; “Users and Groups”\nSelect “Add User+” and fill out the necessary fields.\n\n\n\n\n\n\n\nNote\n\n\n\n\nProvide an email you have access to for each added user.\nMake sure to “View extended profile” to fill out the other fields if applicable\n\n\n\n\nNavigate to the “Groups” tab and select “Add Group” and fill out the required fields and assign the appropriate users.\n\n\n\nCreate API Client\n\nLogin into the dedicated IBM Security Verify instance\nClick on the user profile in the top right corner and select “Switch to admin”\nIn the sidebar, navigate to “Security” -&gt; “API Access”\nSelect “Add API Client +”\nFill out the necessary fields and save the “Client ID” and “Client Secret” values for later reference",
-    "crumbs": [
-      "Implementation Methodology",
-      "Identity and Access Management",
-      "IBM Security Verify"
-    ]
-  },
-  {
-    "objectID": "src/implementation_methodology/imp-verify-assis.html#assistant-custom-extension",
-    "href": "src/implementation_methodology/imp-verify-assis.html#assistant-custom-extension",
-    "title": "IBM Security Verify",
-    "section": "Assistant Custom Extension",
-    "text": "Assistant Custom Extension\nBefore jumping to the custom watsonx assistant we created for IBM Security Verify, it would be prudent to explore the included postman collection for the Verify API. Because of the way that watsonx assistant handles json arrays (or to be more specific, doesn’t handle json arrays), you will need to manually set some of the inputs in case they are arrays. Making API calls using the postman collection makes this process quite a bit easier.\n\nIdentify OpenAPI spec values\nThree values will be needed to connect to IBM Security Verify:\n\nverify instance url\nclient_id\nclient_secret\n\nThe client_id and client_secret will need to be for a corresponding admin account. TODO: Add instructions for getting these values\n\n\nCreate the Custom Extension\n\nNavigate and download the OpenAPI spec for another assistant bot here\nModify the server url at line 10 with the service instance url from step 3 here\nNavigate to the integrations section within the Assistant Builder sidebar\nSelect “Build custom extension” and name the extension\nUpload the OpenApi spec from step 1 and press “Finish”\nSelect “Add+” within the newly configured extension\nSelect “Next” and update values:\n\nAuthentication type: Oauth 2.0\nClient ID: client_id\nClient Secret: client_secret\n\n\n\n\nAction Integration\nThis extension has 3 features with 4 api calls total\n\nVerify username and password\nAuthenticate using a OTP (has two api calls)\nReset Password\n\n\nVerify a Username and Password\n\nWithin the appropriate action, create a step and under “And then” select “Use an extension”\nSelect the appropriate subordinate bot extension made here\nSelect the Operation as “verify user and pass”\nSet the Parameters to:\n\nreturnUserRecord: true or false depending on if you want the user data to be returned\nAccept: */* see the note below\nschemas: [“urn:ietf:params:scim:schemas:ibm:core:2.0:AuthenticateUser”] see the note below\nuserName: The username for the user logging in\npassword: The password for the user logging in\n\n\n\n\nAuthenticate using a One Time Password (OTP)\n\nCreate a new step after the step with the “create a session” extension (either in the same action or another)\nUnder the “And then” Section, select “Use an extension”\nSelect the appropriate subordinate bot extension made here\nSelect the Operation as “Create and email otp transaction”\nSet the Parameters to:\n\ncorrelation: any sequence of 4 numbers (these will appear to the verifying user as a sequence before a dash, followed by the actual verification code)\nemailAddress: The email address to send the verification code to. If returnUserRecord is set to true above, the response json will include a list of all of the user’s associated emails.\n\nAdd a step and prompt the user to input the verification code they recieved less correlation.\nAdd another extension call in a further step using the “Attempt email OTP verification” Operation\nSet the Parameters to:\n\ntrxnid: body.id from the extension call in step 3/4\notp: The user input\n\n\n\n\nReset Password\n\nCreate a new step after the step with the “create a session” extension (either in the same action or another)\nUnder the “And then” Section, select “Use an extension”\nSelect the appropriate subordinate bot extension made here\nSelect the Operation as “Change user’s password”\nSet the Parameters to:\n\nuserid: The user’s verify userid, if returnUserRecord is set to true above, the response json will include the user’s userid.\ncontent-type: application/scim+json see this note\nAccept: */* see the note below\nschemas: [“urn:ietf:params:scim:api:messages:2.0:PatchOp”] see the note below\noperations:\n\n\n\n[{\n\"op\":\"replace\",\n\"value\": {\n    \"password\": \"new_pass\", \n    \"urn:ietf:params:scim:schemas:extension:ibm:2.0:Notification\":{\n        \"notifyType\":\"EMAIL\",\n        \"notifyPassword\": true}\n    }\n}]\n\nreplace new_pass with the new password you would like, and if you would like to disable email notifications set “notifyPassword” to false. For clarity on why it neeeds to be this way, see the note below\nreplace new_pass with the new password you would like, and if you would like to disable email notifications set “notifyPassword” to false. For clarity on why it neeeds to be this way, see the note below\n\n\n\n\n\n\n\n\nA note on schemas and arrays\n\n\n\nIt may have been observed that certain inputs required for these extensions are unconventional. The primary objective of Watsonx Assistant is to simplify complex technical processes, allowing users to focus on designing the chatbot flows they need. While this approach is effective in most scenarios, challenges arise when users need to integrate custom extensions involving more intricate request or response data formats.\nSpecifically, any input involving a JSON array must be manually specified as an expression. This is the case for the schema inputs mentioned earlier, as well as the operations input required for the reset password action. Furthermore, Watsonx Assistant lacks a native mechanism for accessing data within JSON arrays. Users are required to identify the step at which a JSON array is received and subsequently write a custom expression to extract the array values.\nAdditionally, for the Accept and Content-Type fields, IBM Security Verify necessitates these values to be configured precisely as specified. Failure to do so results in the integration not functioning as intended.",
-    "crumbs": [
-      "Implementation Methodology",
-      "Identity and Access Management",
-      "IBM Security Verify"
     ]
   },
   {
@@ -671,6 +647,30 @@
       "Implementation Methodology",
       "Governance",
       "watsonx Governance"
+    ]
+  },
+  {
+    "objectID": "src/implementation_methodology/imp-workday.html",
+    "href": "src/implementation_methodology/imp-workday.html",
+    "title": "Workday",
+    "section": "",
+    "text": "Within the watsonx orchestrate platform, navigate to the sidebar and select “Chat”\nIn the dropdown menu in the top select the right target Assistant environment\nSelect “Add skills from the catalog” and select “Workday”\nIn the top right select “Connect App”\nEnter the appropriate values\nSelect “Connect App”\nNavigate to the platforms sidebar and select “AI Assistant Builder”\nWithin the “Actions” section of the buider, select “New Action+” -&gt; “Action from skills” -&gt; appropriate Workday skill",
+    "crumbs": [
+      "Implementation Methodology",
+      "Third-Party Applications",
+      "Workday"
+    ]
+  },
+  {
+    "objectID": "src/implementation_methodology/imp-workday.html#assistant-integration",
+    "href": "src/implementation_methodology/imp-workday.html#assistant-integration",
+    "title": "Workday",
+    "section": "",
+    "text": "Within the watsonx orchestrate platform, navigate to the sidebar and select “Chat”\nIn the dropdown menu in the top select the right target Assistant environment\nSelect “Add skills from the catalog” and select “Workday”\nIn the top right select “Connect App”\nEnter the appropriate values\nSelect “Connect App”\nNavigate to the platforms sidebar and select “AI Assistant Builder”\nWithin the “Actions” section of the buider, select “New Action+” -&gt; “Action from skills” -&gt; appropriate Workday skill",
+    "crumbs": [
+      "Implementation Methodology",
+      "Third-Party Applications",
+      "Workday"
     ]
   }
 ]

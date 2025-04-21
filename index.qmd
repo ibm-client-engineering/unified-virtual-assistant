@@ -1,6 +1,5 @@
-
 ---
-title: "Unified Virtual Assistant"
+title: "Unified Virtual Agent"
 subtitle: "Leverage watsonx Orchestrate to build a unified user experiance with gen-AI routing, IAM, governance, RAG, and third-party integrations."
 format: html
 ---
@@ -10,9 +9,8 @@ format: html
 ```{=html}
 <span class="dot">JS</span> &ensp;John Scott&ensp;
 ```
----
-Description: "Leverage watsonx Orchestrate to build a unified user experiance with gen-AI routing, IAM, governance, RAG, and third-party integrations."
----
+<br>
+
 ## Overview
 
 ### Business Statement

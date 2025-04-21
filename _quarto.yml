@@ -6,7 +6,7 @@ language:
       search-text-placeholder: Search
 
 website:
-  title: Unified Virtual Assistant
+  title: Unified Virtual Agent
   favicon: images/bee.png
   page-navigation: true
   search: 
